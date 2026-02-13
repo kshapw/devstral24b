@@ -1,0 +1,84 @@
+# ----------------------
+# Python
+# ----------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# ----------------------
+# Environment variables
+# ----------------------
+.env
+.env.*
+
+# ----------------------
+# Logs & runtime files
+# ----------------------
+*.log
+*.txt
+*.sqlite3
+
+# (Keep performance report if you want versioned)
+# rag_performance.txt
+
+# ----------------------
+# IDE / Editor
+# ----------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# ----------------------
+# Docker
+# ----------------------
+docker-compose.override.yml
+
+# ----------------------
+# Qdrant / Vector DB data
+# ----------------------
+qdrant_storage/
+storage/
+*.db
+*.wal
+
+# ----------------------
+# Model / AI artifacts
+# ----------------------
+*.gguf
+*.bin
+*.pt
+*.onnx
+
+# ----------------------
+# Test / experiment scripts (optional)
+# Uncomment if these are temporary
+# once.py
+# two.py
+# three.py
+# benchmark_rag.py
+# test_rag.py
+# test_retrieval.py
+
+# ----------------------
+# Data (optional)
+# ----------------------
+# Ignore large or private data
+# data/
+
+# If you want to keep structure but not content:
+# data/*
+# !data/.gitkeep
