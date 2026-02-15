@@ -3,7 +3,6 @@ from langchain_text_splitters import MarkdownHeaderTextSplitter
 headers = [
     ("#", "section"),
     ("##", "scheme"),
-    ("###", "subsection")
 ]
 
 splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers)
@@ -21,8 +20,6 @@ def chunk_markdown(text):
             context_parts.append(f"Section: {metadata['section']}")
         if "scheme" in metadata:
             context_parts.append(f"Scheme: {metadata['scheme']}")
-        if "subsection" in metadata:
-            context_parts.append(f"Subsection: {metadata['subsection']}")
             
         if context_parts:
             # Prepend context to content
