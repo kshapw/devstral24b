@@ -4,3 +4,4 @@ requests
 qdrant-client
 langchain-text-splitters
 python-dotenv
+httpx

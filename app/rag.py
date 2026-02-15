@@ -1,23 +1,31 @@
-from app.ollama_client import embed, generate
-#from qdrant_client import client
+from app.ollama_client import OllamaClient, default_ollama
 from app.config import settings
-from app.qdrant_service import client
+from qdrant_client import AsyncQdrantClient
+from app.qdrant_service import get_qdrant_client
 
-def retrieve(query, top_k=5):
-    vector = embed(query)
+# We allow passing clients to support dependency injection from FastAPI lifespan
+async def retrieve(query: str, qdrant: AsyncQdrantClient = None, ollama: OllamaClient = None, top_k: int = 5):
+    qdrant = qdrant or get_qdrant_client()
+    ollama = ollama or default_ollama
 
-    results = client.query_points(
+    vector = await ollama.embed(query)
+
+    results = await qdrant.query_points(
         collection_name=settings.COLLECTION_NAME,
         query=vector,
         limit=top_k
-    ).points
+    )
+    
+    # query_points returns a generic object, access points
+    points = results.points
 
-    context = "\n\n".join([r.payload["text"] for r in results])
+    context = "\n\n".join([r.payload["text"] for r in points])
     return context
 
 
-def answer(question):
-    context = retrieve(question)
+async def answer(question: str, qdrant: AsyncQdrantClient = None, ollama: OllamaClient = None):
+    # Pass clients down
+    context = await retrieve(question, qdrant=qdrant, ollama=ollama)
 
     prompt = f"""
 You are a support assistant for Karmika Seva Kendra.
@@ -33,5 +41,5 @@ Question:
 
 Answer:
 """
-
-    return generate(prompt)
+    ollama = ollama or default_ollama
+    return await ollama.generate(prompt)

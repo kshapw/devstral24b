@@ -1,35 +1,44 @@
+import asyncio
 import uuid
-from chunker import chunk_markdown
-from app.ollama_client import embed
-#from qdrant_client import client, create_collection
+from app.chunker import chunk_markdown
+from app.ollama_client import default_ollama
 from app.config import settings
-from qdrant_service import client, create_collection
+from app.qdrant_service import get_qdrant_client, create_collection
 
-def ingest():
+async def ingest():
     with open("data/ksk.md", "r", encoding="utf-8") as f:
         content = f.read()
 
     chunks = chunk_markdown(content)
 
-    create_collection()
+    client = get_qdrant_client()
+    try:
+        await create_collection(client)
 
-    points = []
-    for chunk in chunks:
-        vector = embed(chunk)
+        points = []
+        for chunk in chunks:
+            # default_ollama is a global instance we can use for scripts
+            vector = await default_ollama.embed(chunk)
 
-        points.append({
-            "id": str(uuid.uuid4()),
-            "vector": vector,
-            "payload": {"text": chunk}
-        })
+            points.append({
+                "id": str(uuid.uuid4()),
+                "vector": vector,
+                "payload": {"text": chunk}
+            })
 
-    client.upsert(
-        collection_name=settings.COLLECTION_NAME,
-        points=points
-    )
+        await client.upsert(
+            collection_name=settings.COLLECTION_NAME,
+            points=points
+        )
 
-    print(f"Ingested {len(points)} chunks")
+        print(f"Ingested {len(points)} chunks")
+    finally:
+        await client.close()
+        # default_ollama internal client might need closing if we were strict, 
+        # but for a script it's fine. 
+        # Ideally we'd do: await default_ollama.client.aclose()
+        await default_ollama.client.aclose()
 
 
 if __name__ == "__main__":
-    ingest()
+    asyncio.run(ingest())
