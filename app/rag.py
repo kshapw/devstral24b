@@ -21,9 +21,12 @@ async def retrieve(query: str, qdrant: AsyncQdrantClient = None, ollama: OllamaC
     # query_points returns a generic object, access points
     points = results.points
     print(f"[DEBUG] Qdrant found {len(points)} points.")
+    
+    for i, p in enumerate(points):
+        print(f"[DEBUG] Point {i} payload: {p.payload}")
 
     context = "\n\n".join([r.payload["text"] for r in points])
-    print(f"[DEBUG] Context length: {len(context)}")
+    print(f"[DEBUG] Context Content:\n{context}\n[DEBUG] End Context")
     return context
 
 
