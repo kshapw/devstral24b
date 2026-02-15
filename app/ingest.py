@@ -13,6 +13,10 @@ async def ingest():
 
     client = get_qdrant_client()
     try:
+        # Recreate collection to remove old chunks
+        if await client.collection_exists(settings.COLLECTION_NAME):
+            await client.delete_collection(settings.COLLECTION_NAME)
+            
         await create_collection(client)
 
         points = []
