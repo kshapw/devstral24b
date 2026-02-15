@@ -9,6 +9,8 @@ async def retrieve(query: str, qdrant: AsyncQdrantClient = None, ollama: OllamaC
     ollama = ollama or default_ollama
 
     vector = await ollama.embed(query)
+    print(f"[DEBUG] Query: {query}")
+    print(f"[DEBUG] Vector generated. Len: {len(vector)}")
 
     results = await qdrant.query_points(
         collection_name=settings.COLLECTION_NAME,
@@ -18,8 +20,10 @@ async def retrieve(query: str, qdrant: AsyncQdrantClient = None, ollama: OllamaC
     
     # query_points returns a generic object, access points
     points = results.points
+    print(f"[DEBUG] Qdrant found {len(points)} points.")
 
     context = "\n\n".join([r.payload["text"] for r in points])
+    print(f"[DEBUG] Context length: {len(context)}")
     return context
 
 
