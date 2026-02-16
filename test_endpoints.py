@@ -9,10 +9,31 @@ Usage:
 """
 
 import json
+import os
 import sys
 import time
+from datetime import datetime
 
 import httpx
+
+
+class TeeWriter:
+    """Write to both stdout and a file simultaneously."""
+    def __init__(self, filepath: str):
+        self._stdout = sys.stdout
+        self._file = open(filepath, "w", encoding="utf-8")
+
+    def write(self, text: str):
+        self._stdout.write(text)
+        self._file.write(text)
+
+    def flush(self):
+        self._stdout.flush()
+        self._file.flush()
+
+    def close(self):
+        self._file.close()
+        sys.stdout = self._stdout
 
 BASE_URL = sys.argv[1].rstrip("/") if len(sys.argv) > 1 else "http://localhost:2024"
 TIMEOUT = 180.0  # devstral:24b can be slow on first inference
@@ -148,11 +169,18 @@ def print_result(index: int, test: dict, status: int, duration: float, answer: s
 # Main test runner
 # ---------------------------------------------------------------------------
 def main():
+    # Set up output to both console and file
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_file = f"test_results_{timestamp}.txt"
+    tee = TeeWriter(output_file)
+    sys.stdout = tee
+
     client = httpx.Client(timeout=TIMEOUT)
 
     print_separator()
     print(f"KSK Chatbot Endpoint Tests")
     print(f"Server: {BASE_URL}")
+    print(f"Date:   {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print_separator()
 
     # ------- 1. Health check -------
@@ -416,7 +444,10 @@ def main():
                 print(f"    - Test {r['index']}: {r['desc']} (HTTP {r['status']})")
 
     print()
+    print(f"Results saved to: {output_file}")
+    print()
     client.close()
+    tee.close()
     sys.exit(0 if failed == 0 else 1)
 
 
