@@ -150,6 +150,8 @@ class OllamaClient:
         logger.debug(
             "embed() model=%s text_len=%d", self.embed_model, len(text),
         )
+        # Try new endpoint first (/api/embed, Ollama >= 0.3.4),
+        # fall back to legacy (/api/embeddings) for older versions.
         try:
             response = await self.client.post(
                 f"{self.base_url}/api/embed",
@@ -158,6 +160,17 @@ class OllamaClient:
                     "input": text,
                 },
             )
+            if response.status_code == 404:
+                # Fall back to legacy endpoint
+                response = await self.client.post(
+                    f"{self.base_url}/api/embeddings",
+                    json={
+                        "model": self.embed_model,
+                        "prompt": text,
+                    },
+                )
+                response.raise_for_status()
+                return response.json()["embedding"]
             response.raise_for_status()
             return response.json()["embeddings"][0]
         except httpx.HTTPError as e:
