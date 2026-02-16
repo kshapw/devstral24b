@@ -152,14 +152,14 @@ class OllamaClient:
         )
         try:
             response = await self.client.post(
-                f"{self.base_url}/api/embeddings",
+                f"{self.base_url}/api/embed",
                 json={
                     "model": self.embed_model,
-                    "prompt": text,
+                    "input": text,
                 },
             )
             response.raise_for_status()
-            return response.json()["embedding"]
+            return response.json()["embeddings"][0]
         except httpx.HTTPError as e:
             logger.error("Ollama embed request failed: %s", e)
             raise
