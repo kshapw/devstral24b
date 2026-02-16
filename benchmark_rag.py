@@ -1,26 +1,27 @@
-import time
 import asyncio
-import httpx
+import logging
+import time
 from datetime import datetime
 
-from app.rag import answer
 from app.config import settings
 from app.ollama_client import default_ollama
 from app.qdrant_service import get_qdrant_client
+from app.rag import answer
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # ----------------------------
 # Warmup (important for Devstral)
 # ----------------------------
-async def warmup_model():
-    print("\nWarming up model...")
+async def warmup_model() -> None:
+    logger.info("Warming up model...")
     try:
-        # We can use default_ollama.generate if we want, or raw httpx
-        # Let's use the client method to test the path
         await default_ollama.generate("warmup")
-        print("Warmup complete.\n")
+        logger.info("Warmup complete")
     except Exception as e:
-        print("Warmup failed:", e)
-        print("Continuing without warmup...\n")
+        logger.warning("Warmup failed: %s", e)
+        logger.info("Continuing without warmup")
 
 
 # ----------------------------
@@ -36,7 +37,7 @@ queries = [
     "How long do I have to apply after an accident?",
     "Can dependents apply for major illness treatment?",
     "What is the maximum amount for medical assistance?",
-    "Where can I apply for Karmika schemes?"
+    "Where can I apply for Karmika schemes?",
 ]
 
 output_file = "rag_performance.txt"
@@ -45,14 +46,10 @@ output_file = "rag_performance.txt"
 # ----------------------------
 # Benchmark
 # ----------------------------
-async def run_benchmark():
-    # Setup clients for the script
+async def run_benchmark() -> None:
     qdrant = get_qdrant_client()
-    
-    # We will pass these explicit clients to answer to test the injection behavior primarily
-    # though answer() defaults to global if None, let's be explicit to mimic main.py
-    
-    print("\nRunning RAG performance test...\n")
+
+    logger.info("Running RAG performance test")
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(f"RAG Performance Test - {datetime.now()}\n")
@@ -60,16 +57,17 @@ async def run_benchmark():
         f.write(f"Ollama: {settings.OLLAMA_URL}\n")
         f.write("=" * 60 + "\n\n")
 
-        times = []
+        times: list[float] = []
 
         try:
             for i, question in enumerate(queries, 1):
-                print(f"Query {i}: {question}")
+                logger.info("Query %d: %s", i, question)
 
                 start_time = time.time()
 
-                # Passing dependencies
-                response = await answer(question, qdrant=qdrant, ollama=default_ollama)
+                response = await answer(
+                    question, qdrant=qdrant, ollama=default_ollama
+                )
 
                 end_time = time.time()
                 duration = round(end_time - start_time, 2)
@@ -80,20 +78,19 @@ async def run_benchmark():
                     f"Question: {question}\n"
                     f"Answer: {response}\n"
                     f"Turnaround Time: {duration} seconds\n"
-                    f"{'-'*60}\n"
+                    f"{'-' * 60}\n"
                 )
 
                 f.write(log)
-                print(f"Completed in {duration} sec\n")
+                logger.info("Completed in %.2f sec", duration)
 
-            # Summary
             avg_time = round(sum(times) / len(times), 2)
             f.write("\nSUMMARY\n")
             f.write(f"Average Response Time: {avg_time} seconds\n")
 
-            print(f"\nAverage Response Time: {avg_time} sec")
-            print(f"Results saved to {output_file}")
-            
+            logger.info("Average Response Time: %.2f sec", avg_time)
+            logger.info("Results saved to %s", output_file)
+
         finally:
             await qdrant.close()
             await default_ollama.client.aclose()
@@ -103,8 +100,9 @@ async def run_benchmark():
 # Run
 # ----------------------------
 if __name__ == "__main__":
-    async def main():
+
+    async def main() -> None:
         await warmup_model()
         await run_benchmark()
-    
+
     asyncio.run(main())

@@ -1,0 +1,11 @@
+__pycache__
+*.pyc
+.git
+.gitignore
+chat.db
+*.md
+test_*.py
+benchmark_*.py
+rag_performance.txt
+.env
+.dockerignore
