@@ -25,7 +25,7 @@ services:
   qdrant:
     image: qdrant/qdrant
     ports:
-      - "127.0.0.1:6333:6333"
+      - "127.0.0.1:6343:6333"
     volumes:
       - qdrant_storage:/qdrant/storage
     healthcheck:
@@ -38,7 +38,7 @@ services:
   ollama:
     image: ollama/ollama
     ports:
-      - "127.0.0.1:11434:11434"
+      - "127.0.0.1:11441:11434"
     volumes:
       - ollama_models:/root/.ollama
     environment:
