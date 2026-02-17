@@ -3,6 +3,7 @@ import json
 import logging
 import os
 import re
+import uuid as _uuid
 from collections import OrderedDict
 from contextlib import asynccontextmanager
 from time import time
@@ -18,16 +19,17 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from app.config import settings
 from app.database import (
     add_message,
+    cleanup_old_data,
     create_thread,
     get_db,
+    get_paginated_thread_messages,
     get_recent_thread_messages,
-    get_thread_messages,
     init_db,
     thread_exists,
 )
 from app.ollama_client import OllamaClient
 from app.qdrant_service import get_qdrant_client
-from app.rag import answer, answer_stream
+from app.rag import answer, answer_stream, classify_and_prepare
 from app.schemas import (
     HealthResponse,
     MessageRequest,
@@ -60,6 +62,8 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         response.headers["X-Frame-Options"] = "DENY"
         response.headers["Content-Security-Policy"] = "default-src 'none'"
         response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+        response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+        response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
         return response
 
 
@@ -74,20 +78,43 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         self._hits: dict[str, list[float]] = {}
         self._sweep_counter: int = 0
 
+    def _get_client_ip(self, request: Request) -> str:
+        """Extract client IP, respecting X-Forwarded-For if proxy headers are trusted."""
+        if settings.TRUST_PROXY_HEADERS:
+            forwarded = request.headers.get("X-Forwarded-For", "")
+            if forwarded:
+                return forwarded.split(",")[0].strip()
+        return request.client.host if request.client else "unknown"
+
+    def _do_sweep(self, now: float) -> None:
+        """Remove all stale IPs from the hits dict."""
+        stale_ips = [
+            ip for ip, ts in self._hits.items()
+            if not ts or all(now - t >= self.window for t in ts)
+        ]
+        for ip in stale_ips:
+            del self._hits[ip]
+        if stale_ips:
+            logger.debug("Swept %d stale IPs from rate limiter", len(stale_ips))
+
     async def dispatch(self, request: Request, call_next):
-        # Only rate-limit mutating endpoints
-        if request.method != "POST":
+        # Apply different limits: stricter for POST, lighter for GET
+        if request.method == "GET":
+            max_requests = self.max_requests * 3  # 90 per window for GET
+        elif request.method == "POST":
+            max_requests = self.max_requests  # 30 per window for POST
+        else:
             return await call_next(request)
 
-        client_ip = request.client.host if request.client else "unknown"
+        client_ip = self._get_client_ip(request)
         now = time()
 
         # Clean old entries for this IP
         timestamps = self._hits.get(client_ip, [])
         timestamps = [t for t in timestamps if now - t < self.window]
 
-        if len(timestamps) >= self.max_requests:
-            logger.warning("Rate limit exceeded for IP %s", client_ip)
+        if len(timestamps) >= max_requests:
+            logger.warning("Rate limit exceeded for IP %s (%s)", client_ip, request.method)
             return JSONResponse(
                 status_code=429,
                 content={"detail": "Too many requests. Please try again later."},
@@ -96,20 +123,59 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         timestamps.append(now)
         self._hits[client_ip] = timestamps
 
-        # Periodically sweep all stale IPs (every 100 requests)
+        # Cap tracked IPs to prevent memory exhaustion
+        if len(self._hits) > settings.MAX_TRACKED_IPS:
+            self._do_sweep(now)
+
+        # Periodically sweep all stale IPs (every 50 requests)
         self._sweep_counter += 1
-        if self._sweep_counter >= 100:
+        if self._sweep_counter >= 50:
             self._sweep_counter = 0
-            stale_ips = [
-                ip for ip, ts in self._hits.items()
-                if not ts or all(now - t >= self.window for t in ts)
-            ]
-            for ip in stale_ips:
-                del self._hits[ip]
-            if stale_ips:
-                logger.debug("Swept %d stale IPs from rate limiter", len(stale_ips))
+            self._do_sweep(now)
 
         return await call_next(request)
+
+
+# ---------------------------------------------------------------------------
+# Request ID middleware (log correlation)
+# ---------------------------------------------------------------------------
+class RequestIdMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        request_id = request.headers.get("X-Request-ID", str(_uuid.uuid4()))
+        request.state.request_id = request_id
+        response = await call_next(request)
+        response.headers["X-Request-ID"] = request_id
+        return response
+
+
+# ---------------------------------------------------------------------------
+# Request logging middleware (timing)
+# ---------------------------------------------------------------------------
+class RequestLoggingMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        start = time()
+        response = await call_next(request)
+        elapsed = (time() - start) * 1000
+        logger.info(
+            "%s %s %d %.0fms",
+            request.method, request.url.path, response.status_code, elapsed,
+        )
+        return response
+
+
+# ---------------------------------------------------------------------------
+# Background periodic cleanup
+# ---------------------------------------------------------------------------
+async def _periodic_cleanup(app_instance: FastAPI) -> None:
+    """Run retention cleanup hourly in the background."""
+    while True:
+        await asyncio.sleep(3600)  # hourly
+        try:
+            msgs, cache = await cleanup_old_data(app_instance.state.db)
+            if msgs or cache:
+                logger.info("Periodic cleanup: %d messages, %d cache entries removed", msgs, cache)
+        except Exception:
+            logger.error("Periodic cleanup failed", exc_info=True)
 
 
 @asynccontextmanager
@@ -139,12 +205,28 @@ async def lifespan(app: FastAPI):
         logger.critical("Failed to initialize database", exc_info=True)
         raise
 
+    # Run initial retention cleanup
+    try:
+        msgs, cache = await cleanup_old_data(app.state.db)
+        if msgs or cache:
+            logger.info("Startup cleanup: %d messages, %d cache entries removed", msgs, cache)
+    except Exception:
+        logger.error("Startup cleanup failed (non-fatal)", exc_info=True)
+
     app.state.thread_locks: OrderedDict[str, asyncio.Lock] = OrderedDict()
+
+    # Launch background cleanup task
+    cleanup_task = asyncio.create_task(_periodic_cleanup(app))
     logger.info("Application startup complete")
 
     yield
 
     logger.info("Shutting down application")
+    cleanup_task.cancel()
+    try:
+        await cleanup_task
+    except asyncio.CancelledError:
+        pass
     await app.state.db.close()
     await app.state.qdrant.close()
     await app.state.http_client.aclose()
@@ -154,11 +236,17 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 # --- Middleware stack (order matters: last added = first executed) ---
+# Execution order: RequestId → Logging → Security → RateLimit → CORS → handler
+app.add_middleware(RequestIdMiddleware)
+app.add_middleware(RequestLoggingMiddleware)
 app.add_middleware(SecurityHeadersMiddleware)
 app.add_middleware(RateLimitMiddleware)
+
+_raw_origins = os.getenv("CORS_ORIGINS", "")
+_cors_origins = [o.strip() for o in _raw_origins.split(",") if o.strip()] if _raw_origins else []
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=os.getenv("CORS_ORIGINS", "").split(",") if os.getenv("CORS_ORIGINS") else [],
+    allow_origins=_cors_origins,
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"],
 )
@@ -214,7 +302,51 @@ def get_thread_lock(thread_id: str) -> asyncio.Lock:
 
 @app.get("/", response_model=HealthResponse)
 async def health_check():
+    """Liveness probe — always returns 200 if process is running."""
     return HealthResponse(status="ok")
+
+
+@app.get("/health", response_model=HealthResponse)
+async def health_check_alias():
+    """Liveness probe alias at /health."""
+    return HealthResponse(status="ok")
+
+
+@app.get("/ready")
+async def readiness_check():
+    """Readiness probe — checks all dependencies."""
+    checks: dict[str, str] = {}
+    # Database
+    try:
+        cursor = await app.state.db.execute("SELECT 1")
+        await cursor.fetchone()
+        checks["database"] = "ok"
+    except Exception:
+        checks["database"] = "failed"
+    # Qdrant
+    try:
+        await app.state.qdrant.get_collections()
+        checks["qdrant"] = "ok"
+    except Exception:
+        checks["qdrant"] = "failed"
+    # Ollama
+    try:
+        resp = await app.state.http_client.get(
+            f"{settings.OLLAMA_URL}/api/tags", timeout=5.0,
+        )
+        checks["ollama"] = "ok" if resp.status_code == 200 else "failed"
+    except Exception:
+        checks["ollama"] = "failed"
+
+    all_ok = all(v == "ok" for v in checks.values())
+    status_code = 200 if all_ok else 503
+    return JSONResponse(
+        content={
+            "status": "ready" if all_ok else "degraded",
+            "checks": checks,
+        },
+        status_code=status_code,
+    )
 
 
 @app.post("/api/chat/threads", response_model=ThreadResponse, status_code=201)
@@ -238,12 +370,11 @@ async def get_messages(
     if not await thread_exists(db, threadId):
         raise HTTPException(status_code=404, detail="Thread not found")
 
-    messages = await get_thread_messages(db, threadId)
-    paginated = messages[offset : offset + limit]
+    messages, total = await get_paginated_thread_messages(db, threadId, limit, offset)
     return {
         "threadId": threadId,
-        "messages": paginated,
-        "total": len(messages),
+        "messages": messages,
+        "total": total,
         "limit": limit,
         "offset": offset,
     }
@@ -272,12 +403,30 @@ async def send_message(
         )
         logger.info("User message added to thread %s", threadId)
 
+        # Determine history limit based on authentication status
+        is_authenticated = bool(body.userId and body.authToken)
+        history_limit = (
+            settings.AUTHENTICATED_HISTORY_MESSAGES if is_authenticated
+            else settings.MAX_HISTORY_MESSAGES
+        )
+
         # Fetch recent messages for history (+ 1 to account for the message just added)
         messages = await get_recent_thread_messages(
-            db, threadId, limit=settings.MAX_HISTORY_MESSAGES + 1
+            db, threadId, limit=history_limit + 1
         )
         # Exclude the last message (just added) to form history
         history = messages[:-1] if len(messages) > 1 else None
+
+        # Classify intent + pre-fetch data under lock (prevents race conditions)
+        intent, prefetched_user_data = await classify_and_prepare(
+            ollama=ollama,
+            message=body.message,
+            user_id=body.userId,
+            auth_token=body.authToken,
+            db=db,
+            http_client=app.state.http_client,
+            thread_id=threadId,
+        )
 
         try:
             result = await answer(
@@ -286,6 +435,8 @@ async def send_message(
                 ollama=ollama,
                 history=history,
                 language=body.language,
+                intent=intent,
+                prefetched_user_data=prefetched_user_data,
             )
         except Exception:
             logger.error(
@@ -330,7 +481,8 @@ async def send_message_stream(
 ):
     """Streaming variant — returns Server-Sent Events."""
     _validate_thread_id(threadId)
-    # Validate thread and save user message under lock, then release before streaming
+    # Validate thread, save user message, classify intent, and pre-fetch data
+    # ALL under the thread lock to prevent race conditions on cache read/write.
     async with get_thread_lock(threadId):
         if not await thread_exists(db, threadId):
             raise HTTPException(status_code=404, detail="Thread not found")
@@ -341,24 +493,51 @@ async def send_message_stream(
         )
         logger.info("User message added to thread %s (stream)", threadId)
 
+        # Determine history limit based on authentication status
+        is_authenticated = bool(body.userId and body.authToken)
+        history_limit = (
+            settings.AUTHENTICATED_HISTORY_MESSAGES if is_authenticated
+            else settings.MAX_HISTORY_MESSAGES
+        )
+
         messages = await get_recent_thread_messages(
-            db, threadId, limit=settings.MAX_HISTORY_MESSAGES + 1
+            db, threadId, limit=history_limit + 1
         )
         history = messages[:-1] if len(messages) > 1 else None
 
+        # Classify intent + pre-fetch data under lock (prevents race conditions)
+        intent, prefetched_user_data = await classify_and_prepare(
+            ollama=ollama,
+            message=body.message,
+            user_id=body.userId,
+            auth_token=body.authToken,
+            db=db,
+            http_client=app.state.http_client,
+            thread_id=threadId,
+        )
+
+    # Lock released — streaming happens outside the lock using pre-computed data
     async def event_generator():
         full_answer_parts: list[str] = []
         try:
-            async for chunk in answer_stream(
-                question=body.message,
-                qdrant=qdrant,
-                ollama=ollama,
-                history=history,
-                language=body.language,
-            ):
-                full_answer_parts.append(chunk)
-                event_data = json.dumps({"event": "chunk", "content": chunk})
-                yield f"data: {event_data}\n\n"
+            async with asyncio.timeout(settings.OLLAMA_STREAM_TIMEOUT):
+                async for chunk in answer_stream(
+                    question=body.message,
+                    qdrant=qdrant,
+                    ollama=ollama,
+                    history=history,
+                    language=body.language,
+                    intent=intent,
+                    prefetched_user_data=prefetched_user_data,
+                ):
+                    full_answer_parts.append(chunk)
+                    event_data = json.dumps({"event": "chunk", "content": chunk})
+                    yield f"data: {event_data}\n\n"
+        except TimeoutError:
+            logger.error("Streaming timed out for thread %s", threadId)
+            error_data = json.dumps({"event": "error", "code": 504, "detail": "Response timed out"})
+            yield f"data: {error_data}\n\n"
+            return
         except Exception:
             logger.error(
                 "Streaming RAG pipeline failed for thread %s",

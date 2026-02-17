@@ -8,6 +8,8 @@ from app.config import settings
 
 logger = logging.getLogger(__name__)
 
+_MAX_RESPONSE_SIZE = settings.MAX_RESPONSE_SIZE
+
 
 class OllamaClient:
     def __init__(self, client: Optional[httpx.AsyncClient] = None) -> None:
@@ -62,6 +64,9 @@ class OllamaClient:
                 },
             )
             response.raise_for_status()
+            if len(response.text) > _MAX_RESPONSE_SIZE:
+                logger.error("Ollama response too large: %d bytes", len(response.text))
+                raise ValueError(f"Ollama response exceeds size limit ({len(response.text)} bytes)")
             data = response.json()
             return data["message"]["content"]
         except httpx.HTTPError as e:
@@ -119,6 +124,56 @@ class OllamaClient:
             logger.error("Ollama chat_stream request failed: %s", e)
             raise
 
+    async def classify(
+        self,
+        system_prompt: str,
+        user_message: str,
+    ) -> str:
+        """Constrained classification call — deterministic, short output.
+
+        Uses temperature=0 and num_predict=10 to force a single-token
+        classification response from the LLM.
+        """
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_message},
+        ]
+        logger.debug(
+            "classify() model=%s user_msg_len=%d",
+            self.llm_model, len(user_message),
+        )
+        try:
+            response = await self.client.post(
+                f"{self.base_url}/api/chat",
+                json={
+                    "model": self.llm_model,
+                    "messages": messages,
+                    "stream": False,
+                    "options": {
+                        "temperature": 0,
+                        "top_k": 1,
+                        "top_p": 0.1,
+                        "num_predict": 10,
+                        "repeat_penalty": 1.0,
+                    },
+                },
+            )
+            response.raise_for_status()
+            if len(response.text) > _MAX_RESPONSE_SIZE:
+                logger.error("Ollama classify response too large: %d bytes", len(response.text))
+                raise ValueError("Ollama response exceeds size limit")
+            data = response.json()
+            return data["message"]["content"].strip()
+        except httpx.HTTPError as e:
+            logger.error("Ollama classify request failed: %s", e)
+            raise
+        except (KeyError, TypeError) as e:
+            logger.error(
+                "Unexpected Ollama classify response structure: %s — body: %s",
+                e, response.text[:500],
+            )
+            raise
+
     async def generate(self, prompt: str) -> str:
         """Legacy non-streaming generate (kept for backward compatibility)."""
         logger.debug(
@@ -135,6 +190,9 @@ class OllamaClient:
                 },
             )
             response.raise_for_status()
+            if len(response.text) > _MAX_RESPONSE_SIZE:
+                logger.error("Ollama generate response too large: %d bytes", len(response.text))
+                raise ValueError("Ollama response exceeds size limit")
             return response.json()["response"]
         except httpx.HTTPError as e:
             logger.error("Ollama generate request failed: %s", e)

@@ -1,3 +1,5 @@
+import re
+
 from pydantic import BaseModel, Field, field_validator
 
 # Valid ISO 639-1 language codes accepted by the system
@@ -15,6 +17,13 @@ class MessageRequest(BaseModel):
     def message_must_not_be_blank(cls, v: str) -> str:
         if not v.strip():
             raise ValueError("Message must not be blank or whitespace-only")
+        return v
+
+    @field_validator("userId")
+    @classmethod
+    def user_id_must_be_safe(cls, v: str) -> str:
+        if v and not re.match(r'^[a-zA-Z0-9_.\-]{1,100}$', v):
+            raise ValueError("userId contains invalid characters")
         return v
 
     @field_validator("language")

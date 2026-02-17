@@ -66,6 +66,12 @@ async def ingest() -> None:
 
         # Filter out failed embeddings (None values)
         points = [r for r in results if r is not None]
+        failed_count = len(results) - len(points)
+        if failed_count > 0:
+            logger.warning(
+                "%d of %d chunks failed to embed and were skipped",
+                failed_count, len(results),
+            )
 
         if not points:
             logger.warning("No chunks were embedded successfully; nothing to ingest")

@@ -6,8 +6,8 @@ from urllib.parse import urlparse
 # ------------------------------------------------------------------
 # URL taken from your .env file's BASE_URL_PRODUCTION
 # backend_base_url = "https://apikbocwwb.karnataka.gov.in/api"
-backend_base_url = "https://apikbocwwb.karnataka.gov.in/preprod/api"
-# backend_base_url = "https://staging.ka.karmikakendra.com/api/"
+# backend_base_url = "https://apikbocwwb.karnataka.gov.in/preprod/api"
+backend_base_url = "https://staging.ka.karmikakendra.com/api/"
 # Derive base origin (e.g. https://apikbocwwb.karnataka.gov.in)
 parsed_url = urlparse(backend_base_url)
 BASE_ORIGIN = f"{parsed_url.scheme}://{parsed_url.netloc}"
