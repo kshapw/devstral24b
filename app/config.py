@@ -13,7 +13,7 @@ class Settings:
         "OLLAMA_URL",
         "http://ollama:11434" if ENVIRONMENT == "docker" else "http://localhost:11434",
     )
-    LLM_MODEL: str = os.getenv("LLM_MODEL", "devstral:latest")
+    LLM_MODEL: str = os.getenv("LLM_MODEL", "devstral:24b")
     EMBED_MODEL: str = os.getenv("EMBED_MODEL", "nomic-embed-text")
 
     # -------- Qdrant --------
