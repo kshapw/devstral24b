@@ -197,6 +197,15 @@ async def lifespan(app: FastAPI):
         logger.critical("Failed to create Ollama HTTP client", exc_info=True)
         raise
 
+    # Warmup the model (loads it into GPU memory)
+    try:
+        logger.info("Warming up Ollama model...")
+        # Simple generation to trigger model load
+        await app.state.ollama.generate("Hello")
+        logger.info("Ollama model warmup successful")
+    except Exception:
+        logger.warning("Ollama model warmup failed (non-fatal)", exc_info=True)
+
     try:
         app.state.db = await get_db()
         await init_db(app.state.db)

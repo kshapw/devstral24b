@@ -15,7 +15,7 @@ services:
       ollama:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:2024/')"]
+      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:2024/')" ]
       interval: 10s
       timeout: 5s
       retries: 3
@@ -29,7 +29,7 @@ services:
     volumes:
       - qdrant_storage:/qdrant/storage
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:6333/ || exit 1"]
+      test: [ "CMD-SHELL", "curl -f http://localhost:6333/ || exit 1" ]
       interval: 5s
       timeout: 3s
       retries: 5
@@ -41,8 +41,10 @@ services:
       - "127.0.0.1:11434:11434"
     volumes:
       - ollama_models:/root/.ollama
+    environment:
+      - OLLAMA_KEEP_ALIVE=-1
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:11434/ || exit 1"]
+      test: [ "CMD-SHELL", "curl -f http://localhost:11434/ || exit 1" ]
       interval: 5s
       timeout: 3s
       retries: 10
@@ -54,7 +56,7 @@ services:
           devices:
             - driver: nvidia
               count: all
-              capabilities: [gpu]
+              capabilities: [ gpu ]
 
 volumes:
   qdrant_storage:
