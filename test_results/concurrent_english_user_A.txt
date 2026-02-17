@@ -1,0 +1,79 @@
+
+================================================================================
+  CONCURRENT TEST — ENGLISH — USER A
+================================================================================
+
+Credentials : {'userId': 'user_A_101', 'authToken': 'token_A'}
+
+------------------------------------------------------------
+[CREATE THREAD]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads
+  Status : 201
+  Response:
+    {
+      "threadId": "c8b3c039-5b29-4f7e-ba70-937b4dcb15fb"
+    }
+  Turnaround Time: 4.50 ms
+
+Thread ID : c8b3c039-5b29-4f7e-ba70-937b4dcb15fb
+
+------------------------------------------------------------
+[QUERY 1: What welfare schemes are available for construction workers?]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/c8b3c039-5b29-4f7e-ba70-937b4dcb15fb/messages
+  Payload:
+    {
+      "message": "What welfare schemes are available for construction workers?",
+      "userId": "user_A_101",
+      "authToken": "token_A",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "c8b3c039-5b29-4f7e-ba70-937b4dcb15fb",
+      "messageId": "912530b5-e23d-4d64-8a5d-31a005b87863",
+      "answer": "Namaskara! Here's a list of welfare schemes available to registered construction workers under the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB):\n\n1. **Pension Scheme**\n   - Monthly pension up to ₹3,000\n   - For workers aged 60 or above who have been registered for at least 3 years\n\n2. **Medical Assistance**\n   - Financial aid for medical expenses\n   - Requires a 90 days work certificate\n\n3. **Accident Relief**\n   - Compensation in case of accidents\n   - Requires a 90 days work certificate\n\n4. **Maternity Benefit**\n   - Cash assistance to pregnant workers\n   - Requires a 90 days work certificate\n\n5. **Education Assistance**\n   - Financial aid for children's education\n   - For dependent children of registered workers\n\n6. **Funeral Assistance**\n   - Financial help in case of the worker's death\n   - Requires a 90 days work certificate\n\n7. **Housing Scheme**\n   - Financial assistance for house construction or purchase\n   - Requires a 90 days work certificate"
+    }
+  Turnaround Time: 6408.18 ms
+
+------------------------------------------------------------
+[QUERY 2: How do I register as a construction worker?]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/c8b3c039-5b29-4f7e-ba70-937b4dcb15fb/messages
+  Payload:
+    {
+      "message": "How do I register as a construction worker?",
+      "userId": "user_A_101",
+      "authToken": "token_A",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "c8b3c039-5b29-4f7e-ba70-937b4dcb15fb",
+      "messageId": "fec287a1-4add-4dc9-9bde-ac6098646241",
+      "answer": "Namaskara! Here’s how you can register as a construction worker with the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB):\n\n1. **Online Registration:**\n   - Visit the KBOCWWB web portal or use the Seva Sindhu app.\n   - Fill out the registration form with your personal details and upload required documents.\n   - Submit the application and wait for confirmation.\n\n2. **Offline Registration:**\n   - Visit your nearest Karmika Seva Kendra (KSK) center.\n   - Collect a registration form or get help from the staff to fill it out.\n   - Submit the completed form along with necessary documents.\n   - You will receive an acknowledgment and your ID card will be issued once processed.\n\n3. **Mobile KSK Registration:**\n   - If you are at a construction site or in a rural area, look for Mobile Karmika Seva Kendra (Sanchari Karmika Seva Kendra) units.\n   - These mobile units provide doorstep registration services and can help you register on the spot.\n\n**Documents Required:**\n- Proof of identity (Aadhaar card, voter ID, etc.)\n- Proof of address\n- Passport-size photographs\n- 90 days work certificate (if available)\n\n**Next Steps:**\n- Once registered, you will receive a unique registration number and an ID card.\n- Keep your documents updated to ensure smooth access to welfare schemes.\n\nYou can apply online through the KBOCWWB web portal or mobile app, or visit your nearest KSK center where staff will guide you through the process!"
+    }
+  Turnaround Time: 12659.59 ms
+
+------------------------------------------------------------
+[QUERY 3: What benefits does the maternity scheme provide?]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/c8b3c039-5b29-4f7e-ba70-937b4dcb15fb/messages
+  Payload:
+    {
+      "message": "What benefits does the maternity scheme provide?",
+      "userId": "user_A_101",
+      "authToken": "token_A",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "c8b3c039-5b29-4f7e-ba70-937b4dcb15fb",
+      "messageId": "656bd693-ef02-456c-9c71-566d7e57731c",
+      "answer": "Namaskara! The Maternity Benefit Scheme provides financial assistance to registered woman construction workers during pregnancy. Here are the details:\n\n**Benefits:**\n- **Cash Assistance:** ₹6,000 total (₹500 per month for 12 months)\n\n**Eligibility:**\n- Registered woman worker\n- Applicable for first two children only\n\n**Required Documents:**\n- Birth certificate of the child\n- Child's photo\n- Discharge summary from the hospital\n- Self-declaration form\n- 90 days work certificate\n\n**Next Steps:**\nTo apply, you can:\n1. Visit your nearest Karmika Seva Kendra (KSK) center.\n2. Submit the required documents along with your application.\n3. The staff will guide you through the process and help you complete the necessary forms.\n\nYou can also apply online through the KBOCWWB web portal or mobile app for convenience."
+    }
+  Turnaround Time: 5475.45 ms

@@ -1,0 +1,41 @@
+
+================================================================================
+  CONCURRENT TEST — ENGLISH — SENDING ORDER
+================================================================================
+
+Timestamp : 2026-02-17 04:10:02.647
+Base URL  : http://localhost:8000
+Users     : A (general), B (ecard/status), C (mixed)
+
+------------------------------------------------------------
+ROUND 1
+
+  Queries sent:
+    [04:10:02.759]  User A — Query 1 | User B — Query 1 | User C — Query 1
+
+  Response order (fastest first):
+    1. User C — status=201  TAT=13 ms
+    2. User B — status=201  TAT=13 ms
+    3. User A — status=201  TAT=6408 ms
+
+------------------------------------------------------------
+ROUND 2
+
+  Queries sent:
+    [04:10:09.168]  User A — Query 2 | User B — Query 2 | User C — Query 2
+
+  Response order (fastest first):
+    1. User C — status=201  TAT=1389 ms
+    2. User B — status=201  TAT=5038 ms
+    3. User A — status=201  TAT=12660 ms
+
+------------------------------------------------------------
+ROUND 3
+
+  Queries sent:
+    [04:10:21.828]  User A — Query 3 | User B — Query 3 | User C — Query 3
+
+  Response order (fastest first):
+    1. User A — status=201  TAT=5475 ms
+    2. User C — status=201  TAT=11217 ms
+    3. User B — status=201  TAT=16337 ms

@@ -27,7 +27,6 @@ dist/
 # Logs & runtime files
 # ----------------------
 *.log
-*.txt
 *.sqlite3
 
 # (Keep performance report if you want versioned)

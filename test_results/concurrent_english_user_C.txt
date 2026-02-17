@@ -1,0 +1,79 @@
+
+================================================================================
+  CONCURRENT TEST — ENGLISH — USER C
+================================================================================
+
+Credentials : {'userId': 'user_C_303', 'authToken': 'token_C'}
+
+------------------------------------------------------------
+[CREATE THREAD]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads
+  Status : 201
+  Response:
+    {
+      "threadId": "a8b5de66-2f04-4a82-aa7b-036f325d500d"
+    }
+  Turnaround Time: 43.86 ms
+
+Thread ID : a8b5de66-2f04-4a82-aa7b-036f325d500d
+
+------------------------------------------------------------
+[QUERY 1: Download my ecard]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/a8b5de66-2f04-4a82-aa7b-036f325d500d/messages
+  Payload:
+    {
+      "message": "Download my ecard",
+      "userId": "user_C_303",
+      "authToken": "token_C",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "a8b5de66-2f04-4a82-aa7b-036f325d500d",
+      "messageId": "d356df54-c34c-4f14-8507-6f2a30bf7051",
+      "answer": "ECARD"
+    }
+  Turnaround Time: 12.69 ms
+
+------------------------------------------------------------
+[QUERY 2: Is my renewal approved?]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/a8b5de66-2f04-4a82-aa7b-036f325d500d/messages
+  Payload:
+    {
+      "message": "Is my renewal approved?",
+      "userId": "user_C_303",
+      "authToken": "token_C",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "a8b5de66-2f04-4a82-aa7b-036f325d500d",
+      "messageId": "dd59bac2-27be-41c0-beed-7a8fc5ce64fb",
+      "answer": "I'm sorry, but I don't have the necessary tools or information to check your renewal status. If you have any other questions or need assistance with something else, feel free to ask!"
+    }
+  Turnaround Time: 1389.31 ms
+
+------------------------------------------------------------
+[QUERY 3: What schemes am I eligible for?]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/a8b5de66-2f04-4a82-aa7b-036f325d500d/messages
+  Payload:
+    {
+      "message": "What schemes am I eligible for?",
+      "userId": "user_C_303",
+      "authToken": "token_C",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "a8b5de66-2f04-4a82-aa7b-036f325d500d",
+      "messageId": "bd20c638-ef79-4f33-82e8-c67c217f30df",
+      "answer": "Namaskara! Based on our records, it seems like you haven't applied for any schemes yet. As a registered construction worker under the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB), you may be eligible for various welfare schemes designed to support you and your family.\n\nHere are some of the popular schemes you might consider:\n\n- **Marriage Assistance**: Financial support of ₹60,000 per marriage (maximum two claims per family) for the marriage of your children.\n- **Accident Insurance**: Coverage in case of accidents at work.\n- **Pension Schemes**: Financial support for elderly workers.\n- **Education Assistance**: Support for the education of your children.\n- **Medical Assistance**: Financial help for medical treatments.\n\nTo find out which schemes you are eligible for and to apply, you can:\n\n1. Visit the KBOCWWB web portal or mobile app to check your eligibility and apply online.\n2. Go to your nearest Karmika Seva Kendra (KSK) center where staff will guide you through the process.\n3. Call the helpline for guidance on which schemes are best suited for you.\n\nThey'll be happy to help you with the application process and provide detailed information about each scheme!"
+    }
+  Turnaround Time: 11216.52 ms

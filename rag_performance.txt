@@ -1,0 +1,69 @@
+RAG Performance Test - 2026-02-15 19:04:31.965735
+Model: devstral:24b
+Ollama: http://localhost:11439
+============================================================
+
+Query 1
+Question: How much compensation is given for accident death?
+Answer: ₹8 lakh for workplace death and ₹5 lakh for non-workplace death.
+Turnaround Time: 10.46 seconds
+------------------------------------------------------------
+Query 2
+Question: What documents are required for accident assistance?
+Answer: To provide assistance with accident-related claims, Karmika Seva Kendra typically requires the following documents:
+
+1. Death certificate or disability certificate issued by a competent authority.
+2. Police First Information Report (FIR).
+3. 90 days work certificate (if applicable).
+4. Medical records and treatment history.
+
+Please note that specific document requirements may vary based on individual circumstances, so it's always best to contact Karmika Seva Kendra directly for the most accurate information.
+Turnaround Time: 21.1 seconds
+------------------------------------------------------------
+Query 3
+Question: Is FIR mandatory for accident claim?
+Answer: Yes, an FIR is mandatory for accident claims.
+Turnaround Time: 8.46 seconds
+------------------------------------------------------------
+Query 4
+Question: What is the pension amount after 60 years?
+Answer: The pension amount for workers aged 60 or above is a monthly pension.
+Turnaround Time: 3.83 seconds
+------------------------------------------------------------
+Query 5
+Question: How many times can I claim marriage assistance?
+Answer: You can claim marriage assistance a maximum of two times per family.
+Turnaround Time: 5.02 seconds
+------------------------------------------------------------
+Query 6
+Question: What is the benefit under Thayi Magu scheme?
+Answer: Under the Thayi Magu scheme, beneficiaries receive a monthly pension of ₹2000, subject to certain conditions and age requirements. Additionally, there's an annual Living Certificate required for continued eligibility.
+
+Key points:
+1. Monthly pension amount: ₹2000
+2. No overlap with other government pension schemes (you can't receive another government pension along with this one)
+Turnaround Time: 15.49 seconds
+------------------------------------------------------------
+Query 7
+Question: How long do I have to apply after an accident?
+Answer: You must submit your application within one year of the accident.
+Turnaround Time: 6.96 seconds
+------------------------------------------------------------
+Query 8
+Question: Can dependents apply for major illness treatment?
+Answer: Yes, dependents can apply for major illness treatment.
+Turnaround Time: 9.71 seconds
+------------------------------------------------------------
+Query 9
+Question: What is the maximum amount for medical assistance?
+Answer: The maximum amount for medical assistance is up to ₹2,00,000.
+Turnaround Time: 6.28 seconds
+------------------------------------------------------------
+Query 10
+Question: Where can I apply for Karmika schemes?
+Answer: You can apply for Karmika schemes at KSK centers or Mobile KSK units.
+Turnaround Time: 12.39 seconds
+------------------------------------------------------------
+
+SUMMARY
+Average Response Time: 9.97 seconds

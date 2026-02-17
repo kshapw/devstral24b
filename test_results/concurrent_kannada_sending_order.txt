@@ -1,0 +1,41 @@
+
+================================================================================
+  CONCURRENT TEST — KANNADA — SENDING ORDER
+================================================================================
+
+Timestamp : 2026-02-17 04:10:38.168
+Base URL  : http://localhost:8000
+Users     : A (general), B (ecard/status), C (mixed)
+
+------------------------------------------------------------
+ROUND 1
+
+  Queries sent:
+    [04:10:38.283]  User A — Query 1 | User B — Query 1 | User C — Query 1
+
+  Response order (fastest first):
+    1. User C — status=201  TAT=11 ms
+    2. User B — status=201  TAT=11 ms
+    3. User A — status=201  TAT=6812 ms
+
+------------------------------------------------------------
+ROUND 2
+
+  Queries sent:
+    [04:10:45.096]  User A — Query 2 | User B — Query 2 | User C — Query 2
+
+  Response order (fastest first):
+    1. User B — status=201  TAT=3405 ms
+    2. User C — status=201  TAT=6397 ms
+    3. User A — status=201  TAT=17760 ms
+
+------------------------------------------------------------
+ROUND 3
+
+  Queries sent:
+    [04:11:02.856]  User A — Query 3 | User B — Query 3 | User C — Query 3
+
+  Response order (fastest first):
+    1. User C — status=201  TAT=9183 ms
+    2. User B — status=201  TAT=16404 ms
+    3. User A — status=201  TAT=24148 ms

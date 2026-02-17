@@ -1,0 +1,79 @@
+
+================================================================================
+  CONCURRENT TEST — ENGLISH — USER B
+================================================================================
+
+Credentials : {'userId': 'user_B_202', 'authToken': 'token_B'}
+
+------------------------------------------------------------
+[CREATE THREAD]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads
+  Status : 201
+  Response:
+    {
+      "threadId": "556c9735-c208-484b-9809-5b094158c367"
+    }
+  Turnaround Time: 42.77 ms
+
+Thread ID : 556c9735-c208-484b-9809-5b094158c367
+
+------------------------------------------------------------
+[QUERY 1: Show me my ecard]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/556c9735-c208-484b-9809-5b094158c367/messages
+  Payload:
+    {
+      "message": "Show me my ecard",
+      "userId": "user_B_202",
+      "authToken": "token_B",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "556c9735-c208-484b-9809-5b094158c367",
+      "messageId": "5642f51a-87f8-47a1-8225-17b5c1cebc5e",
+      "answer": "ECARD"
+    }
+  Turnaround Time: 13.07 ms
+
+------------------------------------------------------------
+[QUERY 2: What is my application status?]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/556c9735-c208-484b-9809-5b094158c367/messages
+  Payload:
+    {
+      "message": "What is my application status?",
+      "userId": "user_B_202",
+      "authToken": "token_B",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "556c9735-c208-484b-9809-5b094158c367",
+      "messageId": "dd2bd44e-9dc4-446e-8745-5b4357fbec90",
+      "answer": "Namaskara! I'm Shrama Sahayak, your helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). It looks like you're logged in as a construction worker.\n\nBased on the information available, it seems that you haven't applied for any schemes yet. Here are some benefits and schemes you might be eligible for:\n\n- **Maternity Benefit Scheme**\n- **Education Assistance Scheme**\n- **Skill Development Training Scheme**\n- **Financial Assistance for Accident/Death**\n\nYou can apply for these schemes online through the KBOCWWB web portal or mobile app, or visit your nearest Karmika Seva Kendra (KSK) where staff will guide you through the application process.\n\nWould you like to know more about any of these schemes or how to apply?"
+    }
+  Turnaround Time: 5038.26 ms
+
+------------------------------------------------------------
+[QUERY 3: What documents do I need for registration?]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/556c9735-c208-484b-9809-5b094158c367/messages
+  Payload:
+    {
+      "message": "What documents do I need for registration?",
+      "userId": "user_B_202",
+      "authToken": "token_B",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "556c9735-c208-484b-9809-5b094158c367",
+      "messageId": "ab2cced9-2e8d-4f88-9621-f2d561264d9a",
+      "answer": "Namaskara! I'm Shrama Sahayak, your helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). To register as a construction worker and get your ID card, you'll typically need the following documents:\n\n- **Aadhaar Card**\n- **Ration Card** or **Voter ID Card**\n- **Proof of Address** (if not in Aadhaar)\n- **Passport-sized Photographs**\n- **Work Certificate** from your employer (if available)\n\nYou can apply for registration online through the KBOCWWB web portal or mobile app, or visit your nearest Karmika Seva Kendra (KSK) where staff will guide you through the process.\n\nOnce registered, you'll be eligible to apply for various welfare schemes and benefits. If you have any questions about the registration process or need further assistance, feel free to ask!\n\n**Next Steps:**\n- Apply online through the KBOCWWB web portal or mobile app\n- Visit your nearest Karmika Seva Kendra (KSK) for in-person assistance"
+    }
+  Turnaround Time: 16337.45 ms

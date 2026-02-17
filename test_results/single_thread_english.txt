@@ -1,0 +1,551 @@
+
+================================================================================
+  SINGLE THREAD TEST — ENGLISH
+================================================================================
+
+Timestamp : 2026-02-17 04:03:30.127
+Base URL  : http://localhost:8000
+
+------------------------------------------------------------
+[CREATE THREAD]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743"
+    }
+  Turnaround Time: 44.04 ms
+
+Thread ID: 40d76263-9b9c-49ba-b4ed-a2a7c42ee743
+
+------------------------------------------------------------
+[TEST 1/15: GENERAL (unauth) — Available welfare schemes]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "What welfare schemes are available for construction workers?",
+      "userId": "",
+      "authToken": "",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "197d3dbe-e018-410e-8a81-67f16d94a090",
+      "answer": "Namaskara! I am Shrama Sahayak, your digital helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). We offer several welfare schemes to support registered construction workers and their families. Here are some of our key schemes:\n\n1. **Pension Scheme**\n   - **Who can apply:** Registered workers aged 60 or above who have been registered for at least 3 years.\n   - **Benefit:** Up to ₹3,000 per month.\n\n2. **Medical Assistance**\n   - **Who can apply:** Registered workers and their dependents.\n   - **Benefit:** Financial assistance for medical treatment, including hospitalization and specific illnesses.\n\n3. **Accident Relief**\n   - **Who can apply:** Registered workers who have met with an accident during work.\n   - **Benefit:** Financial assistance based on the severity of the injury.\n\n4. **Education Assistance**\n   - **Who can apply:** Children of registered workers for school/college education.\n   - **Benefit:** Financial support for tuition fees and other educational expenses.\n\n5. **Maternity Benefit**\n   - **Who can apply:** Pregnant women who are registered construction workers.\n   - **Benefit:** Financial assistance during pregnancy and after childbirth.\n\n6. **Funeral Assistance**\n   - **Who can apply:** Families of deceased registered workers.\n   - **Benefit:** Financial support for funeral expenses.\n\n7. **Housing Assistance**\n   - **Who can apply:** Registered workers who need financial help to build or repair their homes.\n   - **Benefit:** Financial assistance for construction or renovation of houses.\n\n8. **Skill Development Training**\n   - **Who can apply:** Registered workers looking to enhance their skills.\n   - **Benefit:** Free training programs in various trades and crafts.\n\n9. **Natural Disaster Relief**\n   - **Who can apply:** Registered workers affected by natural disasters like floods, earthquakes, etc.\n   - **Benefit:** Financial assistance for relief and rehabilitation.\n\n10. **Death Benefit**\n    - **Who can apply:** Families of registered workers who have died due to natural causes or accidents.\n    - **Benefit:** Financial support to the family members.\n\n**Next Steps:**\n- To apply for these schemes, you can:\n  - Apply online through the KBOCWWB web portal or mobile app\n  - Visit your nearest Karmika Seva Kendra (KSK) center where staff will guide you through the process!\n- Make sure you have all necessary documents ready, especially the **90 days work certificate** for most schemes."
+    }
+  Turnaround Time: 19179.86 ms
+
+------------------------------------------------------------
+[TEST 2/15: GENERAL (unauth) — Registration process]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "How do I register as a construction worker?",
+      "userId": "",
+      "authToken": "",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "43f9a5a3-45cd-47d2-9b31-162bde236bc0",
+      "answer": "Namaskara! I am Shrama Sahayak, your digital helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). Registering as a construction worker is an important step to access various welfare schemes and benefits. Here’s how you can register:\n\n### Steps to Register:\n\n1. **Online Registration:**\n   - Visit the KBOCWWB web portal or use the Seva Sindhu app.\n   - Fill out the registration form with your personal details, employment history, and other required information.\n   - Upload scanned copies of necessary documents (see list below).\n   - Submit the application and wait for confirmation.\n\n2. **Offline Registration:**\n   - Visit your nearest Karmika Seva Kendra (KSK) center or Mobile KSK unit.\n   - Collect the registration form from the center.\n   - Fill out the form with the help of the staff if needed.\n   - Submit the completed form along with the required documents.\n\n### Documents Needed:\n\n- **Proof of Identity:** Aadhaar card, voter ID, PAN card, or any other government-issued ID.\n- **Proof of Address:** Aadhaar card, voter ID, ration card, or any other document showing your current address.\n- **Employment Proof:** Work certificate from the employer or a letter stating you have worked at least 90 days in construction work.\n- **Passport Size Photographs:** Usually 2-3 recent photographs.\n\n### Eligibility:\n\n- You must be aged between 18 and 65 years.\n- You should have worked for at least 90 days in the construction sector within the last year.\n\n### Next Steps:\n\n- Once registered, you will receive a registration ID card which is essential for availing various welfare schemes.\n- Keep your documents updated and renew your registration annually to continue receiving benefits.\n\nFor any further assistance or if you have specific questions about the registration process, feel free to visit your nearest Karmika Seva Kendra (KSK) center or call our helpline. We are here to help you!"
+    }
+  Turnaround Time: 10059.82 ms
+
+------------------------------------------------------------
+[TEST 3/15: GENERAL (unauth) — Required documents]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "What documents do I need for registration?",
+      "userId": "",
+      "authToken": "",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "611c7904-c2cd-4d42-a0c7-cfdf0836e0f6",
+      "answer": "Namaskara! I am Shrama Sahayak, your digital helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). To register as a construction worker and access various welfare schemes, you'll need to provide certain documents. Here's a list of the required documents:\n\n### Documents Needed for Registration:\n\n- **Proof of Identity:**\n  - Aadhaar card\n  - Voter ID card\n  - PAN card\n  - Driving license\n  - Any other government-issued photo ID\n\n- **Proof of Address:**\n  - Aadhaar card\n  - Voter ID card\n  - Ration card\n  - Electricity bill\n  - Telephone bill\n  - Bank passbook\n  - Any other document showing your current address\n\n- **Employment Proof:**\n  - Work certificate from the employer stating you have worked at least 90 days in construction work within the last year.\n  - Letter or document from the contractor or site supervisor confirming your employment.\n\n- **Passport Size Photographs:**\n  - Usually, 2-3 recent passport size photographs are required.\n\n### Next Steps:\n\n1. **Gather Your Documents:** Make sure you have all the necessary documents ready before starting the registration process.\n2. **Choose Your Registration Method:**\n   - **Online:** Visit the KBOCWWB web portal or use the Seva Sindhu app to fill out the registration form and upload scanned copies of your documents.\n   - **Offline:** Visit your nearest Karmika Seva Kendra (KSK) center or Mobile KSK unit. Staff will assist you in filling out the form and submitting your documents.\n\n### Additional Tips:\n\n- Ensure all documents are clear and legible.\n- Keep a copy of all submitted documents for your records.\n- If you need help gathering or verifying documents, visit your nearest Karmika Seva Kendra (KSK) center. They can guide you through the process!\n\nFor any further assistance or if you have specific questions about the registration process, feel free to visit your nearest Karmika Seva Kendra (KSK) center or call our helpline. We are here to help you!"
+    }
+  Turnaround Time: 10671.78 ms
+
+------------------------------------------------------------
+[TEST 4/15: GENERAL (unauth) — Eligibility criteria]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "Who is eligible to register under KBOCWWB?",
+      "userId": "",
+      "authToken": "",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "ec534fdd-1b85-421c-b029-a7f2f4e72cde",
+      "answer": "Namaskara! I am Shrama Sahayak, your digital helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). To ensure that we provide support to those who need it most, there are specific eligibility criteria for registering as a construction worker under our board. Here’s who can register:\n\n### Eligibility Criteria:\n\n- **Age:**\n  - You must be between 18 and 65 years old.\n\n- **Employment:**\n  - You should have worked in the construction sector for at least 90 days within the last year.\n  - This includes work on building sites, roads, bridges, and other construction projects.\n\n- **Residence:**\n  - You must be a resident of Karnataka.\n\n### Next Steps:\n\n1. **Gather Your Documents:** Make sure you have all the necessary documents ready for registration (proof of identity, proof of address, employment proof, passport size photographs).\n2. **Choose Your Registration Method:**\n   - **Online:** Visit the KBOCWWB web portal or use the Seva Sindhu app to fill out the registration form and upload scanned copies of your documents.\n   - **Offline:** Visit your nearest Karmika Seva Kendra (KSK) center or Mobile KSK unit. Staff will assist you in filling out the form and submitting your documents.\n\n### Additional Tips:\n\n- If you are unsure about any part of the registration process, visit your nearest Karmika Seva Kendra (KSK) center. They can guide you through the process!\n- Keep a copy of all submitted documents for your records.\n- Ensure that your employment proof clearly states that you have worked at least 90 days in construction work.\n\nFor any further assistance or if you have specific questions about the registration process, feel free to visit your nearest Karmika Seva Kendra (KSK) center or call our helpline. We are here to help you!"
+    }
+  Turnaround Time: 9687.84 ms
+
+------------------------------------------------------------
+[TEST 5/15: ECARD (unauth) — Should return LOGIN_REQUIRED]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "Show me my ecard",
+      "userId": "",
+      "authToken": "",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "2f748209-3cda-46b5-a426-65d28c6d1b16",
+      "answer": "<<LOGIN_MODAL_REQUIRED>>"
+    }
+  Turnaround Time: 47.89 ms
+
+------------------------------------------------------------
+[TEST 6/15: STATUS_CHECK (unauth) — Should return LOGIN_REQUIRED]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "What is my application status?",
+      "userId": "",
+      "authToken": "",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "13bb87b3-bf05-4603-9747-cdf288aead12",
+      "answer": "<<LOGIN_MODAL_REQUIRED>>"
+    }
+  Turnaround Time: 47.69 ms
+
+------------------------------------------------------------
+[TEST 7/15: OFF-TOPIC (unauth) — Should redirect to KSK topics]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "What is the weather today?",
+      "userId": "",
+      "authToken": "",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "0a15c95f-ff6e-4b9c-a384-03cb50b04ed3",
+      "answer": "That's an interesting question! However, I'm Shrama Sahayak — specially trained to help with construction worker welfare schemes and KSK services. Here are some things I can help you with:\n\n- How to apply for welfare schemes online or at a KSK center?\n- How to register as a construction worker under KBOCWWB?\n- What documents are needed for registration or scheme applications?\n- What benefits and financial assistance are available?\n- How to check your application or renewal status?\n\nFeel free to ask me any of these!"
+    }
+  Turnaround Time: 3079.90 ms
+
+------------------------------------------------------------
+[TEST 8/15: GREETING (unauth) — Warm greeting expected]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "Hello",
+      "userId": "",
+      "authToken": "",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "722f7b4d-fcc1-4ace-a1af-ed22fac842bd",
+      "answer": "Namaskara! I am Shrama Sahayak, your digital helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). How can I assist you today? Whether you need help with registration, information about welfare schemes, or guidance on how to apply for benefits, I'm here to support you. Just let me know what you need!"
+    }
+  Turnaround Time: 2163.68 ms
+
+------------------------------------------------------------
+[TEST 9/15: GENERAL (auth) — Eligible schemes]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "What schemes am I eligible for?",
+      "userId": "123",
+      "authToken": "abc",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "713b9347-0c41-49ad-a093-734768569c0c",
+      "answer": "Namaskara! Based on the information available, it appears that you are registered as a construction worker under the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). However, your specific scheme details are not listed in the data provided.\n\nTo find out which welfare schemes you are eligible for, I recommend taking the following steps:\n\n1. **Check Your Registration Details:**\n   - Visit your nearest Karmika Seva Kendra (KSK) center.\n   - Ask the staff to help you review your registration and see which schemes you qualify for based on your work history and other criteria.\n\n2. **Apply or Enquire Online:**\n   - You can visit the KBOCWWB web portal or use the mobile app to check your eligibility for various schemes.\n   - The Seva Sindhu platform also provides information about different welfare programs available for registered workers.\n\n3. **Contact the Helpline:**\n   - If you have any specific questions or need further assistance, you can call the helpline number provided by KBOCWWB. They will be able to guide you on which schemes you are eligible for and how to apply.\n\nSome common schemes that construction workers often qualify for include:\n\n- **Marriage Assistance:** Financial support for the marriage of your children.\n- **Medical Assistance:** Coverage for medical expenses.\n- **Accident Compensation:** Support in case of work-related accidents.\n- **Pension Schemes:** Retirement benefits for elderly workers.\n\nTo apply for these schemes, you typically need a 90 days work certificate and other relevant documents. The KSK staff can help you gather the necessary paperwork and guide you through the application process.\n\nIf you have any specific questions about a particular scheme or need further assistance, feel free to ask! I'm here to help you navigate the welfare programs available to you as a registered construction worker."
+    }
+  Turnaround Time: 9247.82 ms
+
+------------------------------------------------------------
+[TEST 10/15: GENERAL (auth) — How to apply online]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "How can I apply for a scheme online?",
+      "userId": "123",
+      "authToken": "abc",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "a57b1e06-155d-4dd0-8118-744d6b0e86d3",
+      "answer": "Namaskara! Applying for a welfare scheme online is a convenient way to access the benefits you're entitled to as a registered construction worker under the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). Here's how you can do it:\n\n### Steps to Apply Online\n\n1. **Visit the KBOCWWB Web Portal:**\n   - Open your web browser and go to the official KBOCWWB website.\n\n2. **Log In to Your Account:**\n   - Use your registered user ID and password to log in. If you don't have an account, you may need to create one using your registration details.\n\n3. **Navigate to the Schemes Section:**\n   - Once logged in, look for a section labeled \"Schemes\" or \"Welfare Programs.\" This is where you'll find information about various schemes available to registered workers.\n\n4. **Select the Scheme You Want to Apply For:**\n   - Browse through the list of schemes and click on the one that interests you (e.g., Marriage Assistance, Medical Assistance, Accident Compensation).\n\n5. **Fill Out the Application Form:**\n   - Carefully read the eligibility criteria and required documents for the scheme.\n   - Fill out the online application form with accurate information.\n\n6. **Upload Required Documents:**\n   - Scan and upload the necessary documents as specified in the application form. Common documents include:\n     - Marriage certificate (for Marriage Assistance)\n     - Medical reports (for Medical Assistance)\n     - Accident report and FIR (for Accident Compensation)\n     - 90 days work certificate\n\n7. **Submit Your Application:**\n   - Review all the information you've entered to ensure it's correct.\n   - Submit your application online.\n\n8. **Track Your Application Status:**\n   - You can check the status of your application through the portal or by visiting a Karmika Seva Kendra (KSK) center.\n\n### Alternative: Use the Seva Sindhu Platform\n\n- You can also apply for schemes using the Seva Sindhu platform, which provides a user-friendly interface for accessing various welfare programs.\n\n### Need Help?\n\nIf you encounter any difficulties during the online application process, don't hesitate to seek assistance:\n\n- **Visit Your Nearest KSK Center:** The staff at Karmika Seva Kendras are trained to help you with the application process.\n- **Contact the Helpline:** You can call the KBOCWWB helpline for guidance and support.\n\nBy following these steps, you can easily apply for welfare schemes online and access the benefits you deserve as a registered construction worker. If you have any specific questions or need further assistance, feel free to ask! I'm here to help you navigate the process smoothly."
+    }
+  Turnaround Time: 13183.82 ms
+
+------------------------------------------------------------
+[TEST 11/15: ECARD (auth) — Should return ECARD constant]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "Download my ecard",
+      "userId": "123",
+      "authToken": "abc",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "5a01b5f4-638c-499c-8c53-9f7065a8e6f0",
+      "answer": "ECARD"
+    }
+  Turnaround Time: 47.80 ms
+
+------------------------------------------------------------
+[TEST 12/15: ECARD (auth) — Print card variant]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "Print my labour card",
+      "userId": "123",
+      "authToken": "abc",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "5b53c70f-e54f-4eef-a0c6-800dd043d2ec",
+      "answer": "ECARD"
+    }
+  Turnaround Time: 47.83 ms
+
+------------------------------------------------------------
+[TEST 13/15: STATUS_CHECK (auth) — Application status]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "Check my application status",
+      "userId": "123",
+      "authToken": "abc",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "a34129fc-a541-4e2d-925c-1f91b710d828",
+      "answer": "Namaskara! To check your application status for welfare schemes under the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB), you can follow these steps:\n\n### Steps to Check Application Status\n\n1. **Visit the KBOCWWB Web Portal:**\n   - Open your web browser and go to the official KBOCWWB website.\n\n2. **Log In to Your Account:**\n   - Use your registered user ID and password to log in. If you don't have an account, you may need to create one using your registration details.\n\n3. **Navigate to the Application Status Section:**\n   - Once logged in, look for a section labeled \"Application Status\" or similar. This is where you can track the progress of your applications.\n\n4. **Enter Your Application Details:**\n   - You may need to enter your application reference number or other identifying information to view the status.\n\n5. **View Your Application Status:**\n   - The portal will display the current status of your application, such as \"Pending,\" \"Approved,\" or \"Rejected.\"\n\n### Alternative: Use the Seva Sindhu Platform\n\n- You can also check your application status using the Seva Sindhu platform, which provides a user-friendly interface for tracking welfare program applications.\n\n### Need Help?\n\nIf you encounter any difficulties while checking your application status, don't hesitate to seek assistance:\n\n- **Visit Your Nearest KSK Center:** The staff at Karmika Seva Kendras are trained to help you with the application process and can provide updates on your application status.\n- **Contact the Helpline:** You can call the KBOCWWB helpline for guidance and support.\n\nBy following these steps, you can easily check the status of your welfare scheme applications online. If you have any specific questions or need further assistance, feel free to ask! I'm here to help you navigate the process smoothly."
+    }
+  Turnaround Time: 8891.93 ms
+
+------------------------------------------------------------
+[TEST 14/15: STATUS_CHECK (auth) — Renewal status]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "Is my renewal approved?",
+      "userId": "123",
+      "authToken": "abc",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "a42e2eb9-9690-4361-8cbd-a225e6265171",
+      "answer": "Namaskara! It looks like there is no information available regarding your registration details or renewal date in our system.\n\nTo check the status of your renewal application for welfare schemes under the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB), you can follow these steps:\n\n### Steps to Check Renewal Status\n\n1. **Visit the KBOCWWB Web Portal:**\n   - Open your web browser and go to the official KBOCWWB website.\n\n2. **Log In to Your Account:**\n   - Use your registered user ID and password to log in. If you don't have an account, you may need to create one using your registration details.\n\n3. **Navigate to the Renewal Status Section:**\n   - Once logged in, look for a section labeled \"Renewal Status\" or similar. This is where you can track the progress of your renewal application.\n\n4. **Enter Your Renewal Details:**\n   - You may need to enter your renewal reference number or other identifying information to view the status.\n\n5. **View Your Renewal Status:**\n   - The portal will display the current status of your renewal application, such as \"Pending,\" \"Approved,\" or \"Rejected.\"\n\n### Alternative: Use the Seva Sindhu Platform\n\n- You can also check your renewal status using the Seva Sindhu platform, which provides a user-friendly interface for tracking welfare program applications.\n\n### Need Help?\n\nIf you encounter any difficulties while checking your renewal status, don't hesitate to seek assistance:\n\n- **Visit Your Nearest KSK Center:** The staff at Karmika Seva Kendras are trained to help you with the renewal process and can provide updates on your renewal status.\n- **Contact the Helpline:** You can call the KBOCWWB helpline for guidance and support.\n\nBy following these steps, you can easily check the status of your renewal application online. If you have any specific questions or need further assistance, feel free to ask! I'm here to help you navigate the process smoothly."
+    }
+  Turnaround Time: 9303.81 ms
+
+------------------------------------------------------------
+[TEST 15/15: OFF-TOPIC (auth) — Should redirect]
+  Method : POST
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages
+  Payload:
+    {
+      "message": "Tell me a joke",
+      "userId": "123",
+      "authToken": "abc",
+      "language": ""
+    }
+  Status : 201
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messageId": "6b39e209-f858-419b-a3bf-6c636339d20e",
+      "answer": "Namaskara! While I'm here to assist you with information related to welfare schemes and services provided by the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB), I can certainly share a light-hearted moment with you.\n\nHere's a joke for you:\n\nWhy don't construction workers ever play hide and seek?\n\nBecause good luck hiding when your hard hat is sticking out!\n\nNow, if you have any questions about welfare schemes, application processes, or need assistance with anything related to the KSK services, feel free to ask. I'm here to help!"
+    }
+  Turnaround Time: 3591.80 ms
+
+
+================================================================================
+  GET ALL STORED MESSAGES
+================================================================================
+
+------------------------------------------------------------
+[GET MESSAGES (limit=200, offset=0)]
+  Method : GET
+  URL    : http://localhost:8000/api/chat/threads/40d76263-9b9c-49ba-b4ed-a2a7c42ee743/messages?limit=200&offset=0
+  Status : 200
+  Response:
+    {
+      "threadId": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+      "messages": [
+        {
+          "id": "32532d5b-c86d-46c3-ba5f-14533374065c",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "What welfare schemes are available for construction workers?",
+          "created_at": "2026-02-17 04:03:30"
+        },
+        {
+          "id": "197d3dbe-e018-410e-8a81-67f16d94a090",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "Namaskara! I am Shrama Sahayak, your digital helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). We offer several welfare schemes to support registered construction workers and their families. Here are some of our key schemes:\n\n1. **Pension Scheme**\n   - **Who can apply:** Registered workers aged 60 or above who have been registered for at least 3 years.\n   - **Benefit:** Up to ₹3,000 per month.\n\n2. **Medical Assistance**\n   - **Who can apply:** Registered workers and their dependents.\n   - **Benefit:** Financial assistance for medical treatment, including hospitalization and specific illnesses.\n\n3. **Accident Relief**\n   - **Who can apply:** Registered workers who have met with an accident during work.\n   - **Benefit:** Financial assistance based on the severity of the injury.\n\n4. **Education Assistance**\n   - **Who can apply:** Children of registered workers for school/college education.\n   - **Benefit:** Financial support for tuition fees and other educational expenses.\n\n5. **Maternity Benefit**\n   - **Who can apply:** Pregnant women who are registered construction workers.\n   - **Benefit:** Financial assistance during pregnancy and after childbirth.\n\n6. **Funeral Assistance**\n   - **Who can apply:** Families of deceased registered workers.\n   - **Benefit:** Financial support for funeral expenses.\n\n7. **Housing Assistance**\n   - **Who can apply:** Registered workers who need financial help to build or repair their homes.\n   - **Benefit:** Financial assistance for construction or renovation of houses.\n\n8. **Skill Development Training**\n   - **Who can apply:** Registered workers looking to enhance their skills.\n   - **Benefit:** Free training programs in various trades and crafts.\n\n9. **Natural Disaster Relief**\n   - **Who can apply:** Registered workers affected by natural disasters like floods, earthquakes, etc.\n   - **Benefit:** Financial assistance for relief and rehabilitation.\n\n10. **Death Benefit**\n    - **Who can apply:** Families of registered workers who have died due to natural causes or accidents.\n    - **Benefit:** Financial support to the family members.\n\n**Next Steps:**\n- To apply for these schemes, you can:\n  - Apply online through the KBOCWWB web portal or mobile app\n  - Visit your nearest Karmika Seva Kendra (KSK) center where staff will guide you through the process!\n- Make sure you have all necessary documents ready, especially the **90 days work certificate** for most schemes.",
+          "created_at": "2026-02-17 04:03:49"
+        },
+        {
+          "id": "8991e9b4-78c8-4d16-b852-0ad962582b27",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "How do I register as a construction worker?",
+          "created_at": "2026-02-17 04:03:49"
+        },
+        {
+          "id": "43f9a5a3-45cd-47d2-9b31-162bde236bc0",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "Namaskara! I am Shrama Sahayak, your digital helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). Registering as a construction worker is an important step to access various welfare schemes and benefits. Here’s how you can register:\n\n### Steps to Register:\n\n1. **Online Registration:**\n   - Visit the KBOCWWB web portal or use the Seva Sindhu app.\n   - Fill out the registration form with your personal details, employment history, and other required information.\n   - Upload scanned copies of necessary documents (see list below).\n   - Submit the application and wait for confirmation.\n\n2. **Offline Registration:**\n   - Visit your nearest Karmika Seva Kendra (KSK) center or Mobile KSK unit.\n   - Collect the registration form from the center.\n   - Fill out the form with the help of the staff if needed.\n   - Submit the completed form along with the required documents.\n\n### Documents Needed:\n\n- **Proof of Identity:** Aadhaar card, voter ID, PAN card, or any other government-issued ID.\n- **Proof of Address:** Aadhaar card, voter ID, ration card, or any other document showing your current address.\n- **Employment Proof:** Work certificate from the employer or a letter stating you have worked at least 90 days in construction work.\n- **Passport Size Photographs:** Usually 2-3 recent photographs.\n\n### Eligibility:\n\n- You must be aged between 18 and 65 years.\n- You should have worked for at least 90 days in the construction sector within the last year.\n\n### Next Steps:\n\n- Once registered, you will receive a registration ID card which is essential for availing various welfare schemes.\n- Keep your documents updated and renew your registration annually to continue receiving benefits.\n\nFor any further assistance or if you have specific questions about the registration process, feel free to visit your nearest Karmika Seva Kendra (KSK) center or call our helpline. We are here to help you!",
+          "created_at": "2026-02-17 04:03:59"
+        },
+        {
+          "id": "6fa7a4da-d686-41d5-be84-753faa31f952",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "What documents do I need for registration?",
+          "created_at": "2026-02-17 04:03:59"
+        },
+        {
+          "id": "611c7904-c2cd-4d42-a0c7-cfdf0836e0f6",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "Namaskara! I am Shrama Sahayak, your digital helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). To register as a construction worker and access various welfare schemes, you'll need to provide certain documents. Here's a list of the required documents:\n\n### Documents Needed for Registration:\n\n- **Proof of Identity:**\n  - Aadhaar card\n  - Voter ID card\n  - PAN card\n  - Driving license\n  - Any other government-issued photo ID\n\n- **Proof of Address:**\n  - Aadhaar card\n  - Voter ID card\n  - Ration card\n  - Electricity bill\n  - Telephone bill\n  - Bank passbook\n  - Any other document showing your current address\n\n- **Employment Proof:**\n  - Work certificate from the employer stating you have worked at least 90 days in construction work within the last year.\n  - Letter or document from the contractor or site supervisor confirming your employment.\n\n- **Passport Size Photographs:**\n  - Usually, 2-3 recent passport size photographs are required.\n\n### Next Steps:\n\n1. **Gather Your Documents:** Make sure you have all the necessary documents ready before starting the registration process.\n2. **Choose Your Registration Method:**\n   - **Online:** Visit the KBOCWWB web portal or use the Seva Sindhu app to fill out the registration form and upload scanned copies of your documents.\n   - **Offline:** Visit your nearest Karmika Seva Kendra (KSK) center or Mobile KSK unit. Staff will assist you in filling out the form and submitting your documents.\n\n### Additional Tips:\n\n- Ensure all documents are clear and legible.\n- Keep a copy of all submitted documents for your records.\n- If you need help gathering or verifying documents, visit your nearest Karmika Seva Kendra (KSK) center. They can guide you through the process!\n\nFor any further assistance or if you have specific questions about the registration process, feel free to visit your nearest Karmika Seva Kendra (KSK) center or call our helpline. We are here to help you!",
+          "created_at": "2026-02-17 04:04:10"
+        },
+        {
+          "id": "23d5bc01-9942-4ba0-a039-355c4ba0f8c4",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "Who is eligible to register under KBOCWWB?",
+          "created_at": "2026-02-17 04:04:10"
+        },
+        {
+          "id": "ec534fdd-1b85-421c-b029-a7f2f4e72cde",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "Namaskara! I am Shrama Sahayak, your digital helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). To ensure that we provide support to those who need it most, there are specific eligibility criteria for registering as a construction worker under our board. Here’s who can register:\n\n### Eligibility Criteria:\n\n- **Age:**\n  - You must be between 18 and 65 years old.\n\n- **Employment:**\n  - You should have worked in the construction sector for at least 90 days within the last year.\n  - This includes work on building sites, roads, bridges, and other construction projects.\n\n- **Residence:**\n  - You must be a resident of Karnataka.\n\n### Next Steps:\n\n1. **Gather Your Documents:** Make sure you have all the necessary documents ready for registration (proof of identity, proof of address, employment proof, passport size photographs).\n2. **Choose Your Registration Method:**\n   - **Online:** Visit the KBOCWWB web portal or use the Seva Sindhu app to fill out the registration form and upload scanned copies of your documents.\n   - **Offline:** Visit your nearest Karmika Seva Kendra (KSK) center or Mobile KSK unit. Staff will assist you in filling out the form and submitting your documents.\n\n### Additional Tips:\n\n- If you are unsure about any part of the registration process, visit your nearest Karmika Seva Kendra (KSK) center. They can guide you through the process!\n- Keep a copy of all submitted documents for your records.\n- Ensure that your employment proof clearly states that you have worked at least 90 days in construction work.\n\nFor any further assistance or if you have specific questions about the registration process, feel free to visit your nearest Karmika Seva Kendra (KSK) center or call our helpline. We are here to help you!",
+          "created_at": "2026-02-17 04:04:19"
+        },
+        {
+          "id": "7600d1d4-cf1d-4dad-89ba-d1e1ea74aef7",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "Show me my ecard",
+          "created_at": "2026-02-17 04:04:19"
+        },
+        {
+          "id": "2f748209-3cda-46b5-a426-65d28c6d1b16",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "<<LOGIN_MODAL_REQUIRED>>",
+          "created_at": "2026-02-17 04:04:19"
+        },
+        {
+          "id": "85c07023-0739-4f2e-896a-334acf1de59b",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "What is my application status?",
+          "created_at": "2026-02-17 04:04:19"
+        },
+        {
+          "id": "13bb87b3-bf05-4603-9747-cdf288aead12",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "<<LOGIN_MODAL_REQUIRED>>",
+          "created_at": "2026-02-17 04:04:19"
+        },
+        {
+          "id": "1fa1e8ca-051a-4472-a3c2-bedf59450630",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "What is the weather today?",
+          "created_at": "2026-02-17 04:04:19"
+        },
+        {
+          "id": "0a15c95f-ff6e-4b9c-a384-03cb50b04ed3",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "That's an interesting question! However, I'm Shrama Sahayak — specially trained to help with construction worker welfare schemes and KSK services. Here are some things I can help you with:\n\n- How to apply for welfare schemes online or at a KSK center?\n- How to register as a construction worker under KBOCWWB?\n- What documents are needed for registration or scheme applications?\n- What benefits and financial assistance are available?\n- How to check your application or renewal status?\n\nFeel free to ask me any of these!",
+          "created_at": "2026-02-17 04:04:22"
+        },
+        {
+          "id": "dd0d640b-2fcd-4b61-b466-2d6561eff890",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "Hello",
+          "created_at": "2026-02-17 04:04:22"
+        },
+        {
+          "id": "722f7b4d-fcc1-4ace-a1af-ed22fac842bd",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "Namaskara! I am Shrama Sahayak, your digital helper from the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). How can I assist you today? Whether you need help with registration, information about welfare schemes, or guidance on how to apply for benefits, I'm here to support you. Just let me know what you need!",
+          "created_at": "2026-02-17 04:04:25"
+        },
+        {
+          "id": "5a80612d-f7a2-407f-8838-7511bc92dc34",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "What schemes am I eligible for?",
+          "created_at": "2026-02-17 04:04:25"
+        },
+        {
+          "id": "713b9347-0c41-49ad-a093-734768569c0c",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "Namaskara! Based on the information available, it appears that you are registered as a construction worker under the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). However, your specific scheme details are not listed in the data provided.\n\nTo find out which welfare schemes you are eligible for, I recommend taking the following steps:\n\n1. **Check Your Registration Details:**\n   - Visit your nearest Karmika Seva Kendra (KSK) center.\n   - Ask the staff to help you review your registration and see which schemes you qualify for based on your work history and other criteria.\n\n2. **Apply or Enquire Online:**\n   - You can visit the KBOCWWB web portal or use the mobile app to check your eligibility for various schemes.\n   - The Seva Sindhu platform also provides information about different welfare programs available for registered workers.\n\n3. **Contact the Helpline:**\n   - If you have any specific questions or need further assistance, you can call the helpline number provided by KBOCWWB. They will be able to guide you on which schemes you are eligible for and how to apply.\n\nSome common schemes that construction workers often qualify for include:\n\n- **Marriage Assistance:** Financial support for the marriage of your children.\n- **Medical Assistance:** Coverage for medical expenses.\n- **Accident Compensation:** Support in case of work-related accidents.\n- **Pension Schemes:** Retirement benefits for elderly workers.\n\nTo apply for these schemes, you typically need a 90 days work certificate and other relevant documents. The KSK staff can help you gather the necessary paperwork and guide you through the application process.\n\nIf you have any specific questions about a particular scheme or need further assistance, feel free to ask! I'm here to help you navigate the welfare programs available to you as a registered construction worker.",
+          "created_at": "2026-02-17 04:04:34"
+        },
+        {
+          "id": "a4f78e27-02da-4319-9244-127743ded1f8",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "How can I apply for a scheme online?",
+          "created_at": "2026-02-17 04:04:34"
+        },
+        {
+          "id": "a57b1e06-155d-4dd0-8118-744d6b0e86d3",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "Namaskara! Applying for a welfare scheme online is a convenient way to access the benefits you're entitled to as a registered construction worker under the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). Here's how you can do it:\n\n### Steps to Apply Online\n\n1. **Visit the KBOCWWB Web Portal:**\n   - Open your web browser and go to the official KBOCWWB website.\n\n2. **Log In to Your Account:**\n   - Use your registered user ID and password to log in. If you don't have an account, you may need to create one using your registration details.\n\n3. **Navigate to the Schemes Section:**\n   - Once logged in, look for a section labeled \"Schemes\" or \"Welfare Programs.\" This is where you'll find information about various schemes available to registered workers.\n\n4. **Select the Scheme You Want to Apply For:**\n   - Browse through the list of schemes and click on the one that interests you (e.g., Marriage Assistance, Medical Assistance, Accident Compensation).\n\n5. **Fill Out the Application Form:**\n   - Carefully read the eligibility criteria and required documents for the scheme.\n   - Fill out the online application form with accurate information.\n\n6. **Upload Required Documents:**\n   - Scan and upload the necessary documents as specified in the application form. Common documents include:\n     - Marriage certificate (for Marriage Assistance)\n     - Medical reports (for Medical Assistance)\n     - Accident report and FIR (for Accident Compensation)\n     - 90 days work certificate\n\n7. **Submit Your Application:**\n   - Review all the information you've entered to ensure it's correct.\n   - Submit your application online.\n\n8. **Track Your Application Status:**\n   - You can check the status of your application through the portal or by visiting a Karmika Seva Kendra (KSK) center.\n\n### Alternative: Use the Seva Sindhu Platform\n\n- You can also apply for schemes using the Seva Sindhu platform, which provides a user-friendly interface for accessing various welfare programs.\n\n### Need Help?\n\nIf you encounter any difficulties during the online application process, don't hesitate to seek assistance:\n\n- **Visit Your Nearest KSK Center:** The staff at Karmika Seva Kendras are trained to help you with the application process.\n- **Contact the Helpline:** You can call the KBOCWWB helpline for guidance and support.\n\nBy following these steps, you can easily apply for welfare schemes online and access the benefits you deserve as a registered construction worker. If you have any specific questions or need further assistance, feel free to ask! I'm here to help you navigate the process smoothly.",
+          "created_at": "2026-02-17 04:04:47"
+        },
+        {
+          "id": "8d2cb6f1-6b96-432e-a4e9-a3a4f4158d94",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "Download my ecard",
+          "created_at": "2026-02-17 04:04:47"
+        },
+        {
+          "id": "5a01b5f4-638c-499c-8c53-9f7065a8e6f0",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "ECARD",
+          "created_at": "2026-02-17 04:04:47"
+        },
+        {
+          "id": "63fe8ff8-5789-4925-b5fd-160e0fc81592",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "Print my labour card",
+          "created_at": "2026-02-17 04:04:47"
+        },
+        {
+          "id": "5b53c70f-e54f-4eef-a0c6-800dd043d2ec",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "ECARD",
+          "created_at": "2026-02-17 04:04:47"
+        },
+        {
+          "id": "f55d93f7-5d1f-4f02-80d0-0d1c176e6dc1",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "Check my application status",
+          "created_at": "2026-02-17 04:04:47"
+        },
+        {
+          "id": "a34129fc-a541-4e2d-925c-1f91b710d828",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "Namaskara! To check your application status for welfare schemes under the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB), you can follow these steps:\n\n### Steps to Check Application Status\n\n1. **Visit the KBOCWWB Web Portal:**\n   - Open your web browser and go to the official KBOCWWB website.\n\n2. **Log In to Your Account:**\n   - Use your registered user ID and password to log in. If you don't have an account, you may need to create one using your registration details.\n\n3. **Navigate to the Application Status Section:**\n   - Once logged in, look for a section labeled \"Application Status\" or similar. This is where you can track the progress of your applications.\n\n4. **Enter Your Application Details:**\n   - You may need to enter your application reference number or other identifying information to view the status.\n\n5. **View Your Application Status:**\n   - The portal will display the current status of your application, such as \"Pending,\" \"Approved,\" or \"Rejected.\"\n\n### Alternative: Use the Seva Sindhu Platform\n\n- You can also check your application status using the Seva Sindhu platform, which provides a user-friendly interface for tracking welfare program applications.\n\n### Need Help?\n\nIf you encounter any difficulties while checking your application status, don't hesitate to seek assistance:\n\n- **Visit Your Nearest KSK Center:** The staff at Karmika Seva Kendras are trained to help you with the application process and can provide updates on your application status.\n- **Contact the Helpline:** You can call the KBOCWWB helpline for guidance and support.\n\nBy following these steps, you can easily check the status of your welfare scheme applications online. If you have any specific questions or need further assistance, feel free to ask! I'm here to help you navigate the process smoothly.",
+          "created_at": "2026-02-17 04:04:56"
+        },
+        {
+          "id": "5d0de257-3925-4af6-bae9-db01052f9a70",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "Is my renewal approved?",
+          "created_at": "2026-02-17 04:04:56"
+        },
+        {
+          "id": "a42e2eb9-9690-4361-8cbd-a225e6265171",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "Namaskara! It looks like there is no information available regarding your registration details or renewal date in our system.\n\nTo check the status of your renewal application for welfare schemes under the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB), you can follow these steps:\n\n### Steps to Check Renewal Status\n\n1. **Visit the KBOCWWB Web Portal:**\n   - Open your web browser and go to the official KBOCWWB website.\n\n2. **Log In to Your Account:**\n   - Use your registered user ID and password to log in. If you don't have an account, you may need to create one using your registration details.\n\n3. **Navigate to the Renewal Status Section:**\n   - Once logged in, look for a section labeled \"Renewal Status\" or similar. This is where you can track the progress of your renewal application.\n\n4. **Enter Your Renewal Details:**\n   - You may need to enter your renewal reference number or other identifying information to view the status.\n\n5. **View Your Renewal Status:**\n   - The portal will display the current status of your renewal application, such as \"Pending,\" \"Approved,\" or \"Rejected.\"\n\n### Alternative: Use the Seva Sindhu Platform\n\n- You can also check your renewal status using the Seva Sindhu platform, which provides a user-friendly interface for tracking welfare program applications.\n\n### Need Help?\n\nIf you encounter any difficulties while checking your renewal status, don't hesitate to seek assistance:\n\n- **Visit Your Nearest KSK Center:** The staff at Karmika Seva Kendras are trained to help you with the renewal process and can provide updates on your renewal status.\n- **Contact the Helpline:** You can call the KBOCWWB helpline for guidance and support.\n\nBy following these steps, you can easily check the status of your renewal application online. If you have any specific questions or need further assistance, feel free to ask! I'm here to help you navigate the process smoothly.",
+          "created_at": "2026-02-17 04:05:05"
+        },
+        {
+          "id": "3a567607-566b-4028-9fb7-f25ad54ffadb",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "user",
+          "content": "Tell me a joke",
+          "created_at": "2026-02-17 04:05:05"
+        },
+        {
+          "id": "6b39e209-f858-419b-a3bf-6c636339d20e",
+          "thread_id": "40d76263-9b9c-49ba-b4ed-a2a7c42ee743",
+          "role": "assistant",
+          "content": "Namaskara! While I'm here to assist you with information related to welfare schemes and services provided by the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB), I can certainly share a light-hearted moment with you.\n\nHere's a joke for you:\n\nWhy don't construction workers ever play hide and seek?\n\nBecause good luck hiding when your hard hat is sticking out!\n\nNow, if you have any questions about welfare schemes, application processes, or need assistance with anything related to the KSK services, feel free to ask. I'm here to help!",
+          "created_at": "2026-02-17 04:05:09"
+        }
+      ],
+      "total": 30,
+      "limit": 200,
+      "offset": 0
+    }
+  Turnaround Time: 43.83 ms

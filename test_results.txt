@@ -1,0 +1,239 @@
+================================================================================
+KSK Chatbot Endpoint Tests
+Server: http://localhost:8000
+================================================================================
+
+[1] Health Check: GET /
+  Status: 200  Body: {'status': 'ok'}
+
+================================================================================
+ENGLISH TESTS (10 cases)
+================================================================================
+
+  Creating thread...
+  Thread ID: b5a17269-e9ed-49de-bfc2-2ea7d8e49da1
+
+  [PASS] Test 1: Organization overview + services
+  Message:  What is Karmika Seva Kendra and what services does it offer?
+  Language: en (default)
+  Time:     19.59s
+  Answer:   Karmika Seva Kendra (KSK) is a service center set up by the Karnataka Building & Other Construction Workers Welfare Board to help construction workers and their families.
+
+Services offered at KSK incl...
+
+  [PASS] Test 2: Accident Assistance — workplace death ₹8,00,000
+  Message:  How much compensation is given if a worker dies in an accident at the workplace?
+  Language: en (default)
+  Time:     2.93s
+  Answer:   If a registered construction worker dies in an accident at the workplace, their family will receive ₹8,00,000 (₹8 lakh) in compensation under the Accident Assistance scheme.
+
+To apply for this benefit...
+
+  [PASS] Test 3: Accident Assistance — required documents
+  Message:  What documents are needed to claim accident assistance?
+  Language: en (default)
+  Time:     3.40s
+  Answer:   To claim accident assistance, you'll need to submit several important documents:
+
+1. Medical certificate
+2. Disability certificate (if applicable)
+3. Death certificate (in case of death)
+4. FIR copy (...
+
+  [PASS] Test 4: Thayi Magu — ₹6,000, 3 years, first two children
+  Message:  Tell me about the Thayi Magu Sahaya Hasta scheme and its benefits
+  Language: en (default)
+  Time:     2.50s
+  Answer:   I'm sorry, but I don't have complete information on the "Thayi Magu Sahaya Hasta" scheme in my current context. It seems like it might be a specific local scheme that isn't detailed in the information...
+
+  [PASS] Test 5: Delivery Assistance — ₹50,000 per delivery
+  Message:  How much financial support is available for delivery of a child?
+  Language: en (default)
+  Time:     2.42s
+  Answer:   Registered woman construction workers can receive ₹50,000 in financial assistance per delivery under the Delivery Assistance scheme. This benefit can be claimed a maximum of two times.
+
+To qualify:
+- ...
+
+  [PASS] Test 6: Pension — up to ₹3,000/month
+  Message:  What is the pension amount for workers above 60 years?
+  Language: en (default)
+  Time:     2.22s
+  Answer:   Workers aged 60 or above can receive a monthly pension of up to ₹3,000 under the Pension scheme.
+
+To be eligible:
+- You must be a registered beneficiary for at least 3 years
+- You should be aged 60 or...
+
+  [PASS] Test 7: Funeral & Ex-Gratia — ₹4,000 + ₹1,46,000
+  Message:  How much money does the family receive when a registered worker dies?
+  Language: en (default)
+  Time:     3.01s
+  Answer:   When a registered construction worker passes away, their family can receive financial support through two schemes:
+
+1. **Funeral and Ex-Gratia Scheme**:
+   - Funeral expenses: ₹4,000
+   - Ex-gratia pa...
+
+  [PASS] Test 8: Marriage Assistance — ₹60,000, max 2 claims
+  Message:  What is the marriage assistance amount and how many times can I claim it?
+  Language: en (default)
+  Time:     2.32s
+  Answer:   Registered construction workers can receive ₹60,000 in financial support for their child's marriage under the Marriage Assistance scheme. This benefit can be claimed a maximum of two times per family....
+
+  [PASS] Test 9: Major Ailments — up to ₹2,00,000
+  Message:  What is the maximum amount available for major ailment treatment?
+  Language: en (default)
+  Time:     3.04s
+  Answer:   The maximum financial assistance available for treating major ailments is ₹2,00,000. This benefit is provided under the Assistance for Major Ailments scheme.
+
+To qualify:
+- You must be a registered wo...
+
+  [PASS] Test 10: Off-topic — should get polite redirect
+  Message:  What is the weather in Bangalore today?
+  Language: en (default)
+  Time:     1.40s
+  Answer:   I'm here to help with questions about construction worker welfare schemes and KSK services. Could you ask me something related to that? For weather updates, please check a reliable weather website or ...
+
+================================================================================
+KANNADA TESTS (10 cases, language='kn')
+================================================================================
+
+  Creating thread...
+  Thread ID: aa533982-5fad-4cee-945a-84aaa049dfcc
+
+  [PASS] Test 11: Organization overview (Kannada)
+  Message:  ಕಾರ್ಮಿಕ ಸೇವಾ ಕೇಂದ್ರ ಎಂದರೇನು ಮತ್ತು ಅದರ ಸೇವೆಗಳು ಯಾವುವು?
+  Language: kn
+  Time:     7.65s
+  Answer:   ಕಾರ್ಮಿಕ ಸೇವಾ ಕೇಂದ್ರ (KSK) ಎಂದರೆ ಕರ್ನಾಟಕ ಬಿಲ್ಡಿಂಗ್ ಅಂಡ್ ಆಥರ್ ಕನ್‌ಸ್ಟ್ರಕ್ಷನ್ ವರ್ಕರ್ಸ್ ವೆಲ್ಫೇರ್ ಬೋರ್ಡ್ (KBOCWWB) ನ ಒಂದು ಪ್ರಯತ್ನ. ಇದು ಕಟ್ಟಡ ನಿರ್ಮಾಣ ಕೆಲಸಗಾರರಿಗೆ ಮತ್ತು ಅವರ ಕುಟುಂಬಗಳಿಗೆ ವಿವಿಧ ಸೇವೆಗಳನ್ನು ಒದಗಿಸ...
+
+  [PASS] Test 12: Accident — workplace death (Kannada)
+  Message:  ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಅಪಘಾತದಲ್ಲಿ ಕಾರ್ಮಿಕ ಮರಣ ಹೊಂದಿದರೆ ಎಷ್ಟು ಪರಿಹಾರ ಸಿಗುತ್ತದೆ?
+  Language: kn
+  Time:     5.14s
+  Answer:   ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಅಪಘಾತದಿಂದ ಕಾರ್ಮಿಕ ಮರಣ ಹೊಂದಿದರೆ, ಅವರ ಕುಟುಂಬಕ್ಕೆ ₹3,00,000 ರ ಪರಿಹಾರ ಸಿಗುತ್ತದೆ. ಈ ಯೋಜನೆಯನ್ನು 'ಅಪಘಾತ ಸಹಾಯತೆ' ಎಂದು ಕರೆಯುತ್ತಾರೆ.
+
+**ಯೋಗ್ಯತಾ ಶರತ್ತುಗಳು:**
+- ಕಾರ್ಮಿಕ KBOCWWBನಲ್ಲಿ ಪಂಜೀಕರಿಸಲ್ಪಟ್ಟ...
+
+  [PASS] Test 13: Accident — required documents (Kannada)
+  Message:  ಅಪಘಾತ ಸಹಾಯಕ್ಕೆ ಯಾವ ದಾಖಲೆಗಳು ಬೇಕು?
+  Language: kn
+  Time:     3.62s
+  Answer:   ಅಪಘಾತ ಸಹಾಯತೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಲು, ಕೆಳಗಿನ ದಸ್ತಾವೇಜುಗಳನ್ನು ತಯಾರಾಗಿರಬೇಕು:
+
+1. **ಮರಣ ಪತ್ರಿಕೆ** (Death Certificate)
+2. **ಅಪಘಾತದ ವಿವರಗಳ ಪ್ರಾಮಾಣಿಕ ರಿಪೋರ್ಟ್** (Detailed Accident Report)
+3. **ಕುಟುಂಬದ ಹಿರಿಯವರ ID ಪ...
+
+  [PASS] Test 14: Thayi Magu benefits (Kannada)
+  Message:  ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ ಯೋಜನೆಯ ಪ್ರಯೋಜನಗಳೇನು?
+  Language: kn
+  Time:     9.29s
+  Answer:   ತಾಯಿ ಮತ್ತು ಮಗುವಿಗೆ ಸಹಾಯ ಹಸ್ತ ಯೋಜನೆ (Mother and Child Assistance Scheme) ಕಟ್ಟಡ ನಿರ್ಮಾಣ ಕೆಲಸಗಾರರಿಗೂ ಅವರ ಕುಟುಂಬಕ್ಕೂ ವಿನಿಯೋಗಿಸಲ್ಪಟ್ಟಿದೆ. ಈ ಯೋಜನೆಯ ಪ್ರಯೋಜನಗಳೆಂದರೆ:
+
+1. **ಗರ್ಭಿಣಿ ಮಹಿಳೆಯರು**: ಗರ್ಭಿಣಿ ಮಹಿಳೆಯರು...
+
+  [PASS] Test 15: Delivery Assistance (Kannada)
+  Message:  ಹೆರಿಗೆ ಸಹಾಯಧನ ಎಷ್ಟು ಸಿಗುತ್ತದೆ?
+  Language: kn
+  Time:     5.69s
+  Answer:   ಹೆರಿಗೆ ಸಹಾಯಧನ (Hospitalization Assistance) ಯೋಜನೆಗಾಗಿ, ಕಾರ್ಮಿಕರು ಮತ್ತು ಅವರ ಕುಟುಂಬದ ಸದಸ್ಯರಿಗೆ ₹15,000 ರ ಹಣವನ್ನು ಪಡೆಯಬಹುದಾಗಿದೆ. ಈ ಸಹಾಯಧನವು ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ಚಿಕಿತ್ಸೆ ಪಡೆದಾಗ ಲಾಭವಾಗುತ್ತದೆ.
+
+**ಯೋಗ್ಯತಾ ಶರತ್ತುಗಳು...
+
+  [PASS] Test 16: Pension (Kannada)
+  Message:  60 ವರ್ಷ ಮೇಲ್ಪಟ್ಟ ಕಾರ್ಮಿಕರಿಗೆ ಪಿಂಚಣಿ ಎಷ್ಟು?
+  Language: kn
+  Time:     8.76s
+  Answer:   60 ವರ್ಷಗಳಿಗಿಂತ ಹೆಚ್ಚು ವಯಸ್ಸಿನ ಕಾರ್ಮಿಕರಿಗೆ, ಕರ್ನಾಟಕ ಬಿಲ್ಡಿಂಗ್ ಅಂಡ್ ಆಥರ್ ಕನ್ಸ್‌ಟ್ರಕ್ಷನ್ ವರ್ಕರ್ಸ್ ವೆಲ್ಫೇರ್ ಬೋರ್ಡ್ (KBOCWWB) ನಿಂದ ಪಿಂಚಣಿ ಸಿಗುತ್ತದೆಯೆ. ಈ ಯೋಜನೆಯನ್ನು 'ಪಿಂಚಣಿ ಯೋಜನೆ' ಎಂದು ಕರೆಯುತ್ತಾರೇ.
+
+**ಪಿಂಚಣ...
+
+  [PASS] Test 17: Funeral & Ex-Gratia (Kannada)
+  Message:  ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕ ಮರಣ ಹೊಂದಿದರೆ ಕುಟುಂಬಕ್ಕೆ ಎಷ್ಟು ಹಣ ಸಿಗುತ್ತದೆ?
+  Language: kn
+  Time:     5.78s
+  Answer:   ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕ ಮರಣ ಹೊಂದಿದರೆ, ಅವರ ಕುಟುಂಬಕ್ಕೆ ₹3,00,000 ರ ಪರಿಹಾರ ಸಿಗುತ್ತದೆ. ಈ ಯೋಜನೆಯನ್ನು 'ಅಪಘಾತ ಸಹಾಯತೆ' ಎಂದು ಕರೆಯುತ್ತಾರೆ.
+
+**ಯೋಗ್ಯತಾ ಶರತ್ತುಗಳು:**
+- ಕಾರ್ಮಿಕ KBOCWWBನಲ್ಲಿ ನೋಂದಾಯಿಸಲ್ಪಟ್ಟಿರಬೇಕು.
+- ಅಪಘಾತವು...
+
+  [PASS] Test 18: Marriage Assistance (Kannada)
+  Message:  ಮದುವೆ ಸಹಾಯಧನ ಎಷ್ಟು ಮತ್ತು ಎಷ್ಟು ಬಾರಿ ಪಡೆಯಬಹುದು?
+  Language: kn
+  Time:     7.34s
+  Answer:   ಮದುವೆ ಸಹಾಯಧನ (Marriage Assistance) ಯೋಜನೆಗಾಗಿ, ಕಾರ್ಮಿಕರ ಮಕ್ಕಳಿಗೆ ₹25,000 ರ ಹಣವನ್ನು ಒಮ್ಮೆ ಪಡೆಯಬಹುದಾಗಿದೆ. ಈ ಸಹಾಯಧನವು ಮದುವೆಗೆ ಲಾಭವಾಗುತ್ತದೆ.
+
+**ಯೋಗ್ಯತಾ ಶರತ್ತುಗಳು:**
+- ಕಾರ್ಮಿಕ KBOCWWBನಲ್ಲಿ ಪಂಜೀಕರಿಸಲ್ಪಟ್ಟಿರಬ...
+
+  [PASS] Test 19: Major Ailments (Kannada)
+  Message:  ದೊಡ್ಡ ಕಾಯಿಲೆಗೆ ಎಷ್ಟು ಹಣ ಸಿಗುತ್ತದೆ?
+  Language: kn
+  Time:     5.28s
+  Answer:   ದೊಡ್ಡ ಕಾಯಿಲೆಗಾಗಿ (Major Illness) ಸಹಾಯಧನ ಯೋಜನೆಗೆ, ಕಾರ್ಮಿಕರಿಗೆ ಮತ್ತು ಅವರ ಕುಟುಂಬದ ಸದಸ್ಯರಿಗೆ ₹10,000 ರ ಹಣವನ್ನು ಪಡೆಯಬಹುದಾಗಿದೆ.
+
+**ಯೋಗ್ಯತಾ ಶರತ್ತುಗಳು:**
+- ಕಾರ್ಮಿಕ KBOCWWBನಲ್ಲಿ ಪಂಜೀಕರಿಸಲ್ಪಟ್ಟಿರಬೇಕು.
+- ದೊಡ್ಡ ಕ...
+
+  [PASS] Test 20: Off-topic redirect (Kannada)
+  Message:  ಇಂದು ಬೆಂಗಳೂರಿನ ಹವಾಮಾನ ಹೇಗಿದೆ?
+  Language: kn
+  Time:     2.27s
+  Answer:   ನಾನು ಕಟ್ಟಡ ಕಾರ್ಮಿಕರ ಕಲ್ಯಾಣ ಯೋಜನೆಗಳು ಮತ್ತು KSK ಸೇವೆಗಳ ಬಗ್ಗೆ ಸಹಾಯ ಮಾಡಲು ಇಲ್ಲಿದ್ದೇನೆ. ದಯವಿಟ್ಟು ಅದಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಪ್ರಶ್ನೆ ಕೇಳಿ.
+
+================================================================================
+ERROR PATH TESTS
+================================================================================
+
+  [PASS] Error Test 1: Invalid thread ID format (non-UUID) → 400
+  Expected: 400  Got: 400  Time: 0.05s
+
+  [PASS] Error Test 2: Non-existent thread → 404
+  Expected: 404  Got: 404  Time: 0.05s
+
+  [PASS] Error Test 3: Invalid language code → 422
+  Expected: 422  Got: 422  Time: 0.05s
+
+  [PASS] Error Test 4: Blank message (whitespace only) → 422
+  Expected: 422  Got: 422  Time: 0.04s
+
+  [PASS] Error Test 5: GET messages with invalid thread ID → 400
+  Expected: 400  Got: 400  Time: 0.04s
+
+  [PASS] Error Test 6: GET messages for non-existent thread → 404
+  Expected: 404  Got: 404  Time: 0.04s
+
+  [PASS] Error Test 7: GET messages for valid thread → 200
+  Expected: 200  Got: 200  Time: 0.04s
+
+================================================================================
+STREAMING ENDPOINT TEST
+================================================================================
+
+  Creating thread for streaming test...
+  Thread ID: 31a73a10-621e-4fd6-8381-389440db95b7
+
+  Sending streaming request...
+
+  [PASS] Streaming Test
+  Chunks: 140  Done events: 1  Errors: 0
+  Time: 3.35s
+  Answer: Karmika Seva Kendra (KSK) is a service center set up by the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). It helps construction workers and their families access welfare sch...
+
+================================================================================
+SUMMARY
+================================================================================
+
+  Total:  28
+  Passed: 28
+  Failed: 0
+
+  English avg response time: 4.28s
+  Kannada avg response time: 6.08s
+
