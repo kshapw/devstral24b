@@ -233,6 +233,13 @@ def _append_language_instruction(prompt: str, language: str) -> str:
     return prompt
 
 
+def _prepare_user_message(message: str, language: str) -> str:
+    """Appends an explicit language instruction to the user message."""
+    if language == "kn":
+        return message + "\n\n(IMPORTANT: Answer entirely in Kannada (Kannada script) / ದಯವಿಟ್ಟು ಕನ್ನಡದಲ್ಲಿ ಉತ್ತರಿಸಿ)"
+    return message
+
+
 # ---------------------------------------------------------------------------
 # System prompt — the heart of the "ChatGPT-like" experience
 # ---------------------------------------------------------------------------
@@ -641,7 +648,7 @@ async def answer(
             )
         result = await ollama.chat(
             system_prompt=system_prompt,
-            user_message=question,
+            user_message=_prepare_user_message(question, language),
             history=truncated_history,
         )
         return _cap_answer_length(result)
@@ -670,7 +677,7 @@ async def answer(
 
     result = await ollama.chat(
         system_prompt=system_prompt,
-        user_message=question,
+        user_message=_prepare_user_message(question, language),
         history=truncated_history,
     )
     return _cap_answer_length(result)
@@ -720,7 +727,7 @@ async def answer_stream(
             truncated_history = history[-settings.AUTHENTICATED_HISTORY_MESSAGES:]
         async for chunk in ollama.chat_stream(
             system_prompt=system_prompt,
-            user_message=question,
+            user_message=_prepare_user_message(question, language),
             history=truncated_history,
         ):
             yield chunk
@@ -746,7 +753,7 @@ async def answer_stream(
 
     async for chunk in ollama.chat_stream(
         system_prompt=system_prompt,
-        user_message=question,
+        user_message=_prepare_user_message(question, language),
         history=truncated_history,
     ):
         yield chunk
