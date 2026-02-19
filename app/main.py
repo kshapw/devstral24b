@@ -258,12 +258,15 @@ app.add_middleware(SecurityHeadersMiddleware)
 app.add_middleware(RateLimitMiddleware)
 
 _raw_origins = os.getenv("CORS_ORIGINS", "")
-_cors_origins = [o.strip() for o in _raw_origins.split(",") if o.strip()] if _raw_origins else []
+_cors_origins = [o.strip() for o in _raw_origins.split(",") if o.strip()]
+if not _cors_origins:
+    _cors_origins = ["http://localhost:3000"]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_cors_origins,
-    allow_methods=["GET", "POST"],
-    allow_headers=["Content-Type"],
+    allow_methods=["*"],  # Allow all methods including OPTIONS
+    allow_headers=["*"],  # Allow all headers (Authorization, X-Request-ID, etc.)
 )
 
 

@@ -1,0 +1,88 @@
+# API Verification Commands
+
+Base URL: `https://llm.karmikakendra.com`
+
+## 1. Set Thread ID
+Use the known working thread ID.
+```bash
+export THREAD_ID="a9fbb8ff-6138-4201-b96e-4a2da1e6fd92"
+```
+
+---
+
+## 2. Functional Tests
+
+### A. RAG Retrieval (General Query)
+Ask a question that requires knowledge from the ingested documents ([data/ksk.md](file:///Users/kshamawari/Downloads/tar2/data/ksk.md)).
+```bash
+curl -X POST "https://llm.karmikakendra.com/api/chat/threads/$THREAD_ID/messages" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "What is the scholarship amount for a construction worker s child in PhD?",
+    "userId": "test-user-001",
+    "authToken": "test-token",
+    "language": "en"
+  }'
+```
+
+### B. Intent: ECARD (Download/Print)
+Verify the system correctly classifies the intent as `ECARD` and returns the static response.
+```bash
+curl -X POST "https://llm.karmikakendra.com/api/chat/threads/$THREAD_ID/messages" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "I want to download my e-card",
+    "userId": "test-user-001",
+    "authToken": "test-token",
+    "language": "en"
+  }'
+```
+
+### C. Intent: STATUS CHECK
+Verify the system classifies the intent as `STATUS_CHECK`.
+```bash
+curl -X POST "https://llm.karmikakendra.com/api/chat/threads/$THREAD_ID/messages" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "Check my application status",
+    "userId": "test-user-001",
+    "authToken": "test-token",
+    "language": "en"
+  }'
+```
+
+### D. Multilingual Support (Kannada)
+Verify the response is in Kannada script.
+```bash
+curl -X POST "https://llm.karmikakendra.com/api/chat/threads/$THREAD_ID/messages" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "ನೋಂದಣಿಗೆ ಬೇಕಾದ ದಾಖಲೆಗಳು ಯಾವುವು?",
+    "userId": "test-user-001",
+    "authToken": "test-token",
+    "language": "kn"
+  }'
+```
+
+---
+
+## 3. Advanced Features
+
+### E. Streaming Response
+Test the Server-Sent Events (SSE) endpoint. You should see the response arrive in chunks.
+```bash
+curl -N -X POST "https://llm.karmikakendra.com/api/chat/threads/$THREAD_ID/messages/stream" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "Explain the major benefits provided by the board in detail.",
+    "userId": "test-user-001",
+    "authToken": "test-token",
+    "language": "en"
+  }'
+```
+
+### F. Chat History
+Retrieve the conversation history to ensure messages are being persisted.
+```bash
+curl -X GET "https://llm.karmikakendra.com/api/chat/threads/$THREAD_ID/messages?limit=10"
+```

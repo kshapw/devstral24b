@@ -1,0 +1,100 @@
+# Repository Technical Summary: KSK Shrama Sahayak
+
+## 1. Overview
+**Shrama Sahayak** is a production-grade Retrieval-Augmented Generation (RAG) chatbot designed for the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB). It assists construction workers by answering queries about welfare schemes, eligibility, and application status in multiple languages (English, Kannada, etc.).
+
+**Key Technologies:**
+- **Framework**: FastAPI (Python 3.10+)
+- **LLM**: Ollama (Devstral 24B) for generation and classification.
+- **Vector DB**: Qdrant for semantic search.
+- **Database**: SQLite (aiosqlite) for conversation history and caching.
+- **Search**: `nomic-embed-text` embeddings.
+
+## 2. Architecture
+The system follows a microservices-like architecture orchestrated by Docker Compose:
+- **App Service**: The core FastAPI application.
+- **Ollama Service**: Hosts the LLM and embedding models (GPU-accelerated).
+- **Qdrant Service**: Stores vector embeddings for RAG.
+
+### Request Flow
+1.  **Client** sends a message to `/api/chat/threads/{id}/messages`.
+2.  **Middleware** handles security, rate limiting, and logging.
+3.  **Intent Classification** ([rag.py](file:///Users/kshamawari/Downloads/tar2/app/rag.py)) determines if the user wants `ECARD`, `STATUS_CHECK`, or `GENERAL` info.
+4.  **Data Fetching** ([external_api.py](file:///Users/kshamawari/Downloads/tar2/external_api.py)):
+    - If `STATUS_CHECK` or `GENERAL` (authenticated), fetches user data from the Karnataka Govt API.
+    - Caches results in SQLite to minimize external API load.
+5.  **Retrieval** (for `GENERAL` intent):
+    - User query is embedded using Ollama.
+    - Qdrant searches for relevant documentation chunks.
+6.  **Generation**:
+    - A context-aware prompt is built (System Prompt + RAG Context + User Data).
+    - Ollama generates the response (streaming or non-streaming).
+7.  **Response**: Sent back to the client, and the interaction is saved to SQLite.
+
+## 3. Core Components ([app/](file:///Users/kshamawari/Downloads/tar2/app/rag.py#199-235))
+
+### [main.py](file:///Users/kshamawari/Downloads/tar2/app/main.py)
+The entry point for the FastAPI application.
+- **Middleware**:
+    - [SecurityHeadersMiddleware](file:///Users/kshamawari/Downloads/tar2/app/main.py#58-74): Adds security headers (HSTS, CSP, etc.).
+    - [RateLimitMiddleware](file:///Users/kshamawari/Downloads/tar2/app/main.py#79-143): In-memory, IP-based sliding window limiter (stricter for POST).
+    - `request_id` & `logging`: Observability.
+- **Lifespan**: Manages startup/shutdown of Qdrant, Ollama, and DB connections.
+- **Endpoints**: Health checks, thread management, message sending (sync & stream), history retrieval.
+
+### [rag.py](file:///Users/kshamawari/Downloads/tar2/app/rag.py)
+The brain of the chatbot.
+- **Intent Classification**:
+    - **Layer 1**: Keyword matching (deterministic, fast). Checks for "ecard", "status", etc.
+    - **Layer 2**: LLM-based classification (authenticated users only). Uses a constrained prompt (`temperature=0`) to classify ambiguous inputs.
+- **Prompts**: Specialized prompts for `STATUS_CHECK` (data-grounded) and `GENERAL` (RAG-grounded).
+- **Multilingual Support**: Explicit instructions for Kannada (native script, no transliteration) and other languages.
+
+### [external_api.py](file:///Users/kshamawari/Downloads/tar2/external_api.py)
+Integration with the Karnataka Construction Workers Board API.
+- **Endpoints**: Fetches schemes, renewal dates, and registration details.
+- **Aggregation**: [fetch_user_data](file:///Users/kshamawari/Downloads/tar2/app/external_api.py#308-346) gathers all relevant info in parallel using `asyncio.gather`.
+- **Resilience**: Handles timeouts and errors gracefully; logs extensively.
+
+### [ollama_client.py](file:///Users/kshamawari/Downloads/tar2/app/ollama_client.py)
+Async client for interacting with the Ollama API.
+- **Methods**: [chat](file:///Users/kshamawari/Downloads/tar2/app/ollama_client.py#44-81), [chat_stream](file:///Users/kshamawari/Downloads/tar2/app/ollama_client.py#82-126), [classify](file:///Users/kshamawari/Downloads/tar2/app/ollama_client.py#127-176) (optimized for single token), [embed](file:///Users/kshamawari/Downloads/tar2/app/ollama_client.py#207-243) (handles legacy/new endpoints).
+- **Configuration**: Uses settings from [config.py](file:///Users/kshamawari/Downloads/tar2/app/config.py) for model names and timeouts.
+
+### [ingest.py](file:///Users/kshamawari/Downloads/tar2/app/ingest.py) & [chunker.py](file:///Users/kshamawari/Downloads/tar2/app/chunker.py)
+Data ingestion pipeline for the knowledge base.
+- **Source**: Reads [data/ksk.md](file:///Users/kshamawari/Downloads/tar2/data/ksk.md).
+- **Chunking**: Splits by Markdown headers (`#`, `##`) to preserve semantic structure (Scheme/Section).
+- **Embedding**: Embeds chunks concurrently using a semaphore to limit load.
+- **Storage**: Upserts vectors to Qdrant collection `ksk_docs`.
+
+### [database.py](file:///Users/kshamawari/Downloads/tar2/app/database.py)
+SQLite data access layer using `aiosqlite`.
+- **Schema**:
+    - `threads`: Conversation sessions.
+    - [messages](file:///Users/kshamawari/Downloads/tar2/app/main.py#376-396): Chat history with metadata (user_id, language).
+    - `user_data_cache`: Caches external API responses per user/thread.
+- **Retention**: [cleanup_old_data](file:///Users/kshamawari/Downloads/tar2/app/database.py#271-301) periodically removes old messages (90 days) and cache (7 days).
+
+### [schemas.py](file:///Users/kshamawari/Downloads/tar2/app/schemas.py)
+Pydantic models for strict data validation.
+- **Validation**: Regex for `userId` and `threadId`; whitelist for [language](file:///Users/kshamawari/Downloads/tar2/app/rag.py#183-197) codes.
+
+## 4. Data Management
+- **Knowledge Base**: Stored in [data/ksk.md](file:///Users/kshamawari/Downloads/tar2/data/ksk.md).
+- **Vector Store**: Qdrant holds embeddings of the markdown chunks.
+- **Operational DB**: SQLite (`data/chat.db`) stores conversation history and user data cache.
+- **Caching**: User profile data from the external API is cached in SQLite to improve performance and reduce upstream load.
+
+## 5. Security & Performance
+- **Rate Limiting**: Custom middleware prevents abuse (IP-based).
+- **Input Validation**: Pydantic ensures clean inputs; regex prevents injection.
+- **Concurrency**:
+    - `asyncio` used throughout for non-blocking I/O.
+    - `thread_locks` ensure sequential processing of messages within a single thread.
+- **Infrastructure**: Docker Compose with restart policies and health checks.
+
+## 6. Configuration
+Managed via [app/config.py](file:///Users/kshamawari/Downloads/tar2/app/config.py) using `pydantic-settings`.
+- **Environment Variables**: Override defaults (e.g., `OLLAMA_URL`, `DATABASE_PATH`).
+- **Toggles**: Feature flags like `TRUST_PROXY_HEADERS` for deployment behind reverse proxies.
