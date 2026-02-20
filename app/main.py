@@ -264,11 +264,25 @@ app.add_middleware(RateLimitMiddleware)
 _raw_origins = os.getenv("CORS_ORIGINS", "")
 _cors_origins = [o.strip() for o in _raw_origins.split(",") if o.strip()]
 if not _cors_origins:
-    _cors_origins = ["http://localhost:3000"]
+    _cors_origins = [
+        "http://localhost:3000",
+        "https://kbocwwb.karnataka.gov.in",
+        "https://kbocwwb.karnataka.gov.in/preprod",
+        "https://apikbocwwb.karnataka.gov.in/preprod/api/",
+        "https://llm.karmikakendra.com",
+    ]
+# Always ensure kbocwwb origin is present
+_required_origins = [
+    "https://kbocwwb.karnataka.gov.in",
+]
+for origin in _required_origins:
+    if origin not in _cors_origins:
+        _cors_origins.append(origin)
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_cors_origins,
+    allow_credentials=True,
     allow_methods=["*"],  # Allow all methods including OPTIONS
     allow_headers=["*"],  # Allow all headers (Authorization, X-Request-ID, etc.)
 )
