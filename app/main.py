@@ -3,6 +3,7 @@ import json
 import logging
 import os
 import re
+import time
 import uuid as _uuid
 from collections import OrderedDict
 from contextlib import asynccontextmanager
@@ -20,7 +21,7 @@ from app.config import settings
 from app.database import (
     add_message,
     cleanup_old_data,
-    create_thread,
+    ensure_thread,
     get_db,
     get_paginated_thread_messages,
     get_recent_thread_messages,
@@ -367,13 +368,13 @@ async def readiness_check():
     )
 
 
-@app.post("/api/chat/threads", response_model=ThreadResponse, status_code=201)
-async def create_chat_thread(
-    db: aiosqlite.Connection = Depends(get_db_dep),
-):
-    thread_id = await create_thread(db)
+@app.post("/api/chat/threads", status_code=200)
+async def create_chat_thread():
+    """Lightweight thread creation — returns a timestamp-based ID, no DB write."""
+    import time
+    thread_id = f"thread-{int(time.time())}"
     logger.info("Created chat thread %s", thread_id)
-    return ThreadResponse(threadId=thread_id)
+    return {"id": thread_id}
 
 
 @app.get("/api/chat/threads/{threadId}/messages", status_code=200)
@@ -385,8 +386,6 @@ async def get_messages(
 ):
     """Retrieve conversation history for a thread with pagination."""
     _validate_thread_id(threadId)
-    if not await thread_exists(db, threadId):
-        raise HTTPException(status_code=404, detail="Thread not found")
 
     messages, total = await get_paginated_thread_messages(db, threadId, limit, offset)
     return {
@@ -412,8 +411,7 @@ async def send_message(
 ):
     _validate_thread_id(threadId)
     async with get_thread_lock(threadId):
-        if not await thread_exists(db, threadId):
-            raise HTTPException(status_code=404, detail="Thread not found")
+        await ensure_thread(db, threadId)
 
         await add_message(
             db, threadId, "user", body.message,
@@ -502,8 +500,7 @@ async def send_message_stream(
     # Validate thread, save user message, classify intent, and pre-fetch data
     # ALL under the thread lock to prevent race conditions on cache read/write.
     async with get_thread_lock(threadId):
-        if not await thread_exists(db, threadId):
-            raise HTTPException(status_code=404, detail="Thread not found")
+        await ensure_thread(db, threadId)
 
         await add_message(
             db, threadId, "user", body.message,

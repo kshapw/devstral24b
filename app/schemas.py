@@ -38,7 +38,7 @@ class MessageRequest(BaseModel):
 
 
 class ThreadResponse(BaseModel):
-    threadId: str
+    id: str
 
 
 class MessageResponse(BaseModel):

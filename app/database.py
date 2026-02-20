@@ -1,6 +1,7 @@
 import json
 import logging
 import sqlite3
+import time
 import uuid
 
 import aiosqlite
@@ -70,16 +71,16 @@ async def init_db(db: aiosqlite.Connection) -> None:
     logger.info("Database schema initialized")
 
 
-async def create_thread(db: aiosqlite.Connection) -> str:
-    thread_id = str(uuid.uuid4())
+async def ensure_thread(db: aiosqlite.Connection, thread_id: str) -> None:
+    """Ensure a thread row exists in the database (auto-create if missing)."""
     try:
-        await db.execute("INSERT INTO threads (id) VALUES (?)", (thread_id,))
+        await db.execute(
+            "INSERT OR IGNORE INTO threads (id) VALUES (?)", (thread_id,)
+        )
         await db.commit()
     except Exception:
-        logger.error("Failed to create thread %s", thread_id, exc_info=True)
+        logger.error("Failed to ensure thread %s", thread_id, exc_info=True)
         raise
-    logger.info("Created thread %s", thread_id)
-    return thread_id
 
 
 async def thread_exists(db: aiosqlite.Connection, thread_id: str) -> bool:
