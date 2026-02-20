@@ -8,7 +8,7 @@ VALID_LANGUAGE_CODES = {"", "en", "kn", "hi", "ta", "te", "ml", "mr"}
 
 class MessageRequest(BaseModel):
     message: str = Field(..., min_length=1, max_length=10000)
-    authToken: str = Field(default="", max_length=500)
+    authToken: str = Field(default="", max_length=4096)
     userId: str = Field(default="", max_length=100)
     language: str = Field(default="", max_length=10)
 
