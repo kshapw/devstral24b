@@ -463,41 +463,65 @@ async def _get_or_fetch_user_data(
     user_id: str,
     auth_token: str,
 ) -> dict | None:
-    """Return cached user data for this thread, or fetch from external API and cache.
+    """Return cached user data for this thread, or fetch from external API and cache."""
+    print(f"\n{'='*60}")
+    print(f"[DEBUG] _get_or_fetch_user_data called")
+    print(f"[DEBUG]   thread_id={thread_id}")
+    print(f"[DEBUG]   user_id={user_id}")
+    print(f"[DEBUG]   auth_token={auth_token[:20]}..." if auth_token else "[DEBUG]   auth_token=EMPTY")
 
-    This function is designed to be called under the thread lock to prevent
-    concurrent fetches for the same thread. The returned dict is the exact
-    data that was fetched (or cached) — it is NOT re-read from DB after write.
-    """
     # 1. Check cache first
     cached = await get_cached_user_data(db, thread_id, user_id)
     if cached is not None:
+        print(f"[DEBUG]   CACHE HIT — returning cached data")
+        print(f"[DEBUG]   cached keys: {list(cached.keys()) if isinstance(cached, dict) else type(cached)}")
         logger.info("Using cached user data for thread %s, user %s", thread_id, user_id)
         return cached
 
     # 2. Cache miss — fetch from external API
+    print(f"[DEBUG]   CACHE MISS — fetching from external API...")
     logger.info("Fetching user data from external API for user %s", user_id)
     try:
         data = await fetch_user_data(http_client, user_id, auth_token)
-    except Exception:
+    except Exception as e:
+        print(f"[DEBUG]   FETCH FAILED: {type(e).__name__}: {e}")
         logger.error("External API fetch failed for user %s", user_id, exc_info=True)
         return None
 
     if not data:
+        print(f"[DEBUG]   FETCH RETURNED EMPTY/NONE")
         logger.warning("External API returned empty data for user %s", user_id)
         return None
+
+    print(f"[DEBUG]   FETCH SUCCESS")
+    print(f"[DEBUG]   data keys: {list(data.keys())}")
+    print(f"[DEBUG]   fetch_status: {data.get('fetch_status')}")
+    print(f"[DEBUG]   schemes type: {type(data.get('schemes'))}")
+    print(f"[DEBUG]   renewal_date: {data.get('renewal_date')}")
+    reg = data.get('registration_details')
+    if isinstance(reg, dict):
+        print(f"[DEBUG]   registration_details keys: {list(reg.keys())}")
+        pd = reg.get('personal_details')
+        if isinstance(pd, dict):
+            print(f"[DEBUG]   personal_details.first_name: {pd.get('first_name')}")
+            print(f"[DEBUG]   personal_details.calculated_status: {pd.get('calculated_status')}")
+            print(f"[DEBUG]   personal_details.eligible_schemes: {pd.get('eligible_schemes')}")
+    else:
+        print(f"[DEBUG]   registration_details: {reg}")
 
     # 3. Save to DB for future cache hits
     try:
         await save_user_data(db, thread_id, user_id, data)
+        print(f"[DEBUG]   Data saved to cache")
         logger.info("User data cached for thread %s, user %s", thread_id, user_id)
-    except Exception:
+    except Exception as e:
+        print(f"[DEBUG]   CACHE SAVE FAILED: {e}")
         logger.error(
             "Failed to cache user data for thread %s, user %s — using fetched data anyway",
             thread_id, user_id, exc_info=True,
         )
 
-    # 4. Return the fetched data directly (not a re-read from DB)
+    print(f"{'='*60}\n")
     return data
 
 
@@ -513,25 +537,19 @@ async def classify_and_prepare(
     http_client: httpx.AsyncClient,
     thread_id: str,
 ) -> tuple[str, dict | None]:
-    """Classify intent and pre-fetch any required data.
-
-    MUST be called under the thread lock to prevent race conditions on
-    cache reads/writes.
-
-    Classification strategy:
-    - Unauthenticated: keyword matching only (no LLM call).
-      Personal-intent keywords → LOGIN_REQUIRED; else → GENERAL.
-    - Authenticated: keyword matching first, LLM fallback for ambiguous messages.
-      Always fetches user data for non-ECARD intents.
-
-    Returns:
-        (intent, user_data_or_none) where intent is one of:
-        "LOGIN_REQUIRED", "ECARD", "STATUS_CHECK", "GENERAL"
-    """
+    """Classify intent and pre-fetch any required data."""
     is_authenticated = bool(user_id and auth_token)
 
-    # Classify intent (auth-aware: keywords only for unauth, keywords+LLM for auth)
+    print(f"\n{'='*60}")
+    print(f"[DEBUG] classify_and_prepare called")
+    print(f"[DEBUG]   message: {message[:100]}")
+    print(f"[DEBUG]   user_id: {user_id or '(empty)'}")
+    print(f"[DEBUG]   auth_token present: {bool(auth_token)}")
+    print(f"[DEBUG]   is_authenticated: {is_authenticated}")
+
+    # Classify intent
     intent = await _classify_intent(ollama, message, is_authenticated=is_authenticated)
+    print(f"[DEBUG]   classified intent: {intent}")
     logger.info(
         "classify_and_prepare: intent=%s authenticated=%s user=%s",
         intent, is_authenticated, user_id or "(anon)",
@@ -539,19 +557,29 @@ async def classify_and_prepare(
 
     # Unauthenticated user with personal-info intent → login required
     if intent in ("ECARD", "STATUS_CHECK") and not is_authenticated:
+        print(f"[DEBUG]   → returning LOGIN_REQUIRED (unauthenticated)")
         return "LOGIN_REQUIRED", None
 
     # Authenticated ECARD → exact string response, no data fetch needed
     if intent == "ECARD" and is_authenticated:
+        print(f"[DEBUG]   → returning ECARD (no data fetch needed)")
         return "ECARD", None
 
     # Authenticated user (STATUS_CHECK or GENERAL) → always fetch/cache user data
     user_data = None
     if is_authenticated:
+        print(f"[DEBUG]   → Authenticated user, fetching user data...")
         user_data = await _get_or_fetch_user_data(
             db, http_client, thread_id, user_id, auth_token,
         )
+        print(f"[DEBUG]   → user_data returned: {user_data is not None}")
+        if user_data:
+            print(f"[DEBUG]   → user_data keys: {list(user_data.keys())}")
+    else:
+        print(f"[DEBUG]   → Not authenticated, skipping user data fetch")
 
+    print(f"[DEBUG]   FINAL: intent={intent}, has_user_data={user_data is not None}")
+    print(f"{'='*60}\n")
     return intent, user_data
 
 
@@ -658,10 +686,17 @@ async def answer(
 
     # STATUS_CHECK — LLM grounded on pre-fetched user data + conversation history
     if intent == "STATUS_CHECK":
+        print(f"[DEBUG] answer() STATUS_CHECK path")
+        print(f"[DEBUG]   prefetched_user_data is None: {prefetched_user_data is None}")
         if not prefetched_user_data:
+            print(f"[DEBUG]   ERROR: No user data for STATUS_CHECK!")
             logger.error("STATUS_CHECK intent but no prefetched user data")
             return "Unable to fetch your information at this time. Please try again later."
+        print(f"[DEBUG]   user_data keys: {list(prefetched_user_data.keys())}")
+        print(f"[DEBUG]   Building status prompt...")
         system_prompt = _build_status_prompt(prefetched_user_data, language)
+        print(f"[DEBUG]   Status prompt length: {len(system_prompt)} chars")
+        print(f"[DEBUG]   First 500 chars of prompt: {system_prompt[:500]}")
         truncated_history = None
         if history:
             truncated_history = history[-settings.AUTHENTICATED_HISTORY_MESSAGES:]
@@ -674,6 +709,7 @@ async def answer(
             user_message=_prepare_user_message(question, language),
             history=truncated_history,
         )
+        print(f"[DEBUG]   LLM result (first 200): {result[:200]}")
         return _cap_answer_length(result)
 
     # GENERAL — RAG pipeline, optionally enriched with user data
