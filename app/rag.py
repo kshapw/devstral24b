@@ -220,30 +220,34 @@ def _append_language_instruction(prompt: str, language: str) -> str:
         return prompt
     if lang_name == "Kannada":
         prompt += (
-            "\nIMPORTANT — LANGUAGE INSTRUCTION:\n"
-            "You MUST respond ENTIRELY in Kannada (ಕನ್ನಡ). Every single word of your "
-            "response must be in the Kannada script.\n"
-            "- Write naturally and fluently in Kannada as a native speaker would.\n"
-            "- Do NOT transliterate English into Kannada script. Use proper Kannada words "
-            "and grammar.\n"
-            "- Keep rupee amounts as numerals (e.g., ₹2,00,000).\n"
-            "- Keep official scheme names in English if they are commonly known that way, "
-            "but explain them in Kannada.\n"
-            "- Refer to yourself as ಶ್ರಮ ಸಹಾಯಕ (Shrama Sahayak) ONLY if you are introducing yourself for the first time or if the user asks.\n"
-            "- If the user has already greeted you, do NOT repeat your name or say 'Namaskara' again.\n"
+            "\n**STRICT LANGUAGE RULE — KANNADA ONLY:**\n"
+            "The user has SELECTED Kannada language.\n"
+            "You MUST reply in KANNADA script ONLY. REGARDLESS of the input language.\n"
+            "- If input is in English, Hindi, or any other language, TRANSLATE your response to KANNADA.\n"
+            "- Do NOT use ANY English words in your response. Not even scheme names, organization names, or technical terms.\n"
+            "- Translate ALL scheme names into Kannada script (e.g., 'Pension Scheme' → 'ಪಿಂಚಣಿ ಯೋಜನೆ', 'Accident Compensation' → 'ಅಪಘಾತ ಪರಿಹಾರ', 'Medical Assistance' → 'ವೈದ್ಯಕೀಯ ಸಹಾಯ').\n"
+            "- Translate organization names: 'KBOCWWB' → 'ಕೆಬಿಒಸಿಡಬ್ಲ್ಯೂಡಬ್ಲ್ಯೂಬಿ', 'KSK' → 'ಕೆಎಸ್‌ಕೆ'.\n"
+            "- Keep ONLY rupee amounts as numerals (e.g., ₹2,00,000).\n"
+            "- Write naturally and fluently in Kannada as a native speaker would. Use proper Kannada words and grammar.\n"
+            "- Do NOT reply in English. Do NOT mix English and Kannada.\n"
+            "- Refer to yourself as ಶ್ರಮ ಸಹಾಯಕ ONLY if introducing yourself for the first time or if the user asks.\n"
+            "- If the user has already greeted you, do NOT repeat your name or say 'ನಮಸ್ಕಾರ' again.\n"
             "- If you don't have enough information, say: "
-            '"ಈ ವಿಷಯದ ಬಗ್ಗೆ ನನ್ನ ಬಳಿ ಸಂಪೂರ್ಣ ಮಾಹಿತಿ ಇಲ್ಲ. ನೀವು KBOCWWB ವೆಬ್ ಪೋರ್ಟಲ್ '
+            '"ಈ ವಿಷಯದ ಬಗ್ಗೆ ನನ್ನ ಬಳಿ ಸಂಪೂರ್ಣ ಮಾಹಿತಿ ಇಲ್ಲ. ನೀವು ವೆಬ್ ಪೋರ್ಟಲ್ '
             'ಅಥವಾ ಮೊಬೈಲ್ ಆ್ಯಪ್ ಮೂಲಕ ಆನ್\u200cಲೈನ್\u200cನಲ್ಲಿ ವಿಚಾರಿಸಬಹುದು, ಅಥವಾ ನಿಮ್ಮ '
             'ಹತ್ತಿರದ ಕಾರ್ಮಿಕ ಸೇವಾ ಕೇಂದ್ರಕ್ಕೆ ಭೇಟಿ ನೀಡಿ."\n'
             "- If the question is off-topic, say: "
-            '"ನಾನು ಶ್ರಮ ಸಹಾಯಕ — ಕಟ್ಟಡ ಕಾರ್ಮಿಕರ ಕಲ್ಯಾಣ ಯೋಜನೆಗಳು ಮತ್ತು KSK ಸೇವೆಗಳ '
+            '"ನಾನು ಶ್ರಮ ಸಹಾಯಕ — ಕಟ್ಟಡ ಕಾರ್ಮಿಕರ ಕಲ್ಯಾಣ ಯೋಜನೆಗಳು ಮತ್ತು ಸೇವಾ ಕೇಂದ್ರದ ಸೇವೆಗಳ '
             'ಬಗ್ಗೆ ಸಹಾಯ ಮಾಡಲು ಇಲ್ಲಿದ್ದೇನೆ. ದಯವಿಟ್ಟು ಅದಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಪ್ರಶ್ನೆ ಕೇಳಿ."\n'
         )
     else:
         prompt += (
-            f"\nIMPORTANT: Respond entirely in {lang_name}. Translate all information "
-            f"naturally into {lang_name} while keeping rupee amounts as numerals and "
-            f"proper nouns as-is.\n"
+            f"\n**STRICT LANGUAGE RULE — ENGLISH ONLY:**\n"
+            f"The user has SELECTED English language.\n"
+            f"You MUST reply in ENGLISH only, REGARDLESS of the input language.\n"
+            f"- If input is in Kannada, Hindi, or any other language, TRANSLATE your response to ENGLISH.\n"
+            f"- Do NOT reply in Kannada or any other language. Do NOT mix languages.\n"
+            f"- Keep rupee amounts as numerals (e.g., ₹2,00,000) and proper nouns as-is.\n"
         )
     return prompt
 
@@ -251,7 +255,7 @@ def _append_language_instruction(prompt: str, language: str) -> str:
 def _prepare_user_message(message: str, language: str) -> str:
     """Appends an explicit language instruction to the user message."""
     if language == "kn":
-        return message + "\n\n(IMPORTANT: Answer entirely in Kannada (Kannada script) / ದಯವಿಟ್ಟು ಕನ್ನಡದಲ್ಲಿ ಉತ್ತರಿಸಿ)"
+        return message + "\n\n(ಕಡ್ಡಾಯ: ಕನ್ನಡದಲ್ಲಿ ಮಾತ್ರ ಉತ್ತರಿಸಿ. ಯಾವುದೇ ಇಂಗ್ಲಿಷ್ ಪದಗಳನ್ನು ಬಳಸಬೇಡಿ. STRICTLY respond in Kannada script ONLY. Do NOT use any English words.)"
     return message
 
 
