@@ -199,9 +199,11 @@ async def lifespan(app: FastAPI):
     try:
         app.state.http_client = httpx.AsyncClient(timeout=settings.OLLAMA_TIMEOUT)
         app.state.ollama = OllamaClient(client=app.state.http_client)
-        logger.info("Ollama client created")
+        # Separate client for external Karnataka API (needs verify=False)
+        app.state.ext_http_client = httpx.AsyncClient(timeout=30, verify=False)
+        logger.info("Ollama client and external API client created")
     except Exception:
-        logger.critical("Failed to create Ollama HTTP client", exc_info=True)
+        logger.critical("Failed to create HTTP clients", exc_info=True)
         raise
 
     # Warmup the model (loads it into GPU memory)
@@ -246,6 +248,7 @@ async def lifespan(app: FastAPI):
     await app.state.db.close()
     await app.state.qdrant.close()
     await app.state.http_client.aclose()
+    await app.state.ext_http_client.aclose()
     logger.info("Application shutdown complete")
 
 
@@ -440,7 +443,7 @@ async def send_message(
             user_id=body.userId,
             auth_token=body.authToken,
             db=db,
-            http_client=app.state.http_client,
+            http_client=app.state.ext_http_client,
             thread_id=threadId,
         )
 
@@ -528,7 +531,7 @@ async def send_message_stream(
             user_id=body.userId,
             auth_token=body.authToken,
             db=db,
-            http_client=app.state.http_client,
+            http_client=app.state.ext_http_client,
             thread_id=threadId,
         )
 
