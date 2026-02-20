@@ -1,0 +1,156 @@
+# User Data Flow: From Login to Personalized Answers
+
+## Overview
+
+When a user logs in, their data is fetched from the Karnataka KBOCWWB backend API, stored in MongoDB, and injected into every subsequent LLM prompt so the chatbot can give **personalized, eligibility-aware answers** instead of generic scheme information.
+
+---
+
+## End-to-End Data Flow
+
+```mermaid
+sequenceDiagram
+    participant FE as Frontend
+    participant Main as main.py (FastAPI)
+    participant US as user_service.py
+    participant DB as db.py (MongoDB)
+    participant Agent as agent.py
+    participant LLM as LLM Model
+
+    FE->>Main: POST /api/chat/threads/{id}/messages<br/>(message, authToken, userId)
+    Main->>US: fetch_user_data(userId, authToken)
+    US->>US: Call 3 backend APIs
+    US-->>Main: aggregated_data dict
+    Main->>DB: save_user_data(thread_id, data)
+    Main->>Agent: ask_model_a(message, thread_id)
+    Agent->>DB: get_user_data(session_id)
+    DB-->>Agent: user_data dict
+    Agent->>Agent: Build user_context_str
+    Agent->>Agent: Build system_prompt (with personalization)
+    Agent->>LLM: SystemMessage + HumanMessage
+    LLM-->>Agent: Personalized response
+    Agent-->>Main: response text
+    Main-->>FE: {reply: "..."}
+```
+
+---
+
+## Phase 1: Data Fetching — [user_service.py](file:///Users/kshamawari/Documents/rag_model/user_service.py)
+
+[fetch_user_data(user_id, auth_token)](file:///Users/kshamawari/Documents/rag_model/user_service.py#18-557) calls **3 backend APIs** and returns a single `aggregated_data` dict:
+
+### API 1: Schemes History
+- **Endpoint:** `POST /schemes/get_schemes_by_labor`
+- **What it returns:** All schemes the user has **applied for** (approved, rejected, pending)
+- **Processing:**
+  - Deduplicates by `scheme_id` (keeps latest `applied_date`)
+  - For each scheme, calls `POST /public/schemes/status` to get real-time status
+  - If rejected, calls `GET /public/schemes/rejection-reason` for the reason
+- **Output format:**
+```python
+{"data": [
+    {"Scheme Name": "Pension Scheme", "Applied Date": "2024-08-02",
+     "Status Details": "Application Status: Approved. (...)", "Rejection Reasons": "..."}
+]}
+```
+
+### API 2: Renewal Date
+- **Endpoint:** `POST /user/get-renewal-date`
+- **What it returns:** Next renewal date for the labour card
+
+### API 3: Registration Details
+- **Endpoint:** `POST /user/get-user-registration-details`
+- **Processing (the most complex):**
+  1. **Personal details:** name, DOB → age, gender, validity dates → status calculation
+  2. **Status calculation** (from validity dates):
+     - `Active` → current date ≤ validity_to
+     - `Active (Buffer)` → within 1 year after expiry
+     - `Inactive (Waiting)` → within 90 days after buffer
+     - `Expired` → beyond all grace periods
+  3. **Eligible schemes calculation** (rule-based):
+
+| Rule | Condition | Schemes Added |
+|------|-----------|---------------|
+| Active/Buffer | Card is active or in buffer | Accident, Funeral |
+| Active only | Card is active (not buffer) | Medical, Major Ailments |
+| 1+ year member & Female | `current_year > validity_from_year` & female | Delivery, Thayi Magu |
+| 1+ year member | `current_year > validity_from_year` | Marriage |
+| Age ≥ 60 | Calculated age ≥ 60 | Pension |
+| Age > 60 & Pension approved | Has approved pension | Continuation of Pension |
+| Always | Any registered user | Disability Pension |
+| Disability approved + 1yr | Disability approved > 1 year ago | Continuation of Disability |
+
+  4. **Family & Nominees:** Extracted from `family_details` array
+  5. **Registration/Renewal status:** Calls `POST /public/labour/status` to check registration approval, then renewal status, including rejection reasons
+
+---
+
+## Phase 2: Storage — [db.py](file:///Users/kshamawari/Documents/rag_model/db.py)
+
+- [save_user_data(thread_id, data)](file:///Users/kshamawari/Documents/rag_model/db.py#123-141) → Stores the full `aggregated_data` dict in MongoDB collection `userdata` with `thread_id` as the key
+- [get_user_data(thread_id)](file:///Users/kshamawari/Documents/rag_model/db.py#142-160) → Retrieves the latest document for that thread (sorted by `created_at` descending)
+
+---
+
+## Phase 3: Context Injection — [agent.py](file:///Users/kshamawari/Documents/rag_model/agent.py)
+
+### Step 1: Fetch User Data (Lines 32–162)
+At the **top** of [ask_model_a()](file:///Users/kshamawari/Documents/rag_model/agent.py#21-607), before any routing:
+
+```python
+user_data = await get_user_data(session_id)
+```
+
+If data exists, it builds `user_context_str` — a structured text block with **6 sections**:
+
+| Section | Source Field | Used For |
+|---------|-------------|----------|
+| 1. User Profile | `personal_details` | Name, age, gender, status, validity |
+| 2. Account Status | `registration_details.summary` | Registration/renewal approval status |
+| 3. Eligible Schemes | `personal_details.eligible_schemes` | **What schemes user qualifies for** |
+| 4. Schemes History | `schemes.data` | What they've applied for + outcomes |
+| 5. Family & Nominees | `family_details`, `nominees` | Dependents and nominee info |
+| 6. Renewal Info | `renewal_date` | Next renewal date |
+
+The context also includes **LLM instructions**:
+- Address user by name + Sir/Madam based on gender
+- For eligibility questions → use **only** section 3
+- For status questions → use sections 1 + 2
+- For family/nominee questions → use section 5
+
+### Step 2: How Each Scenario Uses User Data
+
+| Scenario | Route | How User Data Is Used |
+|----------|-------|----------------------|
+| **All Schemes** | `ALL_CATEGORIES` | Lists user's eligible schemes as "Recommended for You" first, then shows others |
+| **General Chat** | `GENERAL_CHAT` | User context appended but no special instruction |
+| **No Match (Auth)** | `NO_MATCH` + logged in | LLM answers from user context (profile, schemes, family) |
+| **Specific Scheme** | e.g. `Delivery Assistance` | **Compares** scheme against eligible_schemes list, explicitly tells user if they are eligible or not |
+| **No Match (Unauth)** | `NO_MATCH` + not logged in | Fallback message, no user data |
+
+### Step 3: Final Prompt Assembly (Lines 564–568)
+```python
+if is_authenticated:
+    full_system_prompt = system_prompt + "\n" + user_context_str
+else:
+    full_system_prompt = system_prompt
+```
+
+The `user_context_str` is **appended** to whatever scenario-specific `system_prompt` was built, so the LLM always has full user context available.
+
+---
+
+## Example: "Can I apply for Delivery Assistance?"
+
+### Without Login (Current behavior in screenshot):
+> "The Delivery Assistance Scheme provides ₹50,000/- for each of the first two deliveries for registered woman construction workers in Karnataka..."  
+> *(Generic info, no eligibility check)*
+
+### With Login (After our changes):
+1. Router returns `["Delivery Assistance Scheme"]`
+2. Agent fetches user data → finds `eligible_schemes` list
+3. System prompt includes **PERSONALIZATION CHECK** instruction:
+   - Compare "Delivery Assistance" against eligible_schemes
+   - If user is Male → "Based on your profile, you may NOT be eligible (this scheme is for female workers)"
+   - If user is Female with active card → "Based on your profile, you are ELIGIBLE for this scheme"
+4. Scheme info is still provided, but with a **personalized eligibility verdict**

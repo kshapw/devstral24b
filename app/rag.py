@@ -384,9 +384,9 @@ def _build_system_prompt(context: str, language: str = "") -> str:
 def _build_authenticated_general_prompt(
     context: str, user_data: dict, language: str = ""
 ) -> str:
-    """Assemble system prompt with RAG context + user data for authenticated GENERAL."""
-    user_data_str = json.dumps(user_data, indent=2, ensure_ascii=False, default=str)
-    prompt = AUTHENTICATED_GENERAL_PROMPT.format(context=context, user_data=user_data_str)
+    """Assemble system prompt with RAG context + structured user data for authenticated GENERAL."""
+    user_context = _build_user_context_str(user_data)
+    prompt = AUTHENTICATED_GENERAL_PROMPT.format(context=context, user_data=user_context)
     return _append_language_instruction(prompt, language)
 
 
@@ -446,10 +446,139 @@ User Data:
 """
 
 
+def _build_user_context_str(user_data: dict) -> str:
+    """Convert raw user data dict into a structured plain-text context block.
+
+    This format is proven to work well with LLMs — the working module uses
+    the exact same pattern (structured sections + explicit instructions).
+    """
+    # --- Parse Schemes ---
+    schemes_data = user_data.get("schemes", {})
+    schemes_str = "No registered schemes found."
+    if isinstance(schemes_data, dict) and "data" in schemes_data:
+        s_list = schemes_data["data"]
+        if s_list:
+            schemes_str = ""
+            for s in s_list:
+                schemes_str += f"- **{s.get('Scheme Name')}**: {s.get('Status Details')}"
+                if s.get("Rejection Reasons"):
+                    schemes_str += f" [Reason: {s.get('Rejection Reasons')}]"
+                schemes_str += "\n"
+    elif isinstance(schemes_data, str):
+        schemes_str = schemes_data
+
+    # --- Parse Registration & Personal Details ---
+    reg_details = user_data.get("registration_details", {})
+    reg_summary = "Unavailable"
+    personal_section = "Unavailable"
+    eligibility_section = "No eligibility data available."
+    family_section = "No family details found."
+    p_name = "User"
+    p_gender = "Unknown"
+
+    if isinstance(reg_details, dict):
+        reg_summary = reg_details.get("summary", "No details available")
+
+        personal = reg_details.get("personal_details", {})
+        if personal:
+            p_name = personal.get("first_name", "User") or "User"
+            p_code = personal.get("registration_code", "Unknown")
+            p_status = personal.get("calculated_status", "Unknown")
+            p_age = personal.get("age", "Unknown")
+            p_gender = personal.get("gender", "Unknown")
+            p_nature = personal.get("nature_of_work", "Unknown")
+
+            addr = reg_details.get("address_details", {})
+            p_dist = addr.get("district", "Unknown") if addr else "Unknown"
+
+            val_from = personal.get("validity_from_date", "")
+            val_to = personal.get("validity_to_date", "")
+            val_from_short = val_from.split("T")[0] if val_from else "Unknown"
+            val_to_short = val_to.split("T")[0] if val_to else "Unknown"
+
+            personal_section = f"""
+    - Name: {p_name}
+    - Registration No: {p_code}
+    - Current Status: {p_status}
+    - Age: {p_age} | Gender: {p_gender} | District: {p_dist}
+    - Nature of Work: {p_nature}
+    - Validity: {val_from_short} to {val_to_short}
+            """
+
+            elig_list = personal.get("eligible_schemes", [])
+            if elig_list:
+                eligibility_section = "\n".join([f"    - {s}" for s in elig_list])
+            else:
+                eligibility_section = "    (Based on your profile, no specific additional schemes found at this moment)"
+
+        # --- Family ---
+        deps = reg_details.get("family_details", [])
+        noms = reg_details.get("nominees", [])
+
+        fam_lines = []
+        if deps:
+            fam_lines.append("Dependents:")
+            for d in deps:
+                fam_lines.append(f"      - {d.get('first_name', '')} ({d.get('relation', '')})")
+        if noms:
+            fam_lines.append("Nominees:")
+            for n in noms:
+                fam_lines.append(f"      - {n.get('first_name', '')} ({n.get('relation', '')})")
+        if fam_lines:
+            family_section = "\n".join(fam_lines)
+
+    # --- Parse Renewal ---
+    renewal_data = user_data.get("renewal_date", {})
+    renewal_str = "Unavailable"
+    if isinstance(renewal_data, dict) and isinstance(renewal_data.get("data"), dict):
+        try:
+            rs = renewal_data["data"].get("recordsets", [])
+            if rs and len(rs) > 0 and len(rs[0]) > 0:
+                renewal_str = rs[0][0].get("next_renewal_date", "Date not found")
+                if "T" in str(renewal_str):
+                    renewal_str = str(renewal_str).split("T")[0]
+        except Exception:
+            renewal_str = "Error parsing renewal date"
+
+    # --- Build Final Context String ---
+    context_str = f"""
+=== AUTHENTICATED USER CONTEXT (PRIORITY DATA) ===
+User ID: {user_data.get('user_id', 'Unknown')}
+
+1. User Profile:
+{personal_section}
+
+2. Account Status Summary:
+{reg_summary}
+
+3. Eligible Schemes (Recommended for User):
+{eligibility_section}
+
+4. Registered Schemes History:
+{schemes_str}
+
+5. Family & Nominees:
+{family_section}
+
+6. Renewal Info:
+{renewal_str}
+
+INSTRUCTION FOR USER DATA:
+- **GREETING**: Address the user as "{p_name}" (Sir/Madam based on Gender: {p_gender}).
+- **ELIGIBILITY**: If user asks 'what schemes am I eligible for?', YOU MUST ONLY list the items from '3. Eligible Schemes'. Do NOT suggest any other schemes.
+- If user asks about 'my status', use '1. User Profile' (Current Status) and '2. Account Status Summary'.
+- If user asks about 'my family' or 'nominees', use '5. Family & Nominees'.
+- If user asks about 'my renewal', use '6. Renewal Info' or '1. User Profile' (Validity).
+- You DO NOT need to ask them to login if the data is present here; just answer directly based on this context.
+==================================
+"""
+    return context_str
+
+
 def _build_status_prompt(user_data: dict, language: str = "") -> str:
     """Build a system prompt grounded on the user's fetched data."""
-    user_data_str = json.dumps(user_data, indent=2, ensure_ascii=False, default=str)
-    prompt = STATUS_SYSTEM_PROMPT.format(user_data=user_data_str)
+    user_context = _build_user_context_str(user_data)
+    prompt = STATUS_SYSTEM_PROMPT.format(user_data=user_context)
     return _append_language_instruction(prompt, language)
 
 
@@ -693,6 +822,8 @@ async def answer(
             logger.error("STATUS_CHECK intent but no prefetched user data")
             return "Unable to fetch your information at this time. Please try again later."
         print(f"[DEBUG]   user_data keys: {list(prefetched_user_data.keys())}")
+        print(f"[DEBUG]   FULL USER DATA JSON:")
+        print(json.dumps(prefetched_user_data, indent=2, ensure_ascii=False, default=str))
         print(f"[DEBUG]   Building status prompt...")
         system_prompt = _build_status_prompt(prefetched_user_data, language)
         print(f"[DEBUG]   Status prompt length: {len(system_prompt)} chars")
