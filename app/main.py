@@ -400,7 +400,7 @@ async def get_messages(
 @app.post(
     "/api/chat/threads/{threadId}/messages",
     response_model=MessageResponse,
-    status_code=201,
+    status_code=200,
 )
 async def send_message(
     threadId: str,
@@ -464,7 +464,7 @@ async def send_message(
             )
 
         try:
-            assistant_msg_id = await add_message(
+            await add_message(
                 db, threadId, "assistant", result,
                 user_id=body.userId, language=body.language,
             )
@@ -478,12 +478,13 @@ async def send_message(
             )
 
         logger.info(
-            "Assistant response %s added to thread %s", assistant_msg_id, threadId
+            "Assistant response added to thread %s", threadId
         )
         return MessageResponse(
-            threadId=threadId,
-            messageId=assistant_msg_id,
-            answer=result,
+            message=body.message,
+            reply=result,
+            options=[],
+            audioUrl=None,
         )
 
 

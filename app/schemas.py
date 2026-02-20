@@ -42,9 +42,10 @@ class ThreadResponse(BaseModel):
 
 
 class MessageResponse(BaseModel):
-    threadId: str
-    messageId: str
-    answer: str
+    message: str
+    reply: str
+    options: list[str] = []
+    audioUrl: str | None = None
 
 
 class HealthResponse(BaseModel):
