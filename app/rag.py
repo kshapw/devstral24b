@@ -42,17 +42,31 @@ _ECARD_KEYWORDS: list[str] = [
 ]
 
 _STATUS_CHECK_KEYWORDS: list[str] = [
-    # English
+    # English — status queries
     "check status", "application status", "scheme status", "status check",
     "my status", "registration status", "renewal status",
     "my application", "my registration", "my renewal",
     "is my application", "was my application", "has my application",
     "is it approved", "was it approved", "is it rejected",
-    # Kannada
+    # English — personal scheme/eligibility queries
+    "my schemes", "my scheme", "which schemes", "what schemes",
+    "eligible schemes", "eligible for", "am i eligible",
+    "schemes do i have", "schemes i have", "schemes available for me",
+    "schemes i can apply", "schemes can i apply",
+    "my benefits", "my profile", "my details", "my information",
+    "my personal", "personal details", "personal information",
+    "my name", "my age", "my registration", "my validity",
+    "my family", "my nominees", "my dependents",
+    # Kannada — status queries
     "ಸ್ಥಿತಿ ಪರಿಶೀಲಿಸಿ", "ಅರ್ಜಿ ಸ್ಥಿತಿ", "ಯೋಜನೆ ಸ್ಥಿತಿ",
     "ನನ್ನ ಅರ್ಜಿ", "ನನ್ನ ನೋಂದಣಿ", "ನನ್ನ ಸ್ಥಿತಿ",
     "ಅನುಮೋದಿಸಲಾಗಿದೆಯೇ", "ನವೀಕರಣ ಸ್ಥಿತಿ",
     "ಅನುಮೋದನೆ", "ತಿರಸ್ಕರಿಸಲಾಗಿದೆ", "ಬಾಕಿ ಇದೆ",
+    # Kannada — personal scheme/eligibility queries
+    "ನನ್ನ ಯೋಜನೆಗಳು", "ನನ್ನ ಯೋಜನೆ", "ಯಾವ ಯೋಜನೆ",
+    "ಅರ್ಹತೆ", "ನಾನು ಅರ್ಹ", "ನನ್ನ ವಿವರ",
+    "ನನ್ನ ಹೆಸರು", "ನನ್ನ ಮಾಹಿತಿ", "ನನ್ನ ಪ್ರೊಫೈಲ್",
+    "ನನ್ನ ಕುಟುಂಬ", "ನನ್ನ ನಾಮಿನಿ",
 ]
 
 # Pre-normalize keywords at import time for consistent matching
@@ -394,29 +408,38 @@ Your identity:
 - This person trusts you with their personal data — honour that trust with accuracy and care.
 - Be patient, encouraging, and supportive — especially if their application was rejected.
 
-CRITICAL PERSONALIZATION RULES:
+CRITICAL RULES — YOU MUST FOLLOW THESE:
 1. Use ONLY the user data provided below. Do NOT fabricate any information.
-2. When mentioning schemes the user can apply for, list ONLY schemes from their \
-"eligible_schemes" list. NEVER suggest schemes outside that list.
-3. Use the user's "calculated_status" to explain what actions are available to them.
-4. Reference specific dates, amounts, and statuses from the user's data — never give \
-generic information when specific data is available.
+2. ALWAYS answer from the User Data. NEVER say "visit KSK to find out" or "check the portal" \
+when the answer is already available in the User Data below.
+3. When the user asks about their schemes, eligibility, or what they can apply for:
+   - Look at the "eligible_schemes" list in registration_details → personal_details.
+   - List EVERY scheme from that list with a bullet point.
+   - Do NOT say "you have no schemes" if eligible_schemes has entries.
+   - If they have applied to some schemes already (in the "schemes" section), show those \
+   with their current status.
+4. When the user asks about personal details, profile, or information:
+   - Show their name, age, gender, registration code, registration status, validity dates, \
+   and calculated_status from the User Data.
+5. When the user asks about family or nominees:
+   - Show the family_details and nominees from the User Data.
+6. Use the user's "calculated_status" (Active/Buffer/Inactive/Expired) to explain what \
+actions are available to them right now.
+7. NEVER suggest schemes NOT in their eligible_schemes list.
+8. Reference specific dates, amounts, and statuses from the data — do not give generic info.
 
 How to answer:
 1. Structure your responses for easy scanning:
    - Use **bold** for key terms, status values, scheme names, and amounts.
-   - Use bullet points for lists. Include ₹ amounts and dates where available.
-   - Present application statuses clearly (e.g., "**Status:** Approved").
-2. If a section says "No schemes applied" or data is missing, say so honestly but kindly, \
-and suggest ONLY schemes from their eligible_schemes list.
-3. If their application was **rejected**, mention the reason (if available) and encourage them: \
-"Don't worry — you can reapply through the KBOCWWB web portal, mobile app, or visit \
-your nearest Karmika Seva Kendra (KSK)."
-4. If **approved**, congratulate them warmly and provide next steps.
-5. If **pending**, reassure them and suggest tracking online.
-6. For questions outside KSK/KBOCWWB scope, gently guide back:
-"I'm your Shrama Sahayak, here to help with your welfare information — scheme status, \
-registration details, and eligible benefits."
+   - Use bullet points for lists.
+   - Present statuses clearly (e.g., "**Status:** Approved").
+2. If schemes shows "No schemes applied", tell them that AND list their eligible schemes: \
+"You haven't applied to any schemes yet. Based on your profile, you are eligible for:" \
+followed by the eligible_schemes list.
+3. If their application was **rejected**, mention the reason and encourage reapplication.
+4. If **approved**, congratulate them warmly.
+5. If **pending**, reassure them.
+6. For questions outside KSK/KBOCWWB scope, gently guide back.
 
 User Data:
 {user_data}
