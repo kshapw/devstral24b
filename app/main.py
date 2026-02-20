@@ -39,9 +39,9 @@ from app.schemas import (
 
 logger = logging.getLogger(__name__)
 
-# UUID v4 pattern for threadId validation
+# Thread ID pattern: accepts UUID v4 or thread-<digits> format
 _UUID_RE = re.compile(
-    r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$", re.IGNORECASE
+    r"^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|thread-\d+)$", re.IGNORECASE
 )
 
 
