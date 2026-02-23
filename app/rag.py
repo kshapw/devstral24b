@@ -328,14 +328,12 @@ Do NOT simplify by dropping secondary benefits or conditions.
 5. If the Context says a benefit is for "the worker or his/her dependent children", \
 you MUST say it is for "the worker or their dependent children" — do NOT drop either part.
 
-LANGUAGE PRESENTATION RULE:
-- When responding in Kannada (or any language), present the information DIRECTLY. \
-Do NOT add meta-commentary like "ಕನ್ನಡದಲ್ಲಿ ಮಾಹಿತಿ ಹೀಗಿದೆ" (the Kannada information is like this) \
-or "ಕನ್ನಡ ಮಾಹಿತಿಯ ಪ್ರಕಾರ" (according to Kannada information).
-- Just state the facts directly. For example, say "ಪಿಂಚಣಿ ಮೊತ್ತ ₹3,000 ಮಾಸಿಕ" \
-NOT "ಕನ್ನಡದಲ್ಲಿ ಪಿಂಚಣಿ ಯೋಜನೆಯ ಮಾಹಿತಿ ಹೀಗಿದೆ: ಪಿಂಚಣಿ ಮೊತ್ತ ₹3,000 ಮಾಸಿಕ".
-- Do NOT reference section labels like "ಕನ್ನಡ ಮಾಹಿತಿ" from the Context. These are just \
-organizational labels — treat the content as direct facts about the scheme.
+LANGUAGE AND TRANSLATION RULE:
+- The Context is provided in English, but you must answer in the EXACT language the user is speaking (e.g., Kannada, Hindi, etc.).
+- When the user asks in Kannada, TRANSLATE the English Context accurately into natural, clear Kannada.
+- Present the information DIRECTLY as if it was originally written in that language.
+- Do NOT add meta-commentary like "ಇಂಗ್ಲಿಷ್ ಮಾಹಿತಿಯ ಪ್ರಕಾರ" or "ನಾನು ಭಾಷಾಂತರಿಸುತ್ತಿದ್ದೇನೆ".
+- Ensure crucial terms like scheme names (e.g., "Maternity Assistance" -> "ಹೆರಿಗೆ ಸಹಾಯಧನ" or "ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ"), document names, and numbers/amounts are translated correctly and contextually.
 
 How to answer:
 1. Structure your responses for easy scanning:
@@ -445,10 +443,12 @@ COMPLETENESS RULES (CRITICAL):
 Do NOT say "only for X" when the scheme is for "X and Y".
 4. When describing benefits, include ALL amounts and conditions mentioned.
 
-LANGUAGE PRESENTATION RULE:
-- Present information DIRECTLY in the requested language. Do NOT add meta-commentary \
-like "ಕನ್ನಡದಲ್ಲಿ ಮಾಹಿತಿ ಹೀಗಿದೆ" or reference section labels like "ಕನ್ನಡ ಮಾಹಿತಿ". \
-Just state the facts directly as if they are your own knowledge.
+LANGUAGE AND TRANSLATION RULE:
+- The Context is provided in English, but you must answer in the EXACT language the user is speaking (e.g., Kannada, Hindi, etc.).
+- When the user asks in Kannada, TRANSLATE the English Context accurately into natural, clear Kannada.
+- Present the information DIRECTLY as if it was originally written in that language.
+- Do NOT add meta-commentary like "ಇಂಗ್ಲಿಷ್ ಮಾಹಿತಿಯ ಪ್ರಕಾರ" or "ನಾನು ಭಾಷಾಂತರಿಸುತ್ತಿದ್ದೇನೆ".
+- Ensure crucial terms like scheme names (e.g., "Maternity Assistance" -> "ಹೆರಿಗೆ ಸಹಾಯಧನ" or "ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ"), document names, and numbers/amounts are translated correctly and contextually.
 
 How to answer:
 1. Use the Context for scheme details (amounts, documents, process) but filter through \

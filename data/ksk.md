@@ -167,58 +167,6 @@ A: Yes, it is mandatory to establish eligibility.
 Q: Can the application be rejected?
 A: Yes, if the incident falls under excluded conditions or documents are incomplete.
 
-### ವಿವರಗಳು
-
-ಅಪಘಾತ ಎಂದರೆ ಯಾವುದೇ ಅಪರಾಧ ಉದ್ದೇಶವಿಲ್ಲದೆ ಮತ್ತು ಅನಿರೀಕ್ಷಿತವಾಗಿ ನಡೆಯುವ ಘಟನೆಯಾಗಿದ್ದು, ಇದರಿಂದ ವ್ಯಕ್ತಿಗೆ ಸಂಭವಿಸಬಹುದಾದ ಮರಣ ಅಥವಾ ಶಾಶ್ವತ / ಭಾಗಶಃ ದುರ್ಬಲತೆ.
-
-#### ಅಪಘಾತ ಪರಿಹಾರ ಪಡೆಯಲು ಬೇಕಾದ ಅರ್ಹತೆ
-
-ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕನಿಗೆ ಕೆಲಸ ಮಾಡುವ ಸಮಯದಲ್ಲಿ ಅಪಘಾತವಾದಾಗ, ಅವನಿಗೆ / ಅವಳಿಗೆ ಕಾರ್ಮಿಕರ ನಷ್ಠ ಪರಿಹಾರ ಕಾಯ್ದೆ, 1923 ರ ಪ್ರಾವಧಾನಗಳಡಿ ಸಂಸ್ಥೆಯ ನಿಯೋಜಕನು ಅಪಘಾತ ಪರಿಹಾರವನ್ನು ನೀಡಬೇಕಾಗುತ್ತದೆ. ಜೊತೆಗೆ ಸರ್ಕಾರದ ಅಧಿಸೂಚನೆ ಸಂಖ್ಯೆ ಎಲ್ ಡಿ 116 ಎಲ್ ಇಟಿ 2025 ಬೆಂಗಳೂರು ದಿನಾಂಕ: 16-07-2025 ರಂತೆ ಮಂಡಳಿಯಿಂದ 8-ಲಕ್ಷ ರೂಗಳ ಪರಿಹಾರ ಸಹಾಯಧನ ನೀಡಲಾಗುತ್ತಿದೆ. ಆದರೆ, ಒಂದು ವೇಳೆ ಆತನ ಅವನ/ಅವಳ ಉದ್ಯೋಗ ಸ್ಥಳದಿಂದ ಹೊರಗೆ ಅಪಘಾತ ಸಂಭವಿಸಿದರೆ, ಆ ಫಲಾನುಭವಿಗೆ ಮಂಡಳಿಯಿಂದ ಈ ನಿಯಮದಡಿಯಲ್ಲಿ ಅಪಘಾತ ಪರಿಹಾರ ಧನವನ್ನು ನೀಡಬೇಕಾಗುತ್ತದೆ.
-
-#### ಲಾಭಗಳು
-
-* ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಅಪಘಾತದಿಂದ ಮರಣ: **₹8,00,000**
-* ಕೆಲಸದ ಸ್ಥಳದ ಹೊರಗೆ ಅಪಘಾತದಿಂದ ಮರಣ: **₹5,00,000**
-* ಶಾಶ್ವತ ಪೂರ್ಣ ದುರ್ಬಲತೆ: **₹2,00,000**
-* ಭಾಗಶಃ ಶಾಶ್ವತ ದುರ್ಬಲತೆ: **₹1,00,000**
-
-#### ಅಪಘಾತ ಪರಿಹಾರ ಸಹಾಯಧನ ನೀಡಲಾಗದ ಪ್ರಕರಣಗಳು (ಹೊರಗಿಡಲಾಗಿದೆ)
-
-* ಸಹಜ ಮರಣ
-* ಆತ್ಮಹತ್ಯೆ / ಉದ್ದೇಶ ಪೂರ್ವಕ ವೈಯಕ್ತಿಕ ಹಾನಿಮಾಡಿಕೊಳ್ಳುವುದು
-* ಮಾದಕ ದ್ರವ್ಯ ಮತ್ತು ಔಷಧಿಗಳಿಂದ ಸಂಭವಿಸುವ ಮರಣ
-* ಕ್ರಿಮಿನಲ್ ಉದ್ದೇಶದಿಂದ ಕಾನೂನಿನ ಉಲ್ಲಂಘನೆ ಮಾಡಿ ಸಂಭವಿಸುವ ಸಾವು
-* ಗರ್ಭಿಣಿ ಸಾವು, ಮಗುವಿನ ಜನನ ಸಮಯದ ಸಾವು, ಗರ್ಭಪಾತದ ಸಾವು ಮತ್ತು ಇದಕ್ಕೆ ಸಂಭವಿಸಿದ ಸಾವು
-* ಚಿಕಿತ್ಸಕ ಚಿಕಿತ್ಸೆಗಳು ಅಥವಾ ಮಧ್ಯಸ್ಥಿಕೆಗಳು
-* ಲೈಂಗಿಕವಾಗಿ ಹರಡುವ ರೋಗಗಳು
-* ಎಚ್ಐವಿ ಅಥವಾ ಸಂಬಂಧಿತ ರೋಗಗಳು
-* ದೈಹಿಕವಾಗಿ ದಂಢಿಸಿಕೊಳ್ಳುವ ಅಪರಾಧಿತ ಪ್ರಯತ್ನದ ಸಾವು
-
-#### ಅಗತ್ಯ ದಾಖಲೆಗಳು
-
-* ಮಂಡಳಿಯಿಂದ ನೀಡಲಾದ ಮೂಲ ಗುರುತಿನ ಚೀಟಿ
-* ಮರಣ ಪ್ರಮಾಣಪತ್ರ (ಅಪಘಾತದಿಂದ ಮರಣ ಹೊಂದಿದ್ದಲ್ಲಿ)
-* ಮರಣೊತ್ತಾರಾ ಪರೀಕ್ಷೆ ವರದಿ (ಅಪಘಾತದಿಂದ ಮರಣ ಹೊಂದಿದ್ದಲ್ಲಿ)
-* ಎಫ್ಐಆರ್ ಪ್ರತಿ
-* ನಮೂನೆ 21-ಎ (ಉದ್ಯೋಗದಾತರಿಂದ ಭರ್ತಿ ಮಾಡಿ ಅಪ್ಲೋಡ್ ಮಾಡಬೇಕು)
-* ಫಲಾನುಭವಿಯ ನಾಮನಿರ್ದೇಶಿತರ (ನಾಮಿನಿ) ಬ್ಯಾಂಕ್ ಪಾಸ್ ಪುಸ್ತಕದ ಛಾಯಾಪ್ರತಿ (ಮರಣ ಹೊಂದಿದ ಸಂದರ್ಭದಲ್ಲಿ)
-* ಉದ್ಯೋಗದ ದೃಢೀಕರಣ ಪತ್ರ
-* ವೈದ್ಯಕೀಯ ವರದಿ (ಸಂಪೂರ್ಣ / ಭಾಗಶಃ ದುರ್ಬಲತೆಯ ಸಂದರ್ಭದಲ್ಲಿ)
-* ನಾಮನಿರ್ದೇಶಿತರ ಭಾವಚಿತ್ರವಿರುವ ಗುರುತು ಚೀಟಿಯ ಛಾಯಾಪ್ರತಿ
-* ನಾಮನಿರ್ದೇಶಿತರ ನಮೂನೆ ಮತ್ತು ವಂತಿಗೆ ಪ್ರಮಾಣ ಪತ್ರ (ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ)
-
-#### ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ
-
-1. ಅರ್ಜಿದಾರರು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದಿಂದ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು
-2. ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ
-3. ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ ಅನುಮೋದನೆ
-
-#### ಮುಖ್ಯ ಷರತ್ತುಗಳು
-
-* ಫಲಾನುಭವಿ ಅಪಘಾತವಾದ ದಿನದಿಂದ **ಒಂದು ವರ್ಷದೊಳಗೆ** ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು
-* ₹8 ಲಕ್ಷ ಪರಿಹಾರದಲ್ಲಿ ಶೇ.50 ರಷ್ಟು ಹಣವನ್ನು ರಾಷ್ಟ್ರೀಕೃತ ಬ್ಯಾಂಕಿನಲ್ಲಿ ನಿಶ್ಚಿತ ಠೇವಣಿ ರೂಪದಲ್ಲಿ ಮತ್ತು ಶೇ.50 ರಷ್ಟು DBT ಮೂಲಕ ಜಮೆ ಮಾಡಲಾಗುತ್ತದೆ
-* ಅಪೂರ್ಣ ದಾಖಲೆಗಳನ್ನು ಒದಗಿಸಿದಲ್ಲಿ ಅರ್ಜಿಯನ್ನು ತಿರಸ್ಕರಿಸಬಹುದು
-
 ---
 
 ## Scheme: Assistance for Major Ailments
@@ -311,42 +259,6 @@ A: Yes, it is required to establish eligibility.
 Q: Can multiple claims be made under this scheme?
 A: Yes, if eligibility conditions are met and each case is approved.
 
-### ವಿವರಗಳು
-
-ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕರ ಹಾಗು ಅವನ / ಅವಳ ಅವಲಂಭಿತರ ಪ್ರಮುಖ ಖಾಯಿಲೆಗಳ ವೆಚ್ಚಕ್ಕಾಗಿ ನೀಡುವ ಸಹಾಯಧನ.
-
-#### ಪ್ರಮುಖ ಖಾಯಿಲೆಗಳು
-
-ಹೃದ್ರೋಗ, ಕೋವಿಡ್-19, ಕಿಡ್ನಿ ಜೋಡಣೆ, ಕ್ಯಾನ್ಸರ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ, ಕಣ್ಣಿನ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ, ಮೂಳೆ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ, ಗರ್ಭಕೋಶ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ, ಅಸ್ತಮ ಚಿಕಿತ್ಸೆ, ಗರ್ಭಪಾತ ಪ್ರಕರಣಗಳು, ಪಿತ್ತಕೋಶದ ತೊಂದರೆ, ಮೂತ್ರ ಪಿಂಡದಲ್ಲಿನ ಕಲ್ಲು ತೆಗೆಯುವ ಚಿಕಿತ್ಸೆ, ಮೆದುಳಿನ ರಕ್ತಸ್ರಾವ, ಅಲ್ಸರ್ ಚಿಕಿತ್ಸೆ, ಡಯಾಲಿಸಿಸ್, ಕಿಡ್ನಿ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ, ಇಎನ್.ಟಿ ಚಿಕಿತ್ಸೆ, ನರರೋಗ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ, ವ್ಯಾಸ್ಕ್ಯೂಲರ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ, ಅನ್ನನಾಳದ ಚಿಕಿತ್ಸೆ, ಕರುಳಿನ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ, ಸ್ತನ ಸಂಬಂಧಿತ ಚಿಕಿತ್ಸೆ, ಹರ್ನಿಯ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ, ಅಪೆಂಡಿಕ್ಸ್ ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ ಮತ್ತು ಮಂಡಳಿಯಿಂದ ಪರಿಗಣಿಸಲ್ಪಡುವ ಇತರೆ ಪ್ರಮುಖ ಖಾಯಿಲೆಗಳು.
-
-#### ಲಾಭಗಳು
-
-* ಕೇಂದ್ರ ಸರ್ಕಾರದ ಆರೋಗ್ಯ ಸೇವೆ (CGHS) ದರಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಗರಿಷ್ಠ **₹2,00,000** ವರೆಗೂ ಸಹಾಯಧನ
-
-#### ಅರ್ಹತೆ
-
-* ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕ ಮತ್ತು ಅವನ / ಅವಳ ಅವಲಂಬಿತರು
-* ಸರ್ಕಾರಿ ಅಥವಾ ಸರ್ಕಾರದಿಂದ ಮಾನ್ಯತೆ ಪಡೆದ (ಶೆಡ್ಯೂಲ್ 1ಗೆ ಸೇರಿದ) ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ದಾಖಲಾಗಿರಬೇಕು
-
-#### ಅಗತ್ಯ ದಾಖಲೆಗಳು
-
-* ಮಂಡಳಿ ನೀಡಿರುವ ಗುರುತಿನ ಚೀಟಿ / ಸ್ಮಾರ್ಟ್ ಕಾರ್ಡ್ (ದೃಢೀಕೃತ)
-* ಉದ್ಯೋಗ ದೃಡೀಕರಣ ಪತ್ರ
-* ಬ್ಯಾಂಕ್ ಖಾತೆಯ ಪುರಾವೆ
-* ಆಸ್ಪತ್ರೆಗೆ ದಾಖಲಾದ ಮತ್ತು ಬಿಡುಗಡೆಯಾದ ದಿನಾಂಕ ಹಾಗೂ ಚಿಕಿತ್ಸಾ ವೆಚ್ಚವನ್ನು ಒಳಗೊಂಡ ಬಿಲ್ಲುಗಳ ವಿವರ
-* ವೈದ್ಯಕೀಯ ದಾಖಲೆ (ಸರ್ಕಾರಿ / ಮಾನ್ಯತೆ ಪಡೆದ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ದಾಖಲಾಗಿರುವ ಬಗ್ಗೆ)
-* ನಮೂನೆ 22-ಎ
-
-#### ಮುಖ್ಯ ಷರತ್ತುಗಳು
-
-* ಆಸ್ಪತ್ರೆಯಿಂದ ಬಿಡುಗಡೆಯಾದ ದಿನಾಂಕದಿಂದ **ಆರು ತಿಂಗಳೊಳಗೆ** ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು
-
-#### ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ
-
-1. ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು
-2. ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ
-3. ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿಯವರಿಂದ ಪರಿಶೀಲನೆ ಮತ್ತು ಅನುಮೋದನೆ
-
 ---
 
 ## Scheme: Thayi Magu Sahaya Hasta (Nutritional Support)
@@ -434,84 +346,47 @@ A: Yes, it is mandatory to establish eligibility.
 Q: When should I apply?
 A: The application should be submitted soon after childbirth to ensure timely benefit.
 
-### ವಿವರಗಳು
-
-ನೋಂದಾಯಿತ ಮಹಿಳಾ ಕಾರ್ಮಿಕಳ ಮಗುವಿನ ಪೌಷ್ಠಿಕಾಂಶದ ಪೂರೈಕೆಗಾಗಿ ಹಾಗು ಪೂರ್ವ ಪ್ರಾಥಮಿಕ ಶಿಕ್ಷಣಕ್ಕಾಗಿ ನೀಡುವ ಸಹಾಯ ಧನ (ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ).
-
-ನೋಂದಾಯಿತ ಮಹಿಳಾ ಕಾರ್ಮಿಕರ ಮಗುವಿನ ಹೆರಿಗೆಯ ಸಮಯದಿಂದ ಮೂರು ವರ್ಷಗಳ ಅವಧಿಯವರೆಗೆ ಮಗುವಿನ ಪೂರ್ವ ಪ್ರಾಥಮಿಕ ಶಿಕ್ಷಣ ಮತ್ತು ಪೌಷ್ಠಿಕಾಂಶದ ಪೂರೈಕೆಗಾಗಿ ಸಹಾಯ ಧನವನ್ನು ಪಡೆಯಲು ಅರ್ಹರಾಗಿರುತ್ತಾಳೆ.
-
-#### ಲಾಭಗಳು
-
-* ಒಟ್ಟು ಮೊತ್ತ: **₹6,000** (ಪ್ರತಿ ತಿಂಗಳು **₹500** ರಂತೆ)
-* ಅವಧಿ: ಹೆರಿಗೆಯ ಸಮಯದಿಂದ **3 ವರ್ಷಗಳವರೆಗೆ**
-
-#### ಅರ್ಹತೆ
-
-* ನೋಂದಾಯಿತ ಮಹಿಳಾ ಕಾರ್ಮಿಕರು ಮಾತ್ರ
-* **ಎರಡು ಬಾರಿ ಮಾತ್ರ** ಸಹಾಯ ಧನವನ್ನು ಪಡೆಯಲು ಅರ್ಹರು (ಮೊದಲ ಎರಡು ಮಕ್ಕಳ ಜನನಕ್ಕಾಗಿ ಮಾತ್ರ)
-
-#### ಅಗತ್ಯ ದಾಖಲೆಗಳು
-
-* ಮಂಡಳಿ ನೀಡಿರುವ ಗುರುತಿನ ಚೀಟಿ / ಸ್ಮಾರ್ಟ್ ಕಾರ್ಡ್ (ದೃಢೀಕೃತ)
-* ಮಕ್ಕಳ ಛಾಯಾಚಿತ್ರ
-* ಉದ್ಯೋಗ ದೃಡೀಕರಣ ಪತ್ರ
-* ಬ್ಯಾಂಕ್ ಖಾತೆ ಪುರಾವೆ
-* ಡಿಸ್ಚಾರ್ಜ್ ಸಾರಾಂಶ
-* ಮಗುವಿನ ಜನನ ಪ್ರಮಾಣಪತ್ರ
-
-#### ಮುಖ್ಯ ಷರತ್ತುಗಳು
-
-* ಮಗುವಿನ ಜನನದ **ಆರು ತಿಂಗಳೊಳಗೆ** ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು
-* ಮೂರು ವರ್ಷದವರೆಗೂ ಪ್ರತಿ ವರ್ಷ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸತಕ್ಕದ್ದು
-* ಮಗುವಿನ ಜೀವಿತ ಕುರಿತು ಪ್ರತಿ (ಎರಡು ಹಾಗೂ ಮೂರನೇ ವರ್ಷ) ವರ್ಷ ಅಫಿಡೆವಿಟ್ ಸಲ್ಲಿಸತಕ್ಕದ್ದು
-
-#### ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ
-
-1. ಅರ್ಜಿದಾರರು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದಿಂದ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು
-2. ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ
-3. ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿಯವರಿಂದ ಪರಿಶೀಲನೆ ಮತ್ತು ಅನುಮೋದನೆ
-
 ---
 
 ## Scheme: Delivery Assistance
 
 ### Overview
 
-This scheme provides financial assistance to registered woman construction workers for childbirth expenses.
+Assistance for delivery of child by a registered women construction worker
 
 ### Benefit
 
-* ₹50,000 per delivery
-* Applicable for **first two deliveries only**
+* **₹50,000** for a Male/Female child, only for the first two deliveries.
 
 ### Eligibility
 
-* Applicant must be a **registered woman construction worker**
-* Assistance is available only for the **first two deliveries**
-* The worker **cannot avail this benefit if she already has two living children**
-* For the **second delivery claim**, an affidavit must be submitted confirming that the claim is for the second delivery
+* The Secretary or any other officer authorized in the behalf by the Board, shall on an application from a registered woman construction worker sanction the amount on her producing proof of delivery of a child to her.
+* The registered woman construction worker can get this assistance only twice.
+* The second claim application shall be accompanied by an affidavit stating that the claim is for second delivery.
+* The registered woman construction worker shall not be given this assistance if she already has two living children.
+* The certification of registration of birth obtained from the registrar of births and deaths or certificate of delivery in a government or private hospital in the state of Karnataka duly signed by the doctor concerned from the institution shall be produced along with the application.
 
 ### Required Documents
 
-* Birth Certificate of the child (issued by Registrar of Births and Deaths)
-* Child Photo
-* 90 Days Work Certificate
-* Discharge Summary from hospital
-* Self Declaration Form
+* Proof of Identity / Smart card issued by the Board (Attested)
+* Affidavit for second child
+* Proof of Bank Account
+* Photo of Child
+* Employment Certificate
+* Discharge Summary
+* Birth Certificate of Child
 
 ### Application Process
 
-1. Submit the application along with required documents.
-2. Application is verified by the Senior / Labour Inspector.
-3. Final review and approval is done by the Labour Officer.
-4. Approved amount is sanctioned and disbursed.
+1. Applicant needs to submit the application.
+2. Application processing and Verification by Senior / Labour Inspector.
+3. Review and Approval by Labour Officer.
 
 ### Important
 
-* Maximum **two claims per worker**
-* Not eligible if the worker already has two living children
-* Birth or delivery proof from government or private hospital in Karnataka must be submitted
-* Ensure all medical records are genuine and correctly submitted
+* Maximum **two claims per worker**.
+* Not eligible if the worker already has two living children.
+* Birth certificate or delivery proof from government or private hospital in Karnataka must be submitted.
 
 ### FAQs
 
@@ -533,68 +408,26 @@ A: No, the scheme is not applicable if the worker already has two living childre
 Q: Is the benefit available for both male and female children?
 A: Yes, the benefit is provided regardless of the child’s gender.
 
-Q: Is any additional document required for the claim?
-A: Yes, Affidavit for 1st or 2nd Delivery of Child is required to make the claim.
+Q: What documents are required for the second delivery claim?
+A: An Affidavit for the second child is required.
 
 Q: Is hospital delivery mandatory?
-A: Yes, proof of delivery from a government or private hospital in Karnataka must be submitted.
+A: Yes, proof of delivery from a government or private hospital in Karnataka must be submitted, or a birth certificate from the registrar.
 
 Q: What documents are required to apply?
-A: Birth Certificate, Child Photo, 90 Days Work Certificate, Affidavit for 1st or 2nd Delivery of Child, Discharge Summary, and Self Declaration.
+A: Proof of Identity/Smart card, Proof of Bank Account, Photo of Child, Employment Certificate, Discharge Summary, Birth Certificate of Child, and (if applicable) Affidavit for second child.
 
 Q: Is the birth certificate mandatory?
-A: Yes, it is required as proof of childbirth.
-
-Q: Can I apply before the birth certificate is issued?
-A: No, the birth certificate or official delivery proof is required.
+A: Yes, it is required as proof of childbirth, or an official delivery certificate from the hospital.
 
 Q: Where can I submit the application?
 A: Applications can be submitted through KSK or the Board system.
 
 Q: What happens after submission?
-A: The application is verified by the Labour Inspector and approved by the Labour Officer before disbursement.
+A: The application is verified by the Senior / Labour Inspector and approved by the Labour Officer.
 
 Q: Can the benefit be rejected?
 A: Yes, if eligibility conditions are not met or documents are incorrect.
-
-Q: Is the 90 days work certificate mandatory?
-A: Yes, it is required to establish eligibility.
-
-### ವಿವರಗಳು
-
-ನೋಂದಾಯಿತ ನಿರ್ಮಾಣ ಮಹಿಳಾ ಕಾರ್ಮಿಕರ ಮಗುವಿನ ಹೆರಿಗೆಗೆ ನೀಡುವ ಸಹಾಯ ಧನ.
-
-#### ಲಾಭಗಳು
-
-* ಪ್ರತಿ ಹೆರಿಗೆಗೆ **₹50,000** ಸಹಾಯಧನ
-* ಮೊದಲ **ಎರಡು ಹೆರಿಗೆಗೆ** ಮಾತ್ರ
-* (ಸರ್ಕಾರದ ಅಧಿಸೂಚನೆ ಸಂಖ್ಯೆ ಎಲ್ ಡಿ 458 ಎಲ್ ಇಟಿ 2021 ಬೆಂಗಳೂರು ದಿನಾಂಕ: 08-08-2022 ರಂತೆ)
-
-#### ಅರ್ಹತೆ
-
-* ನೋಂದಾಯಿತ ಮಹಿಳಾ ಕಾರ್ಮಿಕರು ಮಾತ್ರ
-* ಮೊದಲ ಎರಡು ಜೀವಂತ ಮಕ್ಕಳಿಗೆ ಮಾತ್ರ ಅರ್ಹರು
-* ಈಗಾಗಲೇ ಎರಡು ಮಕ್ಕಳಿದ್ದರೆ ಈ ಸೌಲಭ್ಯವನ್ನು ಪಡೆಯಲು ಅರ್ಹರಾಗುವುದಿಲ್ಲ
-
-#### ಅಗತ್ಯ ದಾಖಲೆಗಳು
-
-* ಮಂಡಳಿ ನೀಡಿರುವ ಗುರುತಿನ ಚೀಟಿ / ಸ್ಮಾರ್ಟ್ ಕಾರ್ಡ್
-* ಎರಡನೇ ಮಗುವಿನ ಹೆರಿಗೆ ಎಂದು ಅಫಿಡವಿಟ್ (ಎರಡನೇ ಹಕ್ಕು ಸಾಧನೆಗೆ)
-* ಬ್ಯಾಂಕ್ ಖಾತೆ ಪುರಾವೆ
-* ಮಕ್ಕಳ ಛಾಯಾಚಿತ್ರ
-* ಉದ್ಯೋಗ ದೃಡೀಕರಣ ಪತ್ರ
-* ಡಿಸ್ಚಾರ್ಜ್ ಸಾರಾಂಶ
-* ಮಗುವಿನ ಜನನ ಪ್ರಮಾಣಪತ್ರ
-
-#### ಮುಖ್ಯ ಷರತ್ತುಗಳು
-
-* ಮಗುವಿನ ಜನನದ **ಆರು ತಿಂಗಳೊಳಗೆ** ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು
-
-#### ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ
-
-1. ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು
-2. ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ
-3. ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿಯವರಿಂದ ಪರಿಶೀಲನೆ ಮತ್ತು ಅನುಮೋದನೆ
 
 ---
 
@@ -624,40 +457,6 @@ Minimum 48 hours hospitalization.
 
 Q: Can private hospital treatment be covered?
 A: Yes, if empaneled or recognized.
-
-### ವಿವರಗಳು
-
-ಮಂಡಳಿಯ ಕಾರ್ಯದರ್ಶಿಯ ಅಥವಾ ಮಂಡಳಿಯ ಪರವಾಗಿ ನೇಮಕವಾದ ಅಧಿಕೃತ ಅಧಿಕಾರಿಗಳು ನೋಂದಾಯಿತ ಫಲಾನುಭವಿ ಮತ್ತು ಅವನ ಅವಲಂಬಿತರು ರಾಜ್ಯ ಸರ್ಕಾರದ ಯಾವುದೇ ವಿಮೆ ಯೋಜನೆ ಅಡಿಯಲ್ಲಿ ಗುರುತಿಸಲ್ಪಟ್ಟ ಆಸ್ಪತ್ರೆಗಳಲ್ಲಿ ಅಥವಾ ಕರ್ನಾಟಕ ಸರ್ಕಾರಿ ನೌಕರರ (ವೈದ್ಯಕೀಯ ಹಾಜರಾತಿ) ನಿಯಮಗಳು, 1963 ರ ಷಡ್ಯೂಲ್-1 ರಲ್ಲಿ ನಮೂದಿಸಿರುವ ಆಸ್ಪತ್ರೆಗಳಲ್ಲಿ ದಾಖಲಾದಾಗ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನವನ್ನು ನೀಡಬೇಕಾಗುತ್ತದೆ. ಕನಿಷ್ಠ 48 ಗಂಟೆಗಳವರೆಗೆ ಸತತವಾಗಿ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ದಾಖಲಾದಾಗ, ವೈದ್ಯಕೀಯ ಸಹಾಯಧನವನ್ನು ನೀಡಬೇಕಾಗಿರುತ್ತದೆ.
-
-#### ಲಾಭಗಳು
-
-* ಪ್ರತಿ ದಿನಕ್ಕೆ **₹300** ನಂತೆ ಗರಿಷ್ಠ **₹20,000** ಮಿತಿಗೆ ಒಳಪಟ್ಟು ಸಹಾಯಧನ
-* (ಸರ್ಕಾರದ ಅಧಿಸೂಚನೆ ಸಂಖ್ಯೆ ಎಲ್ ಡಿ 458 ಎಲ್ ಇಟಿ 2021 ಬೆಂಗಳೂರು ದಿನಾಂಕ: 08-08-2022 ರಂತೆ)
-
-#### ಅರ್ಹತೆ
-
-* ನೋಂದಾಯಿತ ಫಲಾನುಭವಿ ಮತ್ತು ಅವರ ಅವಲಂಬಿತರು
-* ಕನಿಷ್ಠ **48 ಗಂಟೆಗಳವರೆಗೆ** ಸತತವಾಗಿ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ದಾಖಲಾಗಿರಬೇಕು
-* ಸರ್ಕಾರಿ ಅಥವಾ ಸರ್ಕಾರದಿಂದ ಮಾನ್ಯತೆ ಪಡೆದ (ಶೆಡ್ಯೂಲ್ 1ಗೆ ಸೇರಿದ) ಖಾಸಗಿ ಆಸ್ಪತ್ರೆಗಳಲ್ಲಿ ಒಳರೋಗಿಯಾಗಿ ದಾಖಲಾಗಿರಬೇಕು
-
-#### ಅಗತ್ಯ ದಾಖಲೆಗಳು
-
-* ಮಂಡಳಿ ನೀಡಿರುವ ಗುರುತಿನ ಚೀಟಿ / ಸ್ಮಾರ್ಟ್ ಕಾರ್ಡ್ (ದೃಢೀಕೃತ)
-* ಉದ್ಯೋಗ ದೃಡೀಕರಣ ಪತ್ರ
-* ಬ್ಯಾಂಕ್ ಖಾತೆಯ ಪುರಾವೆ
-* ಆಸ್ಪತ್ರೆಗೆ ದಾಖಲಾದ ಮತ್ತು ಬಿಡುಗಡೆಯಾದ ದಿನಾಂಕ ಹಾಗೂ ಚಿಕಿತ್ಸಾ ವೆಚ್ಚವನ್ನು ಒಳಗೊಂಡ ಬಿಲ್ಲುಗಳ ವಿವರ
-* ಕನಿಷ್ಠ ಎರಡು ದಿನ ಒಳರೋಗಿಯಾಗಿ ದಾಖಲೆಯಾಗಿರುವ ಬಗ್ಗೆ ವೈದ್ಯಕೀಯ ದಾಖಲೆ
-* ನಮೂನೆ 22 ಎ
-
-#### ಮುಖ್ಯ ಷರತ್ತುಗಳು
-
-* ಆಸ್ಪತ್ರೆಯಿಂದ ಬಿಡುಗಡೆಯಾದ ದಿನಾಂಕದಿಂದ **ಆರು ತಿಂಗಳೊಳಗೆ** ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು
-
-#### ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ
-
-1. ಅರ್ಜಿದಾರರು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದಲ್ಲಿ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು
-2. ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ
-3. ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿಯವರಿಂದ ಪರಿಶೀಲನೆ ಮತ್ತು ಅನುಮೋದನೆ
 
 ---
 
@@ -758,50 +557,6 @@ A: The bank or legal heir must inform the Board and submit the death certificate
 
 Q: Is the 90 days work proof required?
 A: Yes, a 90 Days Work Declaration is mandatory.
-
-### ವಿವರಗಳು
-
-ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಸೌಲಭ್ಯ, ಅರ್ಹತೆ, ವಿಧಾನ ಮತ್ತು ಮಂಜೂರಾತಿ.
-
-ನೋಂದಾಯಿತ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕನು/ಳು ಕೆಲಸದ ಸಮಯದಲ್ಲಾದ ಅಪಘಾತದಿಂದ ಅಥವಾ ಯಾವುದಾದರೂ ಖಾಯಿಲೆಯಿಂದ ಭಾಗಶಃ ದುರ್ಬಲತೆಗೆ ಒಳಗಾದಾಗ ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮತ್ತು ಪರಿಹಾರ ಸಹಾಯಧನವನ್ನು ಮಂಜೂರು ಮಾಡಲಾಗುತ್ತದೆ.
-
-#### ಲಾಭಗಳು
-
-* ಮಾಸಿಕ ದುರ್ಬಲತೆ ಪಿಂಚಣಿ: **₹2,000**
-* ಪರಿಹಾರ ಸಹಾಯಧನ: ಗರಿಷ್ಠ **₹2,00,000** (ಶೇಡಾವಾರು ದುರ್ಬಲತೆಗೆ ಅನುಗುಣವಾಗಿ)
-* **ಸೂತ್ರ:** ₹2,00,000 × ಅಂಗವಿಕಲತೆ ಶೇಡಾವಾರು = ಪರಿಹಾರ ಸಹಾಯಧನ
-
-#### ಅರ್ಹತೆ
-
-* ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕ
-* ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಆದ ಅಪಘಾತ ಅಥವಾ ಖಾಯಿಲೆಯಿಂದ ಭಾಗಶಃ ದುರ್ಬಲತೆಗೆ ಒಳಗಾಗಿರಬೇಕು
-* ಅಂಗವಿಕಲತೆ ಹಾಗೂ ಹಿರಿಯ ನಾಗರೀಕರ ಸಬಲೀಕರಣ ಇಲಾಖೆಯಿಂದ ಗುರುತಿನ ಚೀಟಿ ಪಡೆದಿರಬೇಕು
-* ಅಪಘಾತ ಪರಿಹಾರ ಯೋಜನೆಯಡಿ ಪರಿಹಾರ ಸಹಾಯಧನ ಪಡೆದಿದ್ದಲ್ಲಿ, ಈ ಯೋಜನೆಯಡಿ ಪರಿಹಾರ ಸಹಾಯಧನ ಪಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ
-
-#### ಅಗತ್ಯ ದಾಖಲೆಗಳು
-
-* ಮಂಡಳಿಯಿಂದ ನೀಡಲಾದ ಮೂಲ ಗುರುತಿನ ಚೀಟಿ
-* ಗೆಜೆಟೆಡ್ ಅಧಿಕಾರಿಯಿಂದ ದೃಢೀಕರಿಸಲ್ಪಟ್ಟ ಗುರುತು ಚೀಟಿಯ ಛಾಯಾಪ್ರತಿ
-* ಫಲಾನುಭವಿಯ ಬ್ಯಾಂಕ್ ಪಾಸ್ ಪುಸ್ತಕದ ಛಾಯಾಪ್ರತಿ
-* ಪ್ರತಿವರ್ಷ ಜೀವಿತ ಪ್ರಮಾಣ ಪತ್ರ
-* ರೇಷನ್ ಕಾರ್ಡ್
-* ಉದ್ಯೋಗದ ದೃಢೀಕರಣ ಪತ್ರ
-* ವೈದ್ಯಕೀಯ ವರದಿ
-* ವಿಕಲಚೇತನ ಹಾಗೂ ಹಿರಿಯ ನಾಗರೀಕರ ಸಬಲೀಕರಣ ಇಲಾಖೆಯಿಂದ ಪಡೆದ ದೃಢೀಕರಿಸಲ್ಪಟ್ಟ ಗುರುತಿನ ಚೀಟಿ
-* ದುರ್ಬಲತೆಗೊಳಗಾದ ಫಲಾನುಭವಿಯ ಭಾವಚಿತ್ರ
-
-#### ಮುಖ್ಯ ಷರತ್ತುಗಳು
-
-* ಸಕ್ಷಮ ಪ್ರಾಧಿಕಾರದಿಂದ ದುರ್ಬಲತೆಯ ಗುರುತಿನ ಚೀಟಿ ಪಡೆದ **ಆರು ತಿಂಗಳೊಳಗೆ** ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು
-* ಪ್ರತಿ ವರ್ಷ ಜೀವಿತ ಪ್ರಮಾಣ ಪತ್ರ ನಮೂನೆ XIV–A ಸಲ್ಲಿಸಬೇಕು
-* ಫಲಾನುಭವಿ 60 ವರ್ಷ ತಲುಪಿದಾಗ ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ನಿಲ್ಲಿಸಲಾಗುವುದು
-* ಫಲಾನುಭವಿ ಮರಣ ಹೊಂದಿದರೆ ನಾಮ ನಿರ್ದೇಶಿತರು ಮರಣ ಪ್ರಮಾಣ ಪತ್ರವನ್ನು ಮಂಡಳಿಗೆ ಸಲ್ಲಿಸಬೇಕು
-
-#### ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ
-
-1. ಅರ್ಜಿದಾರರು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದಿಂದ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು
-2. ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ
-3. ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ ಅನುಮೋದನೆ
 
 ---
 
@@ -918,54 +673,6 @@ A: Yes, it is required as proof of continued work eligibility.
 
 Q: Will the pension amount increase over time?
 A: No, the pension amount will not exceed ₹3,000 per month.
-
-### ವಿವರಗಳು
-
-#### ಅರ್ಹತೆ
-
-* ಪ್ರತಿ ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಅಥವಾ ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕ ಫಲಾನುಭವಿಯು **60 ವರ್ಷ** ವಯೋಮಿತಿ ಪೂರ್ಣಗೊಳಿಸಿರಬೇಕು
-* 60 ವರ್ಷ ವಯಸ್ಸು ಪೂರ್ಣಗೊಳ್ಳುವ ಪೂರ್ವದಲ್ಲಿ ಕನಿಷ್ಟ **03 ವರ್ಷಗಳು** ನಿರಂತರವಾಗಿ ಮಂಡಳಿಯ ಫಲಾನುಭವಿಯಾಗಿ ಮುಂದುವರೆದಿರಬೇಕು
-* ಫಲಾನುಭವಿಯು ಸರ್ಕಾರದ ಇತರೆ ಯೋಜನೆಯಡಿ ಇದೇ ತರಹದ ಯಾವುದೇ ಸೌಲಭ್ಯವನ್ನು ಪಡೆದಿರಬಾರದು
-
-#### ಲಾಭಗಳು
-
-* ಮಾಸಿಕ ಪಿಂಚಣಿ: **₹3,000**
-* (ಸರ್ಕಾರದ ಅಧಿಸೂಚನೆ ಸಂಖ್ಯೆ ಎಲ್ ಡಿ 458 ಎಲ್ ಇಟಿ 2021 ಬೆಂಗಳೂರು ದಿನಾಂಕ: 08-08-2022 ರಂತೆ)
-
-#### ಅಗತ್ಯ ದಾಖಲೆಗಳು
-
-* ಮಂಡಳಿಯಿಂದ ನೀಡಲಾದ ಮೂಲ ಗುರುತಿನ ಚೀಟಿ
-* ಉದ್ಯೋಗದ ದೃಢೀಕರಣ ಪತ್ರ
-* ಜೀವಿತ ಪ್ರಮಾಣ ಪತ್ರ
-* ರೇಷನ್ ಕಾರ್ಡ್ ಪ್ರತಿ
-* ಫಲಾನುಭವಿಯ ಬ್ಯಾಂಕ್ ಪಾಸ್ ಪುಸ್ತಕದ ಛಾಯಾಪ್ರತಿ
-* ಪಾಸ್ ಪೋರ್ಟ್ ಫೋಟೋ
-
-#### ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ
-
-1. ಅರ್ಜಿದಾರರು KBOCWWB ತಂತ್ರಾಂಶದ ಮೂಲಕ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು
-2. ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ
-3. ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ ಅನುಮೋದನೆ
-
-#### ಮುಖ್ಯ ಷರತ್ತುಗಳು
-
-* ಪಿಂಚಣಿಯನ್ನು ಮುಂದುವರೆಸಲು ಪ್ರತಿ ವರ್ಷವೂ ಜೀವಿತ ಪ್ರಮಾಣ ಪತ್ರ ನಮೂನೆ XIV–A (living certificate form XIV–A) ಸಲ್ಲಿಸಬೇಕು
-* ಪಿಂಚಣಿದಾರ ಮರಣ ಹೊಂದಿದಾಗ, ಕಾನೂನುಬದ್ದ ಅವಲಂಬಿತರು ಮರಣ ಪ್ರಮಾಣ ಪತ್ರವನ್ನು ಸಲ್ಲಿಸಿ ಬ್ಯಾಂಕ್ ಖಾತೆಯನ್ನು ಮುಚ್ಚಲು ಮಂಡಳಿಗೆ ತಿಳಿಸಬೇಕು
-* ಅನರ್ಹ ಎಂದು ಕಂಡು ಬಂದಲ್ಲಿ ಅರ್ಜಿಯನ್ನು ತಿರಸ್ಕರಿಸಲಾಗುವುದು
-
-#### ಕುಟುಂಬ ಪಿಂಚಣಿ ಸೌಲಭ್ಯ
-
-* ಮೃತ ಪಿಂಚಣಿದಾರ ಕಟ್ಟಡ ಮತ್ತು ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರ **ಪತಿ/ಪತ್ನಿ** ಕುಟುಂಬ ಪಿಂಚಣಿಗೆ ಅರ್ಹರಾಗಿರುತ್ತಾರೆ
-* ನಮೂನೆ-12(ಬಿ) ರಲ್ಲಿ ಮಂಡಳಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು
-* ಕುಟುಂಬ ಪಿಂಚಣಿಯು ಹಿಂದೆ ಪಡೆಯುತ್ತಿದ್ದ ಪಿಂಚಣಿಯ **ಅರ್ಧದಷ್ಟು** ಮೊತ್ತವನ್ನು ಮೀರತಕ್ಕದಲ್ಲ
-* ಪ್ರತಿ ವರ್ಷ ಜೀವಿತ ಪ್ರಮಾಣ ಪತ್ರ ನಮೂನೆ XII–A (living certificate form XII–A) ಸಲ್ಲಿಸಬೇಕು
-
-#### ಕುಟುಂಬ ಪಿಂಚಣಿಗೆ ಅಗತ್ಯ ದಾಖಲೆಗಳು
-
-* ಮೃತ ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕನ ಮರಣ ಪ್ರಮಾಣ ಪತ್ರ
-* ಪತಿ/ಪತ್ನಿ ಎಂದು ದೃಢೀಕರಿಸಲು ಕಂದಾಯ ಇಲಾಖೆಯಿಂದ ಪಡೆದ ಪ್ರಮಾಣ ಪತ್ರ
-* ಅರ್ಜಿದಾರರ ಬ್ಯಾಂಕ್ ಪಾಸ್ ಬುಕ್
-* ಅರ್ಜಿದಾರರ ಇತ್ತೀಚಿನ ಭಾವಚಿತ್ರ
 
 ---
 
@@ -1159,41 +866,6 @@ A: Yes, the scheme is available only for registered construction workers.
 Q: Can the nominee claim other schemes along with this?
 A: Yes, if eligible under other applicable schemes.
 
-### ವಿವರಗಳು
-
-ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕನ ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚವನ್ನು ಭರಿಸಲು ಹಾಗು ಅನುಗ್ರಹ ರಾಶಿ ನೀಡುವ ಸಹಾಯಧನ.
-
-ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕನ ಮರಣದಿಂದ ಕುಟುಂಬದಲ್ಲಿ ಆಗುವ ಆರ್ಥಿಕ ಸಂಕಷ್ಟವನ್ನು ಎದುರಿಸಲು ಅನುಗ್ರಹ ರಾಶಿಯನ್ನು ಶಾಸನಬದ್ಧ ನಾಮನಿರ್ದೇಶಿತನಿಗೆ ಮಂಜೂರು ಮಾಡಲಾಗುತ್ತದೆ.
-
-#### ಲಾಭಗಳು
-
-* ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚ ಮತ್ತು ಅನುಗ್ರಹ ರಾಶಿ: **₹1,46,000**
-* (ಸರ್ಕಾರದ ಅಧಿಸೂಚನೆ ಸಂಖ್ಯೆ ಎಲ್ ಡಿ 116 ಎಲ್ ಇಟಿ 2025 ಬೆಂಗಳೂರು ದಿನಾಂಕ: 16-07-2025 ರಂತೆ)
-
-#### ಅರ್ಹತೆ
-
-* ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕನ ಶಾಸನಬದ್ಧ ನಾಮನಿರ್ದೇಶಿತರು (ನಾಮಿನಿ) ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು
-
-#### ಅಗತ್ಯ ದಾಖಲೆಗಳು
-
-* ಮಂಡಳಿಯಿಂದ ನೀಡಲಾದ ಮೂಲ ಗುರುತಿನ ಚೀಟಿ
-* ನಾಮನಿರ್ದೇಶಿತರ (ನಾಮಿನಿ) ಬ್ಯಾಂಕ್ ಪಾಸ್ ಪುಸ್ತಕದ ಛಾಯಾಪ್ರತಿ
-* ಗೆಜೆಟೆಡ್ ಅಧಿಕಾರಿಯಿಂದ ದೃಢೀಕರಿಸಲ್ಪಟ್ಟ ಮರಣ ಪ್ರಮಾಣಪತ್ರ
-* ರೇಷನ್ ಕಾರ್ಡ್
-* ಆಧಾರ್ ಕಾರ್ಡ್
-* ಉದ್ಯೋಗದ ದೃಢೀಕರಣ ಪತ್ರ
-* ನಾಮನಿರ್ದೇಶಿತರ ಭಾವಚಿತ್ರವಿರುವ ಗುರುತು ಚೀಟಿಯ ಛಾಯಾಪ್ರತಿ
-
-#### ಮುಖ್ಯ ಷರತ್ತುಗಳು
-
-* ಫಲಾನುಭವಿ ಮರಣವಾದ ದಿನದಿಂದ **ಒಂದು ವರ್ಷದೊಳಗೆ** ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು
-
-#### ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ
-
-1. ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು
-2. ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ
-3. ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ ಅನುಮೋದನೆ
-
 ---
 
 ## Scheme: Marriage Assistance
@@ -1291,43 +963,6 @@ A: Yes, only legally valid and registered marriages are eligible.
 
 Q: Can dependents other than children apply under this scheme?
 A: No, the scheme is applicable only for the worker, or the worker’s dependent son or daughter.
-
-### ವಿವರಗಳು
-
-ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕರ ಮೊದಲ ಮದುವೆ ಅಥವಾ ಅವನ / ಅವಳ ಅವಲಂಭಿತರ ಮದುವೆಗೆ ನೀಡುವ ಸಹಾಯ ಧನ.
-
-#### ಲಾಭಗಳು
-
-* ಮದುವೆ ಸಹಾಯಧನ: **₹60,000**
-* (ಸರ್ಕಾರದ ಅಧಿಸೂಚನೆ ಸಂಖ್ಯೆ ಎಲ್ ಡಿ 458 ಎಲ್ ಇಟಿ 2021 ಬೆಂಗಳೂರು ದಿನಾಂಕ: 08-08-2022 ರಂತೆ)
-
-#### ಅರ್ಹತೆ
-
-* ಫಲಾನುಭವಿಯ ಮೊದಲನೆ ಮದುವೆಗೆ ಅಥವಾ **ಎರಡು ಅವಲಂಭಿತ ಮಕ್ಕಳ** ಮದುವೆಗೆ
-* ನೋಂದಣಿಯಾದ ದಿನಾಂಕದಿಂದ **ಒಂದು ವರ್ಷ** ಸದಸ್ಯತ್ವ ಪೂರೈಸಿರಬೇಕು
-* ಕುಟುಂಬವು **ಎರಡು ಬಾರಿ ಮಾತ್ರ** ಅರ್ಹರು
-* ವಿವಾಹ ನಿಯಮದಡಿ ಸೂಚಿತ ವಯಸ್ಸು ಹೊಂದಿರಬೇಕು
-
-#### ಅಗತ್ಯ ದಾಖಲೆಗಳು
-
-* ಮಂಡಳಿಯಿಂದ ನೀಡಲಾದ ಮೂಲ ಗುರುತಿನ ಚೀಟಿ
-* ಉದ್ಯೋಗ ದೃಡೀಕರಣ ಪತ್ರ
-* ಬ್ಯಾಂಕ್ ಖಾತೆ ವಿವರಗಳು
-* ವಿವಾಹ ನೋಂದಣಾ ಪತ್ರ
-* ಮದುವೆಯ ಆಮಂತ್ರಣ ಪತ್ರ
-* ಕರ್ನಾಟಕ ಹೊರಗೆ ಮದುವೆಯಾದಲ್ಲಿ ಅಫಿಡೆವಿಟ್
-* ರೇಷನ್ ಕಾರ್ಡ್
-
-#### ಮುಖ್ಯ ಷರತ್ತುಗಳು
-
-* ನೋಂದಣೆಯಾಗಿ **ಒಂದು ವರ್ಷದ ನಂತರ** ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು
-* ಮದುವೆಯಾಗಿ **ಆರು ತಿಂಗಳೊಳಗೆ** ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು
-
-#### ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ
-
-1. ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು
-2. ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ
-3. ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿಯವರಿಂದ ಅನುಮೋದನೆ
 
 ---
 
