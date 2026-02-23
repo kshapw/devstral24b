@@ -55,117 +55,64 @@ A: The application may be rejected or returned for correction.
 
 ---
 
-## Scheme: Accident Assistance
+## Scheme: Accident Benefits
 
 ### Overview
 
-This scheme provides financial assistance to registered construction workers or their nominees in case of death or permanent disability caused by a sudden and unforeseen accident without criminal intent.
+Accident means an event which is sudden without any criminal intent and unforeseen resulting in Death or incapacitation permanent, Total or partial disablement.
 
 ### Benefits
 
-* Death due to accident at workplace: **₹8,00,000**
-* Death due to accident outside workplace: **₹5,00,000**
-* Permanent Total Disability: **₹2,00,000**
-* Permanent Partial Disability: **₹1,00,000**
+* Every registered construction worker who meets with an accident during the course of employment shall be compensated by the employer under the provisions of the Employee’s Compensation Act, 1923, along with a compensation of **₹8 Lakh** from the Board.
+* If the accident occurs outside the course of his or her employment, assistance shall be given by the Board (subject to exclusions).
+* The Secretary or authorized officer may grant the amount as **50% in Fixed Deposit** in a National Bank and **50% through account payee cheque or DBT**:
+  * **₹8 Lakh** for the deceased beneficiary or first living nominee in case of death.
+  * **₹2 Lakh** for permanent total disablement.
+  * **₹1 Lakh** for permanent partial disablement in proportion to the percentage of disablement, as defined in the Employee’s Compensation Act, 1923.
+* The dependents of a registered worker are sanctioned a compensation of **₹2 Lakhs** in case of an accident occurring during the course of employment resulting in death of the worker.
+* A registered worker who is grievously injured due to an accident occurring during the course of employment is sanctioned a compensation of up to **₹2 Lakhs**.
 
-### Revised Amount Condition
+### Exclusions
 
-* If the **Date of Accident Death is on or after 16-07-2025**, the beneficiary is eligible for the revised sanctioned amount.
-* If the date is **before 16-07-2025**, the previous sanctioned amount will apply.
+Assistance shall not be given in the following cases:
+* Natural Death
+* Payment of compensation in respect of Death or injury as a consequence of or resulting from:
+  * Committing or attempting suicide, intentional self-injury
+  * Whilst under the influence of intoxicating liquor or drugs
+  * Committing any breach of law with criminal intent
+  * Pregnancy during childbirth, miscarriage, abortion or complication arising therefrom
+  * Curative treatments or interventions
+  * Venereal or sexually transmitted diseases
+  * HIV or related illness
+  * Any attempted crime on the body
 
-### Eligibility
+### Eligibility & Claim Conditions
 
-* The worker must be a registered construction worker.
-* Accident must occur during employment or under eligible circumstances.
-* The incident must not fall under excluded categories.
-* Application must be submitted **within 1 year from the date of accident or death**.
-
-### Exclusions (Not Covered)
-
-Assistance will not be provided in the following cases:
-
-* Natural death
-* Suicide or intentional self-injury
-* Accident under the influence of alcohol or drugs
-* Involvement in criminal activity or breach of law
-* Pregnancy-related complications (delivery, miscarriage, abortion, etc.)
-* Curative medical procedures or planned treatments
-* Sexually transmitted diseases
-* HIV or related illness
-* Injury during commission or attempt of a crime
+* Every registered construction worker or his first living nominee eligible for accident benefit shall apply to the Board in **Form XXI**.
+* A medical disability certificate issued by a doctor of a Government hospital or recognized hospital must be enclosed, showing clearly the percentage of permanent disablement (incapacitation) and permanent partial disablement due to the accident, and the age at the time of accident.
+* A construction worker eligible for accident benefit should produce a certificate in **Form XXI-A** by his Employer in proof of the accident occurred, or an **F.I.R. and post-mortem report**.
+* The Secretary or authorized officer shall examine every application and may accept or reject the claim. Before rejecting a claim, the applicant shall be given a reasonable opportunity of making a representation.
+* The application shall be submitted within **one year** of the accident.
 
 ### Required Documents
 
-* Medical Certificate
-* Disability Certificate (for disability cases)
-* Death Certificate (in case of death)
-* FIR Copy
-* Postmortem Report (for death cases)
-* Self Declaration
-* 90 Days Work Certificate
+* Photocopy of ID card attested by gazetted officer
+* Photocopy of bank passbook (Beneficiary or Nominee's in case of beneficiary’s death)
+* Beneficiary / original Identity card, issued by the board
+* The respective application shall be made in Form XXI or XXI-B
+* Death Certificate (in case of death due to accident)
+* Post mortem report
+* Any Photo ID proof of the Nominee
+* FIR copy
+* Medical report
+* Employer Certificate
+* Form XXI-A (This document has to be filled by the employer and uploaded)
 
 ### Application Process
 
-1. Ensure eligibility and collect all medical and legal documents.
-2. Submit the application through the Board / Seva Sindhu system.
-3. Board verifies accident details, eligibility, and documents.
-4. After approval, the sanctioned amount is disbursed.
-
-### Important
-
-* Application must be submitted within **one year**
-* FIR and legal documentation are mandatory for verification
-* Ensure all incident details are properly reported and documented
-
-### FAQs
-
-Q: Who can apply for Accident Assistance?
-A: The registered construction worker (in case of disability) or the nominee/legal heir (in case of death).
-
-Q: What compensation is provided for accident death?
-A: ₹8 lakh for workplace accident death and ₹5 lakh for non-workplace accident death.
-
-Q: What is the compensation for disability?
-A: ₹2 lakh for permanent total disability and ₹1 lakh for permanent partial disability.
-
-Q: Is the benefit available for natural death?
-A: No, the scheme applies only to accidental death or disability.
-
-Q: Is FIR mandatory for this scheme?
-A: Yes, an FIR copy is required for verification.
-
-Q: What is the time limit to apply?
-A: The application must be submitted within one year from the date of accident or death.
-
-Q: Can the claim be made after one year?
-A: No, applications submitted after one year may not be accepted.
-
-Q: Are accidents under alcohol or drug influence covered?
-A: No, such cases are excluded.
-
-Q: Is suicide or self-harm covered?
-A: No, intentional self-injury or suicide is not eligible.
-
-Q: Are pregnancy-related complications covered?
-A: No, pregnancy or childbirth-related cases are excluded.
-
-Q: What documents are required for death cases?
-A: Death Certificate, FIR, Postmortem Report, and other supporting documents.
-
-Q: What documents are required for disability cases?
-A: Medical Certificate, Disability Certificate, FIR (if applicable), and supporting records.
-
-Q: What if the accident happened outside the workplace?
-A: Assistance is still available, but the compensation amount is ₹5 lakh for death.
-
-Q: Does the amount depend on the date of death?
-A: Yes, deaths on or after 16-07-2025 are eligible for revised amounts.
-
-Q: Is the 90 days work certificate required?
-A: Yes, it is mandatory to establish eligibility.
-
-Q: Can the application be rejected?
-A: Yes, if the incident falls under excluded conditions or documents are incomplete.
+1. Applicant needs to submit the application.
+2. Application processing and Verification by Senior / Labour Inspector.
+3. Review and Approval by Assistant Labour Commissioner.
 
 ---
 
@@ -173,91 +120,40 @@ A: Yes, if the incident falls under excluded conditions or documents are incompl
 
 ### Overview
 
-This scheme provides financial assistance to registered construction workers and their dependents for treatment of major illnesses as defined by the Board.
+Assistance of medical expenses for treatment of major ailments of a registered construction worker and his or her dependents (Karmika Chikitsa Bhagya).
 
-### Benefit
+**Definition of "Major ailments":**
+Any heart operation, covid-19, Kidney transformation, eye operation, treatment of paralysis, orthopedics operation, uterus operation, treatment of asthama disease, maternity miscarriage cases, treatment of gall bladder related ailments, removal of kidney stone, treatment of brain hemorrhage, treatment of ulcer, cancer, dialysis, kidney related surgery, ENT treatment and surgery, neurosurgery, vascular surgery, esophagus treatment and surgery, gastrointestinal surgery, breast-related treatment surgery, hernia surgery, appendicitis surgery, treatment of fracture/dislocation, general surgery or such other ailments as in the opinion of the Board be considered as major ailments and occupational diseases.
 
-* Financial assistance up to **₹2,00,000**
-* Amount is sanctioned based on **CGHS rates**
-* Final approval is subject to verification by the Secretary or authorized officer
+**Definition of Accident (for context):**
+Any bodily injury resulting in permanent disablement (incapacitation), Permanent partial disablement as defined in the Employees’ Compensation Act 1923, or death directly from an accident arising out of and in the course of his employment, or on the regular route from home to his workplace and from the workplace to his home resulting in his death.
 
 ### Eligibility
 
-* Applicant must be a **registered construction worker** under KBOCWWB
-* Must have completed **minimum 90 days of work in the past 1 year**
-* Treatment must be for a **major ailment covered by the Board**
-* Required claim forms and medical certification must be submitted
+* Every registered construction worker and his or her dependents, who has major ailments specified above, is eligible for medical expenses.
+
+### Claim & Amount of Assistance
+
+* Every registered construction worker or his/her dependent (in case of death of registered construction worker during the course of treatment) who is eligible for assistance of medical expenses shall apply to the Board in **Form XXII**.
+* The worker shall produce to the Board a certificate in **Form XXII-A** by an Assistant Surgeon of a Government Hospital or the concerned Surgeon or Doctor who has treated the worker or Head of the Private Hospital specified in Schedule I of the Karnataka Government Servants’ (Medical Attendance) Rules, 1963 or the RSBY recognized hospitals.
+* The Secretary or any other officer authorized by the Board shall examine the claim and may accept or reject it. The decision of the Board shall be final. Before rejecting a claim, a reasonable opportunity for representation shall be given to the applicant.
+* **Amount:** The Secretary or authorized officer shall grant an amount up to **₹ 2,00,000/- (Rupees Two Lakh only)** subject to the rates prescribed under the Central Government Health Service (C.G.H.S) based on the application or an estimate of treatment/operation.
+* This doesn’t bar the applicant from claiming medical expenses under any other statute.
 
 ### Required Documents
 
-* Detailed Medical Report (Diagnosis from treating hospital)
-* Discharge Summary
-* Form XXII (Claim Form)
-* Form XXII-A (Medical Certification)
-* Self Declaration
-* 90 Days Work Certificate
+* Proof of Identity / Smart card issued by the Board
+* Employment Certificate
+* Proof of Bank Account
+* Bills of hospital showing Admission and Discharge Dates and all treatment given
+* Any medical documents on hospitalization of beneficiary/dependent in government/private hospital included in schedule 1 of the Karnataka government servants (medical attendance) Rules 1963 or a hospital recognized under any insurance scheme of the state government.
+* Form XXII-A
 
 ### Application Process
 
-1. Fill and submit the digital application through the Board / Seva Sindhu system.
-2. Upload all required medical and eligibility documents.
-3. System validates worker eligibility, hospital recognition, and document authenticity.
-4. Application is reviewed by the Secretary or authorized officer.
-5. If approved, assistance is sanctioned as per CGHS rates (maximum ₹2,00,000).
-
-### Important
-
-* Applicable **only for major ailments defined by the Board**
-* Benefit is available for both **workers and their dependents**
-* All documents and hospital records must be valid and properly certified
-* Strict verification is carried out before approval
-
-### FAQs
-
-Q: Who can apply for Assistance for Major Ailments?
-A: Registered construction workers or their eligible dependents undergoing treatment for a major illness.
-
-Q: What is the maximum financial assistance available?
-A: Up to ₹2,00,000, subject to CGHS rate limits and approval.
-
-Q: Is the full hospital bill reimbursed?
-A: No, the amount is sanctioned based on CGHS rates and eligibility, not the actual bill amount.
-
-Q: Are dependents eligible under this scheme?
-A: Yes, eligible dependents of registered workers can also receive assistance.
-
-Q: What is the minimum work requirement?
-A: The worker must have completed at least 90 days of work in the last one year.
-
-Q: Can I apply for treatment of any illness?
-A: No, the scheme is applicable only for major ailments approved by the Board.
-
-Q: Is hospital recognition important?
-A: Yes, the hospital must be recognized, and treatment details will be verified.
-
-Q: What documents are required for application?
-A: Medical Report, Discharge Summary, Form XXII, Form XXII-A, Self Declaration, and 90 Days Work Certificate.
-
-Q: Is medical certification mandatory?
-A: Yes, Form XXII-A must be certified by the authorized hospital authority.
-
-Q: Where should I submit the application?
-A: Applications must be submitted through the Seva Sindhu or Board system.
-
-Q: What happens after submission?
-A: The system and Board verify eligibility, documents, and hospital details before approval.
-
-Q: Can the application be rejected?
-A: Yes, if the illness is not covered, documents are incomplete, or eligibility conditions are not met.
-
-Q: How is the approved amount decided?
-A: The amount is calculated based on CGHS treatment rates and approved by the authorized officer.
-
-Q: Is the 90 days work certificate mandatory?
-A: Yes, it is required to establish eligibility.
-
-Q: Can multiple claims be made under this scheme?
-A: Yes, if eligibility conditions are met and each case is approved.
+1. Applicant needs to submit the application. The application can be submitted within **6 months** of hospitalization commencement date.
+2. Application processing and Verification by Senior / Labour Inspector.
+3. Review and Approval by Labour Officer.
 
 ---
 
@@ -265,86 +161,34 @@ A: Yes, if eligibility conditions are met and each case is approved.
 
 ### Overview
 
-This scheme provides financial assistance to registered woman construction workers for the nutritional support and pre-school care of their child for a period of three years from the date of delivery.
+Assistance for pre-school Education & Nutritional support of the child of the registered women construction worker - Thayi Magu Sahaya Hastha.
 
 ### Benefit
 
-* Total assistance: **₹6,000 per child**
-* Paid at the rate of **₹500 per month**
-* Support duration: **3 years from the date of delivery**
+* An amount of **₹6,000** (at the rate of ₹500 per month) shall be sanctioned to the registered woman construction worker.
 
 ### Eligibility
 
-* Applicant must be a **registered woman construction worker**
-* Must have delivered a child
-* Benefit is available only for the **first two children**
-* Can be availed **maximum two times** (for first and second child only)
+* A registered woman construction worker who has delivered a child is eligible to avail this assistance for a period of **3 years from the date of delivery** as pre-school education & Nutritional Support of the child.
+* This facility shall be availed by the registered woman construction worker **twice (for the birth of first two children only)**.
+* Every registered woman construction worker eligible for the Thayi Magu Sahaya Hastha scheme must submit through Board software.
 
 ### Required Documents
 
-* Child Photo
-* Birth Certificate
-* Affidavit confirming 1st or 2nd delivery
-* Self Declaration
-* Hospital Discharge Summary
-* 90 Days Work Certificate
+* Proof of Identity / Smart card issued by the Board (Attested)
+* An Affidavit stating that the claim for second Delivery
+* Proof of Bank Account
+* Photo of Child
+* Employment Certificate
+* Discharge Summary
+* Birth Certificate of Child
+* Child living Affidavit shall be submitted for second and third year
 
 ### Application Process
 
-1. Apply through the Board / KSK software.
-2. Submit all required documents including birth and hospital records.
-3. Application is verified by the Board.
-4. Approved amount is disbursed as per scheme provisions.
-
-### Important
-
-* Valid only for **first two childbirths**
-* Total benefit: **₹6,000 per child**
-* Ensure timely application after childbirth
-
-### FAQs
-
-Q: Who can apply for Thayi Magu Sahaya Hasta?
-A: Registered woman construction workers who have delivered a child.
-
-Q: What is the total benefit amount?
-A: ₹6,000 per child.
-
-Q: How is the amount paid?
-A: ₹500 per month for a period of 3 years from the date of delivery.
-
-Q: How many times can this benefit be claimed?
-A: The benefit can be claimed only twice.
-
-Q: Is the scheme applicable for the third child?
-A: No, the scheme is available only for the first two children.
-
-Q: Is this different from Delivery Assistance?
-A: Yes, Delivery Assistance provides a one-time amount of ₹50,000, while this scheme provides monthly support for child nutrition and care.
-
-Q: What documents are required to apply?
-A: Birth Certificate, Child Photo, Affidavit for delivery number, Self Declaration, Discharge Summary, and 90 Days Work Certificate.
-
-Q: Is the birth certificate mandatory?
-A: Yes, it is required as proof of childbirth.
-
-Q: Is an affidavit required?
-A: Yes, an affidavit confirming whether it is the first or second delivery must be submitted.
-
-Q: Where can I apply for this scheme?
-A: Applications can be submitted through KSK or the Board system.
-
-Q: What happens after submission?
-A: The Board verifies the application and processes the benefit after approval.
-
-Q: Can the benefit be rejected?
-A: Yes, if eligibility conditions are not met or required documents are missing.
-
-Q: Is the 90 days work certificate required?
-A: Yes, it is mandatory to establish eligibility.
-
-Q: When should I apply?
-A: The application should be submitted soon after childbirth to ensure timely benefit.
+1. Applicant needs to submit the application. Application can be submitted within **6 months of delivery**, and application can be submitted **every year (upto three years)**.
+2. Application processing and Verification by Senior / Labour Inspector.
+3. Review and Approval by Labour Officer.
 
 ---
 
@@ -435,28 +279,34 @@ A: Yes, if eligibility conditions are not met or documents are incorrect.
 
 ### Overview
 
-Hospitalization support.
+The Secretary or any other officer authorized in this behalf by the Board may sanction financial assistance to a registered construction worker and their dependents hospitalised in a Government hospital, a private hospital included in Schedule I of the Karnataka Government Servant’s (Medical Attendance) Rules 1963, or a hospital recognised under any insurance Scheme of the State Government.
 
 ### Benefit
 
-₹300 per day (maximum ₹20,000)
+* **₹300 per day** of hospitalization.
+* Maximum assistance up to **₹20,000** for a continuous period of hospitalization, subject to actuals.
+* (Govt of Karnataka Notification No. LD 458 LET 2021 Bangalore Dated: 08-08-2022).
 
 ### Eligibility
 
-Minimum 48 hours hospitalization.
+* The beneficiary must be a registered construction worker or their dependent.
+* Hospitalization must be for a minimum of **48 Hours** continuously.
 
 ### Required Documents
 
-* Discharge summary
-* Form 22A
-* Treatment bills
-* Self declaration
-* 90 days work certificate
+* Proof of Identity / Smart card issued by the Board (Attested)
+* Employment Certificate
+* Proof of Bank Account
+* Bills of hospital showing admission and discharge dates and all treatment given
+* Any medical documents on hospitalization of beneficiary/dependent in government/private hospital included in Schedule 1 of the Karnataka Government Servants (Medical Attendance) Rules 1963
+* Form XXII-A
 
-### FAQs
+### Application Process
 
-Q: Can private hospital treatment be covered?
-A: Yes, if empaneled or recognized.
+1. Applicant needs to submit the application. Application can be submitted within **6 months** of hospitalization commencement date.
+2. Applicants submit the application through KB&OWWB software.
+3. Application processing and Verification by Senior / Labour Inspector.
+4. Review and Approval by Labour Officer.
 
 ---
 
@@ -464,99 +314,44 @@ A: Yes, if empaneled or recognized.
 
 ### Overview
 
-This scheme provides monthly pension and one-time financial assistance (ex-gratia) to registered construction workers who suffer partial disability due to disease or accident.
+Disability Pension, procedure and sanction etc.
 
-### Benefits
+### Benefits & Calculation
 
-* Monthly Disability Pension: **₹2,000 per month**
-* One-time Ex-Gratia: **Up to ₹2,00,000**
+* The Board or authorized officer may sanction an amount of **₹ 2000/- per month** (Govt of Karnataka Notification) as disability pension to a beneficiary who is partially disabled due to any disease or accident at worksite.
+* An **ex-gratia payment of not more than ₹ 2,00,000/-** (Rupees two lakhs only) depending upon the percentage of disability.
+* The Board or the Officer authorized shall decide the quantum of ex-gratia based on the percentage of disability declared by the department for the empowerment of differently abled and senior citizens calculated according to the following formula:
+  * **Formula:** ₹ 2,00,000 (Max. Amt) X Percentage of disability as declared by the department for the empowerment of differently abled and senior citizens = Ex-gratia amount.
+* Disability Pension shall be paid through the Bank Account of the beneficiary or any other mode of transfer as may be determined by the Board.
 
-**Ex-Gratia Calculation**
+### Eligibility & Conditions
 
-Ex-Gratia Amount =
-₹2,00,000 × Percentage of disability (as certified by the Department for Empowerment of Differently Abled and Senior Citizens)
-
-### Eligibility
-
-* Registered construction worker
-* Certified **partial disability** due to disease or workplace accident
-* Disability must be officially certified by the competent government authority
-* Beneficiary should not have availed similar benefit under accident assistance scheme (if applicable)
+* The beneficiary cannot avail this assistance in case he has availed similar benefit under the accident assistance scheme.
+* The beneficiary shall obtain an identity card issued by the Department for the empowerment of differently abled and senior citizens.
+* A Disability Pension application must be submitted through **Seva Sindhu software**.
+* The Board or the Officer authorized, after satisfying himself about the eligibility and other criteria, shall sanction the disability pension and send to the registered beneficiary the disability pension sanction order along with the disability pension Identity Card having a unique (Electronically generated) **DPPO (Disability Pension Payment Order)** number.
+* The beneficiary shall submit the **‘Living Certificate’ in Form XIV (A)** to the sanctioning authority for each year.
+* The Disability Pension granted shall be discontinued once the beneficiary attains the age of **sixty years**.
+* If it is found that the beneficiary is not eligible for Disability Pension, the application shall be rejected and the applicant be informed accordingly. Provided that no such application shall be rejected unless the applicant has been given an opportunity of being heard.
+* In case of death of the Disability pensioner, either the bank or the legal dependant shall inform the Board or Officer authorized about the death of the pensioner along with the death certificate in order to close the bank account.
 
 ### Required Documents
 
-* Disability Certificate / ID Card issued by Department for Empowerment of Differently Abled and Senior Citizens
-* Discharge Summary / Treatment Bill
-* 90 Days Work Declaration
-* Self Declaration
+* Beneficiary / original Identity card, Issued by the board
+* Photocopy of beneficiary's bank passbook
+* Provide Living Certificate every year
+* Ration Card
+* Employer Certificate
+* Medical Report
+* ID card issued by the department for the empowerment of differently abled and Senior citizens
+* Photocopy of the disabled beneficiary (Application can be submitted within 6 months from the date of issue of disability ID card by competent authority)
+* In case of death of Beneficiary, Nominee should provide death certificate to Board
 
 ### Application Process
 
-1. Submit application through **Seva Sindhu**.
-2. Board verifies eligibility and disability certification.
-3. If approved:
-   * Disability Pension Sanction Order is issued.
-   * Disability Pension Identity Card is provided.
-   * Unique **DPPO (Disability Pension Payment Order)** number is generated.
-4. Pension is credited to the beneficiary’s bank account.
-5. Beneficiary must submit **Living Certificate (Form XIV-A)** every year.
-
-### Important Conditions
-
-* Annual Living Certificate submission is mandatory.
-* Pension will be **discontinued when the beneficiary attains 60 years of age**.
-* In case of death, the bank or legal heir must inform the Board with the death certificate.
-* If found ineligible, the application may be rejected after giving an opportunity for clarification.
-
-### FAQs
-
-Q: Who can apply for Disability Pension?
-A: Registered construction workers who have certified partial disability due to disease or accident.
-
-Q: What is the monthly pension amount?
-A: ₹2,000 per month.
-
-Q: Is there any one-time financial assistance?
-A: Yes, ex-gratia up to ₹2,00,000 based on the percentage of disability.
-
-Q: How is the ex-gratia amount calculated?
-A: ₹2,00,000 multiplied by the disability percentage certified by the competent authority.
-
-Q: Is a disability certificate mandatory?
-A: Yes, the disability must be certified by the Department for Empowerment of Differently Abled and Senior Citizens.
-
-Q: Where should I apply for this scheme?
-A: The application must be submitted through the Seva Sindhu portal or with assistance at a KSK center.
-
-Q: What happens after approval?
-A: The Board issues a sanction order, disability identity card, and a DPPO number for pension processing.
-
-Q: What is a DPPO number?
-A: DPPO (Disability Pension Payment Order) is a unique number used to process and track disability pension payments.
-
-Q: How will the pension be paid?
-A: The pension is credited directly to the beneficiary’s bank account.
-
-Q: Is annual verification required?
-A: Yes, a Living Certificate (Form XIV-A) must be submitted every year.
-
-Q: What happens if the Living Certificate is not submitted?
-A: Pension may be stopped until the certificate is provided.
-
-Q: Will the disability pension continue after age 60?
-A: No, disability pension is discontinued when the beneficiary reaches 60 years of age.
-
-Q: Can I receive this along with other disability benefits?
-A: No, the benefit cannot be availed if similar assistance has already been received under applicable rules.
-
-Q: What if my application is rejected?
-A: The Board will review the case and provide an opportunity for clarification before final rejection.
-
-Q: What should the family do if the pensioner dies?
-A: The bank or legal heir must inform the Board and submit the death certificate to close the pension account.
-
-Q: Is the 90 days work proof required?
-A: Yes, a 90 Days Work Declaration is mandatory.
+1. Applicant needs to submit the application.
+2. Application processing and Verification by Senior / Labour Inspector.
+3. Review and Approval by Assistant Labour Commissioner.
 
 ---
 
@@ -581,98 +376,64 @@ Annual Living Certificate submission.
 
 ### Overview
 
-This scheme provides monthly financial support to registered construction workers after attaining the age of 60 years.
+Pension scheme, eligibility, procedure and sanction of pension for registered building or other construction workers.
 
 ### Benefit
 
-* Monthly pension up to **₹3,000**
-* Pension amount will not exceed ₹3,000 per month
-* Beneficiary **cannot receive similar pension from other government schemes**
+* The amount of pension shall not exceed a sum of **₹3,000 per month**.
+* (Govt of Karnataka Notification No. LD 458 LET 2021 Bangalore Dated: 08-08-2022).
 
 ### Eligibility
 
-* Registered construction worker aged **60 years or above**
-* Must have been a registered beneficiary of the Board for **at least 3 years before attaining 60 years**
-* Must not be receiving any other government pension
+* Every registered building or other construction worker beneficiary who has **completed 60 years of age**.
+* A registered construction worker must have continued as a beneficiary of the Board for **at least 3 years before the age of 60**.
+* The beneficiary shall not avail similar benefit under any other Government schemes.
+
+### Requirements & Conditions
+
+* Every eligible worker should submit an application through **Seva Sindhu software**.
+* The worker shall **surrender his beneficiary Identity Card** with the application.
+* The Board, after verifying the application, shall send the pension sanction order along with the pension Identity card having an electronically generated unique Pension Payment Order (PPO) number.
+* If the Board concludes that the applicant is not eligible, the application shall be rejected after providing an opportunity of being heard to the applicant.
+* Legal dependents or heirs shall inform the Board about the death of the pensioner along with the death certificate in order to close the bank account.
+* The beneficiary shall submit the **Living Certificate (Form XII-A)** to the sanctioning authority for each year.
 
 ### Required Documents
 
-* Self Declaration Form
-* 90 Days Work Certificate
+* Original Identity Card issued by the Board
+* Employer Certificate
+* Ration Card
+* Photocopy of beneficiary's bank passbook
+* Passport size photo
+* (Living Certificate must be provided every year thereafter)
 
 ### Application Process
 
-1. Submit pension application through **Seva Sindhu software**.
-2. Worker must **surrender the beneficiary Identity Card** along with the application.
-3. Board verifies eligibility and documents.
-4. If approved:
-   * Pension Sanction Order is issued.
-   * Pension Identity Card with unique Pension Payment Order (PPO) number is generated.
-5. Beneficiary must submit **Living Certificate (Form XII-A)** every year to continue receiving pension.
+1. Applicant needs to submit the application.
+2. Application processing and Verification by Senior / Labour Inspector.
+3. Review and Approval by Assistant Labour Commissioner.
 
-### Rejection Condition
+### Family Pension
 
-If the Board finds the applicant not eligible, the application may be rejected after providing an opportunity for clarification or hearing.
+**Eligibility & Procedure:**
+* The **spouse** of the deceased registered building and other construction worker drawing pension is eligible for Family Pension.
+* The eligible spouse shall submit an application in **Form XIIB** to the Board.
+* If the Board verifies the application and is satisfied, the Family Pension Order along with the electronically generated Pension Identity card with a Unique Pension Order number shall be sent to the spouse.
+* If the application is rejected, an opportunity of being heard shall be given to the applicant.
 
-### In Case of Death of Pensioner
+**Benefit Amount:**
+* The amount of Family Pension shall not exceed **fifty percent (50%) of the pension amount per month** earlier drawn by the registered worker. This shall be credited to the Bank Account of the applicant.
 
-Legal dependents or heirs must inform the Board and submit the **death certificate** so that pension payments can be stopped and records closed.
+**Required Documents for Family Pension:**
+* Death Certificate of the deceased registered worker who was drawing pension.
+* Document from Revenue Department to support that the applicant is the spouse of the deceased registered worker.
+* Copy of Bank Pass Book of the applicant.
+* One Passport Size Photo.
 
-### Important
-
-* Maximum pension: **₹3,000 per month**
-* Annual Living Certificate submission is mandatory
-* Not eligible if receiving pension under another government scheme
-
-### FAQs
-
-Q: Who can apply for this pension?
-A: Registered construction workers who are 60 years or older and have been registered for at least 3 years before turning 60.
-
-Q: What is the maximum pension amount?
-A: The pension amount is up to ₹3,000 per month.
-
-Q: Can I receive another government pension along with this?
-A: No, beneficiaries cannot receive similar pension benefits from other government schemes.
-
-Q: Where should I apply for pension?
-A: The application must be submitted through the Seva Sindhu portal.
-
-Q: Do I need to submit my labour card while applying?
-A: Yes, the beneficiary Identity Card must be surrendered along with the application.
-
-Q: What happens after the application is submitted?
-A: The Board verifies the application and, if approved, issues a Pension Sanction Order and Pension Identity Card with a PPO number.
-
-Q: What is a PPO number?
-A: PPO (Pension Payment Order) is a unique number used to process and track pension payments.
-
-Q: Is annual verification required?
-A: Yes, a Living Certificate (Form XII-A) must be submitted every year.
-
-Q: What happens if I do not submit the Living Certificate?
-A: The pension may be stopped until the certificate is submitted.
-
-Q: Can I apply immediately after turning 60?
-A: Yes, eligible workers should apply after completing 60 years of age.
-
-Q: What if I was registered for less than 3 years before turning 60?
-A: You will not be eligible for pension.
-
-Q: Will the application be rejected if I am not eligible?
-A: Yes, the Board may reject the application after review, but the applicant will be given an opportunity for clarification.
-
-Q: Can someone else apply on my behalf?
-A: Yes, assistance can be taken through KSK centers if needed.
-
-Q: What should the family do if the pensioner dies?
-A: The legal heir must inform the Board and submit the death certificate to stop the pension.
-
-Q: Is the 90 days work certificate required for pension?
-A: Yes, it is required as proof of continued work eligibility.
-
-Q: Will the pension amount increase over time?
-A: No, the pension amount will not exceed ₹3,000 per month.
+**Conditions for Family Pension:**
+* In case of death, the legal dependents or heir of the family pensioner shall inform the Board about the death along with the death certificate of the family pensioner.
+* The family pensioner shall provide to the Board a **'Living Certificate' (Form XIIA) once a year** through the Manager of the Bank where the Family Pension amount is deposited or through Revenue Department officials.
+* The family pension sanctioning authority shall maintain a register in Form XIII.
 
 ---
 
@@ -780,91 +541,36 @@ A: No, this scheme is applicable only after the worker becomes eligible for pens
 
 ### Overview
 
-Financial assistance is provided to the nominee or legal heir in case of the death of a registered construction worker to support funeral expenses and reduce financial hardship.
+If a registered construction worker dies, financial assistance is provided to the nominee of the deceased registered construction worker to meet the funeral expenses of the deceased, and an ex-gratia amount is paid to mitigate the financial hardship caused by the sudden demise.
 
-### Benefits
+### Benefit
 
-* **Funeral Assistance:** ₹4,000
-* **Ex-Gratia Assistance:** ₹1,46,000
-* **Total support:** ₹1,50,000
+* **Funeral Expenses:** To meet the funeral expenses of the deceased registered construction worker.
+* **Ex-Gratia Amount:** An ex-gratia amount of **₹ 1,46,000 (Rupees fifty thousand only)** [sic] shall also be paid to the nominee.
+  *(Note: The text states "₹ 1,46,000" numerically but "Rupees fifty thousand only" in words. Both are included as provided. Usually, it is either ₹ 50,000 or ₹ 1,46,000 depending on specific rules, but standardizing to the provided text.)*
 
-**Note on Revised Amount**
+### Eligibility & Conditions
 
-* If the Date of Death is **on or after 16-07-2025**, the beneficiary is eligible for the **revised sanctioned amount**.
-* If the Date of Death is **before 16-07-2025**, the beneficiary is eligible for the **previous sanctioned amount**.
-
-### Eligibility
-
-* The deceased must be a registered construction worker.
-* Application must be submitted by the **nominee** registered with the worker.
-* If no nominee is available, the **legal heir** may apply (subject to verification).
+* The Secretary, or any other officer authorized in this behalf by the Board, shall sanction the amount to the nominee of the deceased registered construction worker.
+* The application for claiming the amount shall be in **Form XVIII**.
+* It shall be accompanied by the death certificate of the deceased registered construction worker.
+* The registration number of the beneficiary is required for verification of validity and correctness by the Board in case of non-availability of the original identity card.
 
 ### Required Documents
 
-* Death Certificate of the worker
-* Nominee / Legal Heir Aadhaar
-* Registration Number of the worker (if ID card is not available)
-* Form XVIII (claim form)
+* Beneficiary / original Identity card, Issued by the board
+* Photocopy of bank passbook (Beneficiary or Nominee's in case of beneficiary’s death)
+* Death Certificate attested by gazetted officer
+* Ration Card
+* Aadhaar Card
+* Employer Certificate
+* Any Photo ID proof of Nominee
 
 ### Application Process
 
-1. Submit **Form XVIII** along with the required documents.
-2. Application can be submitted through KSK / Board system.
-3. Board verifies worker registration and nominee details.
-4. Amount is sanctioned and disbursed after approval.
-
-### Important
-
-* Only nominee or verified legal heir can apply.
-* Aadhaar proof is mandatory.
-* Worker registration must be valid at the time of death.
-
-### FAQs
-
-Q: Who can apply for Funeral and Ex-Gratia assistance?
-A: The registered nominee of the deceased worker can apply. If no nominee exists, the legal heir may apply after verification.
-
-Q: How much financial assistance is provided?
-A: ₹4,000 for funeral expenses and ₹1,46,000 as ex-gratia assistance.
-
-Q: What is the total benefit amount?
-A: The total assistance is ₹1,50,000.
-
-Q: Does the amount depend on the date of death?
-A: Yes. Death on or after 16-07-2025 is eligible for the revised amount. Earlier deaths are eligible for the previous amount.
-
-Q: Is Aadhaar mandatory for the applicant?
-A: Yes, Aadhaar of the nominee or legal heir is required.
-
-Q: What form is required to apply?
-A: The claim must be submitted using Form XVIII.
-
-Q: Is the death certificate mandatory?
-A: Yes, the death certificate is compulsory.
-
-Q: What if the original labour card or ID is not available?
-A: The worker’s registration number can be provided for verification.
-
-Q: Can multiple family members apply separately?
-A: No, only one eligible nominee or verified legal heir can claim the benefit.
-
-Q: What if no nominee was registered?
-A: The legal heir can apply, but additional verification may be required.
-
-Q: Can the application be submitted online?
-A: Yes, through the KSK / Board system or at a KSK center.
-
-Q: How long does the approval process take?
-A: The Board verifies the details and processes the payment after approval.
-
-Q: Is there any time limit to apply?
-A: The application should be submitted as soon as possible after the death to avoid delays in verification.
-
-Q: Will the application be rejected if the worker was not registered?
-A: Yes, the scheme is available only for registered construction workers.
-
-Q: Can the nominee claim other schemes along with this?
-A: Yes, if eligible under other applicable schemes.
+1. Applicant needs to submit the application. Application shall be submitted within **one year** of death.
+2. Application processing and Verification by Senior / Labour Inspector.
+3. Review and Approval by Assistant Labour Commissioner.
 
 ---
 
@@ -872,97 +578,36 @@ A: Yes, if eligible under other applicable schemes.
 
 ### Overview
 
-Financial assistance is provided to support the marriage expenses of the registered construction worker or the worker’s dependent son or daughter.
+Assistance for the marriage of a registered construction worker or his/her dependent children.
 
 ### Benefit
 
-* **₹60,000 per marriage.**
-* Maximum two marriages per family are eligible for assistance.
-* Only one claim is allowed per marriage (no duplicate claims for the same child, even if multiple family members are registered workers).
+* A sum of **₹60,000/-** (Rupees Fifty Thousand Only) as assistance to meet the marriage expenses of the worker or his/her two dependent children.
 
 ### Eligibility & Conditions
 
-* Worker must be registered for at least **1 year** before the date of marriage.
-* Assistance can be claimed for the worker’s own marriage or the marriage of a dependent son/daughter.
-* The bride/groom must have attained the legal age for marriage.
-* Marriage must be legally valid and registered.
-
-### Application Process
-
-1. Apply through KSK / Board software with required documents.
-2. At least one year must have passed between the worker’s registration date and the marriage date.
-3. Amount is sanctioned and disbursed after verification and approval.
+* The Secretary or any other authorized in this behalf by the Board, shall on an application from a registered construction worker, sanction the assistance.
+* A minimum of **one year** shall have lapsed from the date of registration of the applicant to the date of marriage of the applicant’s son or daughter for whose marriage the assistance is sought.
+* The family of a registered construction worker can avail this assistance only **twice**.
+* There shall be **only one claim** in respect of a given marriage irrespective of the number of registered construction workers in the family.
+* The son or daughter of the registered construction worker, for whose marriage the assistance is sought, shall have attained the age prescribed by law for marriage.
+* The certificate of registration of marriage obtained from the registrar of marriage shall be produced along with the application.
 
 ### Required Documents
 
-* **Marriage Certificate** (issued by Registrar of Marriages)
-* Affidavit
-* 90 Days Work Certificate
-* Self Declaration
+* Beneficiary / original Identity card, Issued by the board
+* Employment Certificate
+* Bank Account details
+* Marriage Certificate by Registrar of the marriage
+* Marriage Invitation Card
+* Affidavit if marriage is outside Karnataka state
+* Ration Card
 
-### Important
+### Application Process
 
-* Maximum benefit: ₹60,000 per marriage.
-* Maximum 2 claims per family.
-
-### FAQs
-
-Q: Who can apply for Marriage Assistance?
-A: A registered construction worker can apply for their own marriage or for the marriage of their dependent son or daughter.
-
-Q: How much financial assistance is provided?
-A: ₹60,000 is provided per eligible marriage.
-
-Q: Can the worker apply for their child’s marriage?
-A: Yes, the worker can apply for the marriage of a dependent son or daughter.
-
-Q: Is there a minimum registration period required?
-A: Yes, the worker must be registered for at least 1 year before the date of marriage.
-
-Q: Can I apply immediately after registration?
-A: No, at least one year must have passed between the registration date and the marriage date.
-
-Q: What is the maximum number of times this benefit can be claimed?
-A: A maximum of two claims per family is allowed.
-
-Q: Can I apply for more than two children?
-A: No, only two marriages per family are eligible for assistance.
-
-Q: Can both husband and wife apply separately if both are registered workers?
-A: No, only one claim is allowed for a single marriage, even if multiple family members are registered workers.
-
-Q: Can multiple claims be made for the same child?
-A: No, duplicate claims for the same child are not allowed.
-
-Q: Can the scheme be used for the worker’s own marriage?
-A: Yes, the worker can apply for their own marriage if eligibility conditions are met.
-
-Q: Is there an age requirement for the bride or groom?
-A: Yes, the marriage must meet the legally prescribed age for marriage.
-
-Q: Is marriage registration mandatory?
-A: Yes, the marriage must be legally registered and a Marriage Certificate must be submitted.
-
-Q: What documents are required to apply?
-A: Marriage Certificate, Affidavit, 90 Days Work Certificate, and Self Declaration.
-
-Q: Is the 90 days work certificate required?
-A: Yes, it is mandatory as proof of active work.
-
-Q: Can I apply before the marriage takes place?
-A: No, the application can be submitted only after the marriage and after obtaining the Marriage Certificate.
-
-Q: Where can I apply for this scheme?
-A: Applications can be submitted through the KSK / Board software or at Karmika Seva Kendra centers.
-
-Q: How will the amount be provided?
-A: The application will be verified, and the amount will be sanctioned and disbursed after approval.
-
-Q: Will the application be rejected if the marriage is not legally valid?
-A: Yes, only legally valid and registered marriages are eligible.
-
-Q: Can dependents other than children apply under this scheme?
-A: No, the scheme is applicable only for the worker, or the worker’s dependent son or daughter.
+1. Applicant needs to submit the application. Application must be submitted within **6 months** of the marriage.
+2. Application processing and Verification by Senior / Labour Inspector.
+3. Review and Approval by Labour Officer.
 
 ---
 
