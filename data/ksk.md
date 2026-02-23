@@ -167,7 +167,7 @@ A: Yes, it is mandatory to establish eligibility.
 Q: Can the application be rejected?
 A: Yes, if the incident falls under excluded conditions or documents are incomplete.
 
-### ಕನ್ನಡ ಮಾಹಿತಿ (Kannada Information)
+### ವಿವರಗಳು
 
 ಅಪಘಾತ ಎಂದರೆ ಯಾವುದೇ ಅಪರಾಧ ಉದ್ದೇಶವಿಲ್ಲದೆ ಮತ್ತು ಅನಿರೀಕ್ಷಿತವಾಗಿ ನಡೆಯುವ ಘಟನೆಯಾಗಿದ್ದು, ಇದರಿಂದ ವ್ಯಕ್ತಿಗೆ ಸಂಭವಿಸಬಹುದಾದ ಮರಣ ಅಥವಾ ಶಾಶ್ವತ / ಭಾಗಶಃ ದುರ್ಬಲತೆ.
 
@@ -311,7 +311,7 @@ A: Yes, it is required to establish eligibility.
 Q: Can multiple claims be made under this scheme?
 A: Yes, if eligibility conditions are met and each case is approved.
 
-### ಕನ್ನಡ ಮಾಹಿತಿ (Kannada Information)
+### ವಿವರಗಳು
 
 ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕರ ಹಾಗು ಅವನ / ಅವಳ ಅವಲಂಭಿತರ ಪ್ರಮುಖ ಖಾಯಿಲೆಗಳ ವೆಚ್ಚಕ್ಕಾಗಿ ನೀಡುವ ಸಹಾಯಧನ.
 
@@ -434,7 +434,7 @@ A: Yes, it is mandatory to establish eligibility.
 Q: When should I apply?
 A: The application should be submitted soon after childbirth to ensure timely benefit.
 
-### ಕನ್ನಡ ಮಾಹಿತಿ (Kannada Information)
+### ವಿವರಗಳು
 
 ನೋಂದಾಯಿತ ಮಹಿಳಾ ಕಾರ್ಮಿಕಳ ಮಗುವಿನ ಪೌಷ್ಠಿಕಾಂಶದ ಪೂರೈಕೆಗಾಗಿ ಹಾಗು ಪೂರ್ವ ಪ್ರಾಥಮಿಕ ಶಿಕ್ಷಣಕ್ಕಾಗಿ ನೀಡುವ ಸಹಾಯ ಧನ (ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ).
 
@@ -560,7 +560,7 @@ A: Yes, if eligibility conditions are not met or documents are incorrect.
 Q: Is the 90 days work certificate mandatory?
 A: Yes, it is required to establish eligibility.
 
-### ಕನ್ನಡ ಮಾಹಿತಿ (Kannada Information)
+### ವಿವರಗಳು
 
 ನೋಂದಾಯಿತ ನಿರ್ಮಾಣ ಮಹಿಳಾ ಕಾರ್ಮಿಕರ ಮಗುವಿನ ಹೆರಿಗೆಗೆ ನೀಡುವ ಸಹಾಯ ಧನ.
 
@@ -625,7 +625,7 @@ Minimum 48 hours hospitalization.
 Q: Can private hospital treatment be covered?
 A: Yes, if empaneled or recognized.
 
-### ಕನ್ನಡ ಮಾಹಿತಿ (Kannada Information)
+### ವಿವರಗಳು
 
 ಮಂಡಳಿಯ ಕಾರ್ಯದರ್ಶಿಯ ಅಥವಾ ಮಂಡಳಿಯ ಪರವಾಗಿ ನೇಮಕವಾದ ಅಧಿಕೃತ ಅಧಿಕಾರಿಗಳು ನೋಂದಾಯಿತ ಫಲಾನುಭವಿ ಮತ್ತು ಅವನ ಅವಲಂಬಿತರು ರಾಜ್ಯ ಸರ್ಕಾರದ ಯಾವುದೇ ವಿಮೆ ಯೋಜನೆ ಅಡಿಯಲ್ಲಿ ಗುರುತಿಸಲ್ಪಟ್ಟ ಆಸ್ಪತ್ರೆಗಳಲ್ಲಿ ಅಥವಾ ಕರ್ನಾಟಕ ಸರ್ಕಾರಿ ನೌಕರರ (ವೈದ್ಯಕೀಯ ಹಾಜರಾತಿ) ನಿಯಮಗಳು, 1963 ರ ಷಡ್ಯೂಲ್-1 ರಲ್ಲಿ ನಮೂದಿಸಿರುವ ಆಸ್ಪತ್ರೆಗಳಲ್ಲಿ ದಾಖಲಾದಾಗ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನವನ್ನು ನೀಡಬೇಕಾಗುತ್ತದೆ. ಕನಿಷ್ಠ 48 ಗಂಟೆಗಳವರೆಗೆ ಸತತವಾಗಿ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ದಾಖಲಾದಾಗ, ವೈದ್ಯಕೀಯ ಸಹಾಯಧನವನ್ನು ನೀಡಬೇಕಾಗಿರುತ್ತದೆ.
 
@@ -759,7 +759,7 @@ A: The bank or legal heir must inform the Board and submit the death certificate
 Q: Is the 90 days work proof required?
 A: Yes, a 90 Days Work Declaration is mandatory.
 
-### ಕನ್ನಡ ಮಾಹಿತಿ (Kannada Information)
+### ವಿವರಗಳು
 
 ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಸೌಲಭ್ಯ, ಅರ್ಹತೆ, ವಿಧಾನ ಮತ್ತು ಮಂಜೂರಾತಿ.
 
@@ -919,7 +919,7 @@ A: Yes, it is required as proof of continued work eligibility.
 Q: Will the pension amount increase over time?
 A: No, the pension amount will not exceed ₹3,000 per month.
 
-### ಕನ್ನಡ ಮಾಹಿತಿ (Kannada Information)
+### ವಿವರಗಳು
 
 #### ಅರ್ಹತೆ
 
@@ -1159,7 +1159,7 @@ A: Yes, the scheme is available only for registered construction workers.
 Q: Can the nominee claim other schemes along with this?
 A: Yes, if eligible under other applicable schemes.
 
-### ಕನ್ನಡ ಮಾಹಿತಿ (Kannada Information)
+### ವಿವರಗಳು
 
 ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕನ ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚವನ್ನು ಭರಿಸಲು ಹಾಗು ಅನುಗ್ರಹ ರಾಶಿ ನೀಡುವ ಸಹಾಯಧನ.
 
@@ -1292,7 +1292,7 @@ A: Yes, only legally valid and registered marriages are eligible.
 Q: Can dependents other than children apply under this scheme?
 A: No, the scheme is applicable only for the worker, or the worker’s dependent son or daughter.
 
-### ಕನ್ನಡ ಮಾಹಿತಿ (Kannada Information)
+### ವಿವರಗಳು
 
 ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕರ ಮೊದಲ ಮದುವೆ ಅಥವಾ ಅವನ / ಅವಳ ಅವಲಂಭಿತರ ಮದುವೆಗೆ ನೀಡುವ ಸಹಾಯ ಧನ.
 

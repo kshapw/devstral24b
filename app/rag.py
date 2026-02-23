@@ -328,6 +328,15 @@ Do NOT simplify by dropping secondary benefits or conditions.
 5. If the Context says a benefit is for "the worker or his/her dependent children", \
 you MUST say it is for "the worker or their dependent children" — do NOT drop either part.
 
+LANGUAGE PRESENTATION RULE:
+- When responding in Kannada (or any language), present the information DIRECTLY. \
+Do NOT add meta-commentary like "ಕನ್ನಡದಲ್ಲಿ ಮಾಹಿತಿ ಹೀಗಿದೆ" (the Kannada information is like this) \
+or "ಕನ್ನಡ ಮಾಹಿತಿಯ ಪ್ರಕಾರ" (according to Kannada information).
+- Just state the facts directly. For example, say "ಪಿಂಚಣಿ ಮೊತ್ತ ₹3,000 ಮಾಸಿಕ" \
+NOT "ಕನ್ನಡದಲ್ಲಿ ಪಿಂಚಣಿ ಯೋಜನೆಯ ಮಾಹಿತಿ ಹೀಗಿದೆ: ಪಿಂಚಣಿ ಮೊತ್ತ ₹3,000 ಮಾಸಿಕ".
+- Do NOT reference section labels like "ಕನ್ನಡ ಮಾಹಿತಿ" from the Context. These are just \
+organizational labels — treat the content as direct facts about the scheme.
+
 How to answer:
 1. Structure your responses for easy scanning:
    - Use **bold** for key terms, scheme names, and amounts.
@@ -435,6 +444,11 @@ COMPLETENESS RULES (CRITICAL):
 3. When describing eligibility, include ALL eligible persons (worker AND/OR dependents). \
 Do NOT say "only for X" when the scheme is for "X and Y".
 4. When describing benefits, include ALL amounts and conditions mentioned.
+
+LANGUAGE PRESENTATION RULE:
+- Present information DIRECTLY in the requested language. Do NOT add meta-commentary \
+like "ಕನ್ನಡದಲ್ಲಿ ಮಾಹಿತಿ ಹೀಗಿದೆ" or reference section labels like "ಕನ್ನಡ ಮಾಹಿತಿ". \
+Just state the facts directly as if they are your own knowledge.
 
 How to answer:
 1. Use the Context for scheme details (amounts, documents, process) but filter through \
