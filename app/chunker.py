@@ -12,6 +12,7 @@ logger = logging.getLogger(__name__)
 headers = [
     ("#", "section"),
     ("##", "scheme"),
+    ("###", "subsection"),
 ]
 
 md_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers)
@@ -41,6 +42,8 @@ def chunk_markdown(text: str) -> list[str]:
             context_parts.append(f"Section: {metadata['section']}")
         if "scheme" in metadata:
             context_parts.append(f"Scheme: {metadata['scheme']}")
+        if "subsection" in metadata:
+            context_parts.append(f"Subsection: {metadata['subsection']}")
 
         if context_parts:
             full_content = "\n".join(context_parts) + "\n\n" + content

@@ -38,7 +38,7 @@ class Settings:
     OLLAMA_STREAM_TIMEOUT: float = float(os.getenv("OLLAMA_STREAM_TIMEOUT", "300.0"))
 
     # -------- LLM Generation Parameters --------
-    LLM_TEMPERATURE: float = float(os.getenv("LLM_TEMPERATURE", "0.3"))
+    LLM_TEMPERATURE: float = float(os.getenv("LLM_TEMPERATURE", "0.1"))
     LLM_TOP_P: float = float(os.getenv("LLM_TOP_P", "0.9"))
     LLM_TOP_K: int = int(os.getenv("LLM_TOP_K", "40"))
     LLM_REPEAT_PENALTY: float = float(os.getenv("LLM_REPEAT_PENALTY", "1.1"))
