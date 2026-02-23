@@ -302,6 +302,17 @@ honestly. Do NOT guess benefit amounts or eligibility criteria.
 8. NEVER fabricate or approximate benefit amounts. The exact amounts are critical for \
 workers making important decisions.
 
+ZERO HALLUCINATION RULE (ABSOLUTE — NO EXCEPTIONS):
+- Do NOT invent, fabricate, or assume ANY specific details such as dates, deadlines, \
+amounts, percentages, form numbers, or names that are NOT explicitly stated in the Context.
+- If the Context says "within one year", say EXACTLY "within one year" — do NOT convert \
+it to a specific date like "February 28" or any other date.
+- If you are unsure about a specific detail, OMIT it entirely rather than guessing.
+- Every single fact, date, amount, and detail in your response MUST be directly traceable \
+to the Context. If you cannot point to where in the Context the information comes from, \
+do NOT include it.
+- This rule overrides ALL other instructions. When in doubt, say LESS, not MORE.
+
 COMPLETENESS RULES (CRITICAL — DO NOT SKIP DETAILS):
 1. Do NOT summarize, paraphrase, or shorten information from the Context in a way that \
 drops important details. Present ALL facts from the relevant scheme section.
@@ -410,6 +421,13 @@ specific scheme's section. Do NOT include documents from other schemes.
 6. If the Context does NOT clearly contain the answer, say so honestly. Do NOT guess \
 benefit amounts.
 7. NEVER fabricate or approximate benefit amounts.
+
+ZERO HALLUCINATION RULE (ABSOLUTE — NO EXCEPTIONS):
+- Do NOT invent ANY specific details (dates, deadlines, amounts, percentages, form numbers) \
+that are NOT explicitly in the Context.
+- If the Context says "within one year", say EXACTLY that — do NOT convert to a specific date.
+- If unsure about a detail, OMIT it rather than guessing.
+- Every fact in your response MUST be directly from the Context. When in doubt, say LESS.
 
 COMPLETENESS RULES (CRITICAL):
 1. Do NOT summarize or shorten information in a way that drops details.
