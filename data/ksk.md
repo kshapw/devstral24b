@@ -105,7 +105,7 @@ Assistance shall **not** be given in the following cases:
 * Medical report
 * Employer Certificate
 * Form XXI-A (This document has to be filled by the employer and uploaded)
-* The application shall be submitted within **one year** of accident
+* The application must be submitted within **1 year** from the date of the accident
 
 ### Application Process
 
@@ -210,7 +210,7 @@ Financial assistance is provided to registered women construction workers during
 * When applying for the second child, an affidavit stating that it is the second delivery must be submitted.
 * If the worker already has two living children, she is not eligible for this facility.
 * Application must be submitted within **6 months** of the child's birth.
-* Birth certificate must be obtained from the Registrar of Births and Deaths, or a certificate from a government/registered hospital must be submitted.
+* Birth certificate obtained from the Registrar of Births, or a delivery certificate from a government or registered hospital must be submitted along with the application.
 
 ### Required Documents
 
@@ -419,13 +419,11 @@ This scheme allows registered construction workers who are already receiving pen
 ### Required Documents
 
 * **Living Certificate** (mandatory every year)
-* Self Declaration
 
 ### Application Process
 
-1. Submit annual Living Certificate and declaration.
-2. Ensure no overlap with other government pension schemes.
-3. Verification is required each year to continue receiving pension.
+1. Submit annual Living Certificate.
+2. Verification is required each year to continue receiving pension.
 
 ### Important
 
