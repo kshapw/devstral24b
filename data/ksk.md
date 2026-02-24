@@ -61,57 +61,56 @@ A: The application may be rejected or returned for correction.
 
 Accident means an event which is sudden without any criminal intent and unforeseen resulting in Death or incapacitation permanent, Total or partial disablement.
 
-### Benefits
+### Eligibility
 
-* Every registered construction worker who meets with an accident during the course of employment shall be compensated by the employer under the provisions of the Employee’s Compensation Act, 1923, along with a compensation of **₹8 Lakh** from the Board.
-* If the accident occurs outside the course of his or her employment, assistance shall be given by the Board (subject to exclusions).
-* The Secretary or authorized officer may grant the amount as **50% in Fixed Deposit** in a National Bank and **50% through account payee cheque or DBT**:
-  * **₹8 Lakh** for the deceased beneficiary or first living nominee in case of death.
-  * **₹2 Lakh** for permanent total disablement.
-  * **₹1 Lakh** for permanent partial disablement in proportion to the percentage of disablement, as defined in the Employee’s Compensation Act, 1923.
-* The dependents of a registered worker are sanctioned a compensation of **₹2 Lakhs** in case of an accident occurring during the course of employment resulting in death of the worker.
-* A registered worker who is grievously injured due to an accident occurring during the course of employment is sanctioned a compensation of up to **₹2 Lakhs**.
+* Every registered construction worker who meets with an accident during the course of employment shall be compensated by the employer under the provisions of the Employee’s Compensation Act, 1923. along with a compenstion of **₹8 lakh** from the Board.
+* If the accident occurs outside the course of his or her employment, assistance under this Rule shall be given by the Board excluding the cases below.
 
 ### Exclusions
 
-Assistance shall not be given in the following cases:
+Assistance shall **not** be given in the following cases:
 * Natural Death
-* Payment of compensation in respect of Death or injury as a consequence of or resulting from:
-  * Committing or attempting suicide, intentional self-injury
-  * Whilst under the influence of intoxicating liquor or drugs
-  * Committing any breach of law with criminal intent
-  * Pregnancy during childbirth, miscarriage, abortion or complication arising therefrom
-  * Curative treatments or interventions
-  * Venereal or sexually transmitted diseases
-  * HIV or related illness
-  * Any attempted crime on the body
+* Payment of compensation in Respect of Death or injury as a consequence of resulting from:
+    a) Committing or attempting suicide, Intentional self-injury;
+    b) whilst under the influence of intoxicating liquor or drugs;
+    c) Committing any breach of law with criminal intent;
+    d) Pregnancy during child birth, miscarriage, abortion or complication araising there from;
+    e) curative treatments or interventions;
+    f) venereal or sexually transmitted diseases;
+    g) HIV or related illness;
+    h) Any attempted crime on the body
 
-### Eligibility & Claim Conditions
+### Claim & Benefits
 
-* Every registered construction worker or his first living nominee eligible for accident benefit shall apply to the Board in **Form XXI**.
-* A medical disability certificate issued by a doctor of a Government hospital or recognized hospital must be enclosed, showing clearly the percentage of permanent disablement (incapacitation) and permanent partial disablement due to the accident, and the age at the time of accident.
-* A construction worker eligible for accident benefit should produce a certificate in **Form XXI-A** by his Employer in proof of the accident occurred, or an **F.I.R. and post-mortem report**.
-* The Secretary or authorized officer shall examine every application and may accept or reject the claim. Before rejecting a claim, the applicant shall be given a reasonable opportunity of making a representation.
-* The application shall be submitted within **one year** of the accident.
+* Every registered construction worker [or his first living nominee] who is eligible for accident benefit shall apply to the Board in **Form XXI** enclosing a medical disability certificate issued by the doctor of the Government hospital or of the recognized hospital who has treated the applicant showing clearly the percentage of permanent disablement (incapacitation) and permanent partial disablement suffered by the applicant due to the accident occurred to him and also his age at the time of accident.
+* Provided that a construction worker, who is eligible for accident benefit should produce to the Board, a certificate in **Form XXI-A** by his Employer in proof of accident occurred to him [or **F.I.R. and post-mortem report**].
+* The Secretary or any other office authorized in this behalf by the Board shall examine every application for accident benefit in accordance with the provisions and may accept or reject the claim. Before rejecting a claim for accident benefit, give the applicant a reasonable opportunity of making the representation.
+* The Secretary or any other authorised in this behalf may grant 50% in Fixed Deposit in a National Bank and 50% through account payee cheque or DBT:
+  * A sum of **₹8 Lakh (Rupees Eight Lakh Only)** for the diseased beneficiary or first living nominee in case of death.
+  * **₹2 Lakh (Rupees Two Lakh only)** for permanent total disablement.
+  * **₹1 Lakh (Rupees One Lakh Only)** in case of permamemt partial disablement in proportion to the percentage of disablement, as defined in the Employee’s Compensation Act, 1923.
+* The dependents of registered building or other construction worker sanction a compensation of **₹2 lakhs** in case of accident occurring during the couse of employment resulting in death of the registered building or other construction worker.
+* The registered building or other construction worker who is grievously injured due to accident occurring during the course of employment sanction a compensetion of up to **₹2 lakhs**.
 
 ### Required Documents
 
 * Photocopy of ID card attested by gazetted officer
-* Photocopy of bank passbook (Beneficiary or Nominee's in case of beneficiary’s death)
-* Beneficiary / original Identity card, issued by the board
+* Photocopy of bank passbook Beneficiary or Nominee's in case of beneficiary’s death
+* Beneficiary/original Identity card, Issued by the board
 * The respective application shall be made in Form XXI or XXI-B
-* Death Certificate (in case of death due to accident)
+* Death Certificate (in case of death due to accident )
 * Post mortem report
 * Any Photo ID proof of the Nominee
 * FIR copy
 * Medical report
 * Employer Certificate
 * Form XXI-A (This document has to be filled by the employer and uploaded)
+* The application shall be submitted within **one year** of accident
 
 ### Application Process
 
 1. Applicant needs to submit the application.
-2. Application processing and Verification by Senior / Labour Inspector.
+2. Application processing and Verification by Senior/ Labour Inspector.
 3. Review and Approval by Assistant Labour Commissioner.
 
 ---
@@ -196,82 +195,38 @@ Assistance for pre-school Education & Nutritional support of the child of the re
 
 ### Overview
 
-Assistance for delivery of child by a registered women construction worker
+Delivery Assistance (Tayi Lakshmi Bond).
+Financial assistance is provided to registered women construction workers during the birth of a child. The Board Secretary or authorized officers verify the application and sanction the subsidy.
 
 ### Benefit
 
-* **₹50,000** for a Male/Female child, only for the first two deliveries.
+* **₹50,000/-** financial assistance per delivery.
+* Applicable only for the first two living children.
 
-### Eligibility
+### Eligibility & Conditions
 
-* The Secretary or any other officer authorized in the behalf by the Board, shall on an application from a registered woman construction worker sanction the amount on her producing proof of delivery of a child to her.
-* The registered woman construction worker can get this assistance only twice.
-* The second claim application shall be accompanied by an affidavit stating that the claim is for second delivery.
-* The registered woman construction worker shall not be given this assistance if she already has two living children.
-* The certification of registration of birth obtained from the registrar of births and deaths or certificate of delivery in a government or private hospital in the state of Karnataka duly signed by the doctor concerned from the institution shall be produced along with the application.
+* Must be a registered woman construction worker.
+* Financial assistance is available only for the first two living children.
+* When applying for the second child, an affidavit stating that it is the second delivery must be submitted.
+* If the worker already has two living children, she is not eligible for this facility.
+* Application must be submitted within **6 months** of the child's birth.
+* Birth certificate must be obtained from the Registrar of Births and Deaths, or a certificate from a government/registered hospital must be submitted.
 
 ### Required Documents
 
-* Proof of Identity / Smart card issued by the Board (Attested)
-* Affidavit for second child
+* Proof of Identity / Smart card issued by the Board
 * Proof of Bank Account
+* Birth Certificate of Child
+* Discharge Summary from hospital
 * Photo of Child
 * Employment Certificate
-* Discharge Summary
-* Birth Certificate of Child
+* Affidavit for second child (if necessary)
 
 ### Application Process
 
-1. Applicant needs to submit the application.
-2. Application processing and Verification by Senior / Labour Inspector.
+1. Applicant needs to submit the application with required documents.
+2. Verification by Senior Labour Inspector / Registration Officers.
 3. Review and Approval by Labour Officer.
-
-### Important
-
-* Maximum **two claims per worker**.
-* Not eligible if the worker already has two living children.
-* Birth certificate or delivery proof from government or private hospital in Karnataka must be submitted.
-
-### FAQs
-
-Q: Who can apply for Delivery Assistance?
-A: Registered woman construction workers who have delivered a child.
-
-Q: How much financial assistance is provided?
-A: ₹50,000 per delivery.
-
-Q: How many times can this benefit be claimed?
-A: The benefit can be claimed only two times.
-
-Q: Can I apply if this is my third delivery?
-A: No, assistance is available only for the first two deliveries.
-
-Q: Can I apply if I already have two living children?
-A: No, the scheme is not applicable if the worker already has two living children.
-
-Q: Is the benefit available for both male and female children?
-A: Yes, the benefit is provided regardless of the child’s gender.
-
-Q: What documents are required for the second delivery claim?
-A: An Affidavit for the second child is required.
-
-Q: Is hospital delivery mandatory?
-A: Yes, proof of delivery from a government or private hospital in Karnataka must be submitted, or a birth certificate from the registrar.
-
-Q: What documents are required to apply?
-A: Proof of Identity/Smart card, Proof of Bank Account, Photo of Child, Employment Certificate, Discharge Summary, Birth Certificate of Child, and (if applicable) Affidavit for second child.
-
-Q: Is the birth certificate mandatory?
-A: Yes, it is required as proof of childbirth, or an official delivery certificate from the hospital.
-
-Q: Where can I submit the application?
-A: Applications can be submitted through KSK or the Board system.
-
-Q: What happens after submission?
-A: The application is verified by the Senior / Labour Inspector and approved by the Labour Officer.
-
-Q: Can the benefit be rejected?
-A: Yes, if eligibility conditions are not met or documents are incorrect.
 
 ---
 
@@ -291,6 +246,7 @@ The Secretary or any other officer authorized in this behalf by the Board may sa
 
 * The beneficiary must be a registered construction worker or their dependent.
 * Hospitalization must be for a minimum of **48 Hours** continuously.
+* Application can be submitted within **6 months** of hospitalisation commencement date.
 
 ### Required Documents
 
@@ -541,35 +497,31 @@ A: No, this scheme is applicable only after the worker becomes eligible for pens
 
 ### Overview
 
-If a registered construction worker dies, financial assistance is provided to the nominee of the deceased registered construction worker to meet the funeral expenses of the deceased, and an ex-gratia amount is paid to mitigate the financial hardship caused by the sudden demise.
+Assistance to meet the funeral expenses of a registered construction worker.
 
-### Benefit
-
-* **Funeral Expenses:** To meet the funeral expenses of the deceased registered construction worker.
-* **Ex-Gratia Amount:** An ex-gratia amount of **₹ 1,46,000 (Rupees fifty thousand only)** [sic] shall also be paid to the nominee.
-  *(Note: The text states "₹ 1,46,000" numerically but "Rupees fifty thousand only" in words. Both are included as provided. Usually, it is either ₹ 50,000 or ₹ 1,46,000 depending on specific rules, but standardizing to the provided text.)*
+If registered construction worker dies, the Secretary, or any other officer authorized in this behalf by the Board, the nominee of the deceased registered construction worker to meet the funeral expenses of the deceased registered construction worker and an ex gratia amount of **Rs. 1,46,000 (Rupees fifty thousand only)** shall also be paid to the nominee of the deceased registered construction worker to mitigate the financial hardship caused by the sudden demise.
 
 ### Eligibility & Conditions
 
-* The Secretary, or any other officer authorized in this behalf by the Board, shall sanction the amount to the nominee of the deceased registered construction worker.
-* The application for claiming the amount shall be in **Form XVIII**.
-* It shall be accompanied by the death certificate of the deceased registered construction worker.
-* The registration number of the beneficiary is required for verification of validity and correctness by the Board in case of non-availability of the original identity card.
+* The application for claiming the amount specified in sub-rule (1) shall be in **Form XVIII**.
+* The application shall be accompanied by the death certificate of the deceased registered construction worker.
+* The registration number of beneficiary for verification of validity and correctness by the Board in case of non-availability of original identity card.
 
 ### Required Documents
 
-* Beneficiary / original Identity card, Issued by the board
-* Photocopy of bank passbook (Beneficiary or Nominee's in case of beneficiary’s death)
+* Beneficiary/original Identity card, Issued by the board
+* Photocopy of bank passbook Beneficiary or Nominee's in case of beneficiary’s death
 * Death Certificate attested by gazetted officer
 * Ration Card
 * Aadhaar Card
 * Employer Certificate
 * Any Photo ID proof of Nominee
+* Application shall be submitted within **one year** of death
 
 ### Application Process
 
-1. Applicant needs to submit the application. Application shall be submitted within **one year** of death.
-2. Application processing and Verification by Senior / Labour Inspector.
+1. Applicant needs to submit the application.
+2. Application processing and Verification by Senior/ Labour Inspector.
 3. Review and Approval by Assistant Labour Commissioner.
 
 ---
@@ -600,7 +552,7 @@ Assistance for the marriage of a registered construction worker or his/her depen
 * Bank Account details
 * Marriage Certificate by Registrar of the marriage
 * Marriage Invitation Card
-* Affidavit if marriage is outside Karnataka state
+* Affidavit (Required **only** when the Marriage had happened outside of Karnataka)
 * Ration Card
 
 ### Application Process
