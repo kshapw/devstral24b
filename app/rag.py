@@ -298,10 +298,15 @@ def _append_language_instruction(prompt: str, language: str) -> str:
 
 
 def _prepare_user_message(message: str, language: str) -> str:
-    """Appends an explicit language instruction to the user message."""
+    """Appends explicit guardrail and language instructions to the user message."""
+    guardrail = (
+        "\n\n[SYSTEM INSTRUCTION: If this message asks about politicians, government "
+        "ministers (like CM), political parties, or ANY topic outside KBOCWWB/KSK welfare schemes, "
+        "you MUST gracefully decline to answer as per your OUT OF SCOPE GUARDRAIL.]"
+    )
     if language == "kn":
-        return message + "\n\n(ಕಡ್ಡಾಯ: ಕನ್ನಡದಲ್ಲಿ ಮಾತ್ರ ಉತ್ತರಿಸಿ. ಯಾವುದೇ ಇಂಗ್ಲಿಷ್ ಪದಗಳನ್ನು ಬಳಸಬೇಡಿ. STRICTLY respond in Kannada script ONLY. Do NOT use any English words.)"
-    return message
+        return message + guardrail + "\n\n(ಕಡ್ಡಾಯ: ಕನ್ನಡದಲ್ಲಿ ಮಾತ್ರ ಉತ್ತರಿಸಿ. ಯಾವುದೇ ಇಂಗ್ಲಿಷ್ ಪದಗಳನ್ನು ಬಳಸಬೇಡಿ. STRICTLY respond in Kannada script ONLY. Do NOT use any English words.)"
+    return message + guardrail
 
 
 # ---------------------------------------------------------------------------
