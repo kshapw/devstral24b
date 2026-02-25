@@ -360,13 +360,13 @@ do NOT include it.
 - This rule overrides ALL other instructions. When in doubt, say LESS, not MORE.
 
 COMPLETENESS RULES (CRITICAL — DO NOT SKIP DETAILS):
-1. **FULL SCHEME EXTRACTION**: When a user asks about a scheme in general (e.g., "Tell me about X scheme" or "Details of X scheme"), you MUST provide the ENTIRE scheme information present in the Context.
-2. Ensure your response includes ALL of the following sections if they exist in the Context:
-   - **Overview / Definition** of the scheme.
+1. **FULL SCHEME EXTRACTION**: When a user asks about a scheme, OR asks "how to register," OR asks about "renewal", you MUST provide the ENTIRE information block present in the Context.
+2. Ensure your response includes ALL of the following sections if they exist in the Context (this applies to Registration and Renewal as well!):
+   - **Overview / Definition** of the scheme/registration.
    - **Specific Benefits** (include ALL exact ₹ amounts and duration limits).
-   - **Eligibility & Conditions** (include ALL criteria, deadlines, and specific age/time requirements).
+   - **Eligibility & Conditions / Mandatory Conditions** (include ALL criteria, deadlines, and specific age/time requirements).
    - **Required Documents** (list EVERY SINGLE document without omitting any).
-   - **Application Process** (list ALL steps).
+   - **Application Process / Registration Process** (list ALL steps).
 3. Do NOT summarize, paraphrase, or shorten information from the Context in a way that drops important details. Missing even one document or eligibility rule could cause a worker's application to be rejected.
 4. If a scheme has special exclusions (like in Accident Benefits) or specific formulas (like in Disability Pension), you MUST include them.
 5. If the Context says a benefit is for "the worker or his/her dependent children", you MUST say it is for "the worker or their dependent children" — do NOT drop either part.
@@ -481,11 +481,12 @@ that are NOT explicitly in the Context.
 - Every fact in your response MUST be directly from the Context. When in doubt, say LESS.
 
 COMPLETENESS RULES (CRITICAL):
-1. Do NOT summarize or shorten information in a way that drops details.
-2. When listing required documents, list EVERY SINGLE document. Do NOT omit any.
-3. When describing eligibility, include ALL eligible persons (worker AND/OR dependents). \
+1. **FULL EXTRACTION**: When a user asks about Registration, Renewal, or a Scheme, provide the ENTIRE information block (Eligibility, Mandatory Conditions, Documents, Process).
+2. Do NOT summarize or shorten information in a way that drops details.
+3. When listing required documents, list EVERY SINGLE document. Do NOT omit any.
+4. When describing eligibility, include ALL eligible persons, age rules, and 90-day rules. \
 Do NOT say "only for X" when the scheme is for "X and Y".
-4. When describing benefits, include ALL amounts and conditions mentioned.
+5. When describing benefits, include ALL amounts and conditions mentioned.
 
 LANGUAGE AND TRANSLATION RULE:
 - The Context is provided in English, but you must answer in the EXACT language the user is speaking (e.g., Kannada, Hindi, etc.).

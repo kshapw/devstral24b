@@ -28,39 +28,38 @@ Mobile units travel to construction sites and rural areas to provide doorstep se
 ## Scheme: Worker Registration
 
 ### Registration Overview
-Registration under KBOCWWB enables construction workers to avail welfare schemes such as health benefits, pension, maternity assistance, education support, and accident compensation.
+Registration under the Karnataka Building and Other Construction Workers Welfare Board enables eligible construction workers to avail welfare benefits under the BOCW Act.
 
 ### Eligibility Criteria
-To register as a construction worker:
-* The applicant must be a Building & Other Construction Worker as per the BOCW Act.
-* Must have worked at least 90 days in the last 12 months.
-* Age should generally be 18 to 60 years.
-* Should not be a member of any other welfare board.
-
-### Mandatory Condition
-The worker must have completed minimum 90 days of construction work within the last one year and must possess a valid 90 Days Work Certificate issued by a competent authority (Builder/Contractor/Engineer/Local Authority).
+* The applicant must satisfy the eligibility criteria prescribed under the BOCW Act.
+* Must have worked for a minimum of 90 days in building or other construction work during the preceding 12 months.
+* Age must fall within the prescribed limit (generally 18–60 years).
+* Must not be a member of any other Welfare Board.
 
 ### Required Documents
-The following documents are compulsory for registration:
-* **Aadhaar Card**: Aadhaar verification is mandatory (e-KYC authentication required).
-* **Bank Passbook**: Bank account must be linked with Aadhaar.
-* **Ration Card**: (Not Mandatory) For family details verification.
-* **90 Days Work Certificate**: Proof of having worked in construction for at least 90 days in the last 12 months.
+The applicant must submit the following documents:
+* **Employment Certificate**: In Form V(A) / V(B) / V(C) / V(D). Issued by authorized employer / contractor / competent authority.
+* **Aadhaar Card**: (Self-attested copy)
+* **Ration Card**: (Non-Mandatory) For family details verification.
+* **Age Proof**: (Any one of the following): Aadhaar Card, Voter ID Card, or Any Government-issued age proof document.
 
-### Registration Process
-1. Visit nearest Labour Office / Karmika Seva Kendra or apply online.
-2. Complete Aadhaar authentication.
-3. Upload/submit required documents.
-4. Capture live photograph.
-5. Application verification by Labour Inspector.
-6. Approval and Labour Card generation.
+### Registration Details
+* **Application Fee**: ₹100 (Rupees One Hundred only)
+* **Delivery Timeline**: 15 Working Days (subject to document verification and field validation)
 
-### Please Check
-* Aadhaar–Bank seeding validation.
-* Age eligibility.
-* 90-days certificate verification.
-* Duplicate registration check (via Aadhaar) is not allowed.
-* Check Document before submission.
+### Procedure for Applying
+1. The applicant submits the duly filled application along with required documents.
+2. Application is scrutinized by the Registering Authority (Labour Inspector / Senior Labour Inspector).
+3. Verification of employment certificate and eligibility.
+4. Approval / Rejection by the competent authority.
+5. Issuance of Beneficiary Registration (Labour Card).
+
+### 20-A, Employment Certificate for Continuation of Existing Registration (Renewal Compliance)
+As per Section 14 of the BOCW Act, the beneficiary must submit every year:
+* Pay slip (Non-Mandatory) OR Copy of nominal muster roll as proof of employment in building
+* AND Employment Certificate in Form V(A) / V(B) / V(C) / V(D)
+
+The documents must establish engagement in building or other construction work for a minimum period of 90 days in the preceding 12 months. This is mandatory to ensure continuation of existing registration.
 
 ---
 
