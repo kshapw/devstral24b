@@ -23,6 +23,84 @@ Mobile units travel to construction sites and rural areas to provide doorstep se
 
 ---
 
+# Registration Information
+
+## Scheme: Worker Registration
+
+### Registration Overview
+Registration under KBOCWWB enables construction workers to avail welfare schemes such as health benefits, pension, maternity assistance, education support, and accident compensation.
+
+### Eligibility Criteria
+To register as a construction worker:
+* The applicant must be a Building & Other Construction Worker as per the BOCW Act.
+* Must have worked at least 90 days in the last 12 months.
+* Age should generally be 18 to 60 years.
+* Should not be a member of any other welfare board.
+
+### Mandatory Condition
+The worker must have completed minimum 90 days of construction work within the last one year and must possess a valid 90 Days Work Certificate issued by a competent authority (Builder/Contractor/Engineer/Local Authority).
+
+### Required Documents
+The following documents are compulsory for registration:
+* **Aadhaar Card**: Aadhaar verification is mandatory (e-KYC authentication required).
+* **Bank Passbook**: Bank account must be linked with Aadhaar.
+* **Ration Card**: (Not Mandatory) For family details verification.
+* **90 Days Work Certificate**: Proof of having worked in construction for at least 90 days in the last 12 months.
+
+### Registration Process
+1. Visit nearest Labour Office / Karmika Seva Kendra or apply online.
+2. Complete Aadhaar authentication.
+3. Upload/submit required documents.
+4. Capture live photograph.
+5. Application verification by Labour Inspector.
+6. Approval and Labour Card generation.
+
+### Please Check
+* Aadhaar–Bank seeding validation.
+* Age eligibility.
+* 90-days certificate verification.
+* Duplicate registration check (via Aadhaar) is not allowed.
+* Check Document before submission.
+
+---
+
+# Renewal Information
+
+## Scheme: Worker Renewal
+
+### Renewal Overview
+Renewal of registration is required to continue availing welfare benefits under the Board.
+
+### Eligibility for Renewal
+A registered construction worker can apply for Renewal subject to the following conditions:
+* **90 Days Work Requirement:** The worker must have worked at least 90 days in the last 12 months.
+* A valid 90 Days Work Certificate is mandatory.
+* The certificate must be issued by a competent authority (Builder / Contractor / Engineer / Local Authority).
+* Without a valid 90 Days Work Certificate, renewal cannot be approved.
+
+### When Can Renewal Be Applied
+**After Registration Expiry:**
+* Renewal can be applied only after the registration has expired.
+* Renewal is applicable for previously registered (Active) workers whose registration validity has lapsed.
+
+**Buffer Period (Grace Period):**
+After the registration expiry:
+* The worker enters a buffer period of 365 days (1 year) from the date of expiry.
+* During this buffer period, the worker is eligible to apply for Renewal.
+
+### Important Rule
+* If the worker does not apply for renewal within 365 days from the expiry date, Renewal is not permitted.
+* The worker must apply for New Registration again.
+
+### Please check
+* Can only apply after Expiry date.
+* Buffer period calculation (Expiry Date + 365 days).
+* 90 Days Work Certificate (last 12 months).
+* Check Duplicate active membership.
+* Aadhaar-based authentication.
+
+---
+
 # Website & General FAQs
 
 Q: What is Karmika Seva Kendra?
