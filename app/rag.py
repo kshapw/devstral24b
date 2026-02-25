@@ -1,5 +1,6 @@
 import json
 import logging
+import random
 import unicodedata
 from typing import AsyncIterator, Optional
 
@@ -24,7 +25,7 @@ LOGIN_REQUIRED_RESPONSE = "<<LOGIN_MODAL_REQUIRED>>"
 ECARD_RESPONSE = "ECARD"
 
 # Valid intent labels (used for parsing LLM output)
-_VALID_INTENTS = frozenset({"ECARD", "STATUS_CHECK", "GENERAL"})
+_VALID_INTENTS = frozenset({"ECARD", "STATUS_CHECK", "GENERAL", "OUT_OF_SCOPE"})
 
 # ---------------------------------------------------------------------------
 # Layer 1: Keyword-based intent detection (deterministic, zero-cost)
@@ -99,30 +100,25 @@ def _keyword_intent(message: str) -> str | None:
 # Layer 2: LLM-based intent classification (authenticated users only)
 # ---------------------------------------------------------------------------
 INTENT_CLASSIFICATION_PROMPT = """\
-You are an intent classifier. Classify the message into one of: ECARD, STATUS_CHECK, GENERAL
+You are an intent classifier. Classify the message into one of: ECARD, STATUS_CHECK, OUT_OF_SCOPE, GENERAL
 
 ECARD: User wants their e-card, labour card, ID card — to view, download, or print it.
 STATUS_CHECK: User wants to know the status of their application, scheme, registration, or renewal — approved, rejected, pending.
+OUT_OF_SCOPE: User asks about politicians (PM, CM, ministers), sports, coding, cooking, weather, or ANY factual general knowledge question unrelated to KBOCWWB construction worker welfare schemes.
 GENERAL: Everything else — questions about schemes, eligibility, documents, how to apply, greetings, etc.
 
 Examples:
 - "download my ecard" → ECARD
-- "ನನ್ನ ಕಾರ್ಡ್ ತೋರಿಸಿ" → ECARD
-- "ಇ-ಕಾರ್ಡ್ ಡೌನ್\u200cಲೋಡ್" → ECARD
-- "show me my labour card" → ECARD
-- "ಕಾರ್ಡ್ ಪ್ರಿಂಟ್ ಮಾಡಿ" → ECARD
 - "what is my application status" → STATUS_CHECK
-- "ನನ್ನ ಅರ್ಜಿ ಸ್ಥಿತಿ ಏನು" → STATUS_CHECK
-- "ನನ್ನ ನೋಂದಣಿ ಅನುಮೋದಿಸಲಾಗಿದೆಯೇ?" → STATUS_CHECK
-- "is my renewal approved?" → STATUS_CHECK
-- "ನನ್ನ ಯೋಜನೆ ಅನುಮೋದನೆ ಆಗಿದೆಯಾ?" → STATUS_CHECK
+- "who is cm of maharashtra" → OUT_OF_SCOPE
+- "what is the capital of india" → OUT_OF_SCOPE
+- "who is labour minister" → OUT_OF_SCOPE
+- "tell me about cricket" → OUT_OF_SCOPE
 - "what schemes can I apply for" → GENERAL
-- "ಯಾವ ಯೋಜನೆಗಳು ಲಭ್ಯವಿದೆ?" → GENERAL
 - "how to register" → GENERAL
-- "ನೋಂದಣಿ ಹೇಗೆ ಮಾಡುವುದು" → GENERAL
 - "hello" → GENERAL
 
-Respond with exactly one word: ECARD, STATUS_CHECK, or GENERAL"""
+Respond with exactly one word: ECARD, STATUS_CHECK, OUT_OF_SCOPE, or GENERAL"""
 
 
 async def _llm_classify_intent(ollama: OllamaClient, message: str) -> str:
@@ -171,12 +167,7 @@ async def _classify_intent(
         logger.info("Intent from keywords: %s", keyword_result)
         return keyword_result
 
-    # Unauthenticated: keywords only, no LLM classification → GENERAL
-    if not is_authenticated:
-        logger.debug("Unauthenticated user, no keyword match → GENERAL")
-        return "GENERAL"
-
-    # Layer 2: LLM classification (authenticated users only)
+    # Layer 2: LLM classification (runs for ALL users to catch OUT_OF_SCOPE)
     return await _llm_classify_intent(ollama, message)
 
 
@@ -840,6 +831,11 @@ async def classify_and_prepare(
         print(f"[DEBUG]   → returning LOGIN_REQUIRED (unauthenticated)")
         return "LOGIN_REQUIRED", None
 
+    # Handle OUT_OF_SCOPE directly
+    if intent == "OUT_OF_SCOPE":
+        print(f"[DEBUG]   → returning OUT_OF_SCOPE")
+        return "OUT_OF_SCOPE", None
+
     # Authenticated ECARD → exact string response, no data fetch needed
     if intent == "ECARD" and is_authenticated:
         print(f"[DEBUG]   → returning ECARD (no data fetch needed)")
@@ -964,6 +960,21 @@ async def answer(
     if intent == "ECARD":
         return ECARD_RESPONSE
 
+    # OUT_OF_SCOPE — randomized hardcoded response, bypassing generative LLM
+    if intent == "OUT_OF_SCOPE":
+        if language == "kn":
+            return random.choice([
+                "ಅದು ತುಂಬಾ ಆಸಕ್ತಿದಾಯಕ ಪ್ರಶ್ನೆ! ಆದರೆ ಶ್ರಮ ಸಹಾಯಕನಾಗಿ, ನಾನು ಕೇವಲ ಕಟ್ಟಡ ಕಾರ್ಮಿಕರ ಕಲ್ಯಾಣ ಯೋಜನೆಗಳು ಮತ್ತು ಕಾರ್ಮಿಕ ಸೇವಾ ಕೇಂದ್ರದ (KSK) ಸೇವೆಗಳ ಬಗ್ಗೆ ಮಾತ್ರ ಮಾಹಿತಿ ನೀಡಬಲ್ಲೆ. ನಾನು ನಿಮಗೆ ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಸಹಾಯ ಮಾಡಬಹುದೇ?",
+                "ಕ್ಷಮಿಸಿ, ಆ ವಿಷಯದ ಬಗ್ಗೆ ನನ್ನ ಬಳಿ ಮಾಹಿತಿ ಇಲ್ಲ. ನನ್ನ ಪರಿಣತಿ ಕೇವಲ KBOCWWB ಯೋಜನೆಗಳು ಮತ್ತು ಅರ್ಜಿಗಳ ಬಗ್ಗೆ ಸಹಾಯ ಮಾಡಲು ಸೀಮಿತವಾಗಿದೆ.",
+                "ನಾನು ಆ ಪ್ರಶ್ನೆಗೆ ಉತ್ತರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ, ಆದರೆ ನಿಮ್ಮ ಯೋಜನೆಗಳ ಅರ್ಹತೆ ಅಥವಾ ಅರ್ಜಿ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಲು ನಾನು ಖಂಡಿತ ಸಹಾಯ ಮಾಡುತ್ತೇನೆ!"
+            ])
+        else:
+            return random.choice([
+                "That's an interesting question! However, as Shrama Sahayak, I'm specialized only in construction worker welfare schemes and KSK services.",
+                "I'm afraid that's outside my area of expertise. I am strictly here to assist you with KBOCWWB schemes and KSK services.",
+                "I don't have information on that topic. My focus is entirely on helping construction workers with their welfare benefits."
+            ])
+
     # STATUS_CHECK — LLM grounded on pre-fetched user data + conversation history
     if intent == "STATUS_CHECK":
         print(f"[DEBUG] answer() STATUS_CHECK path")
@@ -1057,6 +1068,21 @@ async def answer_stream(
         yield ECARD_RESPONSE
         return
 
+    # OUT_OF_SCOPE — randomized hardcoded response, bypassing generative LLM
+    if intent == "OUT_OF_SCOPE":
+        if language == "kn":
+            yield random.choice([
+                "ಅದು ತುಂಬಾ ಆಸಕ್ತಿದಾಯಕ ಪ್ರಶ್ನೆ! ಆದರೆ ಶ್ರಮ ಸಹಾಯಕನಾಗಿ, ನಾನು ಕೇವಲ ಕಟ್ಟಡ ಕಾರ್ಮಿಕರ ಕಲ್ಯಾಣ ಯೋಜನೆಗಳು ಮತ್ತು ಕಾರ್ಮಿಕ ಸೇವಾ ಕೇಂದ್ರದ (KSK) ಸೇವೆಗಳ ಬಗ್ಗೆ ಮಾತ್ರ ಮಾಹಿತಿ ನೀಡಬಲ್ಲೆ. ನಾನು ನಿಮಗೆ ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಸಹಾಯ ಮಾಡಬಹುದೇ?",
+                "ಕ್ಷಮಿಸಿ, ಆ ವಿಷಯದ ಬಗ್ಗೆ ನನ್ನ ಬಳಿ ಮಾಹಿತಿ ಇಲ್ಲ. ನನ್ನ ಪರಿಣತಿ ಕೇವಲ KBOCWWB ಯೋಜನೆಗಳು ಮತ್ತು ಅರ್ಜಿಗಳ ಬಗ್ಗೆ ಸಹಾಯಲು ಸೀಮಿತವಾಗಿದೆ.",
+                "ನಾನು ಆ ಪ್ರಶ್ನೆಗೆ ಉತ್ತರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ, ಆದರೆ ನಿಮ್ಮ ಯೋಜನೆಗಳ ಅರ್ಹತೆ ಅಥವಾ ಅರ್ಜಿ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಲು ನಾನು ಖಂಡಿತ ಸಹಾಯ ಮಾಡುತ್ತೇನೆ!"
+            ])
+        else:
+            yield random.choice([
+                "That's an interesting question! However, as Shrama Sahayak, I'm specialized only in construction worker welfare schemes and KSK services.",
+                "I'm afraid that's outside my area of expertise. I am strictly here to assist you with KBOCWWB schemes and KSK services.",
+                "I don't have information on that topic. My focus is entirely on helping construction workers with their welfare benefits."
+            ])
+        return
     # STATUS_CHECK — LLM grounded on pre-fetched user data + conversation history
     if intent == "STATUS_CHECK":
         if not prefetched_user_data:
