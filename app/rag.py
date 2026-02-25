@@ -70,12 +70,24 @@ _STATUS_CHECK_KEYWORDS: list[str] = [
     "ನನ್ನ ಕುಟುಂಬ", "ನನ್ನ ನಾಮಿನಿ",
 ]
 
+_OUT_OF_SCOPE_KEYWORDS: list[str] = [
+    # English
+    "cm of", "chief minister", "pm of", "prime minister", "labour minister",
+    "who is cm", "who is pm", "capital of", "cricket", "badminton", "tennis",
+    "weather", "modi", "siddaramaiah", "shivakumar",
+    # Kannada
+    "ಮುಖ್ಯಮಂತ್ರಿ", "ಪ್ರಧಾನ ಮಂತ್ರಿ", "ಕಾರ್ಮಿಕ ಸಚಿವ", "ರಾಜಧಾನಿ", "ಕ್ರಿಕೆಟ್"
+]
+
 # Pre-normalize keywords at import time for consistent matching
 _ECARD_KEYWORDS_NORM: list[str] = [
     unicodedata.normalize("NFC", kw) for kw in _ECARD_KEYWORDS
 ]
 _STATUS_CHECK_KEYWORDS_NORM: list[str] = [
     unicodedata.normalize("NFC", kw) for kw in _STATUS_CHECK_KEYWORDS
+]
+_OUT_OF_SCOPE_KEYWORDS_NORM: list[str] = [
+    unicodedata.normalize("NFC", kw) for kw in _OUT_OF_SCOPE_KEYWORDS
 ]
 
 
@@ -88,6 +100,9 @@ def _keyword_intent(message: str) -> str | None:
     that can differ between input methods.
     """
     msg_normalized = unicodedata.normalize("NFC", message.lower())
+    # Instant rejection for known out-of-scope topics
+    if any(kw in msg_normalized for kw in _OUT_OF_SCOPE_KEYWORDS_NORM):
+        return "OUT_OF_SCOPE"
     # Check ECARD first — more specific keywords, less likely to false-positive
     if any(kw in msg_normalized for kw in _ECARD_KEYWORDS_NORM):
         return "ECARD"
