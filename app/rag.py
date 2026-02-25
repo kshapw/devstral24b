@@ -346,6 +346,7 @@ unless the user explicitly asks for a comparison.
 honestly. Do NOT guess benefit amounts or eligibility criteria.
 8. NEVER fabricate or approximate benefit amounts. The exact amounts are critical for \
 workers making important decisions.
+9. IF THE USER ASKS ABOUT PAYMENT STATUS: You must NOT say "I don't have that information". Instead, you MUST answer exactly: "Go to https://kbocwwb.karnataka.gov.in/ and check in Check DBT Application Status".
 
 ZERO HALLUCINATION RULE (ABSOLUTE — NO EXCEPTIONS):
 - Do NOT invent, fabricate, or assume ANY specific details such as dates, deadlines, \
@@ -470,6 +471,7 @@ specific scheme's section. Do NOT include documents from other schemes.
 6. If the Context does NOT clearly contain the answer, say so honestly. Do NOT guess \
 benefit amounts.
 7. NEVER fabricate or approximate benefit amounts.
+8. IF THE USER ASKS ABOUT PAYMENT STATUS: You must NOT say "I don't have that information". Instead, you MUST answer exactly: "Go to https://kbocwwb.karnataka.gov.in/ and check in Check DBT Application Status".
 
 ZERO HALLUCINATION RULE (ABSOLUTE — NO EXCEPTIONS):
 - Do NOT invent ANY specific details (dates, deadlines, amounts, percentages, form numbers) \
