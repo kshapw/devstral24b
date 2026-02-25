@@ -32,7 +32,7 @@ Q: Who can use the schemes?
 A: Registered construction workers under KBOCWWB and eligible dependents.
 
 Q: Can I apply online?
-A: Yes, through the Board portal or Seva Sindhu.
+A: Yes, through the Board portal or Software.
 
 Q: Where can I apply offline?
 A: At KSK centers or Mobile KSK units.
@@ -284,7 +284,7 @@ Disability Pension, procedure and sanction etc.
 
 * The beneficiary cannot avail this assistance in case he has availed similar benefit under the accident assistance scheme.
 * The beneficiary shall obtain an identity card issued by the Department for the empowerment of differently abled and senior citizens.
-* A Disability Pension application must be submitted through **Seva Sindhu software**.
+* A Disability Pension application must be submitted through **Software**.
 * The Board or the Officer authorized, after satisfying himself about the eligibility and other criteria, shall sanction the disability pension and send to the registered beneficiary the disability pension sanction order along with the disability pension Identity Card having a unique (Electronically generated) **DPPO (Disability Pension Payment Order)** number.
 * The beneficiary shall submit the **‘Living Certificate’ in Form XIV (A)** to the sanctioning authority for each year.
 * The Disability Pension granted shall be discontinued once the beneficiary attains the age of **sixty years**.
@@ -347,7 +347,7 @@ Pension scheme, eligibility, procedure and sanction of pension for registered bu
 
 ### Requirements & Conditions
 
-* Every eligible worker should submit an application through **Seva Sindhu software**.
+* Every eligible worker should submit an application through **Software**.
 * The worker shall **surrender his beneficiary Identity Card** with the application.
 * The Board, after verifying the application, shall send the pension sanction order along with the pension Identity card having an electronically generated unique Pension Payment Order (PPO) number.
 * If the Board concludes that the applicant is not eligible, the application shall be rejected after providing an opportunity of being heard to the applicant.
@@ -407,7 +407,6 @@ This scheme allows registered construction workers who are already receiving pen
 ### Eligibility
 
 * Registered building or construction worker.
-* Must have paid subscription continuously for at least **3 years**.
 * Must have continued as a construction worker until **60 years of age**.
 * Must already be a sanctioned pension beneficiary.
 
@@ -441,8 +440,6 @@ A: The pension amount is up to ₹3,000 per month.
 Q: Is the pension amount fixed at ₹3,000?
 A: No, the pension will not exceed ₹3,000 per month. The sanctioned amount may be lower based on eligibility.
 
-Q: What is the minimum contribution period required?
-A: The worker must have paid subscription fees continuously for at least 3 years.
 
 Q: At what age is this scheme applicable?
 A: The worker must have continued as a construction worker until attaining the age of 60 years.
@@ -451,7 +448,7 @@ Q: Is annual verification required?
 A: Yes, a Living Certificate must be submitted every year to continue receiving pension.
 
 Q: What documents are required for continuation?
-A: Living Certificate and Self Declaration.
+A: Living Certificate must be submitted every year to continue receiving pension.
 
 Q: When can I apply for continuation of pension?
 A: Applications are accepted only once a year, during the month of December.
@@ -472,7 +469,7 @@ Q: Where can I submit the application?
 A: The annual Living Certificate and declaration can be submitted through KSK or the Board system.
 
 Q: Is online submission allowed?
-A: Yes, submission can be done through the KSK system or at a Karmika Seva Kendra center.
+A: Yes, submission can be done through the KSK software or at a Karmika Seva Kendra center.
 
 Q: Do I need to apply every year?
 A: Yes, continuation requires annual submission of the Living Certificate.
