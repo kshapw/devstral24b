@@ -73,10 +73,12 @@ _STATUS_CHECK_KEYWORDS: list[str] = [
 _OUT_OF_SCOPE_KEYWORDS: list[str] = [
     # English
     "cm of", "chief minister", "pm of", "prime minister", "labour minister",
-    "who is cm", "who is pm", "capital of", "cricket", "badminton", "tennis",
-    "weather", "modi", "siddaramaiah", "shivakumar",
+    "who is cm", "who is pm", "how is cm", "how is pm", "capital of",
+    "cricket", "badminton", "tennis", "weather", "modi", "siddaramaiah",
+    "shivakumar", "maharashtra", "india", "politics", "election",
     # Kannada
-    "ಮುಖ್ಯಮಂತ್ರಿ", "ಪ್ರಧಾನ ಮಂತ್ರಿ", "ಕಾರ್ಮಿಕ ಸಚಿವ", "ರಾಜಧಾನಿ", "ಕ್ರಿಕೆಟ್"
+    "ಮುಖ್ಯಮಂತ್ರಿ", "ಪ್ರಧಾನ ಮಂತ್ರಿ", "ಕಾರ್ಮಿಕ ಸಚಿವ", "ರಾಜಧಾನಿ", "ಕ್ರಿಕೆಟ್",
+    "ರಾಜಕೀಯ", "ಚುನಾವಣೆ"
 ]
 
 # Pre-normalize keywords at import time for consistent matching
@@ -118,19 +120,23 @@ INTENT_CLASSIFICATION_PROMPT = """\
 You are an intent classifier. Classify the message into one of: ECARD, STATUS_CHECK, OUT_OF_SCOPE, GENERAL
 
 ECARD: User wants their e-card, labour card, ID card — to view, download, or print it.
-STATUS_CHECK: User wants to know the status of their application, scheme, registration, or renewal — approved, rejected, pending.
+STATUS_CHECK: User explicitly asks for the STATUS (approved, rejected, pending, payment) of their specific application, scheme, registration, or renewal.
 OUT_OF_SCOPE: User asks about politicians (PM, CM, ministers), sports, coding, cooking, weather, or ANY factual general knowledge question unrelated to KBOCWWB construction worker welfare schemes.
-GENERAL: Everything else — questions about schemes, eligibility, documents, how to apply, greetings, etc.
+GENERAL: Everything else — general questions about what schemes exist, eligibility, required documents, how to apply, how to register, how to renew, 'Registration', 'Renewal', greetings, etc.
 
 Examples:
 - "download my ecard" → ECARD
 - "what is my application status" → STATUS_CHECK
+- "is my renewal approved" → STATUS_CHECK
 - "who is cm of maharashtra" → OUT_OF_SCOPE
 - "what is the capital of india" → OUT_OF_SCOPE
 - "who is labour minister" → OUT_OF_SCOPE
 - "tell me about cricket" → OUT_OF_SCOPE
 - "what schemes can I apply for" → GENERAL
 - "how to register" → GENERAL
+- "Registration" → GENERAL
+- "how to renew" → GENERAL
+- "Renewal" → GENERAL
 - "hello" → GENERAL
 
 Respond with exactly one word: ECARD, STATUS_CHECK, OUT_OF_SCOPE, or GENERAL"""
