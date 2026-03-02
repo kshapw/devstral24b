@@ -409,18 +409,34 @@ _TOPIC_KEYWORDS: list[tuple[list[str], str]] = [
 ]
 
 
-def _get_focused_context(message: str) -> str:
+def _get_focused_context(message: str, history: list[dict] | None = None) -> str:
     """Detect the topic from the question and return ONLY that section as context.
 
-    Falls back to full knowledge base if no topic is detected.
+    If the current message has no topic keyword, checks the conversation history
+    to maintain context for follow-up questions.
+    Falls back to full knowledge base if no topic is detected from either.
     Devstral 24B can read ~2KB focused context but ignores 33KB full context.
     """
     msg = message.lower().strip()
+
+    # First try: detect topic from current message
     for keywords, context_key in _TOPIC_KEYWORDS:
         for kw in keywords:
             if kw in msg:
-                print(f"[DEBUG] _get_focused_context: topic='{context_key}' detected from keyword '{kw}'")
+                print(f"[DEBUG] _get_focused_context: topic='{context_key}' from current message keyword '{kw}'")
                 return _FOCUSED_CONTEXTS[context_key]
+
+    # Second try: detect topic from conversation history (for follow-up questions)
+    if history:
+        # Check the last few messages (both user and assistant) for topic hints
+        for hist_msg in reversed(history[-6:]):
+            hist_content = (hist_msg.get("content", "") or "").lower()
+            for keywords, context_key in _TOPIC_KEYWORDS:
+                for kw in keywords:
+                    if kw in hist_content:
+                        print(f"[DEBUG] _get_focused_context: topic='{context_key}' from history keyword '{kw}'")
+                        return _FOCUSED_CONTEXTS[context_key]
+
     print(f"[DEBUG] _get_focused_context: no topic detected, using full knowledge base")
     return _FULL_KNOWLEDGE_BASE
 
@@ -1631,7 +1647,7 @@ async def answer(
         return _cap_answer_length(direct_section + footer)
 
     # Fallback: use LLM with FOCUSED topic context (not full 33KB).
-    context = _get_focused_context(question)
+    context = _get_focused_context(question, history=history)
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
@@ -1768,7 +1784,7 @@ async def answer_stream(
         return
 
     # Fallback: use LLM with FOCUSED topic context (not full 33KB).
-    context = _get_focused_context(question)
+    context = _get_focused_context(question, history=history)
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
