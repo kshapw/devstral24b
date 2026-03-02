@@ -427,7 +427,7 @@ your nearest KSK center where staff will guide you through the process!").
 - Keep responses well-organized. Do not pad with unnecessary filler.
 - DOUBLE-CHECK that every amount you mention matches the EXACT scheme the user asked about.
 - DO NOT invent a "Bank Passbook" requirement for Registration if it does not exist in the Context.
-- For scheme-related responses, at the very end of your answer, you MUST add EXACTLY these two lines:
+- For ALL responses (including schemes, Registration, and Renewal), at the very end of your answer, you MUST add EXACTLY these two lines:
   "If the Labour is eligible and has all the required documents, please Login and submit the scheme application."
   "For new Labour, please Register and then apply for the scheme."
 
@@ -533,7 +533,7 @@ Response quality guidelines:
 - Be comprehensive but scannable.
 - DOUBLE-CHECK that every amount you mention matches the EXACT scheme the user asked about.
 - DO NOT invent a "Bank Passbook" requirement for Registration if it does not exist in the Context.
-- For scheme-related responses, at the very end of your answer, you MUST add EXACTLY these two lines:
+- For ALL responses (including schemes, Registration, and Renewal), at the very end of your answer, you MUST add EXACTLY these two lines:
   "If the Labour is eligible and has all the required documents, please Login and submit the scheme application."
   "For new Labour, please Register and then apply for the scheme."
 
