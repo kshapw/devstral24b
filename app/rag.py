@@ -473,6 +473,22 @@ def _detect_subtopic(msg: str) -> str | None:
     return None
 
 
+# Topic keyword → topic key mapping
+_TOPIC_KEYWORDS: list[tuple[list[str], str]] = [
+    (["registration", "register", "ನೋಂದಣಿ"], "registration"),
+    (["renewal", "renew", "ನವೀಕರಣ"], "renewal"),
+    (["accident", "ಅಪಘಾತ"], "accident"),
+    (["delivery", "tayi lakshmi", "ಹೆರಿಗೆ"], "delivery"),
+    (["pension", "ಪಿಂಚಣಿ"], "pension"),
+    (["medical", "hospital", "ವೈದ್ಯಕೀಯ"], "medical"),
+    (["marriage", "wedding", "ಮದುವೆ"], "marriage"),
+    (["funeral", "death", "ಅಂತ್ಯಕ್ರಿಯೆ"], "funeral"),
+    (["major ailment", "ailment", "chikitsa", "ಕಾಯಿಲೆ"], "major ailment"),
+    (["thayi magu", "nutritional", "ತಾಯಿ ಮಗು"], "thayi magu"),
+    (["disability", "disabled", "ಅಂಗವಿಕಲ"], "disability"),
+]
+
+
 def _detect_topic(msg: str) -> str | None:
     """Detect the topic from message keywords."""
     for keywords, context_key in _TOPIC_KEYWORDS:
@@ -1737,7 +1753,7 @@ async def answer(
         return _cap_answer_length(direct_section + footer)
 
     # Fallback: use LLM with FOCUSED topic context (not full 33KB).
-    context = _get_focused_context(question, history=history)
+    context = _FULL_KNOWLEDGE_BASE
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
@@ -1882,7 +1898,7 @@ async def answer_stream(
         return
 
     # Fallback: use LLM with FOCUSED topic context (not full 33KB).
-    context = _get_focused_context(question, history=history)
+    context = _FULL_KNOWLEDGE_BASE
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
