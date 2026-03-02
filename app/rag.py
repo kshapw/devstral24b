@@ -295,7 +295,10 @@ def _append_language_instruction(prompt: str, language: str) -> str:
             "**ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ:**\n"
             "1. ಅರ್ಜಿದಾರರು ಅಗತ್ಯ ದಾಖಲೆಗಳೊಂದಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು.\n"
             "2. ಹಿರಿಯ ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರು / ನೋಂದಣಾಧಿಕಾರಿಗಳು ಪರಿಶೀಲಿಸುತ್ತಾರೆ.\n"
-            "3. ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿ ಪರಿಶೀಲಿಸಿ ಅನುಮೋದನೆ ನೀಡುತ್ತಾರೆ.\n"
+            "3. ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿ ಪರಿಶೀಲಿಸಿ ಅನುಮೋದನೆ ನೀಡುತ್ತಾರೆ.\n\n"
+            "If the Labour is eligible and has all the required documents, please Login and submit the scheme application.\n"
+            "For new Labour, please Register and then apply for the scheme.\n"
+
         )
     else:
         prompt += (
@@ -427,7 +430,7 @@ your nearest KSK center where staff will guide you through the process!").
 - Keep responses well-organized. Do not pad with unnecessary filler.
 - DOUBLE-CHECK that every amount you mention matches the EXACT scheme the user asked about.
 - DO NOT invent a "Bank Passbook" requirement for Registration if it does not exist in the Context.
-- For ALL responses (including schemes, Registration, and Renewal), at the very end of your answer, you MUST add EXACTLY these two lines:
+- For ALL responses (including schemes, Registration, and Renewal), at the very end of your answer, you MUST append THIS EXACT TEXT VERBATIM (do not change a single word):
   "If the Labour is eligible and has all the required documents, please Login and submit the scheme application."
   "For new Labour, please Register and then apply for the scheme."
 
@@ -533,7 +536,7 @@ Response quality guidelines:
 - Be comprehensive but scannable.
 - DOUBLE-CHECK that every amount you mention matches the EXACT scheme the user asked about.
 - DO NOT invent a "Bank Passbook" requirement for Registration if it does not exist in the Context.
-- For ALL responses (including schemes, Registration, and Renewal), at the very end of your answer, you MUST add EXACTLY these two lines:
+- For ALL responses (including schemes, Registration, and Renewal), at the very end of your answer, you MUST append THIS EXACT TEXT VERBATIM (do not change a single word):
   "If the Labour is eligible and has all the required documents, please Login and submit the scheme application."
   "For new Labour, please Register and then apply for the scheme."
 
