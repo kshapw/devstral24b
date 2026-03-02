@@ -38,6 +38,124 @@ except Exception:
     logger.error("Failed to load knowledge base", exc_info=True)
 
 # ---------------------------------------------------------------------------
+# Section-based direct responses — bypass LLM entirely for known queries.
+# Parses ksk.md into sections keyed by heading, then maps user queries to
+# the EXACT content, eliminating hallucination completely.
+# ---------------------------------------------------------------------------
+import re as _re
+
+def _parse_kb_sections(text: str) -> dict[str, str]:
+    """Split the knowledge base into sections by '---' separators and ## headings."""
+    sections: dict[str, str] = {}
+    if not text:
+        return sections
+
+    # Split by horizontal rules (---) to get major blocks
+    blocks = _re.split(r'\n---\n', text)
+
+    for block in blocks:
+        block = block.strip()
+        if not block:
+            continue
+        # Find the first ## heading in this block
+        heading_match = _re.search(r'^##\s+(?:Scheme:\s*)?(.+)$', block, _re.MULTILINE)
+        if heading_match:
+            key = heading_match.group(1).strip().lower()
+            sections[key] = block
+        # Also check for # heading (top-level sections like Registration, Renewal)
+        heading_match_h1 = _re.search(r'^#\s+(.+)$', block, _re.MULTILINE)
+        if heading_match_h1:
+            key_h1 = heading_match_h1.group(1).strip().lower()
+            if key_h1 not in sections:  # Don't overwrite ## matches
+                sections[key_h1] = block
+
+    return sections
+
+
+_KB_SECTIONS: dict[str, str] = _parse_kb_sections(_FULL_KNOWLEDGE_BASE)
+logger.info("Parsed %d sections from knowledge base: %s", len(_KB_SECTIONS), list(_KB_SECTIONS.keys()))
+
+# Keyword → section key mapping for direct responses
+_DIRECT_RESPONSE_MAP: list[tuple[list[str], str]] = [
+    # Registration
+    (["registration", "register", "how to register", "worker registration",
+      "ನೋಂದಣಿ", "ನೊಂದಣಿ", "ನೋಂದಾಯಿಸಿ"], "registration information"),
+    # Renewal
+    (["renewal", "renew", "how to renew", "worker renewal",
+      "ನವೀಕರಣ"], "renewal information"),
+    # Schemes
+    (["accident", "accident benefit", "accident assistance",
+      "ಅಪಘಾತ"], "accident benefits"),
+    (["major ailment", "major ailments", "karmika chikitsa", "chikitsa bhagya",
+      "ದೊಡ್ಡ ಕಾಯಿಲೆ"], "assistance for major ailments"),
+    (["thayi magu", "nutritional support", "pre-school", "sahaya hasta",
+      "ತಾಯಿ ಮಗು"], "thayi magu sahaya hasta (nutritional support)"),
+    (["delivery assistance", "tayi lakshmi", "delivery benefit", "maternity",
+      "ಹೆರಿಗೆ ಸಹಾಯ", "ಹೆರಿಗೆ"], "delivery assistance"),
+    (["medical assistance", "medical help", "hospitalization", "hospital",
+      "ವೈದ್ಯಕೀಯ ಸಹಾಯ"], "medical assistance"),
+    (["disability pension", "disabled", "disability",
+      "ಅಂಗವಿಕಲ ಪಿಂಚಣಿ"], "disability pension & ex-gratia"),
+    (["continuation of disability"], "continuation of disability pension"),
+    (["pension", "old age pension", "retirement",
+      "ಪಿಂಚಣಿ"], "pension (old age pension for construction workers)"),
+    (["continuation of pension", "pension continuation"],
+     "continuation of pension"),
+    (["funeral", "ex-gratia", "death assistance", "death benefit",
+      "ಅಂತ್ಯಕ್ರಿಯೆ"], "funeral and ex-gratia"),
+    (["marriage", "marriage assistance", "vivaha", "wedding",
+      "ಮದುವೆ ಸಹಾಯ", "ಮದುವೆ"], "marriage assistance"),
+    # Migration
+    (["migration", "seva sindhu", "e-karmika", "transfer",
+      "ವರ್ಗಾವಣೆ"], "migration from seva sindhu to ksk (important)"),
+]
+
+
+def _find_direct_section(message: str) -> str | None:
+    """Return the exact ksk.md section content if the query matches a known topic.
+
+    Returns None if no match found (falls through to LLM).
+    """
+    msg = unicodedata.normalize("NFC", message.lower()).strip()
+
+    # Special handler: "What schemes are available?" / "List all schemes"
+    _SCHEME_LIST_KEYWORDS = [
+        "what schemes", "list schemes", "all schemes", "available schemes",
+        "schemes available", "scheme list", "which schemes", "tell me about schemes",
+        "ಯೋಜನೆಗಳು", "ಯೋಜನೆ ಪಟ್ಟಿ",
+    ]
+    if any(kw in msg for kw in _SCHEME_LIST_KEYWORDS) or msg in ["schemes", "scheme"]:
+        return (
+            "# Available Welfare Schemes under KBOCWWB\n\n"
+            "The following welfare schemes are available for registered construction workers:\n\n"
+            "1. **Accident Benefits** — Up to ₹8 Lakh for death, ₹2 Lakh for permanent total disablement, ₹1 Lakh for partial disablement\n"
+            "2. **Assistance for Major Ailments (Karmika Chikitsa Bhagya)** — Up to ₹2,00,000 for treatment of major ailments\n"
+            "3. **Thayi Magu Sahaya Hasta (Nutritional Support)** — ₹6,000 (₹500/month) for pre-school education & nutritional support of child\n"
+            "4. **Delivery Assistance (Tayi Lakshmi Bond)** — ₹50,000 per delivery (first two living children only)\n"
+            "5. **Medical Assistance** — ₹300 per day of hospitalization, maximum ₹20,000 (minimum 48 hours hospitalization required)\n"
+            "6. **Disability Pension & Ex-Gratia** — ₹2,000/month pension + up to ₹2,00,000 ex-gratia based on disability percentage\n"
+            "7. **Continuation of Disability Pension** — Continuation of existing disability pension (annual Living Certificate required)\n"
+            "8. **Pension (Old Age Pension)** — Up to ₹3,000/month for workers who completed 60 years of age\n"
+            "9. **Continuation of Pension** — Annual continuation of pension (Living Certificate required every December)\n"
+            "10. **Funeral and Ex-Gratia** — ₹1,46,000 for funeral expenses and ex-gratia to nominee\n"
+            "11. **Marriage Assistance** — ₹60,000 for marriage of worker or dependent children (maximum twice per family)\n\n"
+            "**Note:** Most schemes require a valid 90 Days Work Certificate and active registration.\n"
+            "For detailed information about any specific scheme, please ask about it by name."
+        )
+
+    for keywords, section_key in _DIRECT_RESPONSE_MAP:
+        for kw in keywords:
+            if kw in msg or msg in kw:
+                # Find the section (try exact key, then partial match)
+                if section_key in _KB_SECTIONS:
+                    return _KB_SECTIONS[section_key]
+                # Partial match on section keys
+                for sk, content in _KB_SECTIONS.items():
+                    if section_key in sk or sk in section_key:
+                        return content
+    return None
+
+# ---------------------------------------------------------------------------
 # Exact response constants — returned directly by Python, never by the LLM.
 # These are language-independent: regardless of what language the user
 # selects, ECARD and LOGIN_REQUIRED always return these exact strings.
@@ -1043,9 +1161,15 @@ async def answer(
         print(f"[DEBUG]   LLM result (first 200): {result[:200]}")
         return _cap_answer_length(result)
 
-    # GENERAL — use the FULL knowledge base instead of RAG retrieval.
-    # The entire ksk.md (~33KB) is loaded at startup and injected here,
-    # guaranteeing the model always has ALL information available.
+    # GENERAL — first try direct section match (exact ksk.md content, no LLM).
+    direct_section = _find_direct_section(question)
+    if direct_section:
+        print(f"[DEBUG]   Direct section match found, returning ksk.md content directly (no LLM)")
+        footer = ("\n\nIf the Labour is eligible and has all the required documents, please Login and submit "
+                  "the scheme application. For new Labour, please Register and then apply for the scheme.")
+        return _cap_answer_length(direct_section + footer)
+
+    # Fallback: use LLM with the FULL knowledge base as context.
     context = _FULL_KNOWLEDGE_BASE
 
     if prefetched_user_data:
@@ -1162,7 +1286,16 @@ async def answer_stream(
             yield chunk
         return
 
-    # GENERAL — use the FULL knowledge base instead of RAG retrieval.
+    # GENERAL — first try direct section match (exact ksk.md content, no LLM).
+    direct_section = _find_direct_section(question)
+    if direct_section:
+        print(f"[DEBUG]   Direct section match found, returning ksk.md content directly (no LLM)")
+        footer = ("\n\nIf the Labour is eligible and has all the required documents, please Login and submit "
+                  "the scheme application. For new Labour, please Register and then apply for the scheme.")
+        yield direct_section + footer
+        return
+
+    # Fallback: use LLM with the FULL knowledge base as context.
     context = _FULL_KNOWLEDGE_BASE
 
     if prefetched_user_data:
