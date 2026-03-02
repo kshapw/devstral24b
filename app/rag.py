@@ -17,6 +17,27 @@ from app.qdrant_service import get_qdrant_client
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
+# Load the FULL knowledge base at startup — this is injected into every
+# GENERAL system prompt instead of using RAG retrieval.
+# At ~33KB / ~8-10K tokens, it fits easily in the context window and
+# guarantees the model ALWAYS has ALL the information.
+# ---------------------------------------------------------------------------
+_FULL_KNOWLEDGE_BASE: str = ""
+try:
+    import pathlib
+    _kb_path = pathlib.Path(settings.DATA_PATH)
+    if _kb_path.exists():
+        _FULL_KNOWLEDGE_BASE = _kb_path.read_text(encoding="utf-8")
+        logger.info(
+            "Loaded full knowledge base from %s (%d chars, ~%d tokens)",
+            _kb_path, len(_FULL_KNOWLEDGE_BASE), len(_FULL_KNOWLEDGE_BASE) // 4,
+        )
+    else:
+        logger.error("Knowledge base file not found: %s", _kb_path)
+except Exception:
+    logger.error("Failed to load knowledge base", exc_info=True)
+
+# ---------------------------------------------------------------------------
 # Exact response constants — returned directly by Python, never by the LLM.
 # These are language-independent: regardless of what language the user
 # selects, ECARD and LOGIN_REQUIRED always return these exact strings.
@@ -995,13 +1016,10 @@ async def answer(
         print(f"[DEBUG]   LLM result (first 200): {result[:200]}")
         return _cap_answer_length(result)
 
-    # GENERAL — RAG pipeline, optionally enriched with user data
-    search_query = await _translate_for_search(ollama, question, language)
-    context = await retrieve(search_query, qdrant=qdrant, ollama=ollama)
-
-    # Empty context fallback — prevent hallucination when no relevant docs found
-    if not context.strip():
-        context = "[The retrieval system did not find highly relevant documents for this query. However, this appears to be a valid KBOCWWB-related question. Please answer based on whatever Context IS available in the system prompt, and if truly insufficient, suggest the user visit the KBOCWWB web portal (https://kbocwwb.karnataka.gov.in/) or their nearest Karmika Seva Kendra (KSK) for detailed assistance.]"
+    # GENERAL — use the FULL knowledge base instead of RAG retrieval.
+    # The entire ksk.md (~33KB) is loaded at startup and injected here,
+    # guaranteeing the model always has ALL information available.
+    context = _FULL_KNOWLEDGE_BASE
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
@@ -1117,13 +1135,8 @@ async def answer_stream(
             yield chunk
         return
 
-    # GENERAL — RAG pipeline, optionally enriched with user data
-    search_query = await _translate_for_search(ollama, question, language)
-    context = await retrieve(search_query, qdrant=qdrant, ollama=ollama)
-
-    # Empty context fallback — prevent hallucination when no relevant docs found
-    if not context.strip():
-        context = "[The retrieval system did not find highly relevant documents for this query. However, this appears to be a valid KBOCWWB-related question. Please answer based on whatever Context IS available in the system prompt, and if truly insufficient, suggest the user visit the KBOCWWB web portal (https://kbocwwb.karnataka.gov.in/) or their nearest Karmika Seva Kendra (KSK) for detailed assistance.]"
+    # GENERAL — use the FULL knowledge base instead of RAG retrieval.
+    context = _FULL_KNOWLEDGE_BASE
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
