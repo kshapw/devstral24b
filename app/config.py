@@ -45,7 +45,7 @@ class Settings:
 
     # -------- Retrieval Parameters --------
     RETRIEVAL_TOP_K: int = int(os.getenv("RETRIEVAL_TOP_K", "5"))
-    RETRIEVAL_SCORE_THRESHOLD: float = float(os.getenv("RETRIEVAL_SCORE_THRESHOLD", "0.35"))
+    RETRIEVAL_SCORE_THRESHOLD: float = float(os.getenv("RETRIEVAL_SCORE_THRESHOLD", "0.20"))
 
     # -------- Chunking Parameters --------
     CHUNK_SIZE: int = int(os.getenv("CHUNK_SIZE", "2500"))

@@ -134,6 +134,8 @@ Examples:
 - "tell me about cricket" → OUT_OF_SCOPE
 - "what schemes can I apply for" → GENERAL
 - "how to register" → GENERAL
+- "how much compensation for accident death" → GENERAL
+- "what is the pension amount" → GENERAL
 - "Registration" → GENERAL
 - "how to renew" → GENERAL
 - "Renewal" → GENERAL
@@ -297,8 +299,11 @@ def _append_language_instruction(prompt: str, language: str) -> str:
             "2. ಹಿರಿಯ ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರು / ನೋಂದಣಾಧಿಕಾರಿಗಳು ಪರಿಶೀಲಿಸುತ್ತಾರೆ.\n"
             "3. ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿ ಪರಿಶೀಲಿಸಿ ಅನುಮೋದನೆ ನೀಡುತ್ತಾರೆ.\n\n"
             "If the Labour is eligible and has all the required documents, please Login and submit the scheme application.\n"
-            "For new Labour, please Register and then apply for the scheme.\n"
-
+            "For new Labour, please Register and then apply for the scheme.\n\n"
+            "**MANDATORY RULE FOR APPENDING INSTRUCTIONS:**\n"
+            "For ALL responses (including schemes, Registration, and Renewal), at the very end of your answer, you MUST append THIS EXACT TEXT VERBATIM (do not change a single word):\n"
+            '"ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದರೆ ಮತ್ತು ಎಲ್ಲಾ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನು ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಆಗಿ ಮತ್ತು ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.\n'
+            'ಹೊಸ ಕಾರ್ಮಿಕರಿಗಾಗಿ, ದಯವಿಟ್ಟು ನೋಂದಾಯಿಸಿ ಮತ್ತು ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ."\n'
         )
     else:
         prompt += (
@@ -306,8 +311,11 @@ def _append_language_instruction(prompt: str, language: str) -> str:
             f"The user has SELECTED English language.\n"
             f"You MUST reply in ENGLISH only, REGARDLESS of the input language.\n"
             f"- If input is in Kannada, Hindi, or any other language, TRANSLATE your response to ENGLISH.\n"
-            f"- Do NOT reply in Kannada or any other language. Do NOT mix languages.\n"
-            f"- Keep rupee amounts as numerals (e.g., ₹2,00,000) and proper nouns as-is.\n"
+            f"- Keep rupee amounts as numerals (e.g., ₹2,00,000) and proper nouns as-is.\n\n"
+            f"**MANDATORY RULE FOR APPENDING INSTRUCTIONS:**\n"
+            f"For ALL responses (including schemes, Registration, and Renewal), at the very end of your answer, you MUST append THIS EXACT TEXT VERBATIM (do not change a single word):\n"
+            f'"If the Labour is eligible and has all the required documents, please Login and submit the scheme application.\n'
+            f'For new Labour, please Register and then apply for the scheme."\n'
         )
     return prompt
 
@@ -536,9 +544,6 @@ Response quality guidelines:
 - Be comprehensive but scannable.
 - DOUBLE-CHECK that every amount you mention matches the EXACT scheme the user asked about.
 - DO NOT invent a "Bank Passbook" requirement for Registration if it does not exist in the Context.
-- For ALL responses (including schemes, Registration, and Renewal), at the very end of your answer, you MUST append THIS EXACT TEXT VERBATIM (do not change a single word):
-  "If the Labour is eligible and has all the required documents, please Login and submit the scheme application."
-  "For new Labour, please Register and then apply for the scheme."
 
 Context:
 {context}
