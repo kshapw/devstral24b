@@ -899,6 +899,46 @@ async def classify_and_prepare(
 
 
 # ---------------------------------------------------------------------------
+# Query Translation for Retrieval
+# ---------------------------------------------------------------------------
+async def _translate_for_search(
+    ollama: OllamaClient,
+    question: str,
+    language: str,
+) -> str:
+    """Translates non-English queries to English for semantic search compatibility.
+    
+    Since the embeddings in Qdrant are generated from English documentation, 
+    raw Kannada queries yield near-zero semantic scores.
+    """
+    if not language or language == "en":
+        return question
+
+    prompt = (
+        "You are an expert translation assistant.\n"
+        "Translate the following user query accurately into concise English.\n"
+        "Do NOT answer the question. Do NOT add any extra commentary.\n"
+        "Output ONLY the translated English text, nothing else."
+    )
+    
+    try:
+        translated = await ollama.chat(
+            system_prompt=prompt,
+            user_message=f"Translate this query to English:\n\n{question}",
+            history=None,
+        )
+        # Strip any accidental quotes or whitespace added by the model
+        translated = translated.strip(" '\"\n\t")
+        if translated:
+            logger.info("Translated query for search: '%s' -> '%s'", question[:50], translated[:50])
+            return translated
+        return question
+    except Exception:
+        logger.error("Failed to translate query for search: '%s'", question[:50], exc_info=True)
+        return question
+
+
+# ---------------------------------------------------------------------------
 # Retrieval
 # ---------------------------------------------------------------------------
 async def retrieve(
@@ -1045,7 +1085,8 @@ async def answer(
         return _cap_answer_length(result)
 
     # GENERAL — RAG pipeline, optionally enriched with user data
-    context = await retrieve(question, qdrant=qdrant, ollama=ollama)
+    search_query = await _translate_for_search(ollama, question, language)
+    context = await retrieve(search_query, qdrant=qdrant, ollama=ollama)
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
@@ -1140,7 +1181,8 @@ async def answer_stream(
         return
 
     # GENERAL — RAG pipeline, optionally enriched with user data
-    context = await retrieve(question, qdrant=qdrant, ollama=ollama)
+    search_query = await _translate_for_search(ollama, question, language)
+    context = await retrieve(search_query, qdrant=qdrant, ollama=ollama)
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
