@@ -498,12 +498,11 @@ def _detect_topic(msg: str) -> str | None:
     return None
 
 
-def _answer_directly(message: str, history: list[dict] | None = None) -> str | None:
-    """Try to answer the question directly from the Q&A system.
+def _get_topic_context(message: str, history: list[dict] | None = None) -> str | None:
+    """Detect topic from message/history and return focused section context for LLM.
 
-    Returns a specific sub-answer if topic + sub-topic are detected,
-    or the full section if only topic is detected,
-    or None if no match (falls through to LLM).
+    Returns a ~2KB topic-specific context string so the LLM can answer naturally,
+    or None if no topic detected (falls back to full 33KB knowledge base).
     """
     msg = message.lower().strip()
 
@@ -516,28 +515,25 @@ def _answer_directly(message: str, history: list[dict] | None = None) -> str | N
             hist_content = (hist_msg.get("content", "") or "").lower()
             topic = _detect_topic(hist_content)
             if topic:
-                print(f"[DEBUG] _answer_directly: topic='{topic}' from conversation history")
+                print(f"[DEBUG] _get_topic_context: topic='{topic}' from conversation history")
                 break
 
     if not topic:
-        print(f"[DEBUG] _answer_directly: no topic detected, falling through to LLM")
+        print(f"[DEBUG] _get_topic_context: no topic detected")
         return None
 
-    # Detect sub-topic from current message
-    subtopic = _detect_subtopic(msg)
+    if topic not in _TOPIC_SUBANSWERS:
+        print(f"[DEBUG] _get_topic_context: topic='{topic}' has no sub-answers")
+        return None
 
-    if subtopic and topic in _TOPIC_SUBANSWERS:
-        subanswers = _TOPIC_SUBANSWERS[topic]
-        if subtopic in subanswers:
-            print(f"[DEBUG] _answer_directly: topic='{topic}', subtopic='{subtopic}' → returning specific answer")
-            footer = ("\n\nIf the Labour is eligible and has all the required documents, please Login and submit "
-                      "the scheme application. For new Labour, please Register and then apply for the scheme.")
-            return subanswers[subtopic] + footer
-
-    # Topic detected but no sub-topic → return None so it falls through to
-    # the existing REGISTRATION/RENEWAL/SCHEMES_LIST intent handlers or full section
-    print(f"[DEBUG] _answer_directly: topic='{topic}' but no subtopic match, returning None")
-    return None
+    # Build focused context from ALL sub-answers for this topic
+    subanswers = _TOPIC_SUBANSWERS[topic]
+    context_parts = [f"## Topic: {topic.title()}\n"]
+    for subtopic, answer_text in subanswers.items():
+        context_parts.append(f"### {subtopic.title()}\n{answer_text}\n")
+    focused_context = "\n".join(context_parts)
+    print(f"[DEBUG] _get_topic_context: topic='{topic}', context={len(focused_context)} chars")
+    return focused_context
 
 # ---------------------------------------------------------------------------
 # Exact response constants — returned directly by Python, never by the LLM.
@@ -604,7 +600,7 @@ _OUT_OF_SCOPE_KEYWORDS: list[str] = [
     "movie", "film", "song", "music", "bollywood",
     # English — general knowledge & off-topic
     "weather", "temperature", "recipe", "cook", "joke", "tell me a joke",
-    "poem", "story", "write a", "code", "programming", "python",
+    "poem", "story", "write a", "source code", "write code", "programming", "python",
     "what is the capital", "population of", "history of",
     "calculate", "math", "equation",
     # Kannada
@@ -672,14 +668,15 @@ def _keyword_intent(message: str) -> str | None:
     that can differ between input methods.
     """
     msg_normalized = unicodedata.normalize("NFC", message.lower()).strip()
+    # Check STATUS_CHECK first — "check status" should not be blocked by out-of-scope
+    if any(kw in msg_normalized for kw in _STATUS_CHECK_KEYWORDS_NORM):
+        return "STATUS_CHECK"
     # Instant rejection for known out-of-scope topics
     if any(kw in msg_normalized for kw in _OUT_OF_SCOPE_KEYWORDS_NORM):
         return "OUT_OF_SCOPE"
-    # Check ECARD first — more specific keywords, less likely to false-positive
+    # Check ECARD — more specific keywords, less likely to false-positive
     if any(kw in msg_normalized for kw in _ECARD_KEYWORDS_NORM):
         return "ECARD"
-    if any(kw in msg_normalized for kw in _STATUS_CHECK_KEYWORDS_NORM):
-        return "STATUS_CHECK"
     # Greetings — short messages that are just greetings, bypass RAG
     if any(kw == msg_normalized or msg_normalized.startswith(kw + " ") or msg_normalized.startswith(kw + ",") for kw in _GREETING_KEYWORDS_NORM):
         return "GREETING"
@@ -1738,11 +1735,9 @@ async def answer(
         return _cap_answer_length(result)
 
 
-    # GENERAL — first try sub-topic Q&A (specific answers, no LLM).
-    direct_answer = _answer_directly(question, history=history)
-    if direct_answer:
-        print(f"[DEBUG]   Sub-topic Q&A matched, returning specific answer (no LLM)")
-        return _cap_answer_length(direct_answer)
+    # GENERAL — detect topic and use focused context for LLM (hybrid AI).
+    # Topic detection from message + conversation history.
+    topic_context = _get_topic_context(question, history=history)
 
     # Then try direct section match (exact ksk.md content, no LLM).
     direct_section = _find_direct_section(question)
@@ -1752,8 +1747,9 @@ async def answer(
                   "the scheme application. For new Labour, please Register and then apply for the scheme.")
         return _cap_answer_length(direct_section + footer)
 
-    # Fallback: use LLM with FOCUSED topic context (not full 33KB).
-    context = _FULL_KNOWLEDGE_BASE
+    # Use focused topic context (~2KB) if available, otherwise full knowledge base (33KB)
+    context = topic_context if topic_context else _FULL_KNOWLEDGE_BASE
+    print(f"[DEBUG]   Using {'focused topic' if topic_context else 'full knowledge base'} context ({len(context)} chars)")
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
@@ -1881,12 +1877,8 @@ async def answer_stream(
         return
 
 
-    # GENERAL — first try sub-topic Q&A (specific answers, no LLM).
-    direct_answer = _answer_directly(question, history=history)
-    if direct_answer:
-        print(f"[DEBUG]   Sub-topic Q&A matched, returning specific answer (no LLM)")
-        yield direct_answer
-        return
+    # GENERAL — detect topic and use focused context for LLM (hybrid AI).
+    topic_context = _get_topic_context(question, history=history)
 
     # Then try direct section match (exact ksk.md content, no LLM).
     direct_section = _find_direct_section(question)
@@ -1897,8 +1889,9 @@ async def answer_stream(
         yield direct_section + footer
         return
 
-    # Fallback: use LLM with FOCUSED topic context (not full 33KB).
-    context = _FULL_KNOWLEDGE_BASE
+    # Use focused topic context (~2KB) if available, otherwise full knowledge base (33KB)
+    context = topic_context if topic_context else _FULL_KNOWLEDGE_BASE
+    print(f"[DEBUG]   Using {'focused topic' if topic_context else 'full knowledge base'} context ({len(context)} chars)")
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
