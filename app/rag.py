@@ -353,11 +353,11 @@ def _prepare_user_message(message: str, language: str) -> str:
     """
     grounding = (
         "\n\n[INSTRUCTIONS FOR YOUR RESPONSE:\n"
-        "1. Answer this question using ONLY the information from the === REFERENCE CONTEXT === above.\n"
-        "2. If the Context does NOT contain the answer, say 'I don't have information on that topic.'\n"
-        "3. Do NOT use your pre-trained knowledge to add facts, schemes, amounts, or documents not in the Context.\n"
-        "4. If this is a question about politicians, sports, weather, coding, or anything unrelated to KBOCWWB, "
-        "say: 'That is outside my expertise. I can only help with KBOCWWB welfare schemes and KSK services.']"
+        "1. Answer this question using the information from the === REFERENCE CONTEXT === provided in the system prompt.\n"
+        "2. Do NOT use your pre-trained knowledge to invent scheme names, benefit amounts, or document requirements that are NOT in the Context.\n"
+        "3. If this question is about KBOCWWB topics (registration, renewal, schemes, welfare) BUT the Context has limited info, "
+        "provide what you CAN from the Context and suggest visiting the KBOCWWB portal or nearest KSK for more details.\n"
+        "4. ONLY refuse to answer if the question is about politicians, sports, weather, coding, or topics completely unrelated to KBOCWWB.]"
     )
     if language == "kn":
         return message + grounding + "\n\n(ಕಡ್ಡಾಯ: ಕನ್ನಡದಲ್ಲಿ ಮಾತ್ರ ಉತ್ತರಿಸಿ. ಯಾವುದೇ ಇಂಗ್ಲಿಷ್ ಪದಗಳನ್ನು ಬಳಸಬೇಡಿ.)"
@@ -1001,7 +1001,7 @@ async def answer(
 
     # Empty context fallback — prevent hallucination when no relevant docs found
     if not context.strip():
-        context = "[NO RELEVANT DOCUMENTS FOUND — do NOT fabricate information. Tell the user you don't have information on this topic.]"
+        context = "[The retrieval system did not find highly relevant documents for this query. However, this appears to be a valid KBOCWWB-related question. Please answer based on whatever Context IS available in the system prompt, and if truly insufficient, suggest the user visit the KBOCWWB web portal (https://kbocwwb.karnataka.gov.in/) or their nearest Karmika Seva Kendra (KSK) for detailed assistance.]"
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
@@ -1123,7 +1123,7 @@ async def answer_stream(
 
     # Empty context fallback — prevent hallucination when no relevant docs found
     if not context.strip():
-        context = "[NO RELEVANT DOCUMENTS FOUND — do NOT fabricate information. Tell the user you don't have information on this topic.]"
+        context = "[The retrieval system did not find highly relevant documents for this query. However, this appears to be a valid KBOCWWB-related question. Please answer based on whatever Context IS available in the system prompt, and if truly insufficient, suggest the user visit the KBOCWWB web portal (https://kbocwwb.karnataka.gov.in/) or their nearest Karmika Seva Kendra (KSK) for detailed assistance.]"
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
