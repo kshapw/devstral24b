@@ -39,17 +39,17 @@ class Settings:
 
     # -------- LLM Generation Parameters --------
     LLM_TEMPERATURE: float = float(os.getenv("LLM_TEMPERATURE", "0.0"))
-    LLM_TOP_P: float = float(os.getenv("LLM_TOP_P", "0.9"))
+    LLM_TOP_P: float = float(os.getenv("LLM_TOP_P", "0.7"))
     LLM_TOP_K: int = int(os.getenv("LLM_TOP_K", "40"))
     LLM_REPEAT_PENALTY: float = float(os.getenv("LLM_REPEAT_PENALTY", "1.1"))
 
     # -------- Retrieval Parameters --------
-    RETRIEVAL_TOP_K: int = int(os.getenv("RETRIEVAL_TOP_K", "5"))
-    RETRIEVAL_SCORE_THRESHOLD: float = float(os.getenv("RETRIEVAL_SCORE_THRESHOLD", "0.20"))
+    RETRIEVAL_TOP_K: int = int(os.getenv("RETRIEVAL_TOP_K", "8"))
+    RETRIEVAL_SCORE_THRESHOLD: float = float(os.getenv("RETRIEVAL_SCORE_THRESHOLD", "0.35"))
 
     # -------- Chunking Parameters --------
-    CHUNK_SIZE: int = int(os.getenv("CHUNK_SIZE", "2500"))
-    CHUNK_OVERLAP: int = int(os.getenv("CHUNK_OVERLAP", "200"))
+    CHUNK_SIZE: int = int(os.getenv("CHUNK_SIZE", "1200"))
+    CHUNK_OVERLAP: int = int(os.getenv("CHUNK_OVERLAP", "150"))
 
     # -------- Ingest Concurrency --------
     INGEST_CONCURRENCY: int = int(os.getenv("INGEST_CONCURRENCY", "5"))
