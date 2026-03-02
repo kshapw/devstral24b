@@ -257,6 +257,22 @@ _GREETING_KEYWORDS: list[str] = [
     "नमस्ते", "नमस्कार",
 ]
 
+_REGISTRATION_KEYWORDS: list[str] = [
+    "registration", "register", "how to register", "worker registration",
+    "ನೋಂದಣಿ", "ನೋಂದಾಯಿಸಿ", "ನೊಂದಣಿ",
+]
+
+_RENEWAL_KEYWORDS: list[str] = [
+    "renewal", "renew", "how to renew", "worker renewal",
+    "ನವೀಕರಣ",
+]
+
+_SCHEMES_KEYWORDS: list[str] = [
+    "what schemes", "list schemes", "all schemes", "available schemes",
+    "schemes available", "scheme list", "which schemes", "tell me about schemes",
+    "ಯೋಜನೆಗಳು", "ಯೋಜನೆ ಪಟ್ಟಿ",
+]
+
 # Pre-normalize keywords at import time for consistent matching
 _ECARD_KEYWORDS_NORM: list[str] = [
     unicodedata.normalize("NFC", kw) for kw in _ECARD_KEYWORDS
@@ -269,6 +285,15 @@ _OUT_OF_SCOPE_KEYWORDS_NORM: list[str] = [
 ]
 _GREETING_KEYWORDS_NORM: list[str] = [
     unicodedata.normalize("NFC", kw) for kw in _GREETING_KEYWORDS
+]
+_REGISTRATION_KEYWORDS_NORM: list[str] = [
+    unicodedata.normalize("NFC", kw) for kw in _REGISTRATION_KEYWORDS
+]
+_RENEWAL_KEYWORDS_NORM: list[str] = [
+    unicodedata.normalize("NFC", kw) for kw in _RENEWAL_KEYWORDS
+]
+_SCHEMES_KEYWORDS_NORM: list[str] = [
+    unicodedata.normalize("NFC", kw) for kw in _SCHEMES_KEYWORDS
 ]
 
 
@@ -292,6 +317,15 @@ def _keyword_intent(message: str) -> str | None:
     # Greetings — short messages that are just greetings, bypass RAG
     if any(kw == msg_normalized or msg_normalized.startswith(kw + " ") or msg_normalized.startswith(kw + ",") for kw in _GREETING_KEYWORDS_NORM):
         return "GREETING"
+    # Registration — bypass LLM, return hardcoded ksk.md content
+    if any(kw == msg_normalized or kw in msg_normalized for kw in _REGISTRATION_KEYWORDS_NORM):
+        return "REGISTRATION"
+    # Renewal — bypass LLM, return hardcoded ksk.md content
+    if any(kw == msg_normalized or kw in msg_normalized for kw in _RENEWAL_KEYWORDS_NORM):
+        return "RENEWAL"
+    # Schemes list — bypass LLM, return hardcoded scheme list
+    if any(kw in msg_normalized for kw in _SCHEMES_KEYWORDS_NORM) or msg_normalized in ["schemes", "scheme"]:
+        return "SCHEMES_LIST"
     return None
 
 
@@ -950,6 +984,21 @@ async def classify_and_prepare(
         print(f"[DEBUG]   → returning GREETING")
         return "GREETING", None
 
+    # Handle REGISTRATION directly — return hardcoded ksk.md content
+    if intent == "REGISTRATION":
+        print(f"[DEBUG]   → returning REGISTRATION")
+        return "REGISTRATION", None
+
+    # Handle RENEWAL directly — return hardcoded ksk.md content
+    if intent == "RENEWAL":
+        print(f"[DEBUG]   → returning RENEWAL")
+        return "RENEWAL", None
+
+    # Handle SCHEMES_LIST directly — return hardcoded scheme list
+    if intent == "SCHEMES_LIST":
+        print(f"[DEBUG]   → returning SCHEMES_LIST")
+        return "SCHEMES_LIST", None
+
     # Authenticated ECARD → exact string response, no data fetch needed
     if intent == "ECARD" and is_authenticated:
         print(f"[DEBUG]   → returning ECARD (no data fetch needed)")
@@ -1149,6 +1198,143 @@ async def answer(
                     "- Required documents for schemes\n\n"
                     "How can I assist you today?")
 
+    # REGISTRATION — hardcoded response from ksk.md, no LLM
+    if intent == "REGISTRATION":
+        if language == "kn":
+            return ("## ಕಾರ್ಮಿಕ ನೋಂದಣಿ\n\n"
+                    "### ನೋಂದಣಿ ಅವಲೋಕನ\n"
+                    "ಕರ್ನಾಟಕ ಕಟ್ಟಡ ಮತ್ತು ಇತರ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರ ಕಲ್ಯಾಣ ಮಂಡಳಿಯಲ್ಲಿ (KBOCWWB) ನೋಂದಣಿ ಮಾಡಿಕೊಳ್ಳುವುದರಿಂದ BOCW ಕಾಯ್ದೆಯ ಅಡಿಯಲ್ಲಿ ಕಲ್ಯಾಣ ಸೌಲಭ್ಯಗಳನ್ನು ಪಡೆಯಬಹುದು.\n\n"
+                    "### ಅರ್ಹತೆ ಮಾನದಂಡಗಳು\n"
+                    "- BOCW ಕಾಯ್ದೆಯ ಅಡಿಯಲ್ಲಿ ನಿಗದಿಪಡಿಸಿದ ಅರ್ಹತೆ ಮಾನದಂಡಗಳನ್ನು ಪೂರೈಸಬೇಕು\n"
+                    "- ಹಿಂದಿನ 12 ತಿಂಗಳಲ್ಲಿ ಕನಿಷ್ಠ 90 ದಿನಗಳ ಕಟ್ಟಡ ಅಥವಾ ನಿರ್ಮಾಣ ಕೆಲಸ ಮಾಡಿರಬೇಕು\n"
+                    "- ವಯಸ್ಸು 18-60 ವರ್ಷಗಳ ನಡುವೆ ಇರಬೇಕು\n"
+                    "- ಬೇರೆ ಯಾವುದೇ ಕಲ್ಯಾಣ ಮಂಡಳಿಯ ಸದಸ್ಯರಾಗಿರಬಾರದು\n\n"
+                    "### ಅಗತ್ಯ ದಾಖಲೆಗಳು\n"
+                    "- ಉದ್ಯೋಗ ಪ್ರಮಾಣಪತ್ರ: Form V(A) / V(B) / V(C) / V(D) - ಅಧಿಕೃತ ಉದ್ಯೋಗದಾತ/ಗುತ್ತಿಗೆದಾರ/ಸಕ್ಷಮ ಪ್ರಾಧಿಕಾರದಿಂದ\n"
+                    "- ಆಧಾರ್ ಕಾರ್ಡ್ (ಸ್ವಯಂ-ದೃಢೀಕೃತ ಪ್ರತಿ)\n"
+                    "- ಪಡಿತರ ಚೀಟಿ (ಕಡ್ಡಾಯವಲ್ಲ) - ಕುಟುಂಬ ವಿವರಗಳ ಪರಿಶೀಲನೆಗಾಗಿ\n"
+                    "- ವಯಸ್ಸಿನ ಪುರಾವೆ: ಆಧಾರ್ ಕಾರ್ಡ್, ಮತದಾರರ ಗುರುತಿನ ಚೀಟಿ, ಅಥವಾ ಸರ್ಕಾರಿ ವಯಸ್ಸಿನ ಪುರಾವೆ ದಾಖಲೆ\n\n"
+                    "### ನೋಂದಣಿ ವಿವರಗಳು\n"
+                    "- ಅರ್ಜಿ ಶುಲ್ಕ: ₹100 (ರೂಪಾಯಿ ನೂರು ಮಾತ್ರ)\n"
+                    "- ವಿತರಣೆ ಸಮಯ: 15 ಕೆಲಸದ ದಿನಗಳು\n\n"
+                    "### ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ\n"
+                    "1. ಅರ್ಜಿದಾರರು ಅಗತ್ಯ ದಾಖಲೆಗಳೊಂದಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು\n"
+                    "2. ನೋಂದಣಿ ಪ್ರಾಧಿಕಾರ (ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕ/ಹಿರಿಯ ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕ) ಪರಿಶೀಲಿಸುತ್ತಾರೆ\n"
+                    "3. ಉದ್ಯೋಗ ಪ್ರಮಾಣಪತ್ರ ಮತ್ತು ಅರ್ಹತೆಯ ಪರಿಶೀಲನೆ\n"
+                    "4. ಸಕ್ಷಮ ಪ್ರಾಧಿಕಾರದಿಂದ ಅನುಮೋದನೆ/ತಿರಸ್ಕರಣೆ\n"
+                    "5. ಫಲಾನುಭವಿ ನೋಂದಣಿ (ಲೇಬರ್ ಕಾರ್ಡ್) ವಿತರಣೆ\n\n"
+                    "ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದರೆ ಮತ್ತು ಎಲ್ಲಾ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನು ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಆಗಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.")
+        else:
+            return ("## Scheme: Worker Registration\n\n"
+                    "### Registration Overview\n"
+                    "Registration under the Karnataka Building and Other Construction Workers Welfare Board enables eligible construction workers to avail welfare benefits under the BOCW Act.\n\n"
+                    "### Eligibility Criteria\n"
+                    "- The applicant must satisfy the eligibility criteria prescribed under the BOCW Act.\n"
+                    "- Must have worked for a minimum of 90 days in building or other construction work during the preceding 12 months.\n"
+                    "- Age must fall within the prescribed limit (generally 18-60 years).\n"
+                    "- Must not be a member of any other Welfare Board.\n\n"
+                    "### Required Documents\n"
+                    "The applicant must submit the following documents:\n"
+                    "- **Employment Certificate**: In Form V(A) / V(B) / V(C) / V(D). Issued by authorized employer / contractor / competent authority.\n"
+                    "- **Aadhaar Card**: (Self-attested copy)\n"
+                    "- **Ration Card**: (Non-Mandatory) For family details verification.\n"
+                    "- **Age Proof**: (Any one of the following): Aadhaar Card, Voter ID Card, or Any Government-issued age proof document.\n\n"
+                    "### Registration Details\n"
+                    "- **Application Fee**: Rs.100 (Rupees One Hundred only)\n"
+                    "- **Delivery Timeline**: 15 Working Days (subject to document verification and field validation)\n\n"
+                    "### Procedure for Applying\n"
+                    "1. The applicant submits the duly filled application along with required documents.\n"
+                    "2. Application is scrutinized by the Registering Authority (Labour Inspector / Senior Labour Inspector).\n"
+                    "3. Verification of employment certificate and eligibility.\n"
+                    "4. Approval / Rejection by the competent authority.\n"
+                    "5. Issuance of Beneficiary Registration (Labour Card).\n\n"
+                    "### 20-A, Employment Certificate for Continuation\n"
+                    "As per Section 14 of the BOCW Act, the beneficiary must submit every year:\n"
+                    "- Pay slip (Non-Mandatory) OR Copy of nominal muster roll as proof of employment\n"
+                    "- AND Employment Certificate in Form V(A) / V(B) / V(C) / V(D)\n\n"
+                    "The documents must establish engagement in construction work for a minimum of 90 days in the preceding 12 months.\n\n"
+                    "If the Labour is eligible and has all the required documents, please Login and submit the scheme application.\n"
+                    "For new Labour, please Register and then apply for the scheme.")
+
+    # RENEWAL — hardcoded response from ksk.md, no LLM
+    if intent == "RENEWAL":
+        if language == "kn":
+            return ("## ಕಾರ್ಮಿಕ ನವೀಕರಣ\n\n"
+                    "### ನವೀಕರಣ ಅವಲೋಕನ\n"
+                    "ಮಂಡಳಿಯ ಅಡಿಯಲ್ಲಿ ಕಲ್ಯಾಣ ಸೌಲಭ್ಯಗಳನ್ನು ಮುಂದುವರಿಸಲು ನೋಂದಣಿ ನವೀಕರಣ ಅಗತ್ಯ.\n\n"
+                    "### ನವೀಕರಣಕ್ಕೆ ಅರ್ಹತೆ\n"
+                    "- 90 ದಿನಗಳ ಕೆಲಸದ ಅವಶ್ಯಕತೆ: ಕಳೆದ 12 ತಿಂಗಳಲ್ಲಿ ಕನಿಷ್ಠ 90 ದಿನಗಳ ಕೆಲಸ ಮಾಡಿರಬೇಕು\n"
+                    "- ಮಾನ್ಯ 90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ ಕಡ್ಡಾಯ\n"
+                    "- ಪ್ರಮಾಣಪತ್ರವನ್ನು ಸಕ್ಷಮ ಪ್ರಾಧಿಕಾರ (ಬಿಲ್ಡರ್/ಗುತ್ತಿಗೆದಾರ/ಎಂಜಿನಿಯರ್/ಸ್ಥಳೀಯ ಪ್ರಾಧಿಕಾರ) ನೀಡಬೇಕು\n\n"
+                    "### ನವೀಕರಣ ಯಾವಾಗ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು\n"
+                    "- ನೋಂದಣಿ ಅವಧಿ ಮುಗಿದ ನಂತರ ಮಾತ್ರ ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು\n"
+                    "- ಬಫರ್ ಅವಧಿ: ಅವಧಿ ಮುಗಿದ ದಿನಾಂಕದಿಂದ 365 ದಿನಗಳು (1 ವರ್ಷ)\n"
+                    "- 365 ದಿನಗಳ ಒಳಗೆ ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸದಿದ್ದರೆ, ಹೊಸ ನೋಂದಣಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು\n\n"
+                    "ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದರೆ ಮತ್ತು ಎಲ್ಲಾ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನು ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಆಗಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.")
+        else:
+            return ("## Scheme: Worker Renewal\n\n"
+                    "### Renewal Overview\n"
+                    "Renewal of registration is required to continue availing welfare benefits under the Board.\n\n"
+                    "### Eligibility for Renewal\n"
+                    "A registered construction worker can apply for Renewal subject to the following conditions:\n"
+                    "- **90 Days Work Requirement:** The worker must have worked at least 90 days in the last 12 months.\n"
+                    "- A valid 90 Days Work Certificate is mandatory.\n"
+                    "- The certificate must be issued by a competent authority (Builder / Contractor / Engineer / Local Authority).\n"
+                    "- Without a valid 90 Days Work Certificate, renewal cannot be approved.\n\n"
+                    "### When Can Renewal Be Applied\n"
+                    "**After Registration Expiry:**\n"
+                    "- Renewal can be applied only after the registration has expired.\n"
+                    "- Renewal is applicable for previously registered (Active) workers whose registration validity has lapsed.\n\n"
+                    "**Buffer Period (Grace Period):**\n"
+                    "- After the registration expiry, the worker enters a buffer period of 365 days (1 year) from the date of expiry.\n"
+                    "- During this buffer period, the worker is eligible to apply for Renewal.\n\n"
+                    "### Important Rule\n"
+                    "- If the worker does not apply for renewal within 365 days from the expiry date, Renewal is not permitted.\n"
+                    "- The worker must apply for New Registration again.\n\n"
+                    "### Please Check\n"
+                    "- Can only apply after Expiry date.\n"
+                    "- Buffer period calculation (Expiry Date + 365 days).\n"
+                    "- 90 Days Work Certificate (last 12 months).\n"
+                    "- Check Duplicate active membership.\n"
+                    "- Aadhaar-based authentication.\n\n"
+                    "If the Labour is eligible and has all the required documents, please Login and submit the scheme application.\n"
+                    "For new Labour, please Register and then apply for the scheme.")
+
+    # SCHEMES_LIST — hardcoded list of all schemes, no LLM
+    if intent == "SCHEMES_LIST":
+        if language == "kn":
+            return ("## KBOCWWB ಅಡಿಯಲ್ಲಿ ಲಭ್ಯವಿರುವ ಕಲ್ಯಾಣ ಯೋಜನೆಗಳು\n\n"
+                    "1. **ಅಪಘಾತ ಸೌಲಭ್ಯ** - ಮರಣಕ್ಕೆ ₹8 ಲಕ್ಷ, ಶಾಶ್ವತ ಅಂಗವಿಕಲತೆಗೆ ₹2 ಲಕ್ಷ\n"
+                    "2. **ಪ್ರಮುಖ ಕಾಯಿಲೆಗಳಿಗೆ ಸಹಾಯ (ಕಾರ್ಮಿಕ ಚಿಕಿತ್ಸಾ ಭಾಗ್ಯ)** - ₹2,00,000 ವರೆಗೆ\n"
+                    "3. **ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ** - ₹6,000 (₹500/ತಿಂಗಳು)\n"
+                    "4. **ಹೆರಿಗೆ ಸಹಾಯ (ತಾಯಿ ಲಕ್ಷ್ಮೀ ಬಾಂಡ್)** - ₹50,000 ಪ್ರತಿ ಹೆರಿಗೆಗೆ\n"
+                    "5. **ವೈದ್ಯಕೀಯ ಸಹಾಯ** - ₹300/ದಿನ, ಗರಿಷ್ಠ ₹20,000\n"
+                    "6. **ಅಂಗವಿಕಲ ಪಿಂಚಣಿ** - ₹2,000/ತಿಂಗಳು + ₹2,00,000 ವರೆಗೆ\n"
+                    "7. **ಅಂಗವಿಕಲ ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ** - ವಾರ್ಷಿಕ ಜೀವಂತ ಪ್ರಮಾಣಪತ್ರ ಅಗತ್ಯ\n"
+                    "8. **ಪಿಂಚಣಿ (ವೃದ್ಧಾಪ್ಯ)** - ₹3,000/ತಿಂಗಳು ವರೆಗೆ\n"
+                    "9. **ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ** - ವಾರ್ಷಿಕ ಜೀವಂತ ಪ್ರಮಾಣಪತ್ರ ಅಗತ್ಯ\n"
+                    "10. **ಅಂತ್ಯಕ್ರಿಯೆ ಮತ್ತು ಸಹಾಯಧನ** - ₹1,46,000\n"
+                    "11. **ಮದುವೆ ಸಹಾಯ** - ₹60,000\n\n"
+                    "ಯಾವುದೇ ನಿರ್ದಿಷ್ಟ ಯೋಜನೆಯ ಬಗ್ಗೆ ವಿವರಗಳಿಗಾಗಿ, ದಯವಿಟ್ಟು ಅದರ ಹೆಸರಿನಿಂದ ಕೇಳಿ.")
+        else:
+            return ("## Available Welfare Schemes under KBOCWWB\n\n"
+                    "The following welfare schemes are available for registered construction workers:\n\n"
+                    "1. **Accident Benefits** - Up to Rs.8 Lakh for death, Rs.2 Lakh for permanent total disablement, Rs.1 Lakh for partial disablement\n"
+                    "2. **Assistance for Major Ailments (Karmika Chikitsa Bhagya)** - Up to Rs.2,00,000 for treatment of major ailments\n"
+                    "3. **Thayi Magu Sahaya Hasta (Nutritional Support)** - Rs.6,000 (Rs.500/month) for pre-school education and nutritional support\n"
+                    "4. **Delivery Assistance (Tayi Lakshmi Bond)** - Rs.50,000 per delivery (first two living children only)\n"
+                    "5. **Medical Assistance** - Rs.300 per day of hospitalization, maximum Rs.20,000 (minimum 48 hours required)\n"
+                    "6. **Disability Pension and Ex-Gratia** - Rs.2,000/month pension + up to Rs.2,00,000 ex-gratia\n"
+                    "7. **Continuation of Disability Pension** - Annual Living Certificate required\n"
+                    "8. **Pension (Old Age Pension)** - Up to Rs.3,000/month for workers who completed 60 years\n"
+                    "9. **Continuation of Pension** - Annual continuation, Living Certificate required every December\n"
+                    "10. **Funeral and Ex-Gratia** - Rs.1,46,000 for funeral expenses and ex-gratia to nominee\n"
+                    "11. **Marriage Assistance** - Rs.60,000 for marriage of worker or dependent children (maximum twice per family)\n\n"
+                    "**Note:** Most schemes require a valid 90 Days Work Certificate and active registration.\n"
+                    "For detailed information about any specific scheme, please ask about it by name.\n\n"
+                    "If the Labour is eligible and has all the required documents, please Login and submit the scheme application.\n"
+                    "For new Labour, please Register and then apply for the scheme.")
+
     # STATUS_CHECK — LLM grounded on pre-fetched user data + conversation history
     if intent == "STATUS_CHECK":
         print(f"[DEBUG] answer() STATUS_CHECK path")
@@ -1285,6 +1471,17 @@ async def answer_stream(
                     "- Application status checks\n"
                     "- Required documents for schemes\n\n"
                     "How can I assist you today?")
+        return
+
+    # REGISTRATION, RENEWAL, SCHEMES_LIST — reuse answer() responses
+    if intent in ("REGISTRATION", "RENEWAL", "SCHEMES_LIST"):
+        # Call answer() which has the full hardcoded responses
+        result = await answer(
+            question=question, qdrant=qdrant, ollama=ollama,
+            history=history, language=language, intent=intent,
+            prefetched_user_data=prefetched_user_data,
+        )
+        yield result
         return
 
     # STATUS_CHECK — LLM grounded on pre-fetched user data + conversation history
