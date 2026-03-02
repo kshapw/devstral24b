@@ -1725,13 +1725,6 @@ async def answer(
     # Topic detection from message + conversation history.
     topic_context = _get_topic_context(question, history=history)
 
-    # Then try direct section match (exact ksk.md content, no LLM).
-    direct_section = _find_direct_section(question)
-    if direct_section:
-        print(f"[DEBUG]   Direct section match found, returning ksk.md content directly (no LLM)")
-        footer = ("\n\nIf the Labour is eligible and has all the required documents, please Login and submit "
-                  "the scheme application. For new Labour, please Register and then apply for the scheme.")
-        return _cap_answer_length(direct_section + footer)
 
     # Use focused topic context (~2KB) if available, otherwise full knowledge base (33KB)
     context = topic_context if topic_context else _FULL_KNOWLEDGE_BASE
@@ -1866,14 +1859,6 @@ async def answer_stream(
     # GENERAL — detect topic and use focused context for LLM (hybrid AI).
     topic_context = _get_topic_context(question, history=history)
 
-    # Then try direct section match (exact ksk.md content, no LLM).
-    direct_section = _find_direct_section(question)
-    if direct_section:
-        print(f"[DEBUG]   Direct section match found, returning ksk.md content directly (no LLM)")
-        footer = ("\n\nIf the Labour is eligible and has all the required documents, please Login and submit "
-                  "the scheme application. For new Labour, please Register and then apply for the scheme.")
-        yield direct_section + footer
-        return
 
     # Use focused topic context (~2KB) if available, otherwise full knowledge base (33KB)
     context = topic_context if topic_context else _FULL_KNOWLEDGE_BASE
