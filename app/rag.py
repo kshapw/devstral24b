@@ -173,6 +173,257 @@ def _find_direct_section(message: str) -> str | None:
     print(f"[DEBUG]   No keyword match found, falling through to LLM")
     return None
 
+
+# ---------------------------------------------------------------------------
+# Topic-focused context — instead of 33KB full ksk.md, inject ONLY the
+# relevant section (~2KB). Devstral 24B cannot read large context but
+# CAN answer from small, focused context.
+# ---------------------------------------------------------------------------
+_FOCUSED_CONTEXTS: dict[str, str] = {
+    "registration": (
+        "## Scheme: Worker Registration\n\n"
+        "### Registration Overview\n"
+        "Registration under the Karnataka Building and Other Construction Workers Welfare Board "
+        "enables eligible construction workers to avail welfare benefits under the BOCW Act.\n\n"
+        "### Eligibility Criteria\n"
+        "* The applicant must satisfy the eligibility criteria prescribed under the BOCW Act.\n"
+        "* Must have worked for a minimum of 90 days in building or other construction work during the preceding 12 months.\n"
+        "* Age must fall within the prescribed limit (generally 18-60 years).\n"
+        "* Must not be a member of any other Welfare Board.\n\n"
+        "### Required Documents\n"
+        "* Employment Certificate: In Form V(A) / V(B) / V(C) / V(D). Issued by authorized employer / contractor / competent authority.\n"
+        "* Aadhaar Card: (Self-attested copy)\n"
+        "* Ration Card: (Non-Mandatory) For family details verification.\n"
+        "* Age Proof: (Any one of the following): Aadhaar Card, Voter ID Card, or Any Government-issued age proof document.\n\n"
+        "### Registration Details\n"
+        "* Application Fee: Rs.100 (Rupees One Hundred only)\n"
+        "* Delivery Timeline: 15 Working Days (subject to document verification and field validation)\n\n"
+        "### Procedure for Applying\n"
+        "1. The applicant submits the duly filled application along with required documents.\n"
+        "2. Application is scrutinized by the Registering Authority (Labour Inspector / Senior Labour Inspector).\n"
+        "3. Verification of employment certificate and eligibility.\n"
+        "4. Approval / Rejection by the competent authority.\n"
+        "5. Issuance of Beneficiary Registration (Labour Card).\n\n"
+        "### 20-A, Employment Certificate for Continuation of Existing Registration\n"
+        "As per Section 14 of the BOCW Act, the beneficiary must submit every year:\n"
+        "* Pay slip (Non-Mandatory) OR Copy of nominal muster roll as proof of employment\n"
+        "* AND Employment Certificate in Form V(A) / V(B) / V(C) / V(D)\n"
+        "The documents must establish engagement in construction work for a minimum of 90 days in the preceding 12 months."
+    ),
+    "renewal": (
+        "## Scheme: Worker Renewal\n\n"
+        "### Renewal Overview\n"
+        "Renewal of registration is required to continue availing welfare benefits under the Board.\n\n"
+        "### Eligibility for Renewal\n"
+        "* 90 Days Work Requirement: The worker must have worked at least 90 days in the last 12 months.\n"
+        "* A valid 90 Days Work Certificate is mandatory.\n"
+        "* The certificate must be issued by a competent authority (Builder / Contractor / Engineer / Local Authority).\n"
+        "* Without a valid 90 Days Work Certificate, renewal cannot be approved.\n\n"
+        "### When Can Renewal Be Applied\n"
+        "After Registration Expiry:\n"
+        "* Renewal can be applied only after the registration has expired.\n"
+        "* Renewal is applicable for previously registered (Active) workers whose registration validity has lapsed.\n\n"
+        "Buffer Period (Grace Period):\n"
+        "* After the registration expiry, the worker enters a buffer period of 365 days (1 year) from the date of expiry.\n"
+        "* During this buffer period, the worker is eligible to apply for Renewal.\n\n"
+        "### Important Rule\n"
+        "* If the worker does not apply for renewal within 365 days from the expiry date, Renewal is not permitted.\n"
+        "* The worker must apply for New Registration again."
+    ),
+    "accident": (
+        "## Scheme: Accident Benefits\n\n"
+        "### Overview\n"
+        "Accident means an event which is sudden without any criminal intent and unforeseen resulting in Death or incapacitation.\n\n"
+        "### Claim & Benefits\n"
+        "* Rs.8 Lakh (Rupees Eight Lakh Only) for death.\n"
+        "* Rs.2 Lakh (Rupees Two Lakh only) for permanent total disablement.\n"
+        "* Rs.1 Lakh (Rupees One Lakh Only) for permanent partial disablement.\n"
+        "* Rs.2 lakhs compensation for accident during employment resulting in death.\n"
+        "* Up to Rs.2 lakhs for grievous injury during employment.\n\n"
+        "### Required Documents\n"
+        "* Photocopy of ID card attested by gazetted officer\n"
+        "* Photocopy of bank passbook\n"
+        "* Beneficiary/original Identity card\n"
+        "* Application in Form XXI or XXI-B\n"
+        "* Death Certificate (in case of death)\n"
+        "* Post mortem report\n"
+        "* FIR copy\n"
+        "* Medical report\n"
+        "* Employer Certificate\n"
+        "* Form XXI-A\n"
+        "* Application must be submitted within 1 year from the date of the accident"
+    ),
+    "delivery": (
+        "## Scheme: Delivery Assistance (Tayi Lakshmi Bond)\n\n"
+        "### Benefit\n"
+        "* Rs.50,000 financial assistance per delivery.\n"
+        "* Applicable only for the first two living children.\n\n"
+        "### Eligibility\n"
+        "* Must be a registered woman construction worker.\n"
+        "* Application must be submitted within 6 months of the child's birth.\n"
+        "* When applying for second child, affidavit required.\n\n"
+        "### Required Documents\n"
+        "* Proof of Identity / Smart card issued by the Board\n"
+        "* Proof of Bank Account\n"
+        "* Birth Certificate of Child\n"
+        "* Discharge Summary from hospital\n"
+        "* Photo of Child\n"
+        "* Employment Certificate\n"
+        "* Affidavit for second child (if necessary)"
+    ),
+    "pension": (
+        "## Scheme: Pension (Old Age Pension for Construction Workers)\n\n"
+        "### Benefit\n"
+        "* The amount of pension shall not exceed Rs.3,000 per month.\n\n"
+        "### Eligibility\n"
+        "* Every registered construction worker who has completed 60 years of age.\n"
+        "* Must have continued as a beneficiary of the Board for at least 3 years before the age of 60.\n"
+        "* Cannot avail similar benefit under any other Government schemes.\n\n"
+        "### Required Documents\n"
+        "* Original Identity Card issued by the Board\n"
+        "* Employer Certificate\n"
+        "* Ration Card\n"
+        "* Photocopy of bank passbook\n"
+        "* Passport size photo\n"
+        "* Living Certificate must be provided every year"
+    ),
+    "medical": (
+        "## Scheme: Medical Assistance\n\n"
+        "### Benefit\n"
+        "* Rs.300 per day of hospitalization.\n"
+        "* Maximum assistance up to Rs.20,000 for continuous hospitalization.\n\n"
+        "### Eligibility\n"
+        "* Must be a registered construction worker or their dependent.\n"
+        "* Hospitalization must be for a minimum of 48 Hours continuously.\n"
+        "* Application can be submitted within 6 months of hospitalization.\n\n"
+        "### Required Documents\n"
+        "* Proof of Identity / Smart card issued by the Board\n"
+        "* Employment Certificate\n"
+        "* Proof of Bank Account\n"
+        "* Bills showing admission and discharge dates\n"
+        "* Form XXII-A"
+    ),
+    "marriage": (
+        "## Scheme: Marriage Assistance\n\n"
+        "### Benefit\n"
+        "* Rs.60,000 assistance for marriage of worker or dependent children.\n\n"
+        "### Eligibility\n"
+        "* Minimum 1 year since registration to marriage date.\n"
+        "* Available only twice per family.\n"
+        "* Only one claim per marriage.\n"
+        "* Son/daughter must have attained legal age for marriage.\n"
+        "* Application within 6 months of marriage.\n\n"
+        "### Required Documents\n"
+        "* Identity card issued by the Board\n"
+        "* Employment Certificate\n"
+        "* Bank Account details\n"
+        "* Marriage Certificate by Registrar\n"
+        "* Marriage Invitation Card\n"
+        "* Affidavit (if marriage outside Karnataka)\n"
+        "* Ration Card"
+    ),
+    "funeral": (
+        "## Scheme: Funeral and Ex-Gratia\n\n"
+        "### Benefit\n"
+        "* Rs.1,46,000 for funeral expenses and ex-gratia to nominee.\n\n"
+        "### Required Documents\n"
+        "* Identity card issued by the Board\n"
+        "* Bank passbook of Nominee\n"
+        "* Death Certificate attested by gazetted officer\n"
+        "* Ration Card\n"
+        "* Aadhaar Card\n"
+        "* Employer Certificate\n"
+        "* Photo ID of Nominee\n"
+        "* Application within 1 year of death"
+    ),
+    "major ailment": (
+        "## Scheme: Assistance for Major Ailments (Karmika Chikitsa Bhagya)\n\n"
+        "### Benefit\n"
+        "* Up to Rs.2,00,000 for treatment of major ailments.\n\n"
+        "### Major ailments include:\n"
+        "Heart operation, COVID-19, kidney transformation, eye operation, paralysis, orthopedics, "
+        "uterus operation, asthma, maternity miscarriage, gall bladder, kidney stone, brain hemorrhage, "
+        "ulcer, cancer, dialysis, ENT surgery, neurosurgery, vascular surgery, hernia, appendicitis, fracture.\n\n"
+        "### Required Documents\n"
+        "* Proof of Identity / Smart card\n"
+        "* Employment Certificate\n"
+        "* Proof of Bank Account\n"
+        "* Hospital bills showing admission/discharge dates\n"
+        "* Form XXII-A\n"
+        "* Application within 6 months of hospitalization"
+    ),
+    "thayi magu": (
+        "## Scheme: Thayi Magu Sahaya Hasta (Nutritional Support)\n\n"
+        "### Benefit\n"
+        "* Rs.6,000 (at the rate of Rs.500 per month) for pre-school education & nutritional support.\n\n"
+        "### Eligibility\n"
+        "* Registered woman construction worker who has delivered a child.\n"
+        "* Available for 3 years from the date of delivery.\n"
+        "* Can be availed twice (first two children only).\n\n"
+        "### Required Documents\n"
+        "* Proof of Identity / Smart card\n"
+        "* Affidavit for second delivery\n"
+        "* Proof of Bank Account\n"
+        "* Photo of Child\n"
+        "* Employment Certificate\n"
+        "* Discharge Summary\n"
+        "* Birth Certificate of Child\n"
+        "* Child living Affidavit for 2nd and 3rd year"
+    ),
+    "disability": (
+        "## Scheme: Disability Pension & Ex-Gratia\n\n"
+        "### Benefits\n"
+        "* Rs.2,000 per month disability pension.\n"
+        "* Up to Rs.2,00,000 ex-gratia based on disability percentage.\n"
+        "* Formula: Rs.2,00,000 X Percentage of disability = Ex-gratia amount.\n\n"
+        "### Eligibility\n"
+        "* Beneficiary partially disabled due to disease or accident.\n"
+        "* Cannot avail if already received accident assistance.\n"
+        "* Must obtain ID card from Department for empowerment of differently abled.\n"
+        "* Pension discontinued at age 60.\n\n"
+        "### Required Documents\n"
+        "* Identity card issued by the Board\n"
+        "* Bank passbook\n"
+        "* Living Certificate every year\n"
+        "* Ration Card\n"
+        "* Employer Certificate\n"
+        "* Medical Report\n"
+        "* Disability ID card\n"
+        "* Application within 6 months from disability ID card issue"
+    ),
+}
+
+# Topic keyword → focused context key mapping
+_TOPIC_KEYWORDS: list[tuple[list[str], str]] = [
+    (["registration", "register", "ನೋಂದಣಿ"], "registration"),
+    (["renewal", "renew", "ನವೀಕರಣ"], "renewal"),
+    (["accident", "ಅಪಘಾತ"], "accident"),
+    (["delivery", "tayi lakshmi", "ಹೆರಿಗೆ"], "delivery"),
+    (["pension", "ಪಿಂಚಣಿ"], "pension"),
+    (["medical", "hospital", "ವೈದ್ಯಕೀಯ"], "medical"),
+    (["marriage", "wedding", "ಮದುವೆ"], "marriage"),
+    (["funeral", "death", "ಅಂತ್ಯಕ್ರಿಯೆ"], "funeral"),
+    (["major ailment", "ailment", "chikitsa", "ಕಾಯಿಲೆ"], "major ailment"),
+    (["thayi magu", "nutritional", "ತಾಯಿ ಮಗು"], "thayi magu"),
+    (["disability", "disabled", "ಅಂಗವಿಕಲ"], "disability"),
+]
+
+
+def _get_focused_context(message: str) -> str:
+    """Detect the topic from the question and return ONLY that section as context.
+
+    Falls back to full knowledge base if no topic is detected.
+    Devstral 24B can read ~2KB focused context but ignores 33KB full context.
+    """
+    msg = message.lower().strip()
+    for keywords, context_key in _TOPIC_KEYWORDS:
+        for kw in keywords:
+            if kw in msg:
+                print(f"[DEBUG] _get_focused_context: topic='{context_key}' detected from keyword '{kw}'")
+                return _FOCUSED_CONTEXTS[context_key]
+    print(f"[DEBUG] _get_focused_context: no topic detected, using full knowledge base")
+    return _FULL_KNOWLEDGE_BASE
+
 # ---------------------------------------------------------------------------
 # Exact response constants — returned directly by Python, never by the LLM.
 # These are language-independent: regardless of what language the user
@@ -1379,8 +1630,8 @@ async def answer(
                   "the scheme application. For new Labour, please Register and then apply for the scheme.")
         return _cap_answer_length(direct_section + footer)
 
-    # Fallback: use LLM with the FULL knowledge base as context.
-    context = _FULL_KNOWLEDGE_BASE
+    # Fallback: use LLM with FOCUSED topic context (not full 33KB).
+    context = _get_focused_context(question)
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
@@ -1516,8 +1767,8 @@ async def answer_stream(
         yield direct_section + footer
         return
 
-    # Fallback: use LLM with the FULL knowledge base as context.
-    context = _FULL_KNOWLEDGE_BASE
+    # Fallback: use LLM with FOCUSED topic context (not full 33KB).
+    context = _get_focused_context(question)
 
     if prefetched_user_data:
         # Authenticated GENERAL: RAG context + user data
