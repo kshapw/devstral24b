@@ -1,0 +1,35 @@
+
+--- Test Run at 2026-03-02 09:18:40.316209 ---
+Thread ID: thread-1772423287
+Sending Payload: {"message": "registration", "authToken": "", "userId": "", "language": "en"}
+Streaming response:
+Hello! I am Shrama Sahayak, your dedicated digital helper for working people. How can I assist you today?
+----------------------------------------
+
+--- Test Run at 2026-03-02 09:23:06.020642 ---
+Thread ID: thread-1772423552
+Sending Payload: {"message": "registration", "authToken": "", "userId": "", "language": "en"}
+Streaming response:
+
+----------------------------------------
+
+--- Test Run at 2026-03-02 09:23:48.311706 ---
+Thread ID: thread-1772423595
+Sending Payload: {"message": "registration", "authToken": "", "userId": "", "language": "en"}
+Normal response:
+{"message":"registration","reply":"To apply for a new labour card, you will need the following documents:\n- Aadhaar Card\n- Bank Passbook\n- Ration Card\n- 90 Days Work Certificate\n\nIMPORTANT: You must LOGIN to access this service.","options":[],"audioUrl":null}
+----------------------------------------
+
+--- Test Run at 2026-03-02 11:58:35.546795 ---
+Thread ID: thread-1772432882
+Sending Payload: {"message": "registration", "authToken": "", "userId": "", "language": "en"}
+Normal response:
+{"message":"registration","reply":"To apply for a new labour card, you will need the following documents:\n\n- Aadhaar Card\n- Bank Passbook\n- Ration Card\n- 90 Days Work Certificate\n\nIMPORTANT: You must LOGIN to access this service.","options":[],"audioUrl":null}
+----------------------------------------
+
+--- Test Run at 2026-03-02 12:00:44.562847 ---
+Thread ID: thread-1772433011
+Sending Payload: {"message": "registration", "authToken": "", "userId": "", "language": "en"}
+Normal response:
+{"message":"registration","reply":"Hello! I'm Shrama Sahayak, your digital helper for construction workers.\n\n**Worker Registration at Karmika Seva Kendra (KSK)**\n\n**What is it?**\nWorker registration is the process where you register as a construction worker to access various welfare benefits provided by the Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB).\n\n**Why should I register?**\nRegistering allows you to:\n- Get an official ID card\n- Access many welfare schemes and benefits\n- Protect your rights as a construction worker\n\n**Who can register?**\nAny construction worker who is 18 years or older and works in the unorganized sector.\n\n**What documents do I need?**\nYou will need:\n- Aadhaar card (or other valid ID proof)\n- Ration card (or other address proof)\n- Bank passbook/IFSC code\n- Passport size photo\n\n**How do I register?**\n1. Visit your nearest Karmika Seva Kendra (KSK) center.\n2. Ask for the registration form and fill it out with all required details.\n3. Submit the completed form along with the necessary documents.\n4. You will receive an acknowledgment slip. Keep this safe as you'll need it to collect your ID card.\n\n**Can I register online?**\nYes, you can also register online through the KBOCWWB web portal or mobile app.\n\n**What happens after registration?**\nOnce registered, you will receive a worker ID card within 15 days. This card is essential for accessing various welfare schemes and benefits.\n\n**Next Steps:**\n- Visit your nearest Karmika Seva Kendra (KSK) center to register in person.\n- Or register online through the KBOCWWB web portal or mobile app.\n\nIf the Labour is eligible and has all the required documents, please Login and submit the scheme application.\nFor new Labour, please Register and then apply for the scheme.","options":[],"audioUrl":null}
+----------------------------------------

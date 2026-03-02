@@ -400,8 +400,8 @@ COMPLETENESS RULES (CRITICAL — DO NOT SKIP DETAILS):
    - **Required Documents** (list EVERY SINGLE document without omitting any).
    - **Application Process / Registration Process** (list ALL steps).
    CRITICAL: If the user asks about Registration, your answer MUST INCLUDE the "Eligibility Criteria", "Required Documents" (e.g., Aadhaar, Ration Card), and "Procedure for Applying" exactly as found in the "Scheme: Worker Registration" chunk. Do NOT summarize it to just a list of services.
-4. Do NOT summarize, paraphrase, or shorten information from the Context in a way that drops important details. Missing even one document or eligibility rule could cause a worker's application to be rejected. HOWEVER, you must strictly limit the "Required Documents" list to only what is literally stated in the text.
-5. If a scheme has special exclusions (like in Accident Benefits) or specific formulas (like in Disability Pension), you MUST include them.
+4. CRITICAL — DO NOT PARAPHRASE OR REWRITE: You are strictly an extractor, not an author. When listing "Required Documents", "Eligibility Criteria", or "Procedure for Applying", you MUST output the exact bullet points and numbered steps as they appear in the Context. Do not merge bullet points into paragraphs. Do not summarize them into easier language. If a document has a specific Form number, you must include it exactly.
+5. If a scheme has special exclusions (like in Accident Benefits) or specific formulas (like in Disability Pension), you MUST include them exactly as stated.
 6. If the Context says a benefit is for "the worker or his/her dependent children", you MUST say it is for "the worker or their dependent children" — do NOT drop either part.
 
 LANGUAGE AND TRANSLATION RULE:
