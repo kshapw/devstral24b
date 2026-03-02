@@ -317,13 +317,19 @@ def _keyword_intent(message: str) -> str | None:
     # Greetings — short messages that are just greetings, bypass RAG
     if any(kw == msg_normalized or msg_normalized.startswith(kw + " ") or msg_normalized.startswith(kw + ",") for kw in _GREETING_KEYWORDS_NORM):
         return "GREETING"
-    # Registration — bypass LLM, return hardcoded ksk.md content
-    if any(kw == msg_normalized or kw in msg_normalized for kw in _REGISTRATION_KEYWORDS_NORM):
-        return "REGISTRATION"
-    # Renewal — bypass LLM, return hardcoded ksk.md content
-    if any(kw == msg_normalized or kw in msg_normalized for kw in _RENEWAL_KEYWORDS_NORM):
-        return "RENEWAL"
-    # Schemes list — bypass LLM, return hardcoded scheme list
+    # Registration — only for SHORT standalone queries like "Registration", "how to register"
+    # Longer specific questions like "how much to pay for registration" go to LLM
+    if len(msg_normalized) < 40 and any(kw == msg_normalized or kw in msg_normalized for kw in _REGISTRATION_KEYWORDS_NORM):
+        # Don't trigger if the message is a specific question (contains question words)
+        question_words = ["how much", "what is the", "when", "where", "can i", "do i need", "which", "is it"]
+        if not any(qw in msg_normalized for qw in question_words):
+            return "REGISTRATION"
+    # Renewal — same logic: only short standalone queries
+    if len(msg_normalized) < 40 and any(kw == msg_normalized or kw in msg_normalized for kw in _RENEWAL_KEYWORDS_NORM):
+        question_words = ["how much", "what is the", "when", "where", "can i", "do i need", "which", "is it"]
+        if not any(qw in msg_normalized for qw in question_words):
+            return "RENEWAL"
+    # Schemes list — only for generic "list all schemes" type queries
     if any(kw in msg_normalized for kw in _SCHEMES_KEYWORDS_NORM) or msg_normalized in ["schemes", "scheme"]:
         return "SCHEMES_LIST"
     return None
