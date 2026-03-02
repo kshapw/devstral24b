@@ -26,15 +26,24 @@ _FULL_KNOWLEDGE_BASE: str = ""
 try:
     import pathlib
     _kb_path = pathlib.Path(settings.DATA_PATH)
+    # If relative path, resolve from project root (parent of app/ directory)
+    if not _kb_path.is_absolute():
+        _project_root = pathlib.Path(__file__).resolve().parent.parent
+        _kb_path = _project_root / _kb_path
+    print(f"[STARTUP] Knowledge base path: {_kb_path}")
+    print(f"[STARTUP] Path exists: {_kb_path.exists()}")
     if _kb_path.exists():
         _FULL_KNOWLEDGE_BASE = _kb_path.read_text(encoding="utf-8")
+        print(f"[STARTUP] Loaded knowledge base: {len(_FULL_KNOWLEDGE_BASE)} chars, ~{len(_FULL_KNOWLEDGE_BASE) // 4} tokens")
         logger.info(
             "Loaded full knowledge base from %s (%d chars, ~%d tokens)",
             _kb_path, len(_FULL_KNOWLEDGE_BASE), len(_FULL_KNOWLEDGE_BASE) // 4,
         )
     else:
+        print(f"[STARTUP] ERROR: Knowledge base file NOT FOUND at: {_kb_path}")
         logger.error("Knowledge base file not found: %s", _kb_path)
-except Exception:
+except Exception as e:
+    print(f"[STARTUP] ERROR loading knowledge base: {e}")
     logger.error("Failed to load knowledge base", exc_info=True)
 
 # ---------------------------------------------------------------------------
@@ -73,6 +82,8 @@ def _parse_kb_sections(text: str) -> dict[str, str]:
 
 
 _KB_SECTIONS: dict[str, str] = _parse_kb_sections(_FULL_KNOWLEDGE_BASE)
+print(f"[STARTUP] Parsed {len(_KB_SECTIONS)} sections from knowledge base")
+print(f"[STARTUP] Section keys: {list(_KB_SECTIONS.keys())}")
 logger.info("Parsed %d sections from knowledge base: %s", len(_KB_SECTIONS), list(_KB_SECTIONS.keys()))
 
 # Keyword → section key mapping for direct responses
@@ -143,16 +154,23 @@ def _find_direct_section(message: str) -> str | None:
             "For detailed information about any specific scheme, please ask about it by name."
         )
 
+    print(f"[DEBUG] _find_direct_section called with msg='{msg}', _KB_SECTIONS has {len(_KB_SECTIONS)} keys")
+
     for keywords, section_key in _DIRECT_RESPONSE_MAP:
         for kw in keywords:
             if kw in msg or msg in kw:
+                print(f"[DEBUG]   Keyword '{kw}' matched! Looking for section_key='{section_key}'")
                 # Find the section (try exact key, then partial match)
                 if section_key in _KB_SECTIONS:
+                    print(f"[DEBUG]   Found exact section key, returning {len(_KB_SECTIONS[section_key])} chars")
                     return _KB_SECTIONS[section_key]
                 # Partial match on section keys
                 for sk, content in _KB_SECTIONS.items():
                     if section_key in sk or sk in section_key:
+                        print(f"[DEBUG]   Found partial section key '{sk}', returning {len(content)} chars")
                         return content
+                print(f"[DEBUG]   WARNING: keyword matched but section_key '{section_key}' NOT found in _KB_SECTIONS!")
+    print(f"[DEBUG]   No keyword match found, falling through to LLM")
     return None
 
 # ---------------------------------------------------------------------------
