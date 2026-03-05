@@ -1,30 +1,30 @@
 HARDCODED_RESPONSES = {
     "registration": {
-        "en": """## Application for Registration as a Beneficiary
+        "en": """ Application for Registration as a Beneficiary
 **Karnataka Building and Other Construction Workers Welfare Board**
 
-### Eligibility: 
+ Eligibility: 
 Applicants must satisfy the eligibility criteria as prescribed in the guidelines. 
 
-### Required Supporting Documents: 
+ Required Supporting Documents: 
 - Employment Certificate – Form V(A) / V(B) / V(C) / V(D) 
 - Aadhaar Card  
 - Ration Card (Optional) 
 
-### Fee Details: 
+ Fee Details: 
 - **Application Fee:** ₹100 
 
-### Service Delivery Timeline: 
+ Service Delivery Timeline: 
 - 15 days 
 
-### Application Process: 
+ Application Process: 
 1. The applicant should submit the application along with the required supporting documents. 
 2. The submitted application will be reviewed and verified by the Registering Authority (Senior Labour Inspector / Labour Inspector). 
 3. Upon successful verification, the application will be approved and the applicant will be registered as a beneficiary under the Board. 
 
 If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """## ಕರ್ನಾಟಕ ಕಟ್ಟಡ ಮತ್ತು ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರ ಕಲ್ಯಾಣ ಮಂಡಳಿಯಲ್ಲಿ ಫಲಾನುಭವಿಯಾಗಿ ನೋಂದಾಯಿಸುವ ಅರ್ಜಿ
+        "kn": """ ಕರ್ನಾಟಕ ಕಟ್ಟಡ ಮತ್ತು ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರ ಕಲ್ಯಾಣ ಮಂಡಳಿಯಲ್ಲಿ ಫಲಾನುಭವಿಯಾಗಿ ನೋಂದಾಯಿಸುವ ಅರ್ಜಿ
 
 **ಅರ್ಹತೆ:** ಮಾರ್ಗಸೂಚಿಗಳನ್ನು ಅನುಸರಿಸುವುದು 
 
@@ -46,7 +46,7 @@ If the Labour is eligible and has all the required documents, please Login and s
     },
     
     "schemes_list": {
-        "en": """## Available Welfare Schemes under KBOCWWB 
+        "en": """ Available Welfare Schemes under KBOCWWB 
 
 The following welfare schemes and their benefits are available for registered construction workers: 
 
@@ -72,7 +72,7 @@ The following welfare schemes and their benefits are available for registered co
 
 If the labour is eligible and has all the required documents, please log in and submit the scheme application. For new labour, please do register and then apply for the scheme.
 """,
-        "kn": """## KBOCWWB ಅಡಿಯಲ್ಲಿ ಲಭ್ಯವಿರುವ ಯೋಜನೆಗಳು 
+        "kn": """ KBOCWWB ಅಡಿಯಲ್ಲಿ ಲಭ್ಯವಿರುವ ಯೋಜನೆಗಳು 
 
 ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಮತ್ತು ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರಿಗೆ ಕೆಳಗಿನ ಕಲ್ಯಾಣ ಯೋಜನೆಗಳು ಮತ್ತು ಅವುಗಳ ಪ್ರಯೋಜನಗಳು ಲಭ್ಯವಿವೆ: 
 
@@ -106,7 +106,7 @@ If the labour is eligible and has all the required documents, please log in and 
     },
 
     "accident": {
-        "en": """## Accident Assistance 
+        "en": """ Accident Assistance 
 
 **FEE:** There is no application fee for Accident Benefits. 
 
@@ -141,7 +141,7 @@ If you need more details, feel free to ask!
 
 If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """## ಅಪಘಾತ ಸಹಾಯಧನ 
+        "kn": """ ಅಪಘಾತ ಸಹಾಯಧನ 
 
 **ಶುಲ್ಕ:** ಅಪಘಾತ ಪರಿಹಾರಕ್ಕಾಗಿ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ. ಅರ್ಜಿಯನ್ನು ಅಪಘಾತದ ದಿನಾಂಕದಿಂದ 1 ವರ್ಷದೊಳಗೆ ಸಲ್ಲಿಸಬೇಕು. 
 
@@ -177,7 +177,7 @@ If the Labour is eligible and has all the required documents, please Login and s
     },
 
     "major ailment": {
-        "en": """## Assistance for Major Ailments 
+        "en": """ Assistance for Major Ailments 
 
 **FEE:** There is no application fee for Assistance for Major Ailments. 
 
@@ -203,7 +203,7 @@ Application must be submitted within 6 months of hospitalization.
 
 If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """## ಪ್ರಮುಖ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ 
+        "kn": """ ಪ್ರಮುಖ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ 
 
 **ಫೀ:** ಪ್ರಮುಖ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ.  
 
@@ -232,7 +232,7 @@ If the Labour is eligible and has all the required documents, please Login and s
     },
 
     "thayi magu": {
-        "en": """## Thayi Magu Sahaya Hasta 
+        "en": """ Thayi Magu Sahaya Hasta 
 
 **FEE:** There is no application fee for Thayi Magu Sahaya Hasta.  
 
@@ -264,7 +264,7 @@ If you need more details, feel free to ask!
 
 If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """## ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ 
+        "kn": """ ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ 
 
 **ಫೀ:** ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತಕ್ಕಾಗಿ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ.  
 
@@ -298,7 +298,7 @@ If the Labour is eligible and has all the required documents, please Login and s
     },
 
     "delivery": {
-        "en": """## Delivery Assistance 
+        "en": """ Delivery Assistance 
 
 **FEE:** There is no application fee for Delivery Assistance.  
 
@@ -329,7 +329,7 @@ If you need more details, feel free to ask!
 
 If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """## ಹೆರಿಗೆ ಸೌಲಭ್ಯ ಸಹಾಯಧನ 
+        "kn": """ ಹೆರಿಗೆ ಸೌಲಭ್ಯ ಸಹಾಯಧನ 
 
 **ಫೀ:** ಹೆರಿಗೆ ಸೌಲಭ್ಯಕ್ಕಾಗಿ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ.  
 
@@ -364,7 +364,7 @@ If the Labour is eligible and has all the required documents, please Login and s
     },
 
     "medical": {
-        "en": """## Medical Assistance 
+        "en": """ Medical Assistance 
 
 **FEE:** There is no application fee for Medical Assistance.  
 
@@ -392,7 +392,7 @@ If you need more details, feel free to ask!
 
 If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """## ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ 
+        "kn": """ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ 
 
 **ಫೀ:** ವೈದ್ಯಕೀಯ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ.  
 
@@ -421,7 +421,7 @@ If the Labour is eligible and has all the required documents, please Login and s
     },
 
     "disability": {
-        "en": """## Disability Pension and Ex-Gratia 
+        "en": """ Disability Pension and Ex-Gratia 
 
 **FEE:** There is no application fee for Disability Pension.  
 
@@ -448,14 +448,14 @@ If the Labour is eligible and has all the required documents, please Login and s
 
 **TIMELINE:** Pension is provided monthly after approval. Annual Living Certificate required for continuation.  
 
-### Continuation of Disability Pension
+ Continuation of Disability Pension
 - Continuation of Rs. 3,000 per month disability pension subject to submission of the required living certificate every year.
 
 If you need more details, feel free to ask!  
 
 If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """## ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ 
+        "kn": """ ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ 
 
 **ಫೀ:** ದುರ್ಬಲತೆ ಪಿಂಚಣಿಗಾಗಿಯೂ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ.  
 
@@ -482,7 +482,7 @@ If the Labour is eligible and has all the required documents, please Login and s
 
 **ಕಾಲಾವಧಿ:** ಅನುಮೋದನೆಯ ನಂತರ ಪಿಂಚಣಿ ತಿಂಗಳಿಗೊಮ್ಮೆ ನೀಡಲಾಗುತ್ತದೆ. ಮುಂದುವರಿಕೆಗಾಗಿ ವಾರ್ಷಿಕ ಜೀವಂತತಾ ಪ್ರಮಾಣಪತ್ರ ಅಗತ್ಯ. 
 
-### ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ
+ ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ
 - ಅಗತ್ಯವಿರುವ ಜೀವಂತಿಕೆ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪ್ರತಿ ವರ್ಷ ಸಲ್ಲಿಸಿದಲ್ಲಿ ತಿಂಗಳಿಗೆ ₹3,000 ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಸಲಾಗುತ್ತದೆ.
 
 ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
@@ -490,7 +490,7 @@ If the Labour is eligible and has all the required documents, please Login and s
     },
 
     "pension": {
-        "en": """## Old Age Pension 
+        "en": """ Old Age Pension 
 
 **FEE:** There is no application fee for Old Age Pension.  
 
@@ -514,14 +514,14 @@ If the Labour is eligible and has all the required documents, please Login and s
 
 **TIMELINE:** Pension is provided monthly after approval. Annual Living Certificate required for continuation.  
 
-### Continuation of Pension
+ Continuation of Pension
 Annual continuation is required, and the Living Certificate must be submitted every December to continue receiving the pension up to Rs. 3,000 per month.
 
 If you need more details, feel free to ask!  
 
 If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """## ಪಿಂಚಣಿ 
+        "kn": """ ಪಿಂಚಣಿ 
 
 **ಫೀ:** ಪಿಂಚಣಿ ಯೋಜನೆಯ ಅರ್ಜಿಗೆ ಯಾವುದೇ ಶುಲ್ಕವಿಲ್ಲ.  
 
@@ -545,7 +545,7 @@ If the Labour is eligible and has all the required documents, please Login and s
 
 **ಕಾಲಾವಧಿ:** ಅನುಮೋದನೆಯ ನಂತರ ಪಿಂಚಣಿ ತಿಂಗಳಿಗೊಮ್ಮೆ ನೀಡಲಾಗುತ್ತದೆ. ಮುಂದುವರಿಕೆಗೆ ವಾರ್ಷಿಕ ಜೀವಂತತೆ ಪ್ರಮಾಣಪತ್ರ ಅಗತ್ಯ. 
 
-### ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ
+ ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ
 - ಅರ್ಹ ಕಾರ್ಮಿಕರಿಗೆ ತಿಂಗಳಿಗೆ ಗರಿಷ್ಠ ₹3,000 ಪಿಂಚಣಿ ಮುಂದುವರಿಸಲು ಪ್ರತಿ ವರ್ಷ ಡಿಸೆಂಬರ್ ತಿಂಗಳಲ್ಲಿ ಜೀವಂತಿಕೆ ಪ್ರಮಾಣಪತ್ರ ಸಲ್ಲಿಸುವುದು ಕಡ್ಡಾಯ.
 
 ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
@@ -553,7 +553,7 @@ If the Labour is eligible and has all the required documents, please Login and s
     },
 
     "marriage": {
-        "en": """## Marriage Assistance 
+        "en": """ Marriage Assistance 
 
 **FEE:** There is no application fee for Marriage Assistance.  
 
@@ -585,7 +585,7 @@ If you need more details, feel free to ask!
 
 If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """## ವಿವಾಹ ಸಹಾಯಧನ 
+        "kn": """ ವಿವಾಹ ಸಹಾಯಧನ 
 
 **ಫೀ:** ವಿವಾಹ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವಿಲ್ಲ.  
 
@@ -620,7 +620,7 @@ If the Labour is eligible and has all the required documents, please Login and s
     },
 
     "funeral": {
-        "en": """## Funeral and Ex-Gratia 
+        "en": """ Funeral and Ex-Gratia 
 
 **FEE:** There is no application fee for Funeral and Ex-Gratia.  
 
@@ -649,7 +649,7 @@ If you need more details, feel free to ask!
 
 If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """## ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನ 
+        "kn": """ ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನ 
 
 **ಫೀ:** ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವಿಲ್ಲ.  
 

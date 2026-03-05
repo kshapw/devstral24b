@@ -138,7 +138,7 @@ def _find_direct_section(message: str) -> str | None:
     ]
     if any(kw in msg for kw in _SCHEME_LIST_KEYWORDS) or msg in ["schemes", "scheme"]:
         return (
-            "# Available Welfare Schemes under KBOCWWB\n\n"
+            "Available Welfare Schemes under KBOCWWB\n\n"
             "The following welfare schemes are available for registered construction workers:\n\n"
             "1. **Accident Benefits** — Up to ₹8 Lakh for death, ₹2 Lakh for permanent total disablement, ₹1 Lakh for partial disablement\n"
             "2. **Assistance for Major Ailments (Karmika Chikitsa Bhagya)** — Up to ₹2,00,000 for treatment of major ailments\n"
@@ -1603,42 +1603,42 @@ async def answer(
         lang_key = "kn" if language == "kn" else "en"
         return HARDCODED_RESPONSES["registration"][lang_key].strip()
 
-    # RENEWAL — hardcoded response, no LLM (kept inline since user didn't provide new text)
+    # RENEWAL — hardcoded response from ksk.md, no LLM (kept inline since user didn't provide new text)
     if intent == "RENEWAL":
         if language == "kn":
-            return ("## ಕಾರ್ಮಿಕ ನವೀಕರಣ\n\n"
-                    "### ನವೀಕರಣ ಅವಲೋಕನ\n"
+            return ("ಕಾರ್ಮಿಕ ನವೀಕರಣ\n\n"
+                    "ನವೀಕರಣ ಅವಲೋಕನ\n"
                     "ಮಂಡಳಿಯ ಅಡಿಯಲ್ಲಿ ಕಲ್ಯಾಣ ಸೌಲಭ್ಯಗಳನ್ನು ಮುಂದುವರಿಸಲು ನೋಂದಣಿ ನವೀಕರಣ ಅಗತ್ಯ.\n\n"
-                    "### ನವೀಕರಣಕ್ಕೆ ಅರ್ಹತೆ\n"
+                    "ನವೀಕರಣಕ್ಕೆ ಅರ್ಹತೆ\n"
                     "- 90 ದಿನಗಳ ಕೆಲಸದ ಅವಶ್ಯಕತೆ: ಕಳೆದ 12 ತಿಂಗಳಲ್ಲಿ ಕನಿಷ್ಠ 90 ದಿನಗಳ ಕೆಲಸ ಮಾಡಿರಬೇಕು\n"
                     "- ಮಾನ್ಯ 90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ ಕಡ್ಡಾಯ\n"
                     "- ಪ್ರಮಾಣಪತ್ರವನ್ನು ಸಕ್ಷಮ ಪ್ರಾಧಿಕಾರ (ಬಿಲ್ಡರ್/ಗುತ್ತಿಗೆದಾರ/ಎಂಜಿನಿಯರ್/ಸ್ಥಳೀಯ ಪ್ರಾಧಿಕಾರ) ನೀಡಬೇಕು\n\n"
-                    "### ನವೀಕರಣ ಯಾವಾಗ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು\n"
+                    "ನವೀಕರಣ ಯಾವಾಗ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು\n"
                     "- ನೋಂದಣಿ ಅವಧಿ ಮುಗಿದ ನಂತರ ಮಾತ್ರ ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು\n"
                     "- ಬಫರ್ ಅವಧಿ: ಅವಧಿ ಮುಗಿದ ದಿನಾಂಕದಿಂದ 365 ದಿನಗಳು (1 ವರ್ಷ)\n"
                     "- 365 ದಿನಗಳ ಒಳಗೆ ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸದಿದ್ದರೆ, ಹೊಸ ನೋಂದಣಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು\n\n"
                     "ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದರೆ ಮತ್ತು ಎಲ್ಲಾ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನು ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಆಗಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.")
         else:
-            return ("## Scheme: Worker Renewal\n\n"
-                    "### Renewal Overview\n"
+            return ("Scheme: Worker Renewal\n\n"
+                    "Renewal Overview\n"
                     "Renewal of registration is required to continue availing welfare benefits under the Board.\n\n"
-                    "### Eligibility for Renewal\n"
+                    "Eligibility for Renewal\n"
                     "A registered construction worker can apply for Renewal subject to the following conditions:\n"
                     "- **90 Days Work Requirement:** The worker must have worked at least 90 days in the last 12 months.\n"
                     "- A valid 90 Days Work Certificate is mandatory.\n"
                     "- The certificate must be issued by a competent authority (Builder / Contractor / Engineer / Local Authority).\n"
                     "- Without a valid 90 Days Work Certificate, renewal cannot be approved.\n\n"
-                    "### When Can Renewal Be Applied\n"
-                    "**After Registration Expiry:**\n"
+                    "When Can Renewal Be Applied\n"
+                    "After Registration Expiry:\n"
                     "- Renewal can be applied only after the registration has expired.\n"
                     "- Renewal is applicable for previously registered (Active) workers whose registration validity has lapsed.\n\n"
-                    "**Buffer Period (Grace Period):**\n"
+                    "Buffer Period (Grace Period):\n"
                     "- After the registration expiry, the worker enters a buffer period of 365 days (1 year) from the date of expiry.\n"
                     "- During this buffer period, the worker is eligible to apply for Renewal.\n\n"
-                    "### Important Rule\n"
+                    "Important Rule\n"
                     "- If the worker does not apply for renewal within 365 days from the expiry date, Renewal is not permitted.\n"
                     "- The worker must apply for New Registration again.\n\n"
-                    "### Please Check\n"
+                    "Please Check\n"
                     "- Can only apply after Expiry date.\n"
                     "- Buffer period calculation (Expiry Date + 365 days).\n"
                     "- 90 Days Work Certificate (last 12 months).\n"
