@@ -1,679 +1,1126 @@
 HARDCODED_RESPONSES = {
     "registration": {
-        "en": """ Application for Registration as a Beneficiary
-**Karnataka Building and Other Construction Workers Welfare Board**
+        "en": """Application for Registration as a Beneficiary 
 
- Eligibility: 
+Eligibility: 
 Applicants must satisfy the eligibility criteria as prescribed in the guidelines. 
 
- Required Supporting Documents: 
-- Employment Certificate – Form V(A) / V(B) / V(C) / V(D) 
-- Aadhaar Card  
-- Ration Card (Optional) 
+Required Supporting Documents: 
 
- Fee Details: 
-- **Application Fee:** ₹100 
+Employment Certificate – Form V(A) / V(B) / V(C) / V(D) 
 
- Service Delivery Timeline: 
-- 15 days 
+Aadhaar Card  
 
- Application Process: 
-1. The applicant should submit the application along with the required supporting documents. 
-2. The submitted application will be reviewed and verified by the Registering Authority (Senior Labour Inspector / Labour Inspector). 
-3. Upon successful verification, the application will be approved and the applicant will be registered as a beneficiary under the Board. 
+Ration Card (Optional) 
 
-If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
+Fee Details: Application Fee: ₹100 
+
+Service Delivery Timeline: 15 days 
+
+Application Process: 
+
+The applicant should submit the application along with the required supporting documents. 
+
+The submitted application will be reviewed and verified by the Registering Authority (Senior Labour Inspector / Labour Inspector). 
+
+Upon successful verification, the application will be approved and the applicant will be registered as a beneficiary under the Board.
 """,
-        "kn": """ ಕರ್ನಾಟಕ ಕಟ್ಟಡ ಮತ್ತು ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರ ಕಲ್ಯಾಣ ಮಂಡಳಿಯಲ್ಲಿ ಫಲಾನುಭವಿಯಾಗಿ ನೋಂದಾಯಿಸುವ ಅರ್ಜಿ
+        "kn": """ಕರ್ನಾಟಕ ಕಟ್ಟಡ ಮತ್ತು ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರ  ಕಲ್ಯಾಣ ಮಂಡಳಿ (KBOCWWB) 
 
-**ಅರ್ಹತೆ:** ಮಾರ್ಗಸೂಚಿಗಳನ್ನು ಅನುಸರಿಸುವುದು 
+ಫಲಾನುಭವಿಯಾಗಿ ನೋಂದಾಯಿಸುವ ಅರ್ಜಿಯ ಬಗ್ಗೆ - 
 
-**ಪೂರಕ ದಾಖಲಾತಿಗಳು:** 
-1. ಉದ್ಯೋಗ ದೃಡೀಕರಣ ಪತ್ರ (ನಮೂನೆ V(A) / V(B) / V(C)/ V(D)) 
-2. ಆಧಾರ್ ಕಾರ್ಡ್ (ಸ್ವಯಂ ದೃಡೀಕೃತ ಪ್ರತಿ) 
-3. ರೇಷನ್ ಕಾರ್ಡ್ (ಕಡ್ಡಾಯವಲ್ಲ) 
-4. ವಯಸ್ಸಿನ ದೃಡೀಕರಣ ಪತ್ರ (ಯಾವುದಾದರೊಂದು ಆಧಾರ್ ಕಾರ್ಡ್, ಗುರುತಿನ ಚೀಟಿ) 
+ಅರ್ಹತೆ: ಮಾರ್ಗಸೂಚಿಗಳನ್ನುಅನುಸರಿಸುವುದು 
+ಪೂರಕ ದಾಖಲಾತಿಗಳು: 
+1. ಉದ್ಯೋಗದೃಡೀಕರಣಪತ್ರ (ನಮೂನೆ V(A) / V(B) / V(C)/ V(D)) 
+2. ಆಧಾರ್  ಕಾರ್ಡ್  (ಸ್ವಯಂ ದೃಡೀಕೃತ ಪ್ರತಿ) 
+4. ರೇಷನ್ಕಾರ್ಡ್(non-Mandatory) 
+5. ವಯಸ್ಸಿನದೃಡೀಕರಣಪತ್ರ (ಯಾವುದಾದರೊಂದು ಆಧಾರ್  ಕಾರ್ಡ್ ,ಗುರುತಿನಚೀಟಿ) 
 
-- **ಅರ್ಜಿ ಶುಲ್ಕ:** Rs.100 
-- **ವಿತರಣಾ ಸಮಯ (ದಿನಗಳು):** 15 Days 
+ಅರ್ಜಿ ಶುಲ್ಕ : Rs.100 
+ವಿತರಣಾ ಸಮಯ (ದಿನಗಳು): 15 Days 
 
-**ಅನ್ವಯಿಸುವ ವಿಧಾನ:** 
-1. ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು 
-2. ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ ಮತ್ತು ಅನುಮೋದನೆ 
-
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದರೆ ಮತ್ತು ಎಲ್ಲಾ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನು ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಆಗಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ದಯವಿಟ್ಟು ನೋಂದಾಯಿಸಿ ತದನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+ಅನ್ವಯಿಸುವ ವಿಧಾನ: 
+1. ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು. 
+2. ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ ಮತ್ತು ಅನುಮೋದನೆ
 """
     },
-    
+
+    "renewal": {
+        "en": """Karnataka Building & Other Construction Workers Welfare Board (KBOCWWB) 
+
+Overview of Renewal of Registration 
+
+Renewal of registration is required to continue availing welfare benefits in the Board.  
+
+Eligibility for Renewal - 
+
+A registered construction worker can apply for Renewal subject to the following conditions:  
+
+90 Days Work Requirement,  
+
+The worker must have worked at least 90 days in the last 12 months.  
+
+A valid 90 Days Work Certificate is mandatory.  
+
+The certificate must be issued by a competent authority (Builder / Contractor / Engineer / Local Authority).  
+
+Without a valid 90 Days Work Certificate, renewal cannot be approved.  
+
+When Can Renewal Be Applied - 
+
+After Registration Expiry  
+
+Renewal can be applied only after the registration has expired.  
+
+Renewal is applicable for previously registered (Active) workers whose registration validity lapsed.  
+
+Buffer Period - 
+
+After the registration expiry: 
+
+The worker enters a buffer period of 365 days (1 year) from the date of expiry.  
+
+During this buffer period, the worker is eligible to apply for Renewal.  
+
+Important Rule: 
+
+If the worker does not apply for renewal within 365 days from the expiry date, Renewal is not permitted.  
+
+The worker must apply for New Registration again.  
+
+Note: 
+
+Can only apply for new Registration after Expiry date.  
+
+Buffer period calculation (Expiry Date + 365 days).  
+
+90 Days Work Certificate (last 12 months).  
+
+Check Duplicate active membership.  
+
+Aadhaar-based authentication.
+""",
+        "kn": """ಕರ್ನಾಟಕ ಕಟ್ಟಡ ಮತ್ತು ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರ ಕಲ್ಯಾಣ ಮಂಡಳಿ (KBOCWWB) 
+
+ಫಲಾನುಭವಿಗಳ ನೋಂದಣಿಯನ್ನು ನವೀಕರಿಸುವ ಕುರಿತ ವಿವರಣೆ 
+
+ಮಂಡಳಿಯಲ್ಲಿ ನೀಡಲಾಗುವ ವಿವಿಧ ಕಲ್ಯಾಣ ಸೌಲಭ್ಯಗಳನ್ನು ಮುಂದುವರಿಸಿಕೊಂಡು ಹೋಗಲು ಫಲಾನುಭವಿಗಳು ನೋಂದಣಿಯನ್ನ ನವೀಕರಣ (Renewal) ಮಾಡುವುದು ಅಗತ್ಯವಾಗಿದೆ. 
+
+ನವೀಕರಣಕ್ಕೆ ಇರಬೇಕಾದ ಅರ್ಹತೆಗಳು - 
+
+ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕರು ಕೆಳಗಿನ ಷರತ್ತುಗಳನ್ನು ಪೂರೈಸಿದಲ್ಲಿ ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು: 
+
+90 ದಿನಗಳ ಕೆಲಸ ನಿರ್ವಹಿಸಿರುವ ಕುರಿತ 
+
+ಕಾರ್ಮಿಕರು ಕಳೆದ 12 ತಿಂಗಳಲ್ಲಿ ಕನಿಷ್ಠ 90 ದಿನಗಳ ಕಾಲ ನಿರ್ಮಾಣ ಕಾರ್ಯದಲ್ಲಿ ಕೆಲಸ ಮಾಡಿರಬೇಕು. 
+
+ಕೆಲಸ ನಿರ್ವಹಿಸಿದ 90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ ಸಲ್ಲಿಸುವುದು ಕಡ್ಡಾಯವಾಗಿದೆ. 
+
+ಈ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಸಂಬಂಧಪಟ್ಟ ಬಿಲ್ಡರ್ / ಗುತ್ತಿಗೆದಾರ / ಇಂಜಿನಿಯರ್ / ಸ್ಥಳೀಯ ಪ್ರಾಧಿಕಾರ ನೀಡಿರಬೇಕು. 
+
+90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರವಿಲ್ಲದೆ ನವೀಕರಣವನ್ನು ಅನುಮೋದಿಸಲಾಗುವುದಿಲ್ಲ. 
+
+ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿಯನ್ನು ಯಾವಾಗ ಸಲ್ಲಿಸಬೇಕು - 
+
+ನೋಂದಣಿಯ ಅವಧಿ ಮುಗಿದ ನಂತರ ಮಾತ್ರ ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು. 
+
+ಬಫರ್ ಅವಧಿ (Buffer Period) - 
+
+ನೋಂದಣಿಯ ಅವಧಿ ಮುಗಿದ ನಂತರ: 
+
+ಕಾರ್ಮಿಕರಿಗೆ ಅವಧಿ ಮುಗಿದ ದಿನಾಂಕದಿಂದ 365 ದಿನಗಳು (1 ವರ್ಷ) ಬಫರ್ ಅವಧಿಯು ಲಭ್ಯವಿರುತ್ತದೆ. 
+
+ಈ ಬಫರ್ ಅವಧಿಯೊಳಗೆ ಕಾರ್ಮಿಕರು ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಲು ಅರ್ಹರಾಗಿರುತ್ತಾರೆ. 
+
+ಮುಖ್ಯವಾದ ಅಂಶಗಳು: 
+
+ಕಾರ್ಮಿಕರು ಅವಧಿ ಮುಗಿದ ದಿನಾಂಕದಿಂದ 365 ದಿನಗಳೊಳಗೆ ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸದಿದ್ದರೆ, ನವೀಕರಣಕ್ಕೆ ಅವಕಾಶ ಇರುವುದಿಲ್ಲ. 
+
+ಆ ಸಂದರ್ಭದಲ್ಲಿ ಕಾರ್ಮಿಕರು ಹೊಸ ನೋಂದಣಿಗೆ (New Registration) ಮತ್ತೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು. 
+
+ಸೂಚನೆಗಳು: 
+
+ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸುವುದು ನೋಂದಣಿಯ ಅವಧಿ ಮುಗಿದ ನಂತರ ಮಾತ್ರ ಸಾಧ್ಯ. 
+
+ಬಫರ್ ಅವಧಿ ಲೆಕ್ಕಾಚಾರ: (Expiry Date + 365 ದಿನಗಳು). 
+
+ಕಳೆದ 12 ತಿಂಗಳ 90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ ಸಲ್ಲಿಸಬೇಕು. 
+
+ಎರಡು ಸಕ್ರಿಯ ಸದಸ್ಯತ್ವವನ್ನು (Duplicate Active Membership) ಹೊಂದಿಲ್ಲದಿರುವುದನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತದೆ. 
+
+ಆಧಾರ್ ಆಧಾರಿತ ದೃಢೀಕರಣವು (Aadhaar-based authentication) ಅಗತ್ಯವಿದೆ.
+"""
+    },
+
     "schemes_list": {
-        "en": """ Available Welfare Schemes under KBOCWWB 
+        "en": """Available Welfare Schemes under KBOCWWB 
 
 The following welfare schemes and their benefits are available for registered construction workers: 
 
-1. **Accident Assistance** – Rs. 8 lakh for death (at workplace), Rs. 5 lakh for death (outside the workplace), Rs. 2 lakh for permanent total disability, and Rs. 1 lakh for partial disability. 
-2. **Assistance for Major Ailments** – Up to Rs. 2,00,000 for treatment of major ailments. 
-3. **Thayi Magu Sahaya Hasta** – Rs. 6,000 (Rs. 500 per month) for pre-school education and nutritional support. 
-4. **Delivery Assistance** – Rs. 50,000 per delivery (applicable for the first two living children only). 
-5. **Medical Assistance** – Rs. 300 per day during hospitalization, up to a maximum of Rs. 20,000 (minimum 48 hours of hospitalization required). 
-6. **Disability Pension and Ex-Gratia** – Rs. 2,000 per month disability pension along with ex-gratia up to Rs. 2,00,000. 
-7. **Continuation of Disability Pension** – Continuation of Rs. 2,000 per month disability pension subject to submission of the required living certificate. 
-8. **Pension** – Up to Rs. 3,000 per month for workers who have completed 60 years of age. 
-9. **Continuation of Pension** – Up to Rs. 3,000 per month for eligible workers. Annual continuation is required, and the Living Certificate must be submitted every December. 
-10. **Marriage Assistance** – Rs. 60,000 for the marriage of the worker or dependent children (maximum twice per family). 
-11. **Funeral and Ex-Gratia** – Rs. 4,000 for funeral expenses and Rs. 1,46,000 ex-gratia assistance to the nominee of the deceased registered construction worker (application must be submitted within one year of death). 
+Accident Assistance – Rs. 8 lakh for death (at workplace), Rs. 5 lakh for death (outside the workplace), Rs. 2 lakh for permanent total disability, and Rs. 1 lakh for partial disability. 
 
-**Important:** 
-- If the death is due to an accident, beneficiaries should first avail the Accident Assistance and Medical Assistance (if applicable) schemes before applying for Funeral Assistance. 
-- For deaths on or after 16-07-2025, the eligible amount is Rs. 1,50,000; for deaths before 16-07-2025, the eligible amount is Rs. 75,000. 
+Assistance for Major Ailments – Up to Rs. 2,00,000 for treatment of major ailments. 
 
-**Note:** 
-- All schemes require a valid 90 Days Work Certificate and active registration. 
-- For detailed information about any specific scheme, please ask about it by name. 
+Thayi Magu Sahaya Hasta – Rs. 6,000 (Rs. 500 per month) for pre-school education and nutritional support. 
 
-If the labour is eligible and has all the required documents, please log in and submit the scheme application. For new labour, please do register and then apply for the scheme.
+Delivery Assistance – Rs. 50,000 per delivery (applicable for the first two living children only). 
+
+Medical Assistance – Rs. 300 per day during hospitalization, up to a maximum of Rs. 20,000 (minimum 48 hours of hospitalization required). 
+
+Disability Pension and Ex-Gratia – Rs. 2,000 per month disability pension along with ex-gratia up to Rs. 2,00,000. 
+
+Continuation of Disability Pension – Continuation of Rs. 2,000 per month disability pension subject to submission of the required living certificate. 
+
+Pension – Up to Rs. 3,000 per month for workers who have completed 60 years of age. 
+
+Continuation of Pension – Up to Rs. 3,000 per month for eligible workers. Annual continuation is required, and the Living Certificate must be submitted every December. 
+
+Marriage Assistance – Rs. 60,000 for the marriage of the worker or dependent children (maximum twice per family). 
+
+Funeral and Ex-Gratia – Rs. 4,000 for funeral expenses and Rs. 1,46,000 ex-gratia assistance to the nominee of the deceased registered construction worker (application must be submitted within one year of death). 
+
+Important: 
+
+If the death is due to an accident, beneficiaries should first avail the Accident Assistance and Medical Assistance (if applicable) schemes before applying for Funeral Assistance. 
+
+For deaths on or after 16-07-2025, the eligible amount is Rs. 1,50,000; for deaths before 16-07-2025, the eligible amount is Rs. 75,000. 
+
+Note: All schemes require a valid 90 Days Work Certificate and active registration. 
+
+For detailed information about any specific scheme, please ask about it by name. 
+
+If the labour is eligible and has all the required documents, please log in and submit the scheme application. 
+
+For new labour, please do register and then apply for the scheme.
 """,
-        "kn": """ KBOCWWB ಅಡಿಯಲ್ಲಿ ಲಭ್ಯವಿರುವ ಯೋಜನೆಗಳು 
+        "kn": """KBOCWWB ಅಡಿಯಲ್ಲಿ ಲಭ್ಯವಿರುವ ಯೋಜನೆಗಳು 
 
-ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಮತ್ತು ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರಿಗೆ ಕೆಳಗಿನ ಕಲ್ಯಾಣ ಯೋಜನೆಗಳು ಮತ್ತು ಅವುಗಳ ಪ್ರಯೋಜನಗಳು ಲಭ್ಯವಿವೆ: 
+ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಮತ್ತು ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರಿಗೆ ಕೆಳಗಿನ ಯೋಜನೆಗಳು ಮತ್ತು ಅವುಗಳ ಪ್ರಯೋಜನಗಳು ಲಭ್ಯವಿವೆ: 
 
-1. **ಅಪಘಾತ ಸಹಾಯಧನ** – 
-   - ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಸಾವಿನ ಸಂದರ್ಭದಲ್ಲಿ – ₹8,00,000 
-   - ಕೆಲಸದ ಸ್ಥಳದ ಹೊರಗೆ ಸಾವಿನ ಸಂದರ್ಭದಲ್ಲಿ – ₹5,00,000 
-   - ಶಾಶ್ವತ ಸಂಪೂರ್ಣ ದುರ್ಬಲತೆ – ₹2,00,000 
-   - ಭಾಗಶಃ ದುರ್ಬಲತೆ – ₹1,00,000 
-2. **ಪ್ರಮುಖ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ** – ಗಂಭೀರ ಕಾಯಿಲೆಗಳ ಚಿಕಿತ್ಸೆಗೆ ಗರಿಷ್ಠ ₹2,00,000 ವರೆಗೆ ಸಹಾಯಧನ. 
-3. **ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ** – ಪ್ರೀ-ಸ್ಕೂಲ್ ಶಿಕ್ಷಣ ಮತ್ತು ಪೌಷ್ಠಿಕ ಆಹಾರಕ್ಕಾಗಿ ತಿಂಗಳಿಗೆ ₹500, ಒಟ್ಟು ₹6,000 ಸಹಾಯಧನ. 
-4. **ಹೆರಿಗೆ ಸೌಲಭ್ಯ ಸಹಾಯಧನ** – ಪ್ರತಿ ಹೆರಿಗೆಗೆ ₹50,000 (ಮೊದಲ ಎರಡು ಜೀವಂತ ಮಕ್ಕಳಿಗೆ ಮಾತ್ರ ಅನ್ವಯಿಸುತ್ತದೆ). 
-5. **ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ** – ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ದಾಖಲಾಗಿರುವ ಅವಧಿಯಲ್ಲಿ ದಿನಕ್ಕೆ ₹300, ಗರಿಷ್ಠ ₹20,000 ವರೆಗೆ (ಕನಿಷ್ಠ 48 ಗಂಟೆಗಳ ಆಸ್ಪತ್ರೆ ದಾಖಲಾತಿ ಅಗತ್ಯ). 
-6. **ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ** – ತಿಂಗಳಿಗೆ ₹2,000 ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಹಾಗೂ ಗರಿಷ್ಠ ₹2,00,000 ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನ. 
-7. **ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ** – ಅಗತ್ಯವಿರುವ ಜೀವಂತಿಕೆ ಪ್ರಮಾಣಪತ್ರ ಸಲ್ಲಿಸಿದಲ್ಲಿ ತಿಂಗಳಿಗೆ ₹2,000 ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಸಲಾಗುತ್ತದೆ. 
-8. **ಪಿಂಚಣಿ** – 60 ವರ್ಷ ವಯಸ್ಸು ಪೂರ್ಣಗೊಳಿಸಿದ ಕಾರ್ಮಿಕರಿಗೆ ತಿಂಗಳಿಗೆ ಗರಿಷ್ಠ ₹3,000 ಪಿಂಚಣಿ. 
-9. **ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ** – ಅರ್ಹ ಕಾರ್ಮಿಕರಿಗೆ ತಿಂಗಳಿಗೆ ಗರಿಷ್ಠ ₹3,000 ಪಿಂಚಣಿ ಮುಂದುವರಿಸಲು ಪ್ರತಿ ವರ್ಷ ಡಿಸೆಂಬರ್ ತಿಂಗಳಲ್ಲಿ ಜೀವಂತಿಕೆ ಪ್ರಮಾಣಪತ್ರ ಸಲ್ಲಿಸುವುದು ಕಡ್ಡಾಯ. 
-10. **ವಿವಾಹ ಸಹಾಯಧನ** – ಕಾರ್ಮಿಕ ಅಥವಾ ಅವಲಂಬಿತ ಮಕ್ಕಳ ವಿವಾಹಕ್ಕೆ ₹60,000 ಸಹಾಯಧನ (ಒಂದು ಕುಟುಂಬಕ್ಕೆ ಗರಿಷ್ಠ ಎರಡು ಬಾರಿ). 
-11. **ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನ** – ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚಕ್ಕೆ - ₹4,000 ಮತ್ತು ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರ ಸಾವಿನ ಸಂದರ್ಭದಲ್ಲಿ ನಾಮನಿರ್ದೇಶಿತರಿಗೆ - ₹1,46,000 ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನ (ಸಾವಿನ ದಿನಾಂಕದಿಂದ ಒಂದು ವರ್ಷದೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು). 
+ಅಪಘಾತ ಸಹಾಯಧನ – ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಸಾವಿನ ಸಂದರ್ಭದಲ್ಲಿ ₹8,00,000, ಕೆಲಸದ ಸ್ಥಳದ ಹೊರಗೆ ಸಾವಿನ ಸಂದರ್ಭದಲ್ಲಿ ₹5,00,000, ಶಾಶ್ವತ ಸಂಪೂರ್ಣ ದುರ್ಬಲತೆ ₹2,00,000, ಭಾಗಶಃ ದುರ್ಬಲತೆ ₹1,00,000 
 
-**ಮುಖ್ಯ ಮಾಹಿತಿ:** 
-- ಸಾವು ಅಪಘಾತದಿಂದ ಸಂಭವಿಸಿದರೆ, ಮೊದಲಿಗೆ ಅಪಘಾತ ಸಹಾಯಧನ ಮತ್ತು ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ (ಅನ್ವಯಿಸಿದಲ್ಲಿ) ಯೋಜನೆಗಳ ಪ್ರಯೋಜನ ಪಡೆಯಬೇಕು. ನಂತರ ಮಾತ್ರ ಅಂತ್ಯಕ್ರಿಯೆ ಸಹಾಯಧನಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು. 
-- 16-07-2025 ನಂತರ ಸಂಭವಿಸಿದ ಸಾವುಗಳಿಗೆ ಅರ್ಹ ಮೊತ್ತ ₹1,50,000. 
-- 16-07-2025 ಮೊದಲು ಸಂಭವಿಸಿದ ಸಾವುಗಳಿಗೆ ಅರ್ಹ ಮೊತ್ತ ₹75,000. 
+ಪ್ರಮುಖ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ – ಗಂಭೀರ ಕಾಯಿಲೆಗಳ ಚಿಕಿತ್ಸೆಗೆ ಗರಿಷ್ಠ ₹2,00,000 ವರೆಗೆ ಸಹಾಯಧನ. 
 
-**ಸೂಚನೆ:** 
-- ಎಲ್ಲಾ ಯೋಜನೆಗಳಿಗೆ ಮಾನ್ಯ 90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ ಮತ್ತು ಸಕ್ರಿಯ ನೋಂದಣಿ ಅಗತ್ಯವಿದೆ. 
-- ಯಾವುದೇ ನಿರ್ದಿಷ್ಟ ಯೋಜನೆ ಕುರಿತು ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಆ ಯೋಜನೆಯ ಹೆಸರನ್ನು ಕೇಳಬಹುದು. 
+ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ – ಪ್ರೀ-ಸ್ಕೂಲ್ ಶಿಕ್ಷಣ ಮತ್ತು ಪೌಷ್ಠಿಕ ಆಹಾರಕ್ಕಾಗಿ ತಿಂಗಳಿಗೆ ₹500, ಒಟ್ಟು ₹6,000 ಸಹಾಯಧನ. 
 
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳಿದ್ದಲ್ಲಿ, ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು. ಹೊಸ ಕಾರ್ಮಿಕರು ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿಕೊಂಡು ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು.
+ಹೆರಿಗೆ ಸೌಲಭ್ಯ ಸಹಾಯಧನ – ಪ್ರತಿ ಹೆರಿಗೆಗೆೆ ₹50,000 (ಮೊದಲ ಎರಡು ಜೀವಂತ ಮಕ್ಕಳಿಗೆ ಮಾತ್ರ ಅನ್ವಯಿಸುತ್ತದೆ). 
+
+ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ – ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ದಾಖಲಾಗಿರುವ ಅವಧಿಯಲ್ಲಿ ದಿನಕ್ಕೆ ₹300, ಗರಿಷ್ಠ ₹20,000 ವರೆಗೆ. (ಕನಿಷ್ಠ 48 ಗಂಟೆಗಳ ಆಸ್ಪತ್ರೆ ದಾಖಲಾತಿ ಅಗತ್ಯ). 
+
+ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ – ತಿಂಗಳಿಗೆ ₹2,000 ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಹಾಗೂ ಗರಿಷ್ಠ ₹2,00,000 ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನ. 
+
+ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ – ಅಗತ್ಯವಿರುವ ಜೀವಂತಿಕೆ ಪ್ರಮಾಣಪತ್ರ ಸಲ್ಲಿಸಿದಲ್ಲಿ ತಿಂಗಳಿಗೆ ₹2,000 ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಸಲಾಗುತ್ತದೆ. 
+
+ಪಿಂಚಣಿ – 60 ವರ್ಷ ವಯಸ್ಸು ಪೂರ್ಣಗೊಳಿಸಿದ ಕಾರ್ಮಿಕರಿಗೆ ತಿಂಗಳಿಗೆ ಗರಿಷ್ಠ ₹3,000 ಪಿಂಚಣಿ. 
+
+ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ – ಅರ್ಹ ಕಾರ್ಮಿಕರಿಗೆ ತಿಂಗಳಿಗೆ ಗರಿಷ್ಠ ₹3,000 ಪಿಂಚಣಿ ಮುಂದುವರಿಸಲು ಪ್ರತಿ ವರ್ಷ ಡಿಸೆಂಬರ್ ತಿಂಗಳಲ್ಲಿ ಜೀವಂತೆ ಪ್ರಮಾಣಪತ್ರ ಸಲ್ಲಿಸುವುದು ಕಡ್ಡಾಯ. 
+
+ಮದುವೆ ಸಹಾಯಧನ – ಕಾರ್ಮಿಕ ಅಥವಾ ಅವಲಂಬಿತ ಮಕ್ಕಳ ವಿವಾಹಕ್ಕೆ ₹60,000 ಸಹಾಯಧನ (ಒಂದು ಕುಟುಂಬಕ್ಕೆ ಗರಿಷ್ಠ ಎರಡು ಬಾರಿ). 
+
+ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನ – ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚಕ್ಕೆ - ₹4,000 ಮತ್ತು ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರ ಸಾವಿನ ಸಂದರ್ಭದಲ್ಲಿ ನಾಮನಿರ್ದೇಶಿತರಿಗೆ - ₹1,46,000 ಅನುಗ್ರಹರಾಶಿ  ಸಹಾಯಧನ (ಸಾವಿನ ದಿನಾಂಕದಿಂದ ಒಂದು ವರ್ಷದೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು). 
+
+ಮುಖ್ಯ ಮಾಹಿತಿ: 
+
+ಸಾವು ಅಪಘಾತದಿಂದ ಸಂಭವಿಸಿದರೆ, ಮೊದಲಿಗೆ ಅಪಘಾತ ಸಹಾಯಧನ ಮತ್ತು ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ (ಅನ್ವಯಿಸಿದಲ್ಲಿ) ಯೋಜನೆಗಳ ಪ್ರಯೋಜನ ಪಡೆಯಬೇಕು. ನಂತರ ಮಾತ್ರ ಅಂತ್ಯಕ್ರಿಯೆ ಸಹಾಯಧನಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು. 
+
+16-07-2025 ನಂತರ ಸಂಭವಿಸಿದ ಸಾವುಗಳಿಗೆ ಅರ್ಹ ಮೊತ್ತ ₹1,50,000 ಮತ್ತು 16-07-2025 ಮೊದಲು ಸಂಭವಿಸಿದ ಸಾವುಗಳಿಗೆ ಅರ್ಹ ಮೊತ್ತ ₹75,000. 
+
+ಸೂಚನೆ: 
+
+ಎಲ್ಲಾ ಯೋಜನೆಗಳಿಗೆ ಮಾನ್ಯ 90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ ಮತ್ತು ಸಕ್ರಿಯ ನೋಂದಣಿ ಅಗತ್ಯವಿದೆ. 
+
+ಯಾವುದೇ ನಿರ್ದಿಷ್ಟ ಯೋಜನೆ ಕುರಿತು ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಆ ಯೋಜನೆಯ ಹೆಸರನ್ನು ಕೇಳಬಹುದು. ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳಿದ್ದಲ್ಲಿ, ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು. 
+
+ಹೊಸ ಕಾರ್ಮಿಕರು ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿಕೊಂಡು ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು.
 """
     },
 
     "accident": {
-        "en": """ Accident Assistance 
+        "en": """Accident Assistance 
 
-**FEE:** There is no application fee for Accident Benefits. 
+There is no application fee for Accident Benefits. 
 
-**DOCUMENTS REQUIRED:**  
-- Photocopy of ID card attested by gazetted officer  
-- Photocopy of bank passbook  
-- Beneficiary / original Identity card  
-- Application in Form XXI or XXI-B  
-- Death Certificate (in case of death)  
-- Post mortem report  
-- FIR copy  
-- Medical report  
-- Employer Certificate  
-- Form XXI-A 
+Eligibility Criteria 
 
-**BENEFITS:**  
-- Rs.8 Lakh for death at workplace 
-- Rs.5 Lakh for death outside workplace 
-- Rs.2 Lakh for permanent total disablement  
-- Rs.1 Lakh for permanent partial disablement  
+Must be a registered construction worker with the Board. 
 
-**ELIGIBILITY:**  
-- Must be a registered construction worker with a valid registration.  
-- Application must be submitted within 1 year from the date of the accident. 
+Application Should be submitted within one year from the Accident death date. 
 
-**PROCEDURE:**  
-Submit the application in Form XXI or XXI-B along with all required documents to the Board office within 1 year from the date of accident. 
+Incident not caused by excluded reasons such as intoxication or self-harm. 
 
-**TIMELINE:** Application must be submitted within 1 year from the date of the accident.  
+Compensation for Accident Death scheme in Workplace is RS 8 lakh, other than workplace is RS 5 Lakh in case of Death, RS 2 Lakh in case of Permanent total Disablement (based on disability percentage) and RS 1 Lakh for Permanent Partial Disablement (based on disability percentage) 
 
-If you need more details, feel free to ask!  
+Documents Required 
 
-If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
+Medical Certificate 
+
+FIR COPY 
+
+Medical Disability Certificate 
+
+Postmortem Report 
+
+Death Certificate 
+
+Form 21(A) 
+
+Self-declaration form 
+
+90 Days work certificate 
+
+Application Process 
+
+The applicant submits the application along with the required supporting documents. 
+
+The application is reviewed and approved by the Assistant Labour Commissioner. 
+
+Note: 
+
+Beneficiaries whose Date of Accident Death is on or after 16-07-2025 is eligible for the revised sanctioned amount. 
+
+Beneficiaries whose Date of Accident Death is before 16-07-2025 is eligible for the previous sanctioned amount. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application.  
+For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """ ಅಪಘಾತ ಸಹಾಯಧನ 
+        "kn": """ಅಪಘಾತ ಸಹಾಯಧನ 
 
-**ಶುಲ್ಕ:** ಅಪಘಾತ ಪರಿಹಾರಕ್ಕಾಗಿ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ. ಅರ್ಜಿಯನ್ನು ಅಪಘಾತದ ದಿನಾಂಕದಿಂದ 1 ವರ್ಷದೊಳಗೆ ಸಲ್ಲಿಸಬೇಕು. 
+ಅಪಘಾತ ಪರಿಹಾರಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ.  
 
-**ಅಗತ್ಯ ದಾಖಲೆಗಳು:**  
-- ಗಜೆಟ್ಟೆಡ್ ಅಧಿಕಾರಿ ದೃಢೀಕರಣದೊಂದಿಗೆ ಐಡಿ ಕಾರ್ಡ್‌ನ ಫೋಟೋಕಾಪಿ  
-- ಬ್ಯಾಂಕ್ ಖಾತೆಯ ಫೋಟೋಕಾಪಿ  
-- ಲಾಭಾರ್ಥಿಯ / ಮೂಲ ಗುರುತಿನ ಕಾರ್ಡ್  
-- ಫಾರಂ XXI ಅಥವಾ XXI-B ರಲ್ಲಿ ಅರ್ಜಿ  
-- ಮರಣ ಪತ್ರ (ಮರಣದ ಸಂದರ್ಭದಲ್ಲಿ)  
-- ಪೋಸ್ಟ್ ಮಾರ್ಟಮ್ ರಿಪೋರ್ಟ್  
-- FIR ಕಾಪಿ  
-- ವೈದ್ಯಕೀಯ ರಿಪೋರ್ಟ್  
-- ಉದ್ಯೋಗದಾತರ ದೃಢೀಕರಣ ಪತ್ರ  
-- ಫಾರಂ XXI-A 
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
 
-**ಲಾಭಗಳು:**  
-- ಮರಣದ ಸಂದರ್ಭದಲ್ಲಿ ₹8 ಲಕ್ಷ (ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಅಪಘಾತ ಮರಣ) 
-- ಮರಣದ ಸಂದರ್ಭದಲ್ಲಿ ₹5 ಲಕ್ಷ (ಕೆಲಸದ ಸ್ಥಳವನ್ನು ಹೊರತುಪಡಿಸಿ ಮರಣ) 
-- ಸಂಪೂರ್ಣ ಅಂಗವಿಕಲತೆಗಾಗಿ ₹2 ಲಕ್ಷ  
-- ಶಾಶ್ವತ ಅಂಗವಿಕಲತೆಗಾಗಿ ₹1 ಲಕ್ಷ  
+ಮಂಡಳಿಯಲ್ಲಿ ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು 
 
-**ಅರ್ಹತಾ ಶರತ್ತುಗಳು:**  
-- ನೋಂದಾಯಿತ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು ಮತ್ತು ಮಾನ್ಯ ಗುರುತಿನ ಕಾರ್ಡ್ ಇರಬೇಕು  
-- ಅಪಘಾತದ ದಿನಾಂಕದಿಂದ 1 ವರ್ಷದೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು 
+ಅರ್ಜಿಯನ್ನು ಅಪಘಾತ ಮರಣ ದಿನಾಂಕದಿಂದ ಒಂದು ವರ್ಷದೊಳಗೆ ಸಲ್ಲಿಸಬೇಕು 
 
-**ವಿಧಾನ:**  
-ಫಾರಂ XXI ಅಥವಾ XXI-B ರಲ್ಲಿ ಅರ್ಜಿಯನ್ನು ಎಲ್ಲಾ ಅಗತ್ಯ ದಾಖಲೆಗಳೊಂದಿಗೆ ಮಂಡಳಿಯ ಕಚೇರಿಗೆ ಅಪಘಾತದ ದಿನಾಂಕದಿಂದ 1 ವರ್ಷದೊಳಗೆ ಸಲ್ಲಿಸಿ. 
+ಮದ್ಯಪಾನ ಅಥವಾ ಸ್ವಹಾನಿ ಮುಂತಾದ ಹೊರಗೊಳ್ಳಲಾದ ಕಾರಣಗಳಿಂದ ಉಂಟಾಗದ ಘಟನೆ. 
 
-**ಸಮಯಸೀಮೆ:** ಅರ್ಜಿಯನ್ನು ಅಪಘಾತದ ದಿನಾಂಕದಿಂದ 1 ವರ್ಷದೊಳಗೆ ಸಲ್ಲಿಸಬೇಕು. 
+ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಅಪಘಾತ ಮರಣ ಯೋಜನೆಗೆ ಪರಿಹಾರ 8 ಲಕ್ಷ ರೂ., ಕೆಲಸದ ಸ್ಥಳವನ್ನು ಹೊರತುಪಡಿಸಿ ಅಪಘಾತ ಮರಣದ ಸಂದರ್ಭದಲ್ಲಿ 5 ಲಕ್ಷ ರೂ., ಶಾಶ್ವತ ಒಟ್ಟು ಅಂಗವೈಕಲ್ಯಕ್ಕೆ 2 ಲಕ್ಷ ರೂ. (ದುರ್ಬಲತೆಯ ಶೇಕಡಾವಾರು ಆಧಾರದ ಮೇಲೆ) ಮತ್ತು ಶಾಶ್ವತ ಭಾಗಶಃ ಅಂಗವೈಕಲ್ಯಕ್ಕೆ 1 ಲಕ್ಷ ರೂ (ದುರ್ಬಲತೆಯ ಶೇಕಡಾವಾರು ಆಧಾರದ ಮೇಲೆ) 
 
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ವೈದ್ಯಕೀಯ ಪ್ರಮಾಣಪತ್ರ 
+
+ಎಫ್ಐಆರ್ ಪ್ರತಿ 
+
+ವೈದ್ಯಕೀಯ ಅಂಗವೈಕಲ್ಯ ಪ್ರಮಾಣಪತ್ರ 
+
+ಮರಣೋತ್ತರ ಪರೀಕ್ಷೆಯ ವರದಿ 
+
+ಮರಣ ಪ್ರಮಾಣಪತ್ರ 
+
+ನಮೂನೆ 21(A) 
+
+ಸ್ವಯಂ ಘೋಷಣೆ ಪತ್ರ 
+
+90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅಗತ್ಯವಿರುವ ದಾಖಲೆಗಳೊಂದಿಗೆ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುತ್ತಾರೆ. 
+
+ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ ಅನುಮೋದನೆ. 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಸೂಚನೆ: 
+
+ಅಪಘಾತ ಮರಣದ ದಿನಾಂಕ 16-07-2025 ಅಥವಾ ನಂತರ ಇರುವ ಫಲಾನುಭವಿಗಳು ಪರಿಷ್ಕೃತ ಮಂಜೂರಾದ ಮೊತ್ತಕ್ಕೆ ಅರ್ಹರಾಗಿದ್ದಾರೆ. 
+
+ಅಪಘಾತ ಮರಣದ ದಿನಾಂಕ 16-07-2025 ಕ್ಕಿಂತ ಮೊದಲು ಇರುವ ಫಲಾನುಭವಿಗಳು ಹಿಂದಿನ ಮಂಜೂರಾದ ಮೊತ್ತಕ್ಕೆ ಅರ್ಹರಾಗಿದ್ದಾರೆ. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. 
+ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
 """
     },
 
     "major ailment": {
-        "en": """ Assistance for Major Ailments 
+        "en": """Assistance for Major Ailments 
 
-**FEE:** There is no application fee for Assistance for Major Ailments. 
+There is no application fee for Assistance for Major Ailments. 
 
-**BENEFIT:** Up to Rs.2,00,000 for treatment of major ailments at CGHS rates. 
+Eligibility Criteria 
 
-**ELIGIBILITY:**  
-- Must be a registered construction worker or dependent  
-- Treatment must be for a recognized major ailment  
-- Application within 6 months of hospitalization 
+Must be a registered construction worker with the Board. 
 
-**DOCUMENTS REQUIRED:**  
-- Proof of Identity / Smart card  
-- Employment Certificate  
-- Proof of Bank Account  
-- Hospital bills showing admission/discharge dates  
-- Form XXII-A 
+Major ailments” means any major treatment undergone due to Accident which resulted in any bodily injury resulting in permanent disablement 
 
-**PROCEDURE:**  
-Submit application with Form XXII-A and hospital bills within 6 months of hospitalization. 
+Form 22A to be filled and attested by the Doctor of any Government hospital or ESI certified private hospital or DPAR approved hospital. 
 
-**TIMELINE:**  
-Application must be submitted within 6 months of hospitalization.  
+Every registered construction worker [and his or her dependents], who has major ailments is eligible for medical expenses 
 
-If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
+Board shall grant an amount upto Rs. 2,00,000/- (Rupees Two Lakh only) subject to the rates prescribed under the Central Government Health Service (C.G.H.S) 
+
+The application can be submitted within 6 months from the date of discharge from the hospital. 
+
+Documents Required 
+
+Medical Report 
+
+Discharge Summary 
+
+Form 22A 
+
+Self-declaration form 
+
+90 Days work certificate 
+
+Application Process 
+
+The applicant submits the application along with the required supporting documents. 
+
+The application is reviewed and approved by the Labour Officer. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application.  
+For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """ ಪ್ರಮುಖ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ 
+        "kn": """ಪ್ರಮುಖ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ  
 
-**ಫೀ:** ಪ್ರಮುಖ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ.  
+ಪ್ರಮುಖ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ.  
 
-**ಸಹಾಯಧನ ಮೊತ್ತ:**  
-- ಗಂಭೀರ ಕಾಯಿಲೆಗಳ ಚಿಕಿತ್ಸೆಗೆ ಗರಿಷ್ಠ ₹2,00,000 ವರೆಗೆ ಸಹಾಯಧನ.
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
 
-**ಅರ್ಹತೆ:**  
-- ನೋಂದಾಯಿತ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕ ಅಥವಾ ಅವನ/ಅವಳ ಅವಲಂಬಿತರಾಗಿರಬೇಕು  
-- ಆಸ್ಪತ್ರೆಯಿಂದ ಬಿಡುಗಡೆಯಾದ ನಂತರ 6 ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು  
+ಮಂಡಳಿಯಲ್ಲಿ ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು 
 
-**ಅಗತ್ಯ ದಾಖಲಾತಿಗಳು:**  
-- ಮಂಡಳಿಯಿಂದ ನೀಡಲಾಗುವ ಗುರುತಿನ ಪತ್ರ / ಸ್ಮಾರ್ಟ್ ಕಾರ್ಡ್  
-- ಉದ್ಯೋಗ ದೃಢೀಕರಣ ಪತ್ರ  
-- ಬ್ಯಾಂಕ್ ಖಾತೆ ಪುರಾವೆ  
-- ಆಸ್ಪತ್ರೆಯ ಬಿಲ್ (ನೋಂದಣಿ ಮತ್ತು ಬಿಡುಗಡೆ ದಿನಾಂಕಗಳನ್ನು ತೋರಿಸಬೇಕು)  
-- ಫಾರ್ಮ್ XXII-A 
+" ಪ್ರಮುಖ ಕಾಯಿಲೆಗಳು "ಎಂದರೆ ಯಾವುದೇ ದೈಹಿಕ ಗಂಭೀರ ಗಾಯಗಳ ಪರಿಣಾಮವಾಗಿ ಶಾಶ್ವತ ಅಂಗವೈಕಲ್ಯಕ್ಕೆ ಕಾರಣವಾಗುವ ಅಪಘಾತಕ್ಕೆ ಸಂಭದಿಸಿದ ಯಾವುದೇ ಪ್ರಮುಖ ಚಿಕಿತ್ಸೆಯಾಗಿದೆ" 
 
-**ವಿಧಾನ:**  
-ಫಾರ್ಮ್ XXII-A ಮತ್ತು ಆಸ್ಪತ್ರೆಯ ಬಿಲ್‌ಗಳೊಂದಿಗೆ ಆಸ್ಪತ್ರೆಯಿಂದ ಬಿಡುಗಡೆಯಾದ ನಂತರ 6 ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.  
+ಯಾವುದೇ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ, ಇಎಸ್ಐ ಪ್ರಮಾಣೀಕೃತ ಖಾಸಗಿ ಆಸ್ಪತ್ರೆ ಅಥವಾ ಡಿಪಿಎಆರ್ ಅನುಮೋದಿತ ಆಸ್ಪತ್ರೆಯ ವೈದ್ಯರು ನಮೂನೆ 22A ಅನ್ನು ಭರ್ತಿ ಮಾಡಬೇಕು ಮತ್ತು ದೃಢೀಕರಿಸಬೇಕು. 
 
-**ಕಾಲಾವಧಿ:**  
-ಆಸ್ಪತ್ರೆಯಿಂದ ಬಿಡುಗಡೆಯಾದ ನಂತರ 6 ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು. 
+ಪ್ರಮುಖವಾದ ಕಾಯಿಲೆಗಳನ್ನು ಹೊಂದಿರುವ ಪ್ರತಿ ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕನು [ಮತ್ತು ಅವನ ಅಥವಾ ಅವಳ ಅವಲಂಬಿತರು], ವೈದ್ಯಕೀಯ ವೆಚ್ಚಗಳಿಗೆ ಅರ್ಹರಾಗಿರುತ್ತಾರೆ 
 
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+ಕೇಂದ್ರ ಸರ್ಕಾರದ ಆರೋಗ್ಯ ಸೇವೆಯ (C.G.H.S) ಅಡಿಯಲ್ಲಿ ಸೂಚಿಸಲಾದ ದರಗಳಿಗೆ ಒಳಪಟ್ಟು ಮಂಡಳಿಯು ರೂ. 2,00,000/- (ಎರಡು ಲಕ್ಷ ರೂಪಾಯಿಗಳು ಮಾತ್ರ) ವರೆಗೆ ಮೊತ್ತವನ್ನು ನೀಡುತ್ತದೆ 
+
+ಆಸ್ಪತ್ರೆಯಿಂದ ಬಿಡುಗಡೆಯಾದ ದಿನಾಂಕದಿಂದ 6 ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬಹುದು. 
+
+ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ವೈದ್ಯಕೀಯ ಪ್ರಮಾಣಪತ್ರ 
+
+ಡಿಸ್ಚಾರ್ಜ್ ಸಾರಾಂಶ 
+
+ನಮೂನೆ 22A 
+
+ಸ್ವಯಂ ಘೋಷಣೆ ಪತ್ರ 
+
+90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು. 
+
+ಅರ್ಜಿಯನ್ನು ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ. 
+
+ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿ ಪರಿಶೀಲಿಸಿ ಅನುಮೋದನೆ. 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. 
+ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
 """
     },
 
     "thayi magu": {
-        "en": """ Thayi Magu Sahaya Hasta 
+        "en": """Thayi Magu Sahaya Hasta 
 
-**FEE:** There is no application fee for Thayi Magu Sahaya Hasta.  
+There is no application fee for Thayi Magu Sahaya Hasta.  
 
-**BENEFIT:**  
-- Rs.6,000 (at the rate of Rs.500 per month) for pre-school education and nutritional support of the child.  
-- Available for 3 years from the date of delivery. 
+Eligibility Criteria 
 
-**ELIGIBILITY:**  
-- Registered woman construction worker who has delivered a child  
-- Can be availed twice (first two children only) 
+Must be a registered construction worker with the Board. 
 
-**DOCUMENTS REQUIRED:**  
-- Proof of Identity / Smart card  
-- Affidavit for second delivery  
-- Proof of Bank Account  
-- Photo of Child  
-- Employment Certificate  
-- Discharge Summary  
-- Birth Certificate of Child  
-- Child living Affidavit for 2nd and 3rd year 
+A registered woman construction worker who has delivered a child is eligible to avail this assistance for a period of 3 years from the date of delivery as pre-school education & Nutritional Support of the child 
 
-**PROCEDURE:**  
-1. Submit application with Birth Certificate and required documents.  
-2. Annual Child living Affidavit required for 2nd and 3rd year. 
+An amount of rupee 6000/- (at the rate of 500 hundred per month) shall be sanctioned to the registered woman construction worker 
 
-**TIMELINE:** Available for 3 years from the date of delivery. Annual renewal required.  
+This facility shall be availed by the registered woman construction worker twice (for the birth of first two children only) 
 
-If you need more details, feel free to ask!  
+Documents Required 
 
-If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
+Photo of Child 
+
+Birth Certificate 
+
+Discharge hospital Summary 
+
+Affidavit 
+
+Self-declaration form 
+
+90 Days work certificate 
+
+Application Process 
+
+The applicant submits the application along with the required supporting documents. 
+
+The application is reviewed and approved by the Labour Officer. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application.  
+For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """ ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ 
+        "kn": """ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತ 
 
-**ಫೀ:** ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತಕ್ಕಾಗಿ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ.  
+ತಾಯಿ ಮಗು ಸಹಾಯ ಹಸ್ತಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ.  
 
-**ಸಹಾಯಧನ ಮೊತ್ತ:**  
-- ₹6,000 (ಪ್ರತಿ ತಿಂಗಳಿಗಾಗಿ ₹500) ಪ್ರಾಥಮಿಕ ಶಾಲಾ ಶಿಕ್ಷಣ ಮತ್ತು ಮಗುವಿನ ಪೋಷಣೆಗಾಗಿ.  
-- ಜನನದ ದಿನಾಂಕದಿಂದ 3 ವರ್ಷಗಳವರೆಗೆ ಲಭ್ಯ. 
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
 
-**ಅರ್ಹತೆ:**  
-- ನೋಂದಾಯಿತ ಮಹಿಳಾ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು.  
-- ಮಗುವನ್ನು ಜನಿಸಿದಿರಬೇಕು.  
-- ಮೊದಲ ಎರಡು ಮಕ್ಕಳಿಗಾಗಿ ಮಾತ್ರ ಲಭ್ಯ. 
+ಮಂಡಳಿಯಲ್ಲಿ ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು 
 
-**ಅಗತ್ಯ ದಾಖಲಾತಿಗಳು:**  
-- ಗುರುತಿನ ಪುರಾವೆ / ಸ್ಮಾರ್ಟ್ ಕಾರ್ಡ್  
-- ಎರಡನೇ ಮಗುವಿಗಾಗಿ ಅಫಿಡವಿಟ್  
-- ಬ್ಯಾಂಕ್ ಖಾತೆಯ ಪುರಾವೆ  
-- ಮಗುವಿನ ಛಾಯಾಚಿತ್ರ  
-- ಉದ್ಯೋಗ ದೃಢೀಕರಣ ಪತ್ರ  
-- ಡಿಸ್ಚಾರ್ಜ್ ಸಾರಾಂಶ  
-- ಮಗುವಿನ ಜನನ ಪತ್ರ  
-- ಎರಡನೇ ಮತ್ತು ಮೂರನೇ ವರ್ಷಗಳಿಗಾಗಿ ಮಗು ಜೀವಂತವಿರುವ ಅಫಿಡವಿಟ್ 
+ನೋಂದಾಯಿತ ಮಹಿಳಾ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕಳು ಮಗುವಿಗೆ ಜನ್ಮ ನೀಡಿದ ದಿನಾಂಕದಿಂದ ಮುಂದಿನ 3 ವರ್ಷಗಳವರೆಗೆ ಮಗುವಿನ ಪ್ರಿ-ಸ್ಕೂಲ್ ಶಿಕ್ಷಣ ಮತ್ತು ಪೌಷ್ಟಿಕಾಂಶ ಆಹಾರ ಸೇವನೆ ಬೆಂಬಲದ ಸಹಾಯ ಪಡೆಯಲು ಅರ್ಹಳಾಗಿರುತ್ತಾಳೆ. 
 
-**ವಿಧಾನ:**  
-1. ಜನನ ಪತ್ರ ಮತ್ತು ಅಗತ್ಯ ದಾಖಲಾತಿಗಳೊಂದಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.  
-2. ಎರಡನೇ ಮತ್ತು ಮೂರನೇ ವರ್ಷಗಳಿಗೆ ವಾರ್ಷಿಕ ಮಗು ಜೀವಂತವಿರುವ ಅಫಿಡವಿಟ್ ಅಗತ್ಯ. 
+ನೋಂದಾಯಿತ ಮಹಿಳಾ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರಿಗೆ ವಾರ್ಷಿಕ 6000/- ರೂ ಗಳ ಮೊತ್ತವನ್ನು (ಮಾಸಿಕ 500 ರೂಪಾಯಿಗಳು) ಮಂಜೂರು ಮಾಡಲಾಗುತ್ತದೆ. 
 
-**ಕಾಲಾವಧಿ:** ಜನನದ ದಿನಾಂಕದಿಂದ 3 ವರ್ಷಗಳವರೆಗೆ ಲಭ್ಯ. ವಾರ್ಷಿಕ ನವೀಕರಣ ಅಗತ್ಯ. 
+ಈ ಸೌಲಭ್ಯವನ್ನು ನೋಂದಾಯಿತ ಮಹಿಳಾ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರು ಎರಡು ಬಾರಿ ಪಡೆಯಬಹುದು (ಮೊದಲ ಎರಡು ಮಕ್ಕಳ ಜನನಕ್ಕೆ ಮಾತ್ರ) 
 
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ಮಗುವಿನ ಭಾವಚಿತ್ರ 
+
+ಮಗುವಿನ ಜನನ ಪ್ರಮಾಣಪತ್ರ 
+
+ಮಗು ಡಿಸ್ಚಾರ್ಜ್ ಆದ ಆಸ್ಪತ್ರೆ ವಿವರ 
+
+ಅಫಿಡವಿಟ್ 
+
+ಸ್ವಯಂ ಘೋಷಣೆ ಪತ್ರ 
+
+90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು. 
+
+ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ 
+
+ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿಯವರಿಂದ ಪರಿಶೀಲನೆ ಮತ್ತು ಅನುಮೋದನೆ 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. 
+ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
 """
     },
 
     "delivery": {
-        "en": """ Delivery Assistance 
+        "en": """Delivery Assistance 
 
-**FEE:** There is no application fee for Delivery Assistance.  
+There is no application fee for Delivery Assistance.  
 
-**BENEFIT:**  
-- Rs.50,000 financial assistance per delivery  
-- Applicable only for the first two living children 
+Eligibility Criteria 
 
-**DOCUMENTS REQUIRED:**  
-- Proof of Identity / Smart card issued by the Board  
-- Proof of Bank Account  
-- Birth Certificate of Child  
-- Discharge Summary from hospital  
-- Photo of Child  
-- Employment Certificate  
-- Affidavit for second child (if applicable) 
+Must be a registered construction worker with the Board. 
 
-**ELIGIBILITY:**  
-- Must be a registered woman construction worker  
-- Applicable for first two living children only  
-- Application within 6 months of the child's birth  
-- Affidavit required when applying for the second child 
+Application can be submitted within 6 months of delivery 
 
-**PROCEDURE:** Submit the application with all required documents within 6 months of the child's birth.  
+The certification of registration of birth obtained from the registrar of births and deaths or certificate of delivery in a government or private hospital in the state of Karnataka duly signed by the doctor concerned from the institution shall be produced along with the application 
 
-**TIMELINE:** Application must be submitted within 6 months of the child's birth.  
+Registered woman construction worker sanction 50,000/-, only for first two deliveries, on her producing proof of delivery of a child to her. 
 
-If you need more details, feel free to ask!  
+Documents Required 
 
-If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
+Birth Certificate of Child 
+
+Photo of the Child 
+
+Discharge Summary 
+
+Self-declaration form 
+
+90 Days work certificate 
+
+Application Process 
+
+The applicant submits the application along with the required supporting documents. 
+
+The application is reviewed and approved by the Labour Officer. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application.  
+For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """ ಹೆರಿಗೆ ಸೌಲಭ್ಯ ಸಹಾಯಧನ 
+        "kn": """ಹೆರಿಗೆ ಸೌಲಭ್ಯ ಸಹಾಯಧನ 
 
-**ಫೀ:** ಹೆರಿಗೆ ಸೌಲಭ್ಯಕ್ಕಾಗಿ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ.  
+ಹೆರಿಗೆ ಸೌಲಭ್ಯಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ.  
 
-**ಸಹಾಯಧನ ಮೊತ್ತ:**  
-- ₹50,000 ಪ್ರತಿ ಹೆರಿಗೆಗೆ  
-- ಮೊದಲ ಎರಡು ಜೀವಂತ ಮಕ್ಕಳಿಗಾಗಿ ಮಾತ್ರ ಅನ್ವಯ 
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
 
-**ಅಗತ್ಯ ದಾಖಲೆಗಳು:**  
-- ಗುರುತಿನ ಪುರಾವೆ / ಸ್ಮಾರ್ಟ್ ಕಾರ್ಡ್  
-- ಬ್ಯಾಂಕ್ ಖಾತೆಯ ಪುರಾವೆ  
-- ಮಗುವಿನ ಜನನ ಪತ್ರ  
-- ಆಸ್ಪತ್ರೆಯ ಡಿಸ್ಚಾರ್ಜ್ ಸಾರಾಂಶ  
-- ಮಗುವಿನ ಛಾಯಾಚಿತ್ರ  
-- ಉದ್ಯೋಗ ದೃಢೀಕರಣ ಪತ್ರ  
-- ಎರಡನೇ ಮಗುವಿಗಾಗಿ ಅಫಿಡವಿಟ್ (ಅಗತ್ಯವಿದ್ದರೆ) 
+ಮಂಡಳಿಯಲ್ಲಿ ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು 
 
-**ಅರ್ಹತೆ:**  
-- ನೋಂದಾಯಿತ ಮಹಿಳಾ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು  
-- ಮೊದಲ ಎರಡು ಜೀವಂತ ಮಕ್ಕಳಿಗಾಗಿ ಮಾತ್ರ ಅನ್ವಯ  
-- ಹೆರಿಗೆ ದಿನಾಂಕದಿಂದ 6 ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು  
-- ಎರಡನೇ ಮಗುವಿಗಾಗಿ ಅಫಿಡವಿಟ್ ಅಗತ್ಯ 
+ಹೆರಿಗೆಯಾದ 6 ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು 
 
-**ವಿಧಾನ:**  
-1. ಅಗತ್ಯ ದಾಖಲೆಗಳೊಂದಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ  
-2. ಹಿರಿಯ ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರು/ನೋಂದಣಾಧಿಕಾರಿಗಳು ಪರಿಶೀಲಿಸುತ್ತಾರೆ  
-3. ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿ ಪರಿಶೀಲಿಸಿ ಅನುಮೋದನೆ ನೀಡುತ್ತಾರೆ  
+ಜನನ ಮತ್ತು ಮರಣಗಳ ರಿಜಿಸ್ಟ್ರಾರ್ನಿಂದ ಪಡೆದ ಜನನ ನೋಂದಣಿಯ ಪ್ರಮಾಣಪತ್ರ ಅಥವಾ ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಸರ್ಕಾರಿ ಅಥವಾ ಖಾಸಗಿ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ಸಂಬಂಧಪಟ್ಟ ವೈದ್ಯರಿಂದ ಪಡೆದ ವೈದ್ಯರ ಸಹಿಯುಳ್ಳ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ಸಮಯದಲ್ಲಿ ಲಗತ್ತಿಸಬೇಕು. 
 
-**ಕಾಲಾವಧಿ:** ಹೆರಿಗೆ ದಿನಾಂಕದಿಂದ 6 ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು.  
+ನೋಂದಾಯಿತ ಮಹಿಳಾ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರಿಗೆ ರೂ .50000/-, ಅವರ ಮೊದಲ ಎರಡು ಹೆರಿಗೆಗೆ ಮಾತ್ರ ಈ ಧನ ಸಹಾಯವನ್ನು ಮಾಡಲಾಗುತ್ತದೆ. ಮಹಿಳೆಯು ತನಗಿರುವ ಮಕ್ಕಳ ಕುರಿತು ಸೂಕ್ತ ಪುರಾವೆಗಳನ್ನು ಒದಗಿಸಿದ ಮೇಲೆ ಈ ಧನ ಸಹಾಯವನ್ನು ಒದಗಿಸಲಾಗುತ್ತದೆ. 
 
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ಮಗುವಿನ ಜನನ ಪ್ರಮಾಣಪತ್ರ 
+
+ಮಗುವಿನ ಫೋಟೋ 
+
+ಡಿಸ್ಚಾರ್ಜ್ ಕುರಿತು ಸಂಕ್ಷಿಪ್ತ ವಿವರ 
+
+ಸ್ವಯಂ ಘೋಷಣೆ ಪತ್ರ 
+
+90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು. 
+
+ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ 
+
+ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿಯವರಿಂದ ಪರಿಶೀಲನೆ ಮತ್ತು ಅನುಮೋದನೆ 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. 
+ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
 """
     },
 
     "medical": {
-        "en": """ Medical Assistance 
+        "en": """Medical Assistance 
 
-**FEE:** There is no application fee for Medical Assistance.  
+There is no application fee for Medical Assistance.  
 
-**BENEFIT:**  
-- Rs.300 per day of hospitalization  
-- Maximum assistance up to Rs.20,000 for continuous hospitalization 
+Eligibility Criteria 
 
-**ELIGIBILITY:**  
-- Must be a registered construction worker or their dependent  
-- Hospitalization must be for a minimum of 48 hours continuously  
-- Application within 6 months of hospitalization 
+Must be a registered construction worker with the Board. 
 
-**DOCUMENTS REQUIRED:**  
-- Proof of Identity / Smart card issued by the Board  
-- Employment Certificate  
-- Proof of Bank Account  
-- Bills showing admission and discharge dates  
-- Form XXII-A 
+The financial assistance shall be Rs 300/- per day of the hospitalisation to the maximum of Rs 20,000/- for a continuous period of Hospitalization subject to actuals. 
 
-**PROCEDURE:** Submit the application with Form XXII-A and hospital bills within 6 months of hospitalization.  
+Form 22A to be filled and attested by the Doctor of any Government hospital or ESI certified private hospital or DPAR approved hospital. 
 
-**TIMELINE:** Application must be submitted within 6 months of hospitalization.  
+The assistance shall be towards hospitalisation for minimum 48 Hours continuously. 
 
-If you need more details, feel free to ask!  
+Application can be submitted withtin 6 months of hospitalisation commencement date. 
 
-If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
+Documents Required 
+
+Discharge Summary 
+
+Form 22A 
+
+Treatment Bill 
+
+Self-declaration form 
+
+90 Days work certificate 
+
+Application Process 
+
+The applicant submits the application along with the required supporting documents. 
+
+The application is reviewed and approved by the Labour Officer. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application.  
+For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """ ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ 
+        "kn": """ವೈದ್ಯಕೀಯ ಸಹಾಯಧನ 
 
-**ಫೀ:** ವೈದ್ಯಕೀಯ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ.  
+ವೈದ್ಯಕೀಯ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ.  
 
-**ಸಹಾಯಧನ ಮೊತ್ತ:**  
-- ಪ್ರತಿ ಆಸ್ಪತ್ರೆ ದಿನಕ್ಕೆ ₹300  
-- ಸತತ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ಇರುವುದಕ್ಕಾಗಿ ಗರಿಷ್ಠ ಸಹಾಯಧನ ₹20,000 
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
 
-**ಅರ್ಹತೆ:**  
-- ನೋಂದಾಯಿತ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕ ಅಥವಾ ಅವರ ಅವಲಂಬಿ ಆಗಿರಬೇಕು  
-- ಆಸ್ಪತ್ರೆ ಇರುವುದು ಕನಿಷ್ಠ 48 ಗಂಟೆಗಳ ಕಾಲ ಸತತವಾಗಿ  
-- ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ಇರುವುದಕ್ಕಾಗಿ 6 ತಿಂಗಳುಗಳಲ್ಲಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು 
+ಮಂಡಳಿಯಲ್ಲಿ ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು 
 
-**ಅಗತ್ಯ ದಾಖಲಾತಿಗಳು:**  
-- ಮಂಡಳಿಯಿಂದ ನೀಡಲ್ಪಟ್ಟ ಗುರುತಿನ ಪುರಾವೆ / ಸ್ಮಾರ್ಟ್ ಕಾರ್ಡ್  
-- ಉದ್ಯೋಗ ಪ್ರಮಾಣಪತ್ರ  
-- ಬ್ಯಾಂಕ್ ಖಾತೆಯ ಪುರಾವೆ  
-- ಪ್ರವೇಶ ಮತ್ತು ವಿಸರ್ಜನೆ ದಿನಾಂಕಗಳನ್ನು ತೋರಿಸುವ ಆಸ್ಪತ್ರೆ ಬಿಲ್‌ಗಳು  
-- ಫಾರಂ XXII-A 
+ವ್ಯಕ್ತಿಯು ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ಇರುವ ಸಮಯದಲ್ಲಿ ದಿನವೊಂದಕ್ಕೆ ಕನಿಷ್ಠ 300/- ರೂಗಳಿಂದ ಗರಿಷ್ಠ 20000 /- ರೂಗಳವರೆಗೆ ಹಣಕಾಸಿನ ನೆರವು ನೀಡಲಾಗುತ್ತದೆ.(ವ್ಯಕ್ತಿಯು ನಿರಂತರವಾಗಿ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ಇರಬೇಕಾದ ಸಮಯದಲ್ಲಿ) 
 
-**ವಿಧಾನ:** ಫಾರಂ XXII-A ಮತ್ತು ಆಸ್ಪತ್ರೆ ಬಿಲ್‌ಗಳೊಂದಿಗೆ 6 ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು.  
+ಯಾವುದೇ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ, ಇಎಸ್ಐ ಪ್ರಮಾಣೀಕೃತ ಖಾಸಗಿ ಆಸ್ಪತ್ರೆ ಅಥವಾ ಡಿಪಿಎಆರ್ ಅನುಮೋದಿತ ಆಸ್ಪತ್ರೆಯ ವೈದ್ಯರು ನಮೂನೆ 22A ಅನ್ನು ಭರ್ತಿ ಮಾಡಬೇಕು ಮತ್ತು ದೃಢೀಕರಿಸಬೇಕು. 
 
-**ಕಾಲಾವಧಿ:** ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ಇರುವುದಕ್ಕಾಗಿ 6 ತಿಂಗಳುಗಳಲ್ಲಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು. 
+ಈ ಸಹಾಯವನ್ನು ವ್ಯಕ್ತಿಯು ಕನಿಷ್ಠ 48 ಗಂಟೆಗಳ ಕಾಲ ನಿರಂತರವಾಗಿ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ದಾಖಲಾಗಿದ್ದರೇ ನೀಡಲಾಗುತ್ತದೆ. 
 
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+ಆಸ್ಪತ್ರೆ ದಖಲಾದ ದಿನಾಂಕದಿಂದ 6 ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು. 
+
+ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ಡಿಸ್ಚಾರ್ಜ್ ಸಾರಾಂಶ 
+
+ನಮೂನೆ 22A 
+
+ಚಿಕಿತ್ಸೆಯ ಬಿಲ್ 
+
+ಸ್ವಯಂ ಘೋಷಣೆ ಪತ್ರ 
+
+90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು. 
+
+ಅರ್ಜಿಯನ್ನು ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ. 
+
+ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿ ಪರಿಶೀಲಿಸಿ ಅನುಮೋದನೆ. 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. 
+ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
 """
     },
 
     "disability": {
-        "en": """ Disability Pension and Ex-Gratia 
+        "en": """Disability Pension and Ex-Gratia 
 
-**FEE:** There is no application fee for Disability Pension.  
+There is no application fee for Disability Pension.  
 
-**BENEFIT:**  
-- The pension amount shall not exceed Rs.3,000 per month.  
-- Applicable only if the disability occurred during construction work and is certified by a competent authority.  
-- Ex-Gratia: Rs.1,00,000 in case of death due to an accident during construction work.
+Eligibility Criteria 
 
-**ELIGIBILITY:**  
-- Must have completed 18 years of age  
-- Must be permanently disabled (minimum 40% disability)  
-- The disability must have occurred while working in construction 
+Must be a registered construction worker with the Board. 
 
-**DOCUMENTS REQUIRED:**  
-- Original Identity Card issued by the Board  
-- Employer Certificate  
-- Ration Card  
-- Photocopy of bank passbook  
-- Passport size photo  
-- Disability Certificate from a competent authority  
-- Living Certificate must be provided every year 
+The Board or authorized officer may Sanction an amount of Rs. 2000/- (Govt of Karnataka Notification NO 106 LET 2019, Bengaluru, Dated:14112019) per month as disability pension to a beneficiary, who is partially disabled due to any disease or accident at worksite and for an ex-gratia payment of not more than Rs. 2,00,000/- (Rupees two lakhs only) depending upon the percentage of disability. 
 
-**PROCEDURE:** Submit the application with required documents after completing 18 years of age. A Living Certificate must be provided every year to continue receiving pension.  
+The beneficiary shall submit the ‘Living Certificate’ in Form XIV (A) to the sanctioning authority for each year. 
 
-**TIMELINE:** Pension is provided monthly after approval. Annual Living Certificate required for continuation.  
+In case of death of the Disability pensioner, either the bank or the legal dependant shall inform the Board or Officer authorized, about the death of the pensioner along with the death certificate in order to close the bank account 
 
- Continuation of Disability Pension
-- Continuation of Rs. 3,000 per month disability pension subject to submission of the required living certificate every year.
+Beneficiary cannot avail the scheme if he/she has already availed Accident Assistance 
 
-If you need more details, feel free to ask!  
+Documents Required 
 
-If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
+Discharge Summary/Treatment Bill 
+
+ID card from Department of Empowerment 
+
+Self-declaration form 
+
+90 Days work certificate 
+
+Application Process 
+
+The applicant submits the application along with the required supporting documents. 
+
+The application is reviewed and approved by the Assistant Labour Commissioner. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application.  
+For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """ ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ 
+        "kn": """ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ 
 
-**ಫೀ:** ದುರ್ಬಲತೆ ಪಿಂಚಣಿಗಾಗಿಯೂ ಯಾವುದೇ ಅರ್ಜಿ ಶುಲ್ಕವಿಲ್ಲ.  
+ನೋಂದಾಯಿತ ಫಲಾನುಭವಿಯು ಕಟ್ಟಡ ಕಾಮಗಾರಿಗಳಲ್ಲಿ ಕೆಲಸ ನಿರ್ವಹಿಸುವ ವೇಳೆ ಉಂಟಾದ ಅಪಘಾತದಿಂದ ಅಥವಾ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಖಾಯಿಲೆಗಳಿಂದ ಶಾಶ್ವತ / ಭಾಗಶಃ ಅಂಗವಿಕಲತೆ ಹೊಂದಿದ್ದರೆ, ಮಂಡಳಿ ವತಿಯಿಂದ ಮಾಸಿಕ ಪಿಂಚಣಿ ಹಾಗೂ ಶೇಕಡಾವಾರು ದುರ್ಬಲತೆಯನ್ನಾಧರಿಸಿ ಅನುಗ್ರಹ ರಾಶಿ ಸಹಾಯಧನ ನೀಡಲಾಗುವುದು 
 
-**ಸಹಾಯಧನ ಮೊತ್ತ:**  
-- ಪಿಂಚಣಿಯ ಮೊತ್ತ ಗರಿಷ್ಠ ₹3,000 ಪ್ರತಿ ತಿಂಗಳಿಗೆ.  
-- ದುರ್ಬಲತೆಯು ನಿರ್ಮಾಣ ಕೆಲಸದ ಸಮಯದಲ್ಲಿ ಸಂಭವಿಸಿರಬೇಕು ಮತ್ತು ಅರ್ಹ ಅಧಿಕಾರಿಯಿಂದ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪಡೆದುಕೊಳ್ಳಬೇಕು. 
-- ಅನುಗ್ರಹ ರಾಶಿ: ನಿರ್ಮಾಣ ಕೆಲಸದ ಸಮಯದಲ್ಲಿ ಸಂಭವಿಸಿದ ದುರಂತದಲ್ಲಿ ಸಾವಿನ ವೇಳೆ ₹1,00,000.
+ದುರ್ಬಲತೆ ಪಿಂಚಣಿಗಾಗಿಯೂ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ.  
 
-**ಅರ್ಹತೆ:**  
-- ಕನಿಷ್ಠ 18 ವರ್ಷ ವಯಸ್ಸಾಗಿರಬೇಕು.  
-- ನಿಶ್ಚಿತ ದುರ್ಬಲತೆಯೊಂದಿಗೆ (ಕನಿಷ್ಠ 40% ದುರ್ಬಲತೆ).  
-- ದುರ್ಬಲತೆಯು ನಿರ್ಮಾಣ ಕೆಲಸದ ಸಮಯದಲ್ಲಿ ಸಂಭವಿಸಿರಬೇಕು. 
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
 
-**ಅಗತ್ಯ ದಾಖಲೆಗಳು:**  
-- ಮಂಡಳಿಯಿಂದ ನೀಡಲ್ಪಟ್ಟ ಮೂಲ ಗುರುತಿನ ಪತ್ರ  
-- ಉದ್ಯೋಗದಾರರ ಪ್ರಮಾಣಪತ್ರ  
-- ರೇಷನ್ ಕಾರ್ಡ್  
-- ಬ್ಯಾಂಕ್ ಖಾತೆಯ ಫೋಟೋಕಾಪಿ  
-- ಪಾಸ್‌ಪೋರ್ಟ್ ಸೈಜ್ ಫೋಟೊ  
-- ಅರ್ಹ ಅಧಿಕಾರಿಯಿಂದ ದುರ್ಬಲತೆ ಪ್ರಮಾಣಪತ್ರ  
-- ಪ್ರತಿ ವರ್ಷ ಒಂದು ಜೀವಂತತಾ ಪ್ರಮಾಣಪತ್ರ ನೀಡಬೇಕು 
+ಮಂಡಳಿಯಲ್ಲಿ ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು 
 
-**ವಿಧಾನ:** 18 ವರ್ಷ ವಯಸ್ಸಾಗುವ ನಂತರ ಅಗತ್ಯ ದಾಖಲೆಗಳೊಂದಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು. ಪಿಂಚಣಿಯನ್ನು ಮುಂದುವರಿಸಲು ಪ್ರತಿ ವರ್ಷ ಜೀವಂತತಾ ಪ್ರಮಾಣಪತ್ರವನ್ನು ನೀಡಬೇಕು.  
+ನೋಂದಾಯಿತ ಫಲಾನುಭವಿಯು ನಿಯಮ 47ರಲ್ಲಿ ಪರಿಹಾರ ಸಹಾಯ ಧನ ಪಡೆದಿದ್ದಲ್ಲಿ, ಈ ನಿಯಮದಡಿ ಪರಿಹಾರ ಸಹಾಯಧನ ಪಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ.ಅಂಗವಿಕಲತೆ ಹಾಗೂ ಹಿರಿಯ ನಾಗರೀಕರ ಸಬಲೀಕರಣ ಇಲಾಖೆಯಿಂದ ಫಲಾನುಭವಿಯು ಗುರುತಿನ ಚೀಟಿಯನ್ನು ಪಡೆದಿರಬೇಕಾಗುತ್ತದೆ 
 
-**ಕಾಲಾವಧಿ:** ಅನುಮೋದನೆಯ ನಂತರ ಪಿಂಚಣಿ ತಿಂಗಳಿಗೊಮ್ಮೆ ನೀಡಲಾಗುತ್ತದೆ. ಮುಂದುವರಿಕೆಗಾಗಿ ವಾರ್ಷಿಕ ಜೀವಂತತಾ ಪ್ರಮಾಣಪತ್ರ ಅಗತ್ಯ. 
+ನೋಂದಾಯಿತ ಫಲಾನುಭವಿ ದುರ್ಬಲತೆಯ ಪಿಂಚಣಿಗಾಗಿ ಮಂಡಳಿಯ  ತಂತ್ರಾಂಶದಿಂದ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕಾಗುತ್ತದೆ. 
 
- ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ
-- ಅಗತ್ಯವಿರುವ ಜೀವಂತಿಕೆ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪ್ರತಿ ವರ್ಷ ಸಲ್ಲಿಸಿದಲ್ಲಿ ತಿಂಗಳಿಗೆ ₹3,000 ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಸಲಾಗುತ್ತದೆ.
+ನೋಂದಾಯಿತ ಫಲಾನುಭವಿಯ ದುರ್ಬಲತೆಯು ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಆದ ಅಪಘಾತ ಅಥವಾ ಯಾವುದಾದರೂ ಖಾಯಿಲೆಯಿಂದ ಉಂಟಾಗಿದ್ದು, ಅದರ ಶೇಡಾವಾರು ದುರ್ಬಲತೆಗೆ ಅನುಗುಣವಾಗಿ ಅಂಗವಿಕಲತೆ ಹಾಗೂ ಹಿರಿಯ ನಾಗರೀಕರ ಸಬಲೀಕರಣ ಇಲಾಖೆಯವರು ದುರ್ಬಲತೆಯ ಲೆಕ್ಕಾಚಾರ ಈ ಕೆಳಕಂಡ ಸೂತ್ರದ ಮುಖೇನ ನೀಡಲಾಗುವುದೆಂದು ಮಂಡಳಿಯ ಅಥವಾ ಅಧೀಕೃತ ಮಂಜೂರಾತಿ ಅಧಿಕಾರಿ ತೀರ್ಮಾನಿಸುತ್ತಾರೆ. 
 
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+Formula ,ರೂ.2,00,000/- ಗರಿಷ್ಠ ಮೊತ್ತ X ಅಂಗವಿಕಲತೆ ಹಾಗು ಹಿರಿಯ ನಾಗರೀಕರ ಸಬಲೀಕರಣ ಇಲಾಖೆ ಘೋಷಣೆ ಮಾಡಿದ ಶೇಡಾವಾರು ದುರ್ಬಲತೆ = ಪರಿಹಾರ ಸಹಾಯಧನ 
+
+ದುರ್ಬಲತೆ ಪಿಂಚಣಿಯನ್ನು ನೋಂದಾಯಿತ ಫಲಾನುಭವಿಯ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಜಮಾ ಮಾಡಲಾಗುತ್ತದೆ. 
+
+ನೋಂದಾಯಿತ ಫಲಾನುಭವಿಯು ದುರ್ಬಲತೆ ಪಿಂಚಣಿಯನ್ನು ಮುಂದುವರೆಸಲು ಪ್ರತಿ ವರ್ಷವು ಜೀವಿತ ಪ್ರಮಾಣ ಪತ್ರ ನಮೂನೆ XIV –A (living certificate form XIV –A) ಅನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದಲ್ಲಿ ಮಂಜೂರಾತಿ ಅಧಿಕಾರಿಗೆ ಸಲ್ಲಿಸಬೇಕು. 
+
+ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಪಡೆಯಲು ಫಲಾನುಭವಿ ಅರ್ಹನಲ್ಲ ಎಂದು ಕಂಡು ಬಂದಾಗ ಅವನಿಗೆ ನಿಯಮಾನುಸಾರ ಪರಿಶೀಲಿಸಿ ಅರ್ಜಿಯನ್ನು ತಿರಸ್ಕರಿಸಬೇಕಾಗುತ್ತದೆ. 
+
+ಒಂದು ವೇಳೆ ದುರ್ಬಲತೆ ಪಿಂಚಣಿದಾರರು ಮರಣಿಸಿದರೆ ಅವರ ಕಾನೂನುಬದ್ದ ಅವಲಂಭಿತರು ಅಥವಾ ಉತ್ತರಾಧಿಕಾರಿಗಳು  ಮರಣ ಪ್ರಮಾಣ ಪತ್ರವನ್ನು ಮಂಡಳಿಗೆ ಸಲ್ಲಿಸುವುದು. 
+
+ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ಗೆಜೆಟೆಡ್ ಅಧಿಕಾರಿಯಿಂದ ದೃಢೀಕರಿಸಲ್ಪಟ್ಟ ಗುರುತು ಚೀಟಿಯ ಛಾಯಾಪ್ರತಿ ನೀಡತಕ್ಕದ್ದು 
+
+ಪ್ರತಿವರ್ಷ ಜೀವಿತ ಪ್ರಮಾಣ ಪತ್ರ ನೀಡತಕ್ಕದ್ದು 
+
+ಉದ್ಯೋಗದ ದೃಢೀಕರಣ ಪತ್ರ ನೀಡತಕ್ಕದ್ದು 
+
+ವೈದ್ಯಕೀಯ ವರದಿ 
+
+ವಿಕಲಚೇತನ  ಹಾಗೂ ಹಿರಿಯ  ನಾಗರೀಕರ ಸಬಲೀಕರಣ ಇಲಾಖೆಯಿಂದ ಪಡೆದ, ದೃಢೀಕರಿಸಲ್ಪಟ್ಟ ಗುರುತಿನ ಚೀಟಿಯನ್ನು ಲಗತ್ತಿಸತಕ್ಕದ್ದು 
+
+ದುರ್ಬಲತೆಗೊಳಗಾದ ಫಲಾನುಭವಿಯ ಭಾವಚಿತ್ರ ಲಗತ್ತಿಸತಕ್ಕದ್ದು 
+
+ಫಲಾನುಭವಿಯು ಸಕ್ಷಮ ಪ್ರಾಧಿಕಾರದಿಂದ ದುರ್ಬಲತೆಯ ಗುರುತಿನ ಚೀಟಿಯನ್ನು ಪಡೆದ ಒಂದು ವರ್ಷದೊಳಗೆ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು 
+
+ಫಲಾನುಭವಿ ಮರಣ ಹೊಂದಿದ ಪಕ್ಷದಲ್ಲಿ, ನಾಮ ನಿರ್ದೇಶಿತರು ಮರಣ ಪ್ರಮಾಣ ಪತ್ರವನ್ನು ಮಂಡಳಿಗೆ ನೀಡತಕ್ಕದ್ದು 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು.. 
+
+ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ. 
+
+ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ  ಅನುಮೋದನೆ. 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. 
+ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+"""
+    },
+
+    "continuation of disability": {
+        "en": """Continuation of Disability Pension 
+
+There is no application fee for Continuation of Disability Pension.  
+
+Eligibility Criteria 
+
+Must be a registered construction worker with the Board. 
+
+In case of death of the Disability pensioner, either the bank or the legal dependant shall inform the Board or Officer authorized, about the death of the pensioner along with the death certificate in order to close the bank account 
+
+The Board or authorized officer may Sanction an amount of Rs. 2000/- (Govt of Karnataka Notification NO 106 LET 2019, Bengaluru, dated:14-11-2019) per month as disability pension to a beneficiary, who is partially disabled due to any disease or accident at worksite and for an ex-gratia payment of not more than Rs. 2,00,000/- (Rupees two lakhs only) depending upon the percentage of disability 
+
+The Disability Pension granted shall be discontinued once the beneficiary attains the age of sixty years 
+
+The beneficiary shall submit the ‘Living Certificate’ in Form XIV (A) to the sanctioning authority for each year in the month of December  
+
+Documents Required 
+
+Living Certificate 
+
+Application Process 
+
+The applicant submits the application along with the required supporting documents. 
+
+The application is reviewed and approved by the Assistant Labour Commissioner. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application.  
+For new Labour, please Register and then apply for the scheme.
+""",
+        "kn": """ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ 
+
+ದುರ್ಬಲತೆ ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆಗೆ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ.  
+
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
+
+ಮಂಡಳಿಯಲ್ಲಿ ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು  
+
+ವಿಕಲ ಚೇತನ ಪಿಂಚಣಿದಾರನ ಸಾವಿನ ಸಂದರ್ಭದಲ್ಲಿ, ಬ್ಯಾಂಕ್ ಅಥವಾ ಕಾನೂನು ಅವಲಂಬಿತರು ಪಿಂಚಣೆದಾರರ ಬ್ಯಾಂಕ್ ಖಾತೆಯನ್ನು ಮುಚ್ಚುವ ಸಲುವಾಗಿ ಪಿಂಚಣಿದಾರರ ಸಾವು ಮತ್ತು ಮರಣ ಪ್ರಮಾಣ ಪತ್ರದ ಕುರಿತು ಬೋರ್ಡ್ ಅಥವಾ ಅಧಿಕೃತ ಅಧಿಕಾರಿಗೆ ತಿಳಿಸಬೇಕು 
+
+ಬೋರ್ಡ್ ಅಥವಾ ಅಧಿಕೃತ ಅಧಿಕಾರಿಯು ಕೆಲಸದ ಸ್ಥಳದಲ್ಲಿ ಯಾವುದೇ ರೋಗ ಅಥವಾ ಅಪಘಾತದಿಂದಾಗಿ ಭಾಗಶಃ ಅಂಗವಿಕಲರಾಗಿರುವ ಫಲಾನುಭವಿಗೆ ಪ್ರತಿ ಮಾಸಿಕ ರೂ. 2000/- ಗಳನ್ನು (ಕರ್ನಾಟಕ ಸರ್ಕಾರ ಅಧಿಸೂಚನೆ ಸಂಖ್ಯೆ 106 LET 2019, ಬೆಂಗಳೂರು, ದಿನಾಂಕ: 14-11-2019) ವಿಕಲಚೇತನ ಪಿಂಚಣಿಯನ್ನು ನೀಡಬೇಕು. ರೂ. 2,00,000/- (ಎರಡು ಲಕ್ಷ ರೂಪಾಯಿಗಳು ಮಾತ್ರ) ಕ್ಕಿಂತ ಹೆಚ್ಚಿಲ್ಲದ ಅನುಗ್ರಹರಾಶಿ ಪಾವತಿಗಾಗಿ ಅವರ ದುರ್ಬಲತೆಯ ಶೇಕಡಾವಾರು ಅವಲಂಬಿಸಿ ಈ ಮೊತ್ತವನ್ನು ನಿರ್ಧರಿಸಬೇಕು. 
+
+ಫಲಾನುಭವಿಗೆ ಅರವತ್ತು ವರ್ಷ ತುಂಬಿದ ನಂತರ ನೀಡಲಾದ ವಿಕಲ ಚೇತನ ಪಿಂಚಣಿಯನ್ನು ನಿಲ್ಲಿಸಲಾಗುತ್ತದೆ 
+
+ಫಲಾನುಭವಿಯು ಪ್ರತಿವರ್ಷ ಡಿಸೆಂಬರ್ ಮಾಹೆಯಲ್ಲಿ ಪಿಂಚಣಿ ಮಂಜೂರು ಮಾಡುವ ಪ್ರಾಧಿಕಾರಕ್ಕೆ ನಮೂನೆ XIV (A) ನಲ್ಲಿ ‘ಜೀವಂತ ಪ್ರಮಾಣಪತ್ರ’ ಸಲ್ಲಿಸಬೇಕು. 
+
+ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ಜೀವಂತ ಪ್ರಮಾಣಪತ್ರ 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು. 
+
+ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ  ಅನುಮೋದನೆ. 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. 
+ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
 """
     },
 
     "pension": {
-        "en": """ Old Age Pension 
+        "en": """Pension 
 
-**FEE:** There is no application fee for Old Age Pension.  
+There is no application fee for Old Age Pension.  
 
-**BENEFIT:**  
-- The pension amount shall not exceed Rs.3,000 per month.  
+Eligibility  
 
-**ELIGIBILITY:**  
-- Must have completed 60 years of age  
-- Must have continued as a beneficiary of the Board for at least 3 years before the age of 60  
-- Cannot avail similar benefit under any other Government schemes 
+Must be a registered construction worker with the Board. 
 
-**DOCUMENTS REQUIRED:**  
-- Original Identity Card issued by the Board  
-- Employer Certificate  
-- Ration Card  
-- Photocopy of bank passbook  
-- Passport size photo  
-- Living Certificate must be provided every year 
+A registered Building and Other Construction Worker beneficiary who:  
 
-**PROCEDURE:** Submit the application with required documents after completing 60 years of age. A Living Certificate must be provided every year to continue receiving pension.  
+Has completed 60 years of age, and  
 
-**TIMELINE:** Pension is provided monthly after approval. Annual Living Certificate required for continuation.  
+Has been continuously registered as a beneficiary of the Board for at least 3 years prior to attaining the age of 60.  
 
- Continuation of Pension
-Annual continuation is required, and the Living Certificate must be submitted every December to continue receiving the pension up to Rs. 3,000 per month.
+Cannot avail similar benefit under any other Government Scheme.  
 
-If you need more details, feel free to ask!  
+Application Process  
 
-If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
+The applicant must surrender the Beneficiary Identity Card issued by the Board along with the application. 
+
+After verification of the application, the Board will issue a Pension Sanction Order along with a Pension Identity Card containing an electronically generated unique Pension Payment Order (PPO) number. 
+
+If the Board determines that the applicant does not meet the eligibility criteria, the application will be rejected after providing the applicant an opportunity to be heard. 
+
+In the event of the death of the pensioner, the legal dependents or heirs must inform the Board and submit the death certificate to enable closure of the pension account.  
+
+The pension amount shall not exceed ₹3,000 per month, as per Government of Karnataka Notification No. LD 458 LET 2021 dated 08-08-2022. The beneficiary must not be receiving similar benefits under any other Government scheme.  
+
+The beneficiary is required to submit a Living Certificate (Form XII-A) every year in the month December. 
+
+Documents Required 
+
+Original Beneficiary Identity Card issued by the Board 
+
+Employer Certificate 
+
+Living Certificate (to be submitted annually) 
+
+Passport-size Photograph 
+
+Application Processing Procedure 
+
+The applicant submits the pension application along with the required supporting documents. 
+
+The application is reviewed and approved by the Assistant Labour Commissioner. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application. 
+For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """ ಪಿಂಚಣಿ 
+        "kn": """ಪಿಂಚಣಿ 
 
-**ಫೀ:** ಪಿಂಚಣಿ ಯೋಜನೆಯ ಅರ್ಜಿಗೆ ಯಾವುದೇ ಶುಲ್ಕವಿಲ್ಲ.  
+ಪಿಂಚಣಿ ಯೋಜನೆಯ ಅರ್ಜಿಗೆ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ.. 
 
-**ಸಹಾಯಧನ ಮೊತ್ತ:**  
-- ಪಿಂಚಣಿಯ ಮೊತ್ತ ಗರಿಷ್ಠ ₹3,000 ಪ್ರತಿ ತಿಂಗಳಿಗೆ. 
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
 
-**ಅರ್ಹತೆ:**  
-- ಕನಿಷ್ಠ 60 ವರ್ಷ ವಯಸ್ಸಾಗಿರಬೇಕು.  
-- 60 ವರ್ಷ ವಯಸ್ಸಾಗುವ ಮುನ್ನ ಕನಿಷ್ಠ 3 ವರ್ಷಗಳು ಮಂಡಳಿಯ ಲಾಭಾರ್ಥಿಯಾಗಿ ಇರಬೇಕು.  
-- ಇತರ ಸರಕಾರಿ ಯೋಜನೆಗಳಿಂದ ಸಮಾನ ಲಾಭವನ್ನು ಪಡೆಯಬಾರದು. 
+ಮಂಡಳಿಯಲ್ಲಿ ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು  
 
-**ಅಗತ್ಯ ದಾಖಲೆಗಳು:**  
-- ಮಂಡಳಿಯಿಂದ ನೀಡಲಾದ ಮೂಲ ಗುರುತಿನ ಪತ್ರ  
-- ಉದ್ಯೋಗದಾರರ ಪ್ರಮಾಣಪತ್ರ  
-- ರೇಷನ್ ಕಾರ್ಡ್  
-- ಬ್ಯಾಂಕ್ ಖಾತೆಯ ಫೋಟೋಕಾಪಿ  
-- ಪಾಸ್‌ಪೋರ್ಟ್ ಸೈಜ್ ಫೋಟೊ  
-- ಪ್ರತಿ ವರ್ಷ ಒಂದು ಜೀವಂತತೆ ಪ್ರಮಾಣಪತ್ರ ನೀಡಬೇಕು 
+ಪ್ರತಿ ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಅಥವಾ ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕ ಫಲಾನುಭವಿಯು 60 ವರ್ಷ ವಯೋಮಿತಿ ಪೂರ್ಣಗೊಳಿಸಿರಬೇಕು. 
 
-**ವಿಧಾನ:** 60 ವರ್ಷ ವಯಸ್ಸಾಗುವ ನಂತರ ಅಗತ್ಯ ದಾಖಲೆಗಳೊಂದಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು. ಪಿಂಚಣಿಯನ್ನು ಮುಂದುವರಿಸಲು ಪ್ರತಿ ವರ್ಷ ಜೀವಂತತೆ ಪ್ರಮಾಣಪತ್ರವನ್ನು ನೀಡಬೇಕು.  
+ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕ  60 ವರ್ಷ ವಯಸ್ಸು ಪೂರ್ಣಗೊಳ್ಳುವ ಪೂರ್ವದಲ್ಲಿ ಕನಿಷ್ಠ 03 ವರ್ಷಗಳು ನಿರಂತರವಾಗಿ ಮಂಡಳಿಯ ಫಲಾನುಭವಿಯಾಗಿ ಮುಂದುವರೆದಿರಬೇಕು. 
 
-**ಕಾಲಾವಧಿ:** ಅನುಮೋದನೆಯ ನಂತರ ಪಿಂಚಣಿ ತಿಂಗಳಿಗೊಮ್ಮೆ ನೀಡಲಾಗುತ್ತದೆ. ಮುಂದುವರಿಕೆಗೆ ವಾರ್ಷಿಕ ಜೀವಂತತೆ ಪ್ರಮಾಣಪತ್ರ ಅಗತ್ಯ. 
+ಫಲಾನುಭವಿಯು ಸರ್ಕಾರದ ಇತರೆ ಯೋಜನೆಯಡಿ ಇದೇ ತರಹದ ಯಾವುದೇ ಸೌಲಭ್ಯವನ್ನು ಪಡೆದಿರಬಾರದು 
 
- ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ
-- ಅರ್ಹ ಕಾರ್ಮಿಕರಿಗೆ ತಿಂಗಳಿಗೆ ಗರಿಷ್ಠ ₹3,000 ಪಿಂಚಣಿ ಮುಂದುವರಿಸಲು ಪ್ರತಿ ವರ್ಷ ಡಿಸೆಂಬರ್ ತಿಂಗಳಲ್ಲಿ ಜೀವಂತಿಕೆ ಪ್ರಮಾಣಪತ್ರ ಸಲ್ಲಿಸುವುದು ಕಡ್ಡಾಯ.
+ಪಿಂಚಣಿಗೆ ಅರ್ಹರಾದ ಪ್ರತಿ ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಅಥವಾ ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರು ಮಂಡಳಿಯ KBOCWWB  ತಂತ್ರಾಂಶದ ಮೂಲಕ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಬೇಕು. 
 
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಅಥವಾ ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕನು ತನ್ನ ಮಂಡಳಿಯ ಮೂಲ ಗುರುತಿನ ಚೀಟಿಯನ್ನು ಅರ್ಜಿಯೊಂದಿಗೆ ಸಲ್ಲಿಸಬೇಕು. 
+
+ಮಂಡಳಿಯು ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಮತ್ತು ಇತರೆ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರು ಪಿಂಚಣಿ ಕೋರಿ ಸಲ್ಲಿಸಿದ ಅರ್ಜಿಯನ್ನು ಪರಿಶೀಲಿಸಿದ ನಂತರ, ಫಲಾನುಭವಿಗೆ ಪಿಂಚಣಿ ಮಂಜೂರಾತಿ ಆದೇಶದ ಜೊತೆಗೆ ವಿದ್ಯುನ್ಮಾನಿಕೃತ ವಿಶಿಷ್ಷ ಪಿಂಚಣಿ ಗುರುತಿನ ಚೀಟಿಯನ್ನು ನೀಡಬೇಕು. 
+
+ಫಲಾನುಭವಿಯು ಸಲ್ಲಿಸಿದ ಪಿಂಚಣಿ ಅರ್ಜಿಯ ಪರಿಶೀಲನಾ ಸಂದರ್ಭದಲ್ಲಿ ಅರ್ಜಿಯು ಅನರ್ಹ ಎಂದು ಕಂಡು ಬಂದಲ್ಲಿ, ಅರ್ಜಿಯನ್ನು ತಿರಸ್ಕರಿಸಲಾಗುವುದು. 
+
+ಪಿಂಚಣಿದಾರ ಮರಣ ಹೊಂದಿದಾಗ, ಅವರ ಕಾನೂನುಬದ್ದ ಅವಲಂಬಿತರು ಅಥವಾ ಉತ್ತರಾಧಿಕಾರಿಗಳು ಪಿಂಚಣಿದಾರರ ಮರಣ ಪ್ರಮಾಣ ಪತ್ರವನ್ನು ಸಲ್ಲಿಸಿ ಬ್ಯಾಂಕ್ ಖಾತೆಯನ್ನು ಮುಚ್ಚಲು ಮಂಡಳಿಗೆ ತಿಳಿಸಬೇಕು. 
+
+ಪಿಂಚಣಿಯ ಮೊತ್ತವು ಮಾಸಿಕ ರೂ 3000/-ಗಳನ್ನು (ಸರ್ಕಾರದ ಅಧಿಸೂಚನೆ ಸಂಖ್ಯೆ ಎಲ್ ಡಿ 458 ಎಲ್ ಇಟಿ 2021 ಬೆಂಗಳೂರು ದಿನಾಂಕ: 08-08-2022 ರಂತೆ ) ಮೀರತಕ್ಕದಲ್ಲ, ಮತ್ತು ಫಲಾನುಭವಿಯು ಸರ್ಕಾರದ ಇತರೆ ಯೋಜನೆಯಡಿ ಇದೇ ತರಹದ ಯಾವುದೇ ಸೌಲಭ್ಯವನ್ನು ಪಡೆದಿರಬಾರದು) 
+
+ನೋಂದಾಯಿತ ಫಲಾನುಭವಿಯು ಪಿಂಚಣಿಯನ್ನು ಮುಂದುವರೆಸಲು ಪ್ರತಿ ವರ್ಷವೂ ಜೀವಿತ ಪ್ರಮಾಣ ಪತ್ರ ನಮೂನೆ XIV –A (living certificate form XIV –A) ಅನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದಲ್ಲಿ ಮಂಜೂರಾತಿ ಅಧಿಕಾರಿಗೆ ಸಲ್ಲಿಸಬೇಕು. 
+
+ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ಉದ್ಯೋಗದ ದೃಢೀಕರಣ ಪತ್ರ  
+
+ಜೀವಿತ ಪ್ರಮಾಣ ಪತ್ರ  
+
+ಫಲಾನುಭವಿಯ ಬ್ಯಾಂಕ್ ಪಾಸ್ ಪುಸ್ತಕದ ಛಾಯಾಪ್ರತಿ 
+
+ಪಾಸ್ ಪೋರ್ಟ್ ಫೋಟೋ 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು. 
+
+ನೋಂದಣಾಧಿಕಾರಿಗಳಾದ ಹಿರಿಯ / ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರಿಂದ ಪರಿಶೀಲನೆ   
+
+ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ  ಅನುಮೋದನೆ. 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. 
+ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+"""
+    },
+
+    "continuation of pension": {
+        "en": """Continuation of Pension 
+
+There is no application fee for Continuation of Pension.  
+
+Eligibility Criteria 
+
+Must be a registered construction worker with the Board. 
+
+Every registered building or other construction worker, can avail this scheme who has paid subscription fee for a continuous period of (not less than three years) and remain as such construction worker until he attains the age of sixty years 
+
+The amount of pension shall not exceed a sum of Rs. 3000/- (Rupees three thousand only) per month, and the beneficiary shall not avail similar benefit under any of the Government Schemes. 
+
+Living Certificate to be submitted every year in the month of December 
+
+Documents Required 
+
+Living Certificate 
+
+Application Process 
+
+The applicant submits the application along with the required supporting documents. 
+
+The application is reviewed and approved by the Assistant Labour Commissioner. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application.  
+For new Labour, please Register and then apply for the scheme.
+""",
+        "kn": """ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆ 
+
+ಪಿಂಚಣಿ ಮುಂದುವರಿಕೆಗೆ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ. 
+
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
+
+ಮಂಡಳಿಯಲ್ಲಿ ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು  
+
+ನಿರಂತರ ಅವಧಿಗೆ ಚಂದಾದಾರಿಕೆ ಶುಲ್ಕವನ್ನು (ನಿರಂತರ ಮೂರು ವರ್ಷಗಳು) ಪಾವತಿಸಿದ ಮತ್ತು ಅರವತ್ತು ವರ್ಷ ತುಂಬುವವರೆಗೆ ಕಟ್ಟಡ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರಾಗಿ ಕಾರ್ಯ ನಿರ್ವಹಿಸುವ ಪ್ರತಿ ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಅಥವಾ ಇತರ ನಿರ್ಮಾಣ ಕೆಲಸಗಾರರು, ಈ ಯೋಜನೆಯನ್ನು ಬಳಸಿಕೊಳ್ಳಬಹುದು. 
+
+ಪ್ರತಿ ತಿಂಗಳು ಈ ಪಿಂಚಣಿ ಮೊತ್ತವು ರೂ 3000 ಗಳನ್ನು (ರೂಪಾಯಿಗಳು ಮೂರು ಸಾವಿರ ಮಾತ್ರ) ಮೀರಬಾರದು. ಮತ್ತು ಈ ಯೋಜನೆಯ ಫಲಾನುಭವಿಯು ಯಾವುದೇ ಇತರ ಸರ್ಕಾರಿ ಯೋಜನೆಗಳ ಅಡಿಯಲ್ಲಿ ಇದೇ ರೀತಿಯ ಪ್ರಯೋಜನವನ್ನು ಪಡೆಯುವಂತಿಲ್ಲ. 
+
+ಪ್ರತಿ ವರ್ಷ ಡಿಸೆಂಬರ್ ಮಾಹೆಯಲ್ಲಿ ಜೀವಂತ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಸಲ್ಲಿಸಬೇಕು 
+
+ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ಜೀವಂತ ಪ್ರಮಾಣಪತ್ರ 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು.   
+
+ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ ಅನುಮೋದನೆ. 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. 
+ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
 """
     },
 
     "marriage": {
-        "en": """ Marriage Assistance 
+        "en": """Marriage Assistance 
 
-**FEE:** There is no application fee for Marriage Assistance.  
+The Secretary or any other authorized in this behalf by the Board, shall on an application from a registered construction worker, sanction a sum of Rs.60,000/- (Rupees Fifty Thousand Only) as assistance to meet the marriage expenses of the worker or his/her two dependent children.  
 
-**BENEFIT:**  
-- ₹60,000 assistance for marriage of worker or dependent children.  
-- Available maximum twice per family.  
+There is no application fee for Marriage Assistance.  
 
-**ELIGIBILITY:**  
-- Minimum 1 year since registration to marriage date  
-- Available only twice per family  
-- Only one claim per marriage  
-- Son/daughter must have attained legal age for marriage  
-- Application within 6 months of marriage  
+Eligibility Criteria 
 
-**DOCUMENTS REQUIRED:**  
-- Identity card issued by the Board  
-- Employment Certificate  
-- Bank Account details  
-- Marriage Certificate by Registrar  
-- Marriage Invitation Card  
-- Affidavit (if marriage outside Karnataka)  
-- Ration Card  
+A minimum of one year shall have lapsed from the date of registered of the applicant to the date of marriage of the applicant’s son or daughter for whose marriage the assistance is sought. 
 
-**PROCEDURE:** Submit the application with Marriage Certificate and required documents within 6 months of marriage.  
+The family of a registered construction worker can avail this assistance only twice, However, there shall be only one claim in respect of a given marriage irrespective of the number of registered construction workers in the family. 
 
-**TIMELINE:** Application must be submitted within 6 months of marriage.  
+The son or daughter of the registered construction worker, for whose marriage the assistance is sought, shall have attained the age prescribed by law for marriage. 
 
-If you need more details, feel free to ask!  
+The certificate of registration of marriage to obtain from the registrar of marriage shall be produced along with the application. 
 
-If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
+Documents Required 
+
+Employment Certificate 
+
+Marriage Certificate by Registrar of the marriage 
+
+Marriage Invitation Card 
+
+Affidavit (if marriage is outside Karnataka state) 
+
+Application submitted within 6 months from the Date of marriage 
+
+Application Process 
+
+The applicant needs to submit the application. 
+
+The application is reviewed and Approved by Labour Officer. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application.  
+For new Labour, please Register and then apply for the scheme.
 """,
-        "kn": """ ವಿವಾಹ ಸಹಾಯಧನ 
+        "kn": """ಮದುವೆ ಸಹಾಯಧನ 
 
-**ಫೀ:** ವಿವಾಹ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವಿಲ್ಲ.  
+ನೋಂದಾಯಿತ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕರ ಮೊದಲ ಮದುವೆ ಅಥವಾ ಅವನ / ಅವಳ ಮಕ್ಕಳ ಮದುವೆಗೆ ಸಹಾಯ ಧನ ನೀಡಲಾಗುವುದು. 
 
-**ಸಹಾಯಧನ ಮೊತ್ತ:**  
-- ವಿವಾಹದ ಸಂದರ್ಭದಲ್ಲಿ ₹60,000/- ಆರ್ಥಿಕ ನೆರವು.  
-- ಪ್ರತಿ ಕುಟುಂಬಕ್ಕೆ ಗರಿಷ್ಠ ಎರಡು ಬಾರಿ ಲಭ್ಯ.  
+ಮದುವೆ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ. 
 
-**ಅರ್ಹತೆ ಮತ್ತು ಷರತ್ತುಗಳು:**  
-- ನೋಂದಾಯಿತ ಕಾರ್ಮಿಕನಾಗಿರಬೇಕು.  
-- ವಿವಾಹದ ದಿನಾಂಕದಿಂದ ಮುನ್ನ ಕನಿಷ್ಠ 1 ವರ್ಷ ನೋಂದಾಯಿತರಾಗಿರಬೇಕು.  
-- ಪ್ರತಿ ಕುಟುಂಬಕ್ಕೆ ಗರಿಷ್ಠ ಎರಡು ಬಾರಿ ಮಾತ್ರ ಲಭ್ಯ.  
-- ಒಂದೇ ವಿವಾಹಕ್ಕಾಗಿ ಒಂದು ಬಾರಿಗೆ ಮಾತ್ರ ಸಹಾಯಧನ ಲಭ್ಯ.  
-- ಮಗುವಿನ ವಯಸ್ಸು 18 ವರ್ಷ (ಮಹಿಳಾ) ಮತ್ತು 21 ವರ್ಷ (ಪುರುಷ) ತಲುಪಿರಬೇಕು.  
-- ವಿವಾಹದ ನಂತರ 6 ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು.  
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
 
-**ಅಗತ್ಯ ದಾಖಲೆಗಳು:**  
-- ಮಂಡಳಿಯಿಂದ ನೀಡಲಾದ ಗುರುತಿನ ಚೀಟಿ / ಸ್ಮಾರ್ಟ್ ಕಾರ್ಡ್  
-- ಉದ್ಯೋಗ ದೃಢೀಕರಣ ಪತ್ರ  
-- ಬ್ಯಾಂಕ್ ಖಾತೆ ಪುರಾವೆ  
-- ವಿವಾಹದ ಪತ್ರ (ವಿವಾಹ ನೋಂದಣಾಧಿಕಾರಿ)  
-- ವಿವಾಹದ ಆಹ್ವಾನಪತ್ರಿಕೆ  
-- ಅಫಿಡವಿಟ್ (ಕರ್ಣಾಟಕ ಹೊರಗಿನ ವಿವಾಹಕ್ಕಾಗಿ)  
-- ಪಡಿತರ ಚೀಟಿ 
+ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕನು ಮದುವೆಯ ಸಹಾಯ ಧನ ಪಡೆಯಲು ಮದುವೆಯಾದ ದಿನಾಂಕದಿಂದ ನೋಂದಣಿಯಾದ ದಿನಾಂಕದವರೆಗೆ ಒಂದು ವರ್ಷ ಸದಸ್ಯತ್ವವನ್ನು ಪೂರೈಸಿರಬೇಕು. 
 
-**ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ:**  
-1. ಅಗತ್ಯ ದಾಖಲೆಗಳೊಂದಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು.  
-2. ಹಿರಿಯ ಕಾರ್ಮಿಕ ನಿರೀಕ್ಷಕರು / ನೋಂದಣಾಧಿಕಾರಿ ಪರಿಶೀಲಿಸುತ್ತಾರೆ.  
-3. ಕಾರ್ಮಿಕ ಅಧಿಕಾರಿ ಪರಿಶೀಲಿಸಿ ಅನುಮೋದನೆ ನೀಡುತ್ತಾರೆ. 
+ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕನ ಕುಟುಂಬವು ಎರಡು ಬಾರಿ ಮಾತ್ರ ಸಹಾಯಧನ ಪಡೆಯಲು ಅರ್ಹರಾಗಿರುತ್ತಾರೆ. (ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕನ ಕುಟುಂಬದಲ್ಲಿ ಇರುವ ನೋಂದಾಯಿತ ನಿರ್ಮಾಣ ಕಾರ್ಮಿಕನ ಸದಸ್ಯರನ್ನು ಲೆಕ್ಕಿಸದೆ ಒಂದು ನಿರ್ದಿಷ್ಠವಾದ ಮದುವೆಗೆ ಒಂದೇ ಸಹಾಯ ಧನವಾಗಿ ಹಕ್ಕು ಸಾಧಿಸಬೇಕಾಗಿರುತ್ತದೆ). 
 
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕನ ಮಗ ಅಥವಾ ಮಗಳು ಮದುವೆ ಸಹಾಯಧನವನ್ನು ಪಡೆಯಲು ವಿವಾಹ ನಿಯಮದಡಿ ಸೂಚಿಸಿರುವ ವಯಸ್ಸನ್ನು ಹೊಂದಿರಬೇಕು. 
+
+ವಿವಾಹ ನೋಂದಣಾಧಿಕಾರಿಯಿಂದ ಪಡೆದ ವಿವಾಹ ನೋಂದಣಾ ಪತ್ರವನ್ನು ಅರ್ಜಿಯೊಂದಿಗೆ ಸಲ್ಲಿಸಬೇಕು. 
+
+ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ಫಲಾನುಭವಿಯೆಂದು ನೊಂದಣೆಯಾಗಿ ಒಂದು ವರ್ಷದ ನಂತರ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸುವುದು 
+
+ಉದ್ಯೋಗ ದೃಡೀಕರಣ ಪತ್ರ 
+
+ವಿವಾಹ ನೋಂದಣಾಧಿಕಾರಿಗಳಿಂದ ಪಡೆದ ವಿವಾಹ ನೋಂದಣಾ ಪತ್ರ 
+
+ಮದುವೆಯ ಆಮಂತ್ರಣ ಪತ್ರ 
+
+ಮದುವೆ ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಹೊರಗೆ ಜರುಗಿದ್ದಲ್ಲಿ ಅಫಿಡೆವಿಟ್ ಸಲ್ಲಿಸುವುದು 
+
+ಮದುವೆಯಾಗಿ ಆರು ತಿಂಗಳೊಳಗೆ ಅರ್ಜಿಯನ್ನುಸಲ್ಲಿಸುವುದು 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು. 
+
+ಅರ್ಜಿಯನ್ನು ಸಂಬಂಧಪಟ್ಟ ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ ವಿಲೇವಾರಿ ಮಾಡಲಾಗುವುದು. 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. 
+ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
 """
     },
 
     "funeral": {
-        "en": """ Funeral and Ex-Gratia 
+        "en": """Funeral and Ex-Gratia 
 
-**FEE:** There is no application fee for Funeral and Ex-Gratia.  
+There is no application fee for Funeral and Ex-Gratia.  
 
-**BENEFIT:**  
-- ₹1,46,000 for funeral expenses and ex-gratia to the nominee.  
+Eligibility Criteria 
 
-**DOCUMENTS REQUIRED:**  
-- Identity card issued by the Board  
-- Bank passbook of Nominee  
-- Death Certificate attested by gazetted officer  
-- Ration Card  
-- Aadhaar Card  
-- Employer Certificate  
-- Photo ID of Nominee  
+Must be a registered construction worker with the Board. 
 
-**ELIGIBILITY:**  
-- The nominee of the deceased registered construction worker can apply within 1 year of death. 
+Application should be submitted within one year of death. 
 
-**PROCEDURE:**  
-- The nominee submits the application in Form XVIII with Death Certificate and required documents within 1 year of death.  
+If registered construction worker dies, the secretary, or any other officer authorized in this behalf by the board, shall pay a sum of Rs. 4,000 (Rupees four thousand only) to the nominee of the deceased registered construction worker to meet the funeral expenses of the deceased registered construction worker and an ex-gratia amount of Rs. 1,46,000 (Rupees One Lakh Forty Six Thousand only) shall also be paid to the nominee of the deceased registered construction worker to mitigate the financial hardship caused by the sudden demise. 
 
-**TIMELINE:**  
-- Application must be submitted within 1 year of death.  
+Documents Required 
 
-If you need more details, feel free to ask!  
+Death Certificate 
 
-If the Labour is eligible and has all the required documents, please Login and submit the scheme application. For new Labour, please Register and then apply for the scheme.
+Nominee Aadhaar 
+
+FIR Copy 
+
+Postmortem Report 
+
+Application Process 
+
+The applicant submits the application along with the required supporting documents. 
+
+The application is reviewed and approved by the Assistant Labour Commissioner. 
+
+If the Labour is eligible and has all the required documents, please Login and submit the scheme application.  
 """,
-        "kn": """ ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನ 
+        "kn": """ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನ 
 
-**ಫೀ:** ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವಿಲ್ಲ.  
+ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚ ಮತ್ತು ಅನುಗ್ರಹರಾಶಿ ಸಹಾಯಧನಕ್ಕಾಗಿ ಯಾವುದೇ ಶುಲ್ಕವನ್ನು ಫಲಾನುಭವಿಯು ಪಾವತಿಸಬೇಕಾಗಿರುವುದಿಲ್ಲ. 
 
-**ಸಹಾಯಧನ ಮೊತ್ತ:**  
-- ಅಂತ್ಯಕ್ರಿಯೆ ವೆಚ್ಚದಿಗಾಗಿ ₹1,46,000/-  
+ಅರ್ಹತೆಯ ಮಾನದಂಡಗಳು 
 
-**ಅಗತ್ಯ ದಾಖಲೆಗಳು:**  
-- ಮಂಡಳಿಯಿಂದ ನೀಡಲಾದ ಗುರುತಿನ ಚೀಟಿ  
-- ನಾಮನಿರ್ದೇಶಿತರ ಬ್ಯಾಂಕ್ ಖಾತೆ ಪುಸ್ತಕ  
-- ಮರಣ ಪ್ರಮಾಣಪತ್ರ 
-- ರೇಷನ್ ಕಾರ್ಡ್  
-- ಆಧಾರ್ ಕಾರ್ಡ್  
-- ಉದ್ಯೋಗದಾತರ ಪ್ರಮಾಣಪತ್ರ  
-- ನಾಮನಿರ್ದೇಶಿತರ ಫೋಟೋ ಐಡಿ  
+ಮಂಡಳಿಯಲ್ಲಿ ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕರಾಗಿರಬೇಕು. 
 
-**ಅರ್ಹತೆ ಮತ್ತು ಶರತ್ತುಗಳು:**  
-- ನೋಂದಾಯಿಸಲಾದ ನಿರ್ಮಾಣ ಕೂಲಿಯ ಮರಣಾನಂತರ ನಾಮನಿರ್ದೇಶಿತರು ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು.  
-- ಮರಣದ ನಂತರ 1 ವರ್ಷದೊಳಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು.  
+ಮರಣ ಹೊಂದಿದ ಒಂದು ವರ್ಷದೊಳಗಾಗಿ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸತಕ್ಕದ್ದು 
 
-**ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ:**  
-- ನಾಮನಿರ್ದೇಶಿತರು ಮರಣ ಪತ್ರಿಕೆ ಮತ್ತು ಅಗತ್ಯ ದಾಖಲೆಗಳೊಂದಿಗೆ ಫಾರ್ಮ್ XVIII ರಲ್ಲಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು.  
-- ಅರ್ಜಿಯನ್ನು ಮರಣದ ನಂತರ 1 ವರ್ಷದೊಳಗೆ ಸಲ್ಲಿಸಬೇಕು.  
+ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕರು ಮರಣಹೊಂದಿದಾಗ, ಮೃತರ ಅಂತ್ಯಕ್ರಿಯೆಯ ವೆಚ್ಚವನ್ನು ಮೃತರ ನೋಂದಾಯಿತ ಕಟ್ಟಡ ಕಾರ್ಮಿಕರ ನಾಮನಿರ್ದೇಶಿತರಿಗೆ ರೂ 4,000 (ರೂಪಾಯಿ ನಾಲ್ಕು ಸಾವಿರ ಮಾತ್ರ) ಗಳನ್ನು ಮತ್ತು ಮರಣದಿಂದ ಅವರ ಕುಟುಂಬಕ್ಕೆ ಉಂಟಾದ ಆರ್ಥಿಕ ಸಂಕಷ್ಟವನ್ನು ತಗ್ಗಿಸಲು ರೂ 1,46,000 ಅನುಗ್ರಹರಾಶಿ ಮೊತ್ತವನ್ನು (ರೂಪಾಯಿ ಒಂದು ಲಕ್ಷದ ನಲವತ್ತಾರು ಸಾವಿರ ಮಾತ್ರ) ಮೃತರ ನಾಮನಿರ್ದೇಶಿತರಿಗೆ ಪಾವತಿಸಲಾಗುವುದು. 
 
-ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದು ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ. ಹೊಸ ಕಾರ್ಮಿಕರಾಗಿದ್ದರೆ, ಮೊದಲು ನೋಂದಣಿ ಮಾಡಿ ನಂತರ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
+ಬೇಕಾದ ಅಗತ್ಯ ದಾಖಲೆಗಳು 
+
+ಮರಣ ಪ್ರಮಾಣಪತ್ರ 
+
+ನಾಮನಿರ್ದೇಶಿತರ ಆಧಾರ್  
+
+FIR ಪ್ರತಿ 
+
+ಮರಣೋತ್ತರ ವರದಿ 
+
+ಅರ್ಜಿ ಪ್ರಕ್ರಿಯೆ 
+
+ಅರ್ಜಿದಾರರು ಅರ್ಜಿಯನ್ನು ಮಂಡಳಿಯ ತಂತ್ರಾಂಶದ ಮೂಲಕ ಸಲ್ಲಿಸುವುದು. 
+
+ಅರ್ಜಿಯನ್ನು ಸಂಬಂಧಪಟ್ಟ ಸಹಾಯಕ ಕಾರ್ಮಿಕ ಆಯುಕ್ತರಿಂದ ವಿಲೇವಾರಿ ಮಾಡಲಾಗುವುದು. 
+
+ಅರ್ಜಿದಾರರ ಅರ್ಜಿಯು ಅನುಮೋದನೆಗೊಂಡನಂತರ ನಾಮನಿರ್ದೇಶಿತರ ಆಧಾರ್ ಲಿಂಕ್ ಆಗಿರುವ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಪಾವತಿಸಲಾಗುವುದು. 
+
+ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದಲ್ಲಿ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನೆಲ್ಲ ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಮಾಡಿ ಯೋಜನೆಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.
 """
     }
 }
