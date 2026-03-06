@@ -1603,49 +1603,10 @@ async def answer(
         lang_key = "kn" if language == "kn" else "en"
         return HARDCODED_RESPONSES["registration"][lang_key].strip()
 
-    # RENEWAL — hardcoded response from ksk.md, no LLM (kept inline since user didn't provide new text)
+    # RENEWAL — hardcoded response from hardcoded_responses.py, no LLM
     if intent == "RENEWAL":
-        if language == "kn":
-            return ("ಕಾರ್ಮಿಕ ನವೀಕರಣ\n\n"
-                    "ನವೀಕರಣ ಅವಲೋಕನ\n"
-                    "ಮಂಡಳಿಯ ಅಡಿಯಲ್ಲಿ ಕಲ್ಯಾಣ ಸೌಲಭ್ಯಗಳನ್ನು ಮುಂದುವರಿಸಲು ನೋಂದಣಿ ನವೀಕರಣ ಅಗತ್ಯ.\n\n"
-                    "ನವೀಕರಣಕ್ಕೆ ಅರ್ಹತೆ\n"
-                    "- 90 ದಿನಗಳ ಕೆಲಸದ ಅವಶ್ಯಕತೆ: ಕಳೆದ 12 ತಿಂಗಳಲ್ಲಿ ಕನಿಷ್ಠ 90 ದಿನಗಳ ಕೆಲಸ ಮಾಡಿರಬೇಕು\n"
-                    "- ಮಾನ್ಯ 90 ದಿನಗಳ ಕೆಲಸದ ಪ್ರಮಾಣಪತ್ರ ಕಡ್ಡಾಯ\n"
-                    "- ಪ್ರಮಾಣಪತ್ರವನ್ನು ಸಕ್ಷಮ ಪ್ರಾಧಿಕಾರ (ಬಿಲ್ಡರ್/ಗುತ್ತಿಗೆದಾರ/ಎಂಜಿನಿಯರ್/ಸ್ಥಳೀಯ ಪ್ರಾಧಿಕಾರ) ನೀಡಬೇಕು\n\n"
-                    "ನವೀಕರಣ ಯಾವಾಗ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು\n"
-                    "- ನೋಂದಣಿ ಅವಧಿ ಮುಗಿದ ನಂತರ ಮಾತ್ರ ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು\n"
-                    "- ಬಫರ್ ಅವಧಿ: ಅವಧಿ ಮುಗಿದ ದಿನಾಂಕದಿಂದ 365 ದಿನಗಳು (1 ವರ್ಷ)\n"
-                    "- 365 ದಿನಗಳ ಒಳಗೆ ನವೀಕರಣಕ್ಕೆ ಅರ್ಜಿ ಸಲ್ಲಿಸದಿದ್ದರೆ, ಹೊಸ ನೋಂದಣಿಗೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಬೇಕು\n\n"
-                    "ಕಾರ್ಮಿಕರು ಅರ್ಹರಾಗಿದ್ದರೆ ಮತ್ತು ಎಲ್ಲಾ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನು ಹೊಂದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಲಾಗಿನ್ ಆಗಿ ಅರ್ಜಿ ಸಲ್ಲಿಸಿ.")
-        else:
-            return ("Scheme: Worker Renewal\n\n"
-                    "Renewal Overview\n"
-                    "Renewal of registration is required to continue availing welfare benefits under the Board.\n\n"
-                    "Eligibility for Renewal\n"
-                    "A registered construction worker can apply for Renewal subject to the following conditions:\n"
-                    "- **90 Days Work Requirement:** The worker must have worked at least 90 days in the last 12 months.\n"
-                    "- A valid 90 Days Work Certificate is mandatory.\n"
-                    "- The certificate must be issued by a competent authority (Builder / Contractor / Engineer / Local Authority).\n"
-                    "- Without a valid 90 Days Work Certificate, renewal cannot be approved.\n\n"
-                    "When Can Renewal Be Applied\n"
-                    "After Registration Expiry:\n"
-                    "- Renewal can be applied only after the registration has expired.\n"
-                    "- Renewal is applicable for previously registered (Active) workers whose registration validity has lapsed.\n\n"
-                    "Buffer Period (Grace Period):\n"
-                    "- After the registration expiry, the worker enters a buffer period of 365 days (1 year) from the date of expiry.\n"
-                    "- During this buffer period, the worker is eligible to apply for Renewal.\n\n"
-                    "Important Rule\n"
-                    "- If the worker does not apply for renewal within 365 days from the expiry date, Renewal is not permitted.\n"
-                    "- The worker must apply for New Registration again.\n\n"
-                    "Please Check\n"
-                    "- Can only apply after Expiry date.\n"
-                    "- Buffer period calculation (Expiry Date + 365 days).\n"
-                    "- 90 Days Work Certificate (last 12 months).\n"
-                    "- Check Duplicate active membership.\n"
-                    "- Aadhaar-based authentication.\n\n"
-                    "If the Labour is eligible and has all the required documents, please Login and submit the scheme application.\n"
-                    "For new Labour, please Register and then apply for the scheme.")
+        lang_key = "kn" if language == "kn" else "en"
+        return HARDCODED_RESPONSES["renewal"][lang_key].strip()
 
     # SCHEMES_LIST — hardcoded list of all schemes, no LLM
     if intent == "SCHEMES_LIST":
